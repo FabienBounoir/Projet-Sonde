@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Ihm</class>
+ <widget class="QWidget" name="Ihm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>353</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>353</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Ihm</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayoutPrincipalFenetre">
+     <item>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="Donnees">
+        <attribute name="title">
+         <string>Données</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <layout class="QGridLayout" name="gridLayout" columnstretch="0,0,0">
+           <property name="horizontalSpacing">
+            <number>6</number>
+           </property>
+           <item row="2" column="1">
+            <widget class="QLCDNumber" name="lcdNumberRessentie"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="labelRessentie">
+             <property name="text">
+              <string>Ressentie :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLabel" name="labelUniteRessenti">
+             <property name="text">
+              <string>°C</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLCDNumber" name="lcdNumberLuminosite"/>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="labelPression">
+             <property name="text">
+              <string>Pression :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLCDNumber" name="lcdNumberTemperature"/>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="labelLuminositer">
+             <property name="text">
+              <string>Luminosité :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="labelTemperature">
+             <property name="text">
+              <string>Température :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="labelHumiditer">
+             <property name="text">
+              <string>Humidité :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLCDNumber" name="lcdNumberHumidite"/>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLabel" name="labelUniteTemperature">
+             <property name="text">
+              <string>°C</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLCDNumber" name="lcdNumberPression"/>
+           </item>
+           <item row="5" column="2">
+            <widget class="QLabel" name="labelUnitePression">
+             <property name="text">
+              <string>hPa</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QLabel" name="labelUniteHumidite">
+             <property name="text">
+              <string>%</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QLCDNumber" name="lcdNumberAltitude"/>
+           </item>
+           <item row="4" column="2">
+            <widget class="QLabel" name="labelUniteLuminosite">
+             <property name="text">
+              <string>Lux</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="labelAltitude">
+             <property name="text">
+              <string>Altitude :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="2">
+            <widget class="QLabel" name="labelUniteAltitude">
+             <property name="text">
+              <string>Mètre</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" colspan="2">
+            <widget class="QLabel" name="horodatage">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="labelHorodatage">
+             <property name="text">
+              <string>Horodatage :</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QLabel" name="ImageEtatLed">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="commande">
+        <attribute name="title">
+         <string>Commande</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <item>
+              <widget class="QLabel" name="labelEtatLed">
+               <property name="text">
+                <string>Configurer la couleur de la LED :</string>
+               </property>
+               <property name="scaledContents">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButtonLedRouge">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="text">
+                <string>Rouge</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButtonLedVert">
+               <property name="text">
+                <string>Vert</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButtonLedOrange">
+               <property name="text">
+                <string>Orange</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="radioButtonLedOff">
+               <property name="text">
+                <string>Eteint</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="Configuration">
+        <attribute name="title">
+         <string>Configuration</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <layout class="QFormLayout" name="formLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="labelAppareil">
+             <property name="text">
+              <string>Appareil :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="labelDebitBauds">
+             <property name="text">
+              <string>débit en bauds</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="labelBitsDonnees">
+             <property name="text">
+              <string>Bits de données :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="labelBitsStop">
+             <property name="text">
+              <string>Bits de stop :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QPushButton" name="pushButtonFermerPort">
+             <property name="text">
+              <string>fermer port</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QComboBox" name="comboBoxDebitBaud">
+             <property name="editable">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QComboBox" name="comboBoxBitsDonnees"/>
+           </item>
+           <item row="3" column="1">
+            <widget class="QComboBox" name="comboBoxBitsStop"/>
+           </item>
+           <item row="0" column="1">
+            <widget class="QComboBox" name="comboBoxAppareil">
+             <property name="editable">
+              <bool>true</bool>
+             </property>
+             <property name="currentText">
+              <string>/dev/ttyUSB0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QPushButton" name="pushButtonOuvrirPort">
+             <property name="text">
+              <string>Ouvrir port</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="Operateur">
+        <attribute name="title">
+         <string>Operateur</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QTextEdit" name="textEditTrame"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelEnvoieTrame">
+             <property name="text">
+              <string>envoie trame:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLineEdit" name="lineEditEnvoyerTrame"/>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButtonEnvoyerTrame">
+               <property name="text">
+                <string>Envoyer</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutFooter">
+     <item>
+      <widget class="QCheckBox" name="ModeOperateur">
+       <property name="text">
+        <string>Mode Operateur</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonQuitter">
+       <property name="text">
+        <string>Quitter</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

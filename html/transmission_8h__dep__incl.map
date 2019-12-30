@@ -1,0 +1,6 @@
+<map id="Sonde/transmission.h" name="Sonde/transmission.h">
+<area shape="rect" id="node2" href="$ihm_8h.html" title="Declaration de la classe Ihm. " alt="" coords="81,80,175,107"/>
+<area shape="rect" id="node5" href="$transmission_8cpp.html" title="programme qui s&#39;occupe de la parti trame (configuration, reception / envoie de trame) ..." alt="" coords="200,80,363,107"/>
+<area shape="rect" id="node3" href="$ihm_8cpp.html" title="programme qui s&#39;occupe de l&#39;affichage dans l&#39;ihm " alt="" coords="5,155,115,181"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="Programme principal ... " alt="" coords="139,155,255,181"/>
+</map>

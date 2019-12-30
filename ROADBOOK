@@ -1,0 +1,78 @@
+11/12/19:
+
+mise a jour Qt plus configuration des plugins.
+Début Tp 0.
+
+12/12/19:
+
+démarrage MiniProjet
+mettre en oeuvre un diagramme de classe.
+
+18/12/19:
+
+déclaration des attributs
+Commencement du traitement de la trame
+décomposition trame
+assesseur et mutateur classe Esp32
+
+19/12/19:
+
+création de l'Ihm
+création signal TrameRecu
+création méthode actualiserDonnee()
+création méthode fermerPort()
+création méthode recevoir()
+création méthode décomposer()
+ajout commentaire de code
+
+20/12/19
+
+ajout de layout sur l'Ihm
+ajout de commentaire pour doxygen
+correction bug affichage unité température
+correction bug affichage unité ressentie
+creation ficher doxygen
+rendu 1.0
+
+21/12/19
+
+mettre un horodatage pour les messures
+mettre les message debug que en debug
+mettre la fonction qui appele le qDebug()
+
+22/12/19
+
+pouvoir ouvrir et fermer le port
+modification Ihm pour l'envoi de trame pour la led
+choisir le port de communication;
+choisir etat de la LED en mode Operateur
+choisir etat de la LED avec des bouton (Rouge/Vert/Orange/Eteint).
+
+23/12/19
+
+Utilisateur doit pouvoir choisir le baud rate
+Utilisateur doit pouvoir choisir le bit de donnée.
+Utilisateur doit pouvoir choisir le bit de stop.
+rendu 2.0
+
+modification Nom methode 
+methode deplacer en priver
+les qDebug ne s'affiche plus en release
+ajout de define
+tout les attribut son maintenant initialiser
+correction faute orthographe
+
+29/12/19
+
+enregistrement et chargement de la configuration du port depuis un fichier .ini
+
+30/12/19
+
+creation documentation
+rendu 2.1
+
+
+
+
+
+

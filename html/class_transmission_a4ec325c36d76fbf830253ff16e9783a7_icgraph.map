@@ -1,0 +1,6 @@
+<map id="Transmission::portFerme" name="Transmission::portFerme">
+<area shape="rect" id="node2" href="$class_transmission.html#a14d36ad615852d6b630fbddf5787f3a3" title="cette methode ferme le port serie " alt="" coords="239,56,408,83"/>
+<area shape="rect" id="node5" href="$class_transmission.html#a21e35372ada18cd35411c0e8c0984fd7" title="envoyer les données par le port serie " alt="" coords="220,5,427,32"/>
+<area shape="rect" id="node3" href="$class_ihm.html#af0426507c2130aefd01bdb4f825ae168" title="Méthode qui actualise l&#39;etat de la led dans ihm et change le radiobutton activer en fontion de l&#39;etat..." alt="" coords="501,5,643,32"/>
+<area shape="rect" id="node4" href="$class_transmission.html#adcdc6012d99ddb1d0c3159d50984e146" title="destructeur de la classe Transmission " alt="" coords="475,56,669,83"/>
+</map>
