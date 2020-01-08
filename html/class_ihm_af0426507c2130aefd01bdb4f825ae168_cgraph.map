@@ -1,34 +1,4 @@
 <map id="Ihm::modifierEtatLed" name="Ihm::modifierEtatLed">
-<area shape="rect" id="node2" href="$class_transmission.html#afccd88f8be8c204a0960bc2d6970931f" title="return l&#39;objet Esp32 " alt="" coords="218,5,381,32"/>
-<area shape="rect" id="node3" href="$class_esp32.html#ac695656654b5d83ec3924b47f533f465" title="retourne l&#39;etat de la led " alt="" coords="234,56,365,83"/>
-<area shape="rect" id="node4" href="$class_esp32.html#adb339413686f3d78df1ecd41f106fd4e" title="retourne la valeur de temperature " alt="" coords="220,107,379,133"/>
-<area shape="rect" id="node5" href="$class_esp32.html#a87f581ef8f01bcb71a7294cc545b242e" title="retourne la valeur d&#39;humiditer " alt="" coords="231,157,368,184"/>
-<area shape="rect" id="node6" href="$class_esp32.html#ae29854a5127d760a216f96ec7d797412" title="retourne la valeur de ressentie " alt="" coords="227,208,371,235"/>
-<area shape="rect" id="node7" href="$class_esp32.html#aa2cdabace1ce70928c53d25e306a16d1" title="retourne la valeur de luminositer " alt="" coords="225,259,373,285"/>
-<area shape="rect" id="node8" href="$class_esp32.html#a31155a36108b37febae371d9ae65385a" title="retourne la valeur de pression " alt="" coords="231,309,367,336"/>
-<area shape="rect" id="node9" href="$class_esp32.html#a31b691e6c75c1f9859bde4c0df8fe12f" title="retourne la valeur de l&#39;altitude " alt="" coords="235,360,364,387"/>
-<area shape="rect" id="node10" href="$class_esp32.html#ae20c976b79f87de083ca8ee49b2abf25" title="retourne l&#39;uniter de la valeur de temperature " alt="" coords="205,411,394,437"/>
-<area shape="rect" id="node11" href="$class_esp32.html#a548ed7533f742d087c65df256479ed00" title="retourne l&#39;uniter de la valeur de ressentie " alt="" coords="212,461,387,488"/>
-<area shape="rect" id="node12" href="$class_esp32.html#ab2a1fc92c11af031814569f3d2836f33" title="retourne l&#39;uniter de la valeur d&#39;humidite " alt="" coords="215,512,383,539"/>
-<area shape="rect" id="node13" href="$class_esp32.html#a50f4ef373379d2dbc0fd960438ab6f93" title="retourne l&#39;uniter de la valeur de luminosite " alt="" coords="210,563,389,589"/>
-<area shape="rect" id="node14" href="$class_esp32.html#a398d4a1cbc61f7af2f3af7ecbcf2f93f" title="retourne l&#39;uniter de la valeur de pression " alt="" coords="216,613,383,640"/>
-<area shape="rect" id="node15" href="$class_esp32.html#aad3c2e4b5d15a02abc62d0329f43942d" title="retourne l&#39;uniter de la valeur de l&#39;altitude " alt="" coords="219,664,379,691"/>
-<area shape="rect" id="node16" href="$class_transmission.html#ab4e82ab30c181a8e0d0c0257ea0e1f56" title="configure le port serie " alt="" coords="205,715,394,741"/>
-<area shape="rect" id="node19" href="$class_transmission.html#a14d36ad615852d6b630fbddf5787f3a3" title="cette methode ferme le port serie " alt="" coords="215,765,384,792"/>
-<area shape="rect" id="node33" href="$class_transmission.html#a21e35372ada18cd35411c0e8c0984fd7" title="envoyer les données par le port serie " alt="" coords="196,816,403,843"/>
-<area shape="rect" id="node17" href="$class_transmission.html#a41d15e65be472e058b28869f8dfad392" title="Transmission::ouvrirPort" alt="" coords="463,436,627,463"/>
-<area shape="rect" id="node18" href="$class_transmission.html#aa54a695d9d1c728ccab04f1d8030da41" title="Récupérer la trame émise. " alt="" coords="688,436,843,463"/>
-<area shape="rect" id="node20" href="$class_esp32.html#a8e7a509ed5704bee4bc527ae297f14f0" title="modifie la variable température avec celle&#45;ci passer en paramètre " alt="" coords="466,487,625,513"/>
-<area shape="rect" id="node21" href="$class_esp32.html#a709c261e1cea7b6bbd2ea1b09b1d7ec0" title="modifie la variable de l&#39;uniter utiliser pour la temperature " alt="" coords="451,537,640,564"/>
-<area shape="rect" id="node22" href="$class_esp32.html#a85dc760b771c9233fa094a49679d9286" title="modifie la variable ressentie avec celle&#45;ci passer en paramètre " alt="" coords="473,588,617,615"/>
-<area shape="rect" id="node23" href="$class_esp32.html#abf8a7f9942150b6c17cc5d1cc7b0fc8a" title="modifie la variable de l&#39;uniter utiliser pour le ressentie " alt="" coords="458,639,633,665"/>
-<area shape="rect" id="node24" href="$class_esp32.html#add0a064335e1ac6d96e1bbb7818d299a" title="modifie la variable de l&#39;humidite " alt="" coords="477,689,614,716"/>
-<area shape="rect" id="node25" href="$class_esp32.html#ae9b2704f36bcd246668354d0ac06ea35" title="modifie la variable de l&#39;uniter utiliser pour l&#39;humidite " alt="" coords="461,740,629,767"/>
-<area shape="rect" id="node26" href="$class_esp32.html#ae60b48e8c808a5108402d5b9f03590ac" title="modifie la variable de la luminosite " alt="" coords="471,791,619,817"/>
-<area shape="rect" id="node27" href="$class_esp32.html#a36450bcd23e7676d1f0a46e8bec31275" title="modifie la variable de l&#39;uniter utiliser pour la luminosite " alt="" coords="456,841,635,868"/>
-<area shape="rect" id="node28" href="$class_esp32.html#a583358abbf0b279dabb5a2976f1783de" title="modifie la variable de la pression " alt="" coords="477,892,613,919"/>
-<area shape="rect" id="node29" href="$class_esp32.html#a3c6dd57f955aef0738c48be705538337" title="modifie la variable de l&#39;uniter utiliser pour la pression " alt="" coords="462,943,629,969"/>
-<area shape="rect" id="node30" href="$class_esp32.html#aeb2268155501f27e36e6a7c6caa15412" title="modifie la variable altitude passer en paramètre " alt="" coords="481,993,610,1020"/>
-<area shape="rect" id="node31" href="$class_esp32.html#a69b0c6a1c0a31e043b715be3fc40ded1" title="modifie la variable de l&#39;uniter utiliser pour l&#39;altitude " alt="" coords="465,1044,625,1071"/>
-<area shape="rect" id="node32" href="$class_esp32.html#a32d0d1abb41a3762a54e9f5a33b3b247" title="modifie la variable de l&#39;etat de la led " alt="" coords="470,1095,621,1121"/>
+<area shape="rect" id="node2" href="$class_transmission.html#afccd88f8be8c204a0960bc2d6970931f" title="return l&#39;objet Esp32 " alt="" coords="196,5,359,32"/>
+<area shape="rect" id="node3" href="$class_esp32.html#ac695656654b5d83ec3924b47f533f465" title="retourne l&#39;etat de la led " alt="" coords="212,56,343,83"/>
 </map>

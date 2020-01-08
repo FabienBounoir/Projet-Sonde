@@ -5,7 +5,8 @@
 #-------------------------------------------------
 
 QT       += core gui \
-            serialport
+            serialport network
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -17,8 +18,6 @@ TEMPLATE = app
 # depend on your compiler). Please consult the documentation of the
 # deprecated API in order to know how to port your code away from it.
 DEFINES += QT_DEPRECATED_WARNINGS \
-           # QT_NO_DEBUG_OUTPUT
-
 
 # You can also make your code fail to compile if you use deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -31,15 +30,19 @@ SOURCES += \
         main.cpp \
         ihm.cpp \
     transmission.cpp \
-    esp32.cpp
+    esp32.cpp \
+    meteo.cpp
 
 HEADERS += \
         ihm.h \
     transmission.h \
-    esp32.h
+    esp32.h \
+    meteo.h
 
 FORMS += \
         ihm.ui
+
+CONFIG(release, debug|release):DEFINES+=QT_NO_DEBUG_OUTPUT
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

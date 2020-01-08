@@ -1,4 +1,4 @@
 <map id="Transmission::ouvrirPort" name="Transmission::ouvrirPort">
-<area shape="rect" id="node2" href="$class_transmission.html#ab4e82ab30c181a8e0d0c0257ea0e1f56" title="configure le port serie " alt="" coords="217,5,407,32"/>
-<area shape="rect" id="node3" href="$class_ihm.html#af0426507c2130aefd01bdb4f825ae168" title="Méthode qui actualise l&#39;etat de la led dans ihm et change le radiobutton activer en fontion de l&#39;etat..." alt="" coords="455,5,597,32"/>
+<area shape="rect" id="node2" href="$class_transmission.html#ab4e82ab30c181a8e0d0c0257ea0e1f56" title="configure le port serie " alt="" coords="217,13,407,39"/>
+<area shape="rect" id="node3" href="$class_ihm.html#a9ce167b94baead6e318bbd0c5254f842" title="bouton qui ouvre le port serie " alt="" coords="455,5,629,47"/>
 </map>

@@ -3,13 +3,6 @@
 
 #include <QDebug>
 
-#define MODE_OPERATEUR_ACTIVER 2
-#define ONGLET_MODE_OPERATEUR 3
-#define LED_ROUGE "../Sonde/image/ledRouge.png"
-#define LED_VERT "../Sonde/image/ledVert.png"
-#define LED_ORANGE "../Sonde/image/ledOrange.png"
-#define LED_OFF "../Sonde/image/ledEteint.png"
-
 /**
 * @file ihm.cpp
 *
@@ -18,7 +11,7 @@
 * @author Bounoir Fabien
 * @author Villesseche Ethan
 *
-* @version 2.1
+* @version 3.0
 *
 */
 
@@ -38,11 +31,14 @@ Ihm::Ihm(QWidget *parent) :
     initialiserAffichage();
 
     transmission = new Transmission(this);
+    meteo = new Meteo(this);
 
     connect(transmission, SIGNAL(trameRecue()), this, SLOT(actualiserTrame()));
     connect(transmission, SIGNAL(trameRecue()), this, SLOT(actualiserDonnee()));
     connect(transmission, SIGNAL(portOuvert()), this, SLOT(desactiverOuverturePort()));
     connect(transmission, SIGNAL(portFerme()), this, SLOT(desactiverFermerPort()));
+    connect(meteo, SIGNAL(donnerMeteoMiseAJour()), this, SLOT(actualiserAffichageMeteo()));
+
 }
 
 /**
@@ -52,7 +48,7 @@ Ihm::Ihm(QWidget *parent) :
  */
 Ihm::~Ihm()
 {
-    EnregistrerConfigurationPort();
+    enregistrerConfigurationPort();
 
     delete ui;
 }
@@ -60,33 +56,33 @@ Ihm::~Ihm()
 /**
  * @brief enregistrer la configuration du port dans un fichier .ini
  *
- * @fn Ihm::EnregistrerConfigurationPort
+ * @fn Ihm::enregistrerConfigurationPort
  */
-void Ihm::EnregistrerConfigurationPort()
+void Ihm::enregistrerConfigurationPort()
 {
-    QSettings EnregistrerConfigurationPort("Sonde.ini", QSettings::IniFormat);
+    QSettings configurationport("Sonde.ini", QSettings::IniFormat);
 
-    EnregistrerConfigurationPort.beginGroup("Port");
-    EnregistrerConfigurationPort.setValue("Appareil", ui->comboBoxAppareil->currentText());
-    EnregistrerConfigurationPort.setValue("DebitBauds", ui->comboBoxDebitBaud->currentText());
-    EnregistrerConfigurationPort.setValue("BitsDonnee", ui->comboBoxBitsDonnees->currentText());
-    EnregistrerConfigurationPort.setValue("BitsStop", ui->comboBoxBitsStop->currentText());
-    EnregistrerConfigurationPort.endGroup();
+    configurationport.beginGroup("Port");
+    configurationport.setValue("Appareil", ui->comboBoxAppareil->currentText());
+    configurationport.setValue("DebitBauds", ui->comboBoxDebitBaud->currentText());
+    configurationport.setValue("BitsDonnee", ui->comboBoxBitsDonnees->currentText());
+    configurationport.setValue("BitsStop", ui->comboBoxBitsStop->currentText());
+    configurationport.endGroup();
 }
 
 /**
  * @brief charger la configuration du port depuis un fichier .ini
  *
- * @fn Ihm::ChargerConfigurationPort
+ * @fn Ihm::chargerConfigurationPort
  */
-void Ihm::ChargerConfigurationPort()
+void Ihm::chargerConfigurationPort()
 {
-    QSettings initialiserPort("Sonde.ini", QSettings::IniFormat);
+    QSettings configurationport("Sonde.ini", QSettings::IniFormat);
 
-    ui->comboBoxAppareil->setCurrentText(initialiserPort.value("Port/Appareil","/dev/ttyUSB0").toString());
-    ui->comboBoxDebitBaud->setCurrentText(initialiserPort.value("Port/DebitBauds","1200").toString());
-    ui->comboBoxBitsDonnees->setCurrentText(initialiserPort.value("Port/BitsDonnee","5").toString());
-    ui->comboBoxBitsStop->setCurrentText(initialiserPort.value("Port/BitsStop","1").toString());
+    ui->comboBoxAppareil->setCurrentText(configurationport.value("Port/Appareil","/dev/ttyUSB0").toString());
+    ui->comboBoxDebitBaud->setCurrentText(configurationport.value("Port/DebitBauds","1200").toString());
+    ui->comboBoxBitsDonnees->setCurrentText(configurationport.value("Port/BitsDonnee","5").toString());
+    ui->comboBoxBitsStop->setCurrentText(configurationport.value("Port/BitsStop","1").toString());
 }
 
 /**
@@ -111,7 +107,7 @@ void Ihm::initialiserInterface()
     ui->comboBoxBitsDonnees->addItems(QStringList{"5", "6", "7", "8"});
     ui->comboBoxBitsStop->addItems(QStringList{"1", "2"});
 
-    ChargerConfigurationPort();
+    chargerConfigurationPort();
 }
 
 /**
@@ -168,19 +164,19 @@ void Ihm::modifierEtatLed()
 {
     switch (transmission->getEsp32()->getEtatLed())
           {
-             case 0:
+             case VALEUR_LED_OFF:
                 ui->ImageEtatLed->setPixmap(QPixmap(LED_OFF));
                 ui->radioButtonLedOff->setChecked(true);
                 break;
-             case 1:
+             case VALEUR_LED_ROUGE:
                 ui->ImageEtatLed->setPixmap(QPixmap(LED_ROUGE));
                 ui->radioButtonLedRouge->setChecked(true);
                 break;
-             case 2:
+             case VALEUR_LED_VERT:
                 ui->ImageEtatLed->setPixmap(QPixmap(LED_VERT));
                 ui->radioButtonLedVert->setChecked(true);
                break;
-             case 3:
+             case VALEUR_LED_ORANGE:
                 ui->ImageEtatLed->setPixmap(QPixmap(LED_ORANGE));
                 ui->radioButtonLedOrange->setChecked(true);
                break;
@@ -282,6 +278,16 @@ void Ihm::initialiserAffichage()
     ui->lcdNumberAltitude->display("----");
 }
 
+void Ihm::actualiserAffichageMeteo()
+{
+    ui->lcdNumberTemperatureMeteo->display(meteo->getTemperature());
+    ui->lcdNumberHumiditeMeteo->display(meteo->getHumidite());
+    ui->lcdNumberRessentieMeteo->display(meteo->getRessentie());
+    ui->lcdNumberPressionMeteo->display(meteo->getPression());
+    ui->lcdNumberTempMinMeteo->display(meteo->getTemperatureMin());
+    ui->lcdNumberTempMaxMeteo->display(meteo->getTemperatureMax());
+}
+
 /**
  * @brief recuperer le texte de la lineEdit dans l'onglet operateur pour l'envoyer par le port serie
  *
@@ -333,4 +339,13 @@ void Ihm::on_radioButtonLedOrange_clicked()
 void Ihm::on_radioButtonLedOff_clicked()
 {
     transmission->envoyerDonnees("SET LED off");
+}
+
+
+void Ihm::on_pushButtonVille_clicked()
+{
+    if(ui->lineEditVille->text() != "")
+    {
+        meteo->recupererDonnerMeteo(ui->lineEditVille->text());
+    }
 }

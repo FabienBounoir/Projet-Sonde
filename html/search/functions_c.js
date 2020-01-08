@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['_7eihm',['~Ihm',['../class_ihm.html#add292ea9005bacd1de44dd1ed9ede5b9',1,'Ihm']]],
-  ['_7etransmission',['~Transmission',['../class_transmission.html#adcdc6012d99ddb1d0c3159d50984e146',1,'Transmission']]]
+  ['tramerecue',['trameRecue',['../class_transmission.html#a178c5b3a067d5f5ed4f0804c72f63eda',1,'Transmission']]],
+  ['transmission',['Transmission',['../class_transmission.html#a1d8087d2d09b9ddd4fd6e8261daed9f3',1,'Transmission']]]
 ];

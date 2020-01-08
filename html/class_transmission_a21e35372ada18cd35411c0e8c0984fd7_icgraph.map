@@ -1,3 +1,7 @@
 <map id="Transmission::envoyerDonnees" name="Transmission::envoyerDonnees">
-<area shape="rect" id="node2" href="$class_ihm.html#af0426507c2130aefd01bdb4f825ae168" title="Méthode qui actualise l&#39;etat de la led dans ihm et change le radiobutton activer en fontion de l&#39;etat..." alt="" coords="260,5,403,32"/>
+<area shape="rect" id="node2" href="$class_ihm.html#afd32da9e614eba44bb1d3630b48e6075" title="recuperer le texte de la lineEdit dans l&#39;onglet operateur pour l&#39;envoyer par le port serie ..." alt="" coords="268,5,455,47"/>
+<area shape="rect" id="node3" href="$class_ihm.html#a731ee780915cb90a5dfb11f2e02144c9" title="envoit une trame pour allumer la led en rouge " alt="" coords="262,71,461,112"/>
+<area shape="rect" id="node4" href="$class_ihm.html#afef5bfaa83383427e615d21d9474f466" title="envoit une trame pour allumer la led en vert " alt="" coords="269,136,453,177"/>
+<area shape="rect" id="node5" href="$class_ihm.html#a7e000e198b11fc38a4459f7749561ded" title="envoit une trame pour allumer la led en orange " alt="" coords="260,201,463,243"/>
+<area shape="rect" id="node6" href="$class_ihm.html#a1e328a2e8165bbef347e901f1bc5534d" title="envoit une trame pour eteindre la led " alt="" coords="272,267,451,308"/>
 </map>

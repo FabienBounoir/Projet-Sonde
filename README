@@ -2,8 +2,8 @@ README
 
 Nom du logiciel : Sonde
 Date de début : 12/12/19
-Numéro de version du logiciel : 2.0
-Date de cette version du logiciel : 23/12/19
+Numéro de version du logiciel : 3.0
+Date de cette version du logiciel : 08/01/20
 Objectif : recuperer les données d'une sonde et les visualiser sur une Ihm
 Équipe de développement : Equipe-3
 			  BOUNOIR Fabien
@@ -23,5 +23,9 @@ Objectif : recuperer les données d'une sonde et les visualiser sur une Ihm
 2.1:
 -->correction de bug
 -->enregistrer la configuration du port serie a la fermeture de l'application
+
+3.0:
+-->visualiser les donnée meteo d'un ville.
+-->
 
 

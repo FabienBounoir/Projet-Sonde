@@ -164,6 +164,136 @@
          </item>
         </layout>
        </widget>
+       <widget class="QWidget" name="meteo">
+        <attribute name="title">
+         <string>Meteo</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <widget class="QLabel" name="labelVille">
+             <property name="text">
+              <string>Ville :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEditVille"/>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="labelTemperatureMinMeteo">
+             <property name="text">
+              <string>Température min</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLCDNumber" name="lcdNumberRessentieMeteo"/>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLCDNumber" name="lcdNumberTemperatureMeteo"/>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="labelTemperaturemaxMeteo">
+             <property name="text">
+              <string>Température max</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="labelRessentieMeteo">
+             <property name="text">
+              <string>Ressentie :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="labelTemperatureMeteo">
+             <property name="text">
+              <string>Température: </string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLCDNumber" name="lcdNumberTempMaxMeteo"/>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLCDNumber" name="lcdNumberTempMinMeteo"/>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLabel" name="labelUniteTemperatureMeteo">
+             <property name="text">
+              <string>°C</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLabel" name="labelUniteRessentieMeteo">
+             <property name="text">
+              <string>°C</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QLabel" name="labelUniteTempMinMeteo">
+             <property name="text">
+              <string>°C</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QLabel" name="labelUniteTempMaxMeteo">
+             <property name="text">
+              <string>°C</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="labelPressionMeteo">
+             <property name="text">
+              <string>Pression</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="labelHumiditeMeteo">
+             <property name="text">
+              <string>Humidité</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLCDNumber" name="lcdNumberPressionMeteo"/>
+           </item>
+           <item row="6" column="1">
+            <widget class="QLCDNumber" name="lcdNumberHumiditeMeteo"/>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="pushButtonVille">
+             <property name="text">
+              <string>Envoyer</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QLabel" name="labelUnitePressionMeteo">
+             <property name="text">
+              <string>hPa</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="2">
+            <widget class="QLabel" name="labelUniteHumiditeMeteo">
+             <property name="text">
+              <string>%</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
        <widget class="QWidget" name="commande">
         <attribute name="title">
          <string>Commande</string>

@@ -1,5 +1,7 @@
 <map id="Esp32::setHumidite" name="Esp32::setHumidite">
-<area shape="rect" id="node2" href="$class_transmission.html#a14d36ad615852d6b630fbddf5787f3a3" title="cette methode ferme le port serie " alt="" coords="191,31,360,57"/>
-<area shape="rect" id="node3" href="$class_ihm.html#af0426507c2130aefd01bdb4f825ae168" title="Méthode qui actualise l&#39;etat de la led dans ihm et change le radiobutton activer en fontion de l&#39;etat..." alt="" coords="434,5,577,32"/>
-<area shape="rect" id="node4" href="$class_transmission.html#adcdc6012d99ddb1d0c3159d50984e146" title="destructeur de la classe Transmission " alt="" coords="408,56,603,83"/>
+<area shape="rect" id="node2" href="$class_transmission.html#aa2977705ec793b10bf3212a13e67b097" title="Décompose la trame reçue. " alt="" coords="191,13,369,39"/>
+<area shape="rect" id="node3" href="$class_transmission.html#aa54a695d9d1c728ccab04f1d8030da41" title="Récupérer la trame émise. " alt="" coords="417,13,572,39"/>
+<area shape="rect" id="node4" href="$class_transmission.html#a41d15e65be472e058b28869f8dfad392" title="Transmission::ouvrirPort" alt="" coords="620,13,784,39"/>
+<area shape="rect" id="node5" href="$class_transmission.html#ab4e82ab30c181a8e0d0c0257ea0e1f56" title="configure le port serie " alt="" coords="832,13,1021,39"/>
+<area shape="rect" id="node6" href="$class_ihm.html#a9ce167b94baead6e318bbd0c5254f842" title="bouton qui ouvre le port serie " alt="" coords="1069,5,1244,47"/>
 </map>

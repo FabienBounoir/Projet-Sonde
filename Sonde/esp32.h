@@ -7,9 +7,10 @@
 
 /**
  * @file esp32.h
+ *
  * @brief Declaration de la classe Esp32
  *
- * @version 2.1
+ * @version 3.0
  *
  * @author Bounoir Fabien
  * @author Villesseche Ethan
@@ -17,8 +18,9 @@
 
 /**
  * @class Esp32 esp32.h "esp32.h"
- */
-
+ *
+ * @brief Declaration de la classe Esp32
+*/
 class Esp32 : public QObject
 {
     Q_OBJECT

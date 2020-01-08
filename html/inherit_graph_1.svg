@@ -16,7 +16,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="class_ihm.html" target="_top" xlink:title="Ihm">
+<g id="a_node2"><a xlink:href="class_ihm.html" target="_top" xlink:title="Declaration de la classe Ihm. ">
 <polygon fill="white" stroke="black" points="91,-0.5 91,-19.5 124,-19.5 124,-0.5 91,-0.5"/>
 <text text-anchor="middle" x="107.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Ihm</text>
 </a>

@@ -25,7 +25,7 @@
   <td id="projectlogo"><img alt="Logo" src="SondeLogo.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Sonde
-   &#160;<span id="projectnumber">2.1</span>
+   &#160;<span id="projectnumber">3.0</span>
    </div>
    <div id="projectbrief">Recupere les données d&#39;une sonde pour les afficher dans une Ihm</div>
   </td>
@@ -41,6 +41,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Fichiers</span></a></li>
       <li>
@@ -87,26 +88,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pri-attribs">Attributs privés</a> &#124;
 <a href="class_esp32-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle">
 <div class="title">Référence de la classe Esp32</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Graphe d'héritage de Esp32:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32__inherit__graph.svg" width="175" height="360"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+
+<p>Declaration de la classe <a class="el" href="class_esp32.html" title="Declaration de la classe Esp32. ">Esp32</a>.  
+ <a href="class_esp32.html#details">Plus de détails...</a></p>
+
+<p><code>#include &quot;<a class="el" href="esp32_8h_source.html">esp32.h</a>&quot;</code></p>
 <div class="dynheader">
 Graphe de collaboration de Esp32:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32__coll__graph.svg" width="175" height="360"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32__coll__graph.svg" width="175" height="536"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:abf9de8dee58d0105a551455874f29c19"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#abf9de8dee58d0105a551455874f29c19">Esp32</a> (QObject *parent=nullptr)</td></tr>
-<tr class="memdesc:abf9de8dee58d0105a551455874f29c19"><td class="mdescLeft">&#160;</td><td class="mdescRight">contructeur de la classe <a class="el" href="class_esp32.html">Esp32</a>  <a href="#abf9de8dee58d0105a551455874f29c19">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:abf9de8dee58d0105a551455874f29c19"><td class="mdescLeft">&#160;</td><td class="mdescRight">contructeur de la classe <a class="el" href="class_esp32.html" title="Declaration de la classe Esp32. ">Esp32</a>  <a href="#abf9de8dee58d0105a551455874f29c19">Plus de détails...</a><br /></td></tr>
 <tr class="separator:abf9de8dee58d0105a551455874f29c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb339413686f3d78df1ecd41f106fd4e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#adb339413686f3d78df1ecd41f106fd4e">getTemperature</a> () const </td></tr>
 <tr class="memdesc:adb339413686f3d78df1ecd41f106fd4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">retourne la valeur de temperature  <a href="#adb339413686f3d78df1ecd41f106fd4e">Plus de détails...</a><br /></td></tr>
@@ -147,47 +149,78 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:ac695656654b5d83ec3924b47f533f465"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#ac695656654b5d83ec3924b47f533f465">getEtatLed</a> () const </td></tr>
 <tr class="memdesc:ac695656654b5d83ec3924b47f533f465"><td class="mdescLeft">&#160;</td><td class="mdescRight">retourne l'etat de la led  <a href="#ac695656654b5d83ec3924b47f533f465">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ac695656654b5d83ec3924b47f533f465"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e7a509ed5704bee4bc527ae297f14f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a8e7a509ed5704bee4bc527ae297f14f0">setTemperature</a> (double temperature)</td></tr>
+<tr class="memitem:a8e7a509ed5704bee4bc527ae297f14f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a8e7a509ed5704bee4bc527ae297f14f0">setTemperature</a> (double <a class="el" href="class_esp32.html#a8274802633ca34c07fbfe7fa38a171a8">temperature</a>)</td></tr>
 <tr class="memdesc:a8e7a509ed5704bee4bc527ae297f14f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">modifie la variable température avec celle-ci passer en paramètre  <a href="#a8e7a509ed5704bee4bc527ae297f14f0">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a8e7a509ed5704bee4bc527ae297f14f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85dc760b771c9233fa094a49679d9286"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a85dc760b771c9233fa094a49679d9286">setRessentie</a> (double ressentie)</td></tr>
+<tr class="memitem:a85dc760b771c9233fa094a49679d9286"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a85dc760b771c9233fa094a49679d9286">setRessentie</a> (double <a class="el" href="class_esp32.html#a08425470633629dae05f61659ff90375">ressentie</a>)</td></tr>
 <tr class="memdesc:a85dc760b771c9233fa094a49679d9286"><td class="mdescLeft">&#160;</td><td class="mdescRight">modifie la variable ressentie avec celle-ci passer en paramètre  <a href="#a85dc760b771c9233fa094a49679d9286">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a85dc760b771c9233fa094a49679d9286"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a709c261e1cea7b6bbd2ea1b09b1d7ec0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a709c261e1cea7b6bbd2ea1b09b1d7ec0">setTemperatureUnite</a> (QString temperatureUnite)</td></tr>
+<tr class="memitem:a709c261e1cea7b6bbd2ea1b09b1d7ec0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a709c261e1cea7b6bbd2ea1b09b1d7ec0">setTemperatureUnite</a> (QString <a class="el" href="class_esp32.html#a825526f0d6b74fda9ddeba7e67ec9dd5">temperatureUnite</a>)</td></tr>
 <tr class="memdesc:a709c261e1cea7b6bbd2ea1b09b1d7ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">modifie la variable de l'uniter utiliser pour la temperature  <a href="#a709c261e1cea7b6bbd2ea1b09b1d7ec0">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a709c261e1cea7b6bbd2ea1b09b1d7ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf8a7f9942150b6c17cc5d1cc7b0fc8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#abf8a7f9942150b6c17cc5d1cc7b0fc8a">setRessentieUnite</a> (QString ressentieUnite)</td></tr>
+<tr class="memitem:abf8a7f9942150b6c17cc5d1cc7b0fc8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#abf8a7f9942150b6c17cc5d1cc7b0fc8a">setRessentieUnite</a> (QString <a class="el" href="class_esp32.html#a5333681c08a07f1877c20cfe88b7024f">ressentieUnite</a>)</td></tr>
 <tr class="memdesc:abf8a7f9942150b6c17cc5d1cc7b0fc8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">modifie la variable de l'uniter utiliser pour le ressentie  <a href="#abf8a7f9942150b6c17cc5d1cc7b0fc8a">Plus de détails...</a><br /></td></tr>
 <tr class="separator:abf8a7f9942150b6c17cc5d1cc7b0fc8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add0a064335e1ac6d96e1bbb7818d299a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#add0a064335e1ac6d96e1bbb7818d299a">setHumidite</a> (int ressentieUnite)</td></tr>
+<tr class="memitem:add0a064335e1ac6d96e1bbb7818d299a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#add0a064335e1ac6d96e1bbb7818d299a">setHumidite</a> (int <a class="el" href="class_esp32.html#a5333681c08a07f1877c20cfe88b7024f">ressentieUnite</a>)</td></tr>
 <tr class="memdesc:add0a064335e1ac6d96e1bbb7818d299a"><td class="mdescLeft">&#160;</td><td class="mdescRight">modifie la variable de l'humidite  <a href="#add0a064335e1ac6d96e1bbb7818d299a">Plus de détails...</a><br /></td></tr>
 <tr class="separator:add0a064335e1ac6d96e1bbb7818d299a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae60b48e8c808a5108402d5b9f03590ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#ae60b48e8c808a5108402d5b9f03590ac">setLuminosite</a> (int luminosite)</td></tr>
+<tr class="memitem:ae60b48e8c808a5108402d5b9f03590ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#ae60b48e8c808a5108402d5b9f03590ac">setLuminosite</a> (int <a class="el" href="class_esp32.html#aa6ce86f87c88d7fd29880e9865fefefc">luminosite</a>)</td></tr>
 <tr class="memdesc:ae60b48e8c808a5108402d5b9f03590ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">modifie la variable de la luminosite  <a href="#ae60b48e8c808a5108402d5b9f03590ac">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ae60b48e8c808a5108402d5b9f03590ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9b2704f36bcd246668354d0ac06ea35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#ae9b2704f36bcd246668354d0ac06ea35">setHumiditeUnite</a> (QString humiditeUnite)</td></tr>
+<tr class="memitem:ae9b2704f36bcd246668354d0ac06ea35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#ae9b2704f36bcd246668354d0ac06ea35">setHumiditeUnite</a> (QString <a class="el" href="class_esp32.html#a90c1ea9a5598c16a7918205185aa9fd6">humiditeUnite</a>)</td></tr>
 <tr class="memdesc:ae9b2704f36bcd246668354d0ac06ea35"><td class="mdescLeft">&#160;</td><td class="mdescRight">modifie la variable de l'uniter utiliser pour l'humidite  <a href="#ae9b2704f36bcd246668354d0ac06ea35">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ae9b2704f36bcd246668354d0ac06ea35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36450bcd23e7676d1f0a46e8bec31275"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a36450bcd23e7676d1f0a46e8bec31275">setLuminositeUnite</a> (QString luminositeUnite)</td></tr>
+<tr class="memitem:a36450bcd23e7676d1f0a46e8bec31275"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a36450bcd23e7676d1f0a46e8bec31275">setLuminositeUnite</a> (QString <a class="el" href="class_esp32.html#a67087c5b6b76b64f929dbc255a7d5441">luminositeUnite</a>)</td></tr>
 <tr class="memdesc:a36450bcd23e7676d1f0a46e8bec31275"><td class="mdescLeft">&#160;</td><td class="mdescRight">modifie la variable de l'uniter utiliser pour la luminosite  <a href="#a36450bcd23e7676d1f0a46e8bec31275">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a36450bcd23e7676d1f0a46e8bec31275"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a583358abbf0b279dabb5a2976f1783de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a583358abbf0b279dabb5a2976f1783de">setPression</a> (int pression)</td></tr>
+<tr class="memitem:a583358abbf0b279dabb5a2976f1783de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a583358abbf0b279dabb5a2976f1783de">setPression</a> (int <a class="el" href="class_esp32.html#a7ddfb5679b439b204a93f775cfa9d2fa">pression</a>)</td></tr>
 <tr class="memdesc:a583358abbf0b279dabb5a2976f1783de"><td class="mdescLeft">&#160;</td><td class="mdescRight">modifie la variable de la pression  <a href="#a583358abbf0b279dabb5a2976f1783de">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a583358abbf0b279dabb5a2976f1783de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c6dd57f955aef0738c48be705538337"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a3c6dd57f955aef0738c48be705538337">setPressionUnite</a> (QString pressionUnite)</td></tr>
+<tr class="memitem:a3c6dd57f955aef0738c48be705538337"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a3c6dd57f955aef0738c48be705538337">setPressionUnite</a> (QString <a class="el" href="class_esp32.html#aad1ead1e2c830025af0eebcdb30bcafe">pressionUnite</a>)</td></tr>
 <tr class="memdesc:a3c6dd57f955aef0738c48be705538337"><td class="mdescLeft">&#160;</td><td class="mdescRight">modifie la variable de l'uniter utiliser pour la pression  <a href="#a3c6dd57f955aef0738c48be705538337">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a3c6dd57f955aef0738c48be705538337"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb2268155501f27e36e6a7c6caa15412"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#aeb2268155501f27e36e6a7c6caa15412">setAltitude</a> (int altitude)</td></tr>
+<tr class="memitem:aeb2268155501f27e36e6a7c6caa15412"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#aeb2268155501f27e36e6a7c6caa15412">setAltitude</a> (int <a class="el" href="class_esp32.html#ab257f7aff043b4d60d963e1bfd1fe35f">altitude</a>)</td></tr>
 <tr class="memdesc:aeb2268155501f27e36e6a7c6caa15412"><td class="mdescLeft">&#160;</td><td class="mdescRight">modifie la variable altitude passer en paramètre  <a href="#aeb2268155501f27e36e6a7c6caa15412">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aeb2268155501f27e36e6a7c6caa15412"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69b0c6a1c0a31e043b715be3fc40ded1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a69b0c6a1c0a31e043b715be3fc40ded1">setAltitudeUnite</a> (QString altitudeUnite)</td></tr>
+<tr class="memitem:a69b0c6a1c0a31e043b715be3fc40ded1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a69b0c6a1c0a31e043b715be3fc40ded1">setAltitudeUnite</a> (QString <a class="el" href="class_esp32.html#ad407a4a4139183be7c4293fb254c96d7">altitudeUnite</a>)</td></tr>
 <tr class="memdesc:a69b0c6a1c0a31e043b715be3fc40ded1"><td class="mdescLeft">&#160;</td><td class="mdescRight">modifie la variable de l'uniter utiliser pour l'altitude  <a href="#a69b0c6a1c0a31e043b715be3fc40ded1">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a69b0c6a1c0a31e043b715be3fc40ded1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32d0d1abb41a3762a54e9f5a33b3b247"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a32d0d1abb41a3762a54e9f5a33b3b247">setCouleurLed</a> (int couleur)</td></tr>
+<tr class="memitem:a32d0d1abb41a3762a54e9f5a33b3b247"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a32d0d1abb41a3762a54e9f5a33b3b247">setCouleurLed</a> (int <a class="el" href="class_esp32.html#ae8f6b2080769949ae5bd41c8312a6892">couleur</a>)</td></tr>
 <tr class="memdesc:a32d0d1abb41a3762a54e9f5a33b3b247"><td class="mdescLeft">&#160;</td><td class="mdescRight">modifie la variable de l'etat de la led  <a href="#a32d0d1abb41a3762a54e9f5a33b3b247">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a32d0d1abb41a3762a54e9f5a33b3b247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Attributs privés</h2></td></tr>
+<tr class="memitem:a8274802633ca34c07fbfe7fa38a171a8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a8274802633ca34c07fbfe7fa38a171a8">temperature</a></td></tr>
+<tr class="separator:a8274802633ca34c07fbfe7fa38a171a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a825526f0d6b74fda9ddeba7e67ec9dd5"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a825526f0d6b74fda9ddeba7e67ec9dd5">temperatureUnite</a></td></tr>
+<tr class="separator:a825526f0d6b74fda9ddeba7e67ec9dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08425470633629dae05f61659ff90375"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a08425470633629dae05f61659ff90375">ressentie</a></td></tr>
+<tr class="separator:a08425470633629dae05f61659ff90375"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5333681c08a07f1877c20cfe88b7024f"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a5333681c08a07f1877c20cfe88b7024f">ressentieUnite</a></td></tr>
+<tr class="separator:a5333681c08a07f1877c20cfe88b7024f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ad1a81c0a3cb29035aaef89d153f662"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a7ad1a81c0a3cb29035aaef89d153f662">humidite</a></td></tr>
+<tr class="separator:a7ad1a81c0a3cb29035aaef89d153f662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c1ea9a5598c16a7918205185aa9fd6"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a90c1ea9a5598c16a7918205185aa9fd6">humiditeUnite</a></td></tr>
+<tr class="separator:a90c1ea9a5598c16a7918205185aa9fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6ce86f87c88d7fd29880e9865fefefc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#aa6ce86f87c88d7fd29880e9865fefefc">luminosite</a></td></tr>
+<tr class="separator:aa6ce86f87c88d7fd29880e9865fefefc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67087c5b6b76b64f929dbc255a7d5441"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a67087c5b6b76b64f929dbc255a7d5441">luminositeUnite</a></td></tr>
+<tr class="separator:a67087c5b6b76b64f929dbc255a7d5441"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ddfb5679b439b204a93f775cfa9d2fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#a7ddfb5679b439b204a93f775cfa9d2fa">pression</a></td></tr>
+<tr class="separator:a7ddfb5679b439b204a93f775cfa9d2fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad1ead1e2c830025af0eebcdb30bcafe"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#aad1ead1e2c830025af0eebcdb30bcafe">pressionUnite</a></td></tr>
+<tr class="separator:aad1ead1e2c830025af0eebcdb30bcafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab257f7aff043b4d60d963e1bfd1fe35f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#ab257f7aff043b4d60d963e1bfd1fe35f">altitude</a></td></tr>
+<tr class="separator:ab257f7aff043b4d60d963e1bfd1fe35f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad407a4a4139183be7c4293fb254c96d7"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#ad407a4a4139183be7c4293fb254c96d7">altitudeUnite</a></td></tr>
+<tr class="separator:ad407a4a4139183be7c4293fb254c96d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8f6b2080769949ae5bd41c8312a6892"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_esp32.html#ae8f6b2080769949ae5bd41c8312a6892">couleur</a></td></tr>
+<tr class="separator:ae8f6b2080769949ae5bd41c8312a6892"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Declaration de la classe <a class="el" href="class_esp32.html" title="Declaration de la classe Esp32. ">Esp32</a>. </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a class="anchor" id="abf9de8dee58d0105a551455874f29c19"></a>
 <div class="memitem">
 <div class="memproto">
@@ -210,7 +243,7 @@ Fonctions membres publiques</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>contructeur de la classe <a class="el" href="class_esp32.html">Esp32</a> </p>
+<p>contructeur de la classe <a class="el" href="class_esp32.html" title="Declaration de la classe Esp32. ">Esp32</a> </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">parent</td><td></td></tr>
@@ -241,7 +274,7 @@ Fonctions membres publiques</h2></td></tr>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a31b691e6c75c1f9859bde4c0df8fe12f_icgraph.svg" width="331" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a31b691e6c75c1f9859bde4c0df8fe12f_icgraph.svg" width="464" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -267,7 +300,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_aad3c2e4b5d15a02abc62d0329f43942d_icgraph.svg" width="362" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_aad3c2e4b5d15a02abc62d0329f43942d_icgraph.svg" width="495" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -293,7 +326,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_ac695656654b5d83ec3924b47f533f465_icgraph.svg" width="332" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_ac695656654b5d83ec3924b47f533f465_icgraph.svg" width="656" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -319,7 +352,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a87f581ef8f01bcb71a7294cc545b242e_icgraph.svg" width="339" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a87f581ef8f01bcb71a7294cc545b242e_icgraph.svg" width="472" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -345,7 +378,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_ab2a1fc92c11af031814569f3d2836f33_icgraph.svg" width="370" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_ab2a1fc92c11af031814569f3d2836f33_icgraph.svg" width="503" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -371,7 +404,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_aa2cdabace1ce70928c53d25e306a16d1_icgraph.svg" width="350" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_aa2cdabace1ce70928c53d25e306a16d1_icgraph.svg" width="483" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -397,7 +430,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a50f4ef373379d2dbc0fd960438ab6f93_icgraph.svg" width="380" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a50f4ef373379d2dbc0fd960438ab6f93_icgraph.svg" width="514" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -423,7 +456,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a31155a36108b37febae371d9ae65385a_icgraph.svg" width="338" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a31155a36108b37febae371d9ae65385a_icgraph.svg" width="471" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -449,7 +482,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a398d4a1cbc61f7af2f3af7ecbcf2f93f_icgraph.svg" width="368" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a398d4a1cbc61f7af2f3af7ecbcf2f93f_icgraph.svg" width="502" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -475,7 +508,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_ae29854a5127d760a216f96ec7d797412_icgraph.svg" width="346" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_ae29854a5127d760a216f96ec7d797412_icgraph.svg" width="479" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -501,7 +534,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a548ed7533f742d087c65df256479ed00_icgraph.svg" width="376" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a548ed7533f742d087c65df256479ed00_icgraph.svg" width="510" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -526,7 +559,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_adb339413686f3d78df1ecd41f106fd4e_icgraph.svg" width="360" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_adb339413686f3d78df1ecd41f106fd4e_icgraph.svg" width="494" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -552,7 +585,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_ae20c976b79f87de083ca8ee49b2abf25_icgraph.svg" width="391" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_ae20c976b79f87de083ca8ee49b2abf25_icgraph.svg" width="524" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -584,7 +617,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_aeb2268155501f27e36e6a7c6caa15412_icgraph.svg" width="600" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_aeb2268155501f27e36e6a7c6caa15412_icgraph.svg" width="1242" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -616,7 +649,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a69b0c6a1c0a31e043b715be3fc40ded1_icgraph.svg" width="631" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a69b0c6a1c0a31e043b715be3fc40ded1_icgraph.svg" width="1272" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -648,7 +681,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a32d0d1abb41a3762a54e9f5a33b3b247_icgraph.svg" width="622" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a32d0d1abb41a3762a54e9f5a33b3b247_icgraph.svg" width="1263" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -680,7 +713,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_add0a064335e1ac6d96e1bbb7818d299a_icgraph.svg" width="608" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_add0a064335e1ac6d96e1bbb7818d299a_icgraph.svg" width="1250" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -712,7 +745,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_ae9b2704f36bcd246668354d0ac06ea35_icgraph.svg" width="639" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_ae9b2704f36bcd246668354d0ac06ea35_icgraph.svg" width="1280" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -744,7 +777,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_ae60b48e8c808a5108402d5b9f03590ac_icgraph.svg" width="619" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_ae60b48e8c808a5108402d5b9f03590ac_icgraph.svg" width="1260" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -776,7 +809,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a36450bcd23e7676d1f0a46e8bec31275_icgraph.svg" width="650" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a36450bcd23e7676d1f0a46e8bec31275_icgraph.svg" width="1291" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -808,7 +841,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a583358abbf0b279dabb5a2976f1783de_icgraph.svg" width="607" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a583358abbf0b279dabb5a2976f1783de_icgraph.svg" width="1248" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -840,7 +873,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a3c6dd57f955aef0738c48be705538337_icgraph.svg" width="638" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a3c6dd57f955aef0738c48be705538337_icgraph.svg" width="1279" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -872,7 +905,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a85dc760b771c9233fa094a49679d9286_icgraph.svg" width="615" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a85dc760b771c9233fa094a49679d9286_icgraph.svg" width="1256" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -904,7 +937,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_abf8a7f9942150b6c17cc5d1cc7b0fc8a_icgraph.svg" width="646" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_abf8a7f9942150b6c17cc5d1cc7b0fc8a_icgraph.svg" width="1287" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -936,7 +969,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a8e7a509ed5704bee4bc527ae297f14f0_icgraph.svg" width="630" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a8e7a509ed5704bee4bc527ae297f14f0_icgraph.svg" width="1271" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -968,9 +1001,283 @@ Voici le graphe des appelants de cette fonction :</div>
 <p><div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a709c261e1cea7b6bbd2ea1b09b1d7ec0_icgraph.svg" width="660" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_esp32_a709c261e1cea7b6bbd2ea1b09b1d7ec0_icgraph.svg" width="1302" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des données membres</h2>
+<a class="anchor" id="ab257f7aff043b4d60d963e1bfd1fe35f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Esp32::altitude</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>variable qui stocke l'unite de pression </p>
+
+</div>
+</div>
+<a class="anchor" id="ad407a4a4139183be7c4293fb254c96d7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString Esp32::altitudeUnite</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>variable qui stocke l'altitude </p>
+
+</div>
+</div>
+<a class="anchor" id="ae8f6b2080769949ae5bd41c8312a6892"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Esp32::couleur</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>variable qui stocke l'unite de l'altitude </p>
+
+</div>
+</div>
+<a class="anchor" id="a7ad1a81c0a3cb29035aaef89d153f662"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Esp32::humidite</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>variable qui stocke l'unite de ressenti </p>
+
+</div>
+</div>
+<a class="anchor" id="a90c1ea9a5598c16a7918205185aa9fd6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString Esp32::humiditeUnite</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>variable qui stocke l'humidite </p>
+
+</div>
+</div>
+<a class="anchor" id="aa6ce86f87c88d7fd29880e9865fefefc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Esp32::luminosite</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>variable qui stocke l'unite de l'humidite </p>
+
+</div>
+</div>
+<a class="anchor" id="a67087c5b6b76b64f929dbc255a7d5441"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString Esp32::luminositeUnite</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>variable qui stocke la luminosite </p>
+
+</div>
+</div>
+<a class="anchor" id="a7ddfb5679b439b204a93f775cfa9d2fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Esp32::pression</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>variable qui stocke l'unite de la luminosite </p>
+
+</div>
+</div>
+<a class="anchor" id="aad1ead1e2c830025af0eebcdb30bcafe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString Esp32::pressionUnite</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>variable qui stocke la pression </p>
+
+</div>
+</div>
+<a class="anchor" id="a08425470633629dae05f61659ff90375"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Esp32::ressentie</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>variable qui stocke l'unite de la temperature </p>
+
+</div>
+</div>
+<a class="anchor" id="a5333681c08a07f1877c20cfe88b7024f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString Esp32::ressentieUnite</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>variable qui stocke le ressenti </p>
+
+</div>
+</div>
+<a class="anchor" id="a8274802633ca34c07fbfe7fa38a171a8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Esp32::temperature</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>modifier l'etat de la led </p>
+
+</div>
+</div>
+<a class="anchor" id="a825526f0d6b74fda9ddeba7e67ec9dd5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString Esp32::temperatureUnite</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>variable qui stocke la temperature </p>
 
 </div>
 </div>

@@ -1,6 +1,11 @@
 <map id="Transmission::portFerme" name="Transmission::portFerme">
-<area shape="rect" id="node2" href="$class_transmission.html#a14d36ad615852d6b630fbddf5787f3a3" title="cette methode ferme le port serie " alt="" coords="239,56,408,83"/>
-<area shape="rect" id="node5" href="$class_transmission.html#a21e35372ada18cd35411c0e8c0984fd7" title="envoyer les données par le port serie " alt="" coords="220,5,427,32"/>
-<area shape="rect" id="node3" href="$class_ihm.html#af0426507c2130aefd01bdb4f825ae168" title="Méthode qui actualise l&#39;etat de la led dans ihm et change le radiobutton activer en fontion de l&#39;etat..." alt="" coords="501,5,643,32"/>
-<area shape="rect" id="node4" href="$class_transmission.html#adcdc6012d99ddb1d0c3159d50984e146" title="destructeur de la classe Transmission " alt="" coords="475,56,669,83"/>
+<area shape="rect" id="node2" href="$class_transmission.html#a14d36ad615852d6b630fbddf5787f3a3" title="cette methode ferme le port serie " alt="" coords="239,71,408,98"/>
+<area shape="rect" id="node5" href="$class_transmission.html#a21e35372ada18cd35411c0e8c0984fd7" title="envoyer les données par le port serie " alt="" coords="220,229,427,255"/>
+<area shape="rect" id="node3" href="$class_ihm.html#abcdae03ce7e83266fb9d3e795df8a171" title="bouton qui ferme le port serie " alt="" coords="486,5,666,47"/>
+<area shape="rect" id="node4" href="$class_transmission.html#adcdc6012d99ddb1d0c3159d50984e146" title="destructeur de la classe Transmission " alt="" coords="479,71,673,98"/>
+<area shape="rect" id="node6" href="$class_ihm.html#afd32da9e614eba44bb1d3630b48e6075" title="recuperer le texte de la lineEdit dans l&#39;onglet operateur pour l&#39;envoyer par le port serie ..." alt="" coords="483,123,669,164"/>
+<area shape="rect" id="node7" href="$class_ihm.html#a731ee780915cb90a5dfb11f2e02144c9" title="envoit une trame pour allumer la led en rouge " alt="" coords="477,188,675,229"/>
+<area shape="rect" id="node8" href="$class_ihm.html#afef5bfaa83383427e615d21d9474f466" title="envoit une trame pour allumer la led en vert " alt="" coords="484,253,668,295"/>
+<area shape="rect" id="node9" href="$class_ihm.html#a7e000e198b11fc38a4459f7749561ded" title="envoit une trame pour allumer la led en orange " alt="" coords="475,319,677,360"/>
+<area shape="rect" id="node10" href="$class_ihm.html#a1e328a2e8165bbef347e901f1bc5534d" title="envoit une trame pour eteindre la led " alt="" coords="487,384,665,425"/>
 </map>

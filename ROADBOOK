@@ -71,6 +71,24 @@ enregistrement et chargement de la configuration du port depuis un fichier .ini
 creation documentation
 rendu 2.1
 
+03/01/20
+
+rectification remarque 2.1
+
+
+08/01/20
+
+ajout classe Meteo pour la communication avec l'api openweather
+creatin get et set classe Meteo
+envoye requete a l'api de openweather
+ajouter diagramme de classe pour chaque classe(doxywizard parametre).
+enlever qDebug() en release.
+decodage Json.
+affichage donnée de la meteo de la ville choisie dans l'Ihm (onglet Meteo).
+
+
+
+
 
 
 
