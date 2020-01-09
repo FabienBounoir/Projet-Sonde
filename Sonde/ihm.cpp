@@ -38,7 +38,10 @@ Ihm::Ihm(QWidget *parent) :
     connect(transmission, SIGNAL(portOuvert()), this, SLOT(desactiverOuverturePort()));
     connect(transmission, SIGNAL(portFerme()), this, SLOT(desactiverFermerPort()));
     connect(meteo, SIGNAL(donnerMeteoMiseAJour()), this, SLOT(actualiserAffichageMeteo()));
-
+    connect(transmission, SIGNAL(nouvelleAppareilDisponible()), this, SLOT(mettreAjourAppareilBluetoothDisponible()));
+    connect(transmission, SIGNAL(scanfini()), this, SLOT(actualiserAffichageBluetooth()));
+    connect(transmission, SIGNAL(connecter()), this, SLOT(actualiserMessageStatutBluetooth()));
+    connect(transmission, SIGNAL(deconnecter()), this, SLOT(actualiserMessageStatutBluetooth()));
 }
 
 /**
@@ -106,8 +109,9 @@ void Ihm::initialiserInterface()
     ui->comboBoxDebitBaud->addItems(QStringList{"1200", "1800", "2400", "4800", "9600", "19200", "38400", "57600", "115200", "230400", "460800"});
     ui->comboBoxBitsDonnees->addItems(QStringList{"5", "6", "7", "8"});
     ui->comboBoxBitsStop->addItems(QStringList{"1", "2"});
-
+    ui->pushButtonConnection->setDisabled(true);
     chargerConfigurationPort();
+
 }
 
 /**
@@ -265,7 +269,7 @@ void Ihm::desactiverFermerPort()
 
 /**
  * @brief   remet les lcdNumber a zero quand le port est fermer
- *initialiserAffichage
+ *
  * @fn Ihm::initialiserAffichage
  */
 void Ihm::initialiserAffichage()
@@ -278,6 +282,11 @@ void Ihm::initialiserAffichage()
     ui->lcdNumberAltitude->display("----");
 }
 
+/**
+ * @brief fonction qui actualise les différente donné de la météo
+ *
+ * @fn Ihm::actualiserAffichageMeteo
+ */
 void Ihm::actualiserAffichageMeteo()
 {
     ui->lcdNumberTemperatureMeteo->display(meteo->getTemperature());
@@ -342,10 +351,79 @@ void Ihm::on_radioButtonLedOff_clicked()
 }
 
 
+/**
+ * @brief fonction qui envoit la ville contenue dans la line edit
+ *
+ * @fn Ihm::on_pushButtonVille_clicked
+ */
 void Ihm::on_pushButtonVille_clicked()
 {
     if(ui->lineEditVille->text() != "")
     {
         meteo->recupererDonnerMeteo(ui->lineEditVille->text());
     }
+}
+
+
+/**
+ * @brief fonction qui met a jour les appareil bluetooth disponible
+ *
+ * @fn Ihm::mettreAjourAppareilBluetoothDisponible
+ */
+void Ihm::mettreAjourAppareilBluetoothDisponible()
+{
+     ui->comboBoxBluetooth->clear();
+     ui->comboBoxBluetooth->addItems(transmission->getAppareilDisponible());
+}
+
+/**
+ * @brief fonction appelée quand le bouton scan est cliqué
+ *
+ * @fn Ihm::on_pushButtonScan_clicked
+ */
+void Ihm::on_pushButtonScan_clicked()
+{
+    /*for (int i = 0; i <= ui->comboBoxBluetooth->count(); i++)
+            ui->comboBoxBluetooth->removeItem(i);*/
+    ui->comboBoxBluetooth->clear();
+    ui->pushButtonScan->setEnabled(false);
+    ui->pushButtonConnection->setEnabled(false);
+    ui->labelStatut->setText("<font color=\"#bd2c2c\">scan en cours...</font>");
+    transmission->demarrerScan();
+}
+
+/**
+ * @brief fonction qui actualise l'affichage de la parti bluetooth
+ *
+ * @fn Ihm::actualiserAffichageBluetooth
+ */
+void Ihm::actualiserAffichageBluetooth()
+{
+    ui->pushButtonScan->setEnabled(true);
+    ui->pushButtonConnection->setEnabled(true);
+    ui->labelStatut->setText("<font color=\"#19B2AD\">scan terminé</font>");
+}
+
+/**
+ * @brief fonction appelée quand le bouton connexion est cliqué
+ *
+ * @fn Ihm::on_pushButtonConnection_clicked
+ */
+void Ihm::on_pushButtonConnection_clicked()
+{
+    if(ui->comboBoxBluetooth->currentText() != "")
+    {
+        ui->labelStatut->setText("<font color=\"#21618c\">Connection en cours...</font>");
+        transmission->connecterAppareilBluetooth(ui->comboBoxBluetooth->currentText());
+    }
+}
+
+/**
+ * @brief fonction qui actualiser dans l'ihm le statut de la connection avec l'appareil
+ *
+ * @fn Ihm::actualiserMessageStatutBluetooth
+ */
+void Ihm::actualiserMessageStatutBluetooth()
+{
+    ui->labelStatut->setText("<font color=\"#f39c12\">" + transmission->getStatutBluetooth() + "</font>");
 }

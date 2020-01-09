@@ -86,6 +86,14 @@ enlever qDebug() en release.
 decodage Json.
 affichage donnée de la meteo de la ville choisie dans l'Ihm (onglet Meteo).
 
+09/01/20
+
+correction bug requete Api openweather
+voir les appareils bluetooth disponible
+connection possible(presque)
+
+
+
 
 
 

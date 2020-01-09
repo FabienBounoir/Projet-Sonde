@@ -5,7 +5,8 @@
 #-------------------------------------------------
 
 QT       += core gui \
-            serialport network
+            serialport network \
+            bluetooth
 
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets

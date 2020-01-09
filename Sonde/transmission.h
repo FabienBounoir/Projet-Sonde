@@ -5,6 +5,13 @@
 #include <QString>
 #include <QSerialPort>
 #include <unistd.h>
+
+#include <qbluetoothaddress.h>
+#include <qbluetoothservicediscoveryagent.h>
+#include <QLowEnergyController>
+#include <QBluetoothLocalDevice>
+#include <QBluetoothSocket>
+
 #include "esp32.h"
 
 class Esp32;
@@ -33,27 +40,48 @@ public:
 
     QString getTrame() const;                            /** recuperer la trame */
     Esp32 *getEsp32() const;                             /** recuperer l'objet */
+    QStringList getAppareilDisponible() const;               /** recuperer les appareil disponible */
+    QString getStatutBluetooth() const;                      /** recuperer les message de statut de la connection */
+    void setStatutBluetooth(QString statutBluetooth);        /** modifier le statut de la connection bluetooth */
+    void setAppareilDisponible(QString appareilDisponible);  /** modifier la liste des appareil bluetooth disponible*/
 
     void configurerPort(QString portCommunication, QString DebitBaud, QString BitsDonnees, QString BitsStop);  /** configurer le port de transmission*/
     void fermerPort();                                   /** fermer le port de transmission */
     void envoyerDonnees(QString envoyerTrame);           /** envoyer donner sur le port serie */
     void ouvrirPort();                                   /** Méthode appelée pour ouvrir le port série */
+    void demarrerScan();                                 /** methode appelée pour demarrer le scan*/
+    void connecterAppareilBluetooth(QString appareil);   /** methode appelée pour connecter un appareil bluetooth */
 
 signals:
     void trameRecue();                                   /** signal emit quand une nouvelle trame est recu*/
     void portOuvert();                                   /** signal emit quand le port est ouvert */
     void portFerme();                                    /** signal emit quand le port est fermer */
+    void nouvelleAppareilDisponible();                   /** signal emit quand un nouvelle appareil est disponible */
+    void scanfini();                                     /** signal emit quand le scan est terminé*/
+    void connecter();                                    /** signal emit quand l'appareil est connecté*/
+    void deconnecter();                                  /** signal emit quand l'appareil est deconnecté*/
+
 
 public slots:
-    void recevoir();                                     /** methode appeler quand une nouvelle trame et disponible  */
+    void recevoir();                                             /** methode appeler quand une nouvelle trame et disponible  */
+    void ajouterAppareil(const QBluetoothDeviceInfo &info);      /** methode appeler quand de nouveau appareil son disponible */
+    void scanTerminer();                                         /** methode appeler quand le scan est terminé */
+    void socketConnected();                                      /** methode appeler quand l'appareil est connecté */
+    void socketDisconnected();                                   /** methode appeler quand l'appareil est deconnecté*/
 
 private:
 
-    Esp32* esp32;           //!< objet esp32
-    QSerialPort *port;      //!< objet port
+    Esp32* esp32;                           //!< objet esp32
+    QSerialPort *port;                      //!< objet port
+    QBluetoothDeviceDiscoveryAgent *scan;   //!<objet scan
+    QLowEnergyController *m_controller;     //!< objet m_controller
+    QBluetoothSocket *socket;               //!< objet socket
 
-    QString trame;          /** stockage de la trame recu */
-    void decomposer();      /** decomposition de la trame recu */
+    QString trame;                  /** stockage de la trame recu */
+    QString statutBluetooth;        /** stockage du statut de la connection bluetooth */
+    void decomposer();              /** decomposition de la trame recu */
+    QStringList appareilDisponible; /** stockage des appareil bluetooth disponible*/
+
 };
 
 #endif // TRANSMISSION_H

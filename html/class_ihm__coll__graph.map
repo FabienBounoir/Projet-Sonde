@@ -1,5 +1,5 @@
 <map id="Ihm" name="Ihm">
 <area shape="rect" id="node3" href="$class_meteo.html" title="Declaration de la classe Meteo. " alt="" coords="40,556,215,927"/>
-<area shape="rect" id="node5" href="$class_transmission.html" title="Declaration de la classe Transmission. " alt="" coords="197,951,337,1175"/>
+<area shape="rect" id="node5" href="$class_transmission.html" title="Declaration de la classe Transmission. " alt="" coords="197,951,399,1395"/>
 <area shape="rect" id="node6" href="$class_esp32.html" title="Declaration de la classe Esp32. " alt="" coords="273,132,437,532"/>
 </map>

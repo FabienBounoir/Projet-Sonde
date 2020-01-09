@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['recevoir',['recevoir',['../class_transmission.html#aa54a695d9d1c728ccab04f1d8030da41',1,'Transmission']]],
-  ['recupererdonnermeteo',['recupererDonnerMeteo',['../class_meteo.html#ab22f9ccb2e00900d9d7591c8520cb028',1,'Meteo']]],
-  ['replyfinished',['replyFinished',['../class_meteo.html#a3bb764a7af2d35df9018e0acb3a88127',1,'Meteo']]]
+  ['portferme',['portFerme',['../class_transmission.html#a4ec325c36d76fbf830253ff16e9783a7',1,'Transmission']]],
+  ['portouvert',['portOuvert',['../class_transmission.html#af4627b741806b2d4eb05fae07f2b0588',1,'Transmission']]]
 ];

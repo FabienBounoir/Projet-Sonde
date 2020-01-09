@@ -2,5 +2,5 @@ TODO
 
 version 3.0:
 
-connection bluetooth avec Esp32.
+connection bluetooth avec Esp32(scan fait / a finir la connection avec l'appareil bluetooth).
 Un affichage des données sous forme de graphiques ou de tableau.

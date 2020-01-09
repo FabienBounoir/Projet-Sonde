@@ -1,7 +1,9 @@
 <map id="Esp32::setTemperature" name="Esp32::setTemperature">
-<area shape="rect" id="node2" href="$class_transmission.html#aa2977705ec793b10bf3212a13e67b097" title="Décompose la trame reçue. " alt="" coords="212,13,391,39"/>
-<area shape="rect" id="node3" href="$class_transmission.html#aa54a695d9d1c728ccab04f1d8030da41" title="Récupérer la trame émise. " alt="" coords="439,13,593,39"/>
-<area shape="rect" id="node4" href="$class_transmission.html#a41d15e65be472e058b28869f8dfad392" title="Transmission::ouvrirPort" alt="" coords="641,13,805,39"/>
-<area shape="rect" id="node5" href="$class_transmission.html#ab4e82ab30c181a8e0d0c0257ea0e1f56" title="configure le port serie " alt="" coords="853,13,1043,39"/>
-<area shape="rect" id="node6" href="$class_ihm.html#a9ce167b94baead6e318bbd0c5254f842" title="bouton qui ouvre le port serie " alt="" coords="1091,5,1265,47"/>
+<area shape="rect" id="node2" href="$class_transmission.html#aa2977705ec793b10bf3212a13e67b097" title="Décompose la trame reçue. " alt="" coords="212,42,391,69"/>
+<area shape="rect" id="node3" href="$class_transmission.html#aa54a695d9d1c728ccab04f1d8030da41" title="Récupérer la trame émise. " alt="" coords="439,42,593,69"/>
+<area shape="rect" id="node4" href="$class_transmission.html#a41d15e65be472e058b28869f8dfad392" title="Transmission::ouvrirPort" alt="" coords="665,13,829,39"/>
+<area shape="rect" id="node7" href="$class_transmission.html#a5a21d201dd0096f96aec12264c2f03d9" title="Permets de se connecter à un appareil. " alt="" coords="641,64,853,105"/>
+<area shape="rect" id="node5" href="$class_transmission.html#ab4e82ab30c181a8e0d0c0257ea0e1f56" title="configure le port serie " alt="" coords="909,13,1099,39"/>
+<area shape="rect" id="node6" href="$class_ihm.html#a9ce167b94baead6e318bbd0c5254f842" title="bouton qui ouvre le port serie " alt="" coords="1155,5,1329,47"/>
+<area shape="rect" id="node8" href="$class_ihm.html#ac154e42263a45f12d696a03a7ed6890f" title="fonction appelée quand le bouton connexion est cliqué " alt="" coords="901,64,1107,105"/>
 </map>

@@ -22,6 +22,10 @@ Transmission::Transmission(QObject *parent) : QObject(parent), trame("")
 {
     esp32 = new Esp32(this);
     port = new QSerialPort(this);
+    scan = new QBluetoothDeviceDiscoveryAgent(this);
+
+    connect(scan, SIGNAL(deviceDiscovered(QBluetoothDeviceInfo)), this, SLOT(ajouterAppareil(QBluetoothDeviceInfo)));
+    connect(scan, SIGNAL(finished()), this, SLOT(scanTerminer()));
 }
 
 /**
@@ -54,6 +58,50 @@ QString Transmission::getTrame() const
 Esp32* Transmission::getEsp32() const
 {
     return esp32;
+}
+
+/**
+ * @brief return une liste des appareil bluetooth disponible
+ *
+ * @fn Transmission::getAppareilDisponible
+ * @return QStringList
+ */
+QStringList Transmission::getAppareilDisponible() const
+{
+    return appareilDisponible;
+}
+
+/**
+ * @brief return la statut de la connection avec l'appareil bluetooth
+ *
+ * @fn Transmission::getStatutBluetooth
+ * @return QString
+ */
+QString Transmission::getStatutBluetooth() const
+{
+    return statutBluetooth;
+}
+
+/**
+ * @brief permet de modifier le statut de la connection avec l'appareil bluetooth
+ *
+ * @fn Transmission::setStatutBluetooth
+ * @param statutBluetooth
+ */
+void Transmission::setStatutBluetooth(QString statutBluetooth)
+{
+    this->statutBluetooth = statutBluetooth;
+}
+/**
+ * @brief ajoute un appareil a la liste des appareilDisponible
+ *
+ * @fn Transmission::setAppareilDisponible
+ * @param appareilDisponible
+ */
+void Transmission::setAppareilDisponible(QString appareilDisponible)
+{
+    this->appareilDisponible << appareilDisponible;
+
 }
 
 /**
@@ -181,4 +229,87 @@ void Transmission::envoyerDonnees(QString envoyerTrame)
         qDebug() << __FUNCTION__ << " port non ouvert" << endl;
         emit portFerme();
     }
+}
+
+/**
+ * @brief cette fonction scan les appareils disponible
+ *
+ * @fn Transmission::demarrerScan
+ */
+void Transmission::demarrerScan()
+{
+    appareilDisponible.clear();
+    scan->start();
+}
+
+/**
+ * @brief ajout les appareil trouver dans une list pour les afficher dans l'IHM
+ *
+ * @fn Transmission::ajouterAppareil
+ * @param info
+ */
+void Transmission::ajouterAppareil(const QBluetoothDeviceInfo &info)
+{
+    //QString appareilDisponible = QString("%1 %2").arg(info.address().toString()).arg(info.name());
+    QString appareilDisponible = info.address().toString();
+    qDebug() <<"appareil trouver :"<< QString("%1 %2").arg(info.address().toString()).arg(info.name());
+    setAppareilDisponible(appareilDisponible);
+}
+
+/**
+ * @brief fonction appeler quand le scan est fini
+ *
+ * @fn Transmission::scanTerminer
+ */
+void Transmission::scanTerminer()
+{
+    qDebug() << "scan terminer";    
+    emit scanfini();
+    emit nouvelleAppareilDisponible();
+}
+
+/**
+ * @brief Permets de se connecter à un appareil.
+ *
+ * @fn Transmission::connecterAppareilBluetooth
+ * @param appareil
+ */
+void Transmission::connecterAppareilBluetooth(QString appareil)
+{
+    socket = new QBluetoothSocket(QBluetoothServiceInfo::RfcommProtocol);
+    connect(socket, SIGNAL(connected()), this, SLOT(socketConnected()));
+    connect(socket, SIGNAL(disconnected()), this, SLOT(socketDisconnected()));
+    connect(socket, SIGNAL(readyRead()), this, SLOT(recevoir()));
+
+    QBluetoothAddress adresse = QBluetoothAddress(appareil);
+    QBluetoothUuid uuid = QBluetoothUuid(QBluetoothUuid::SerialPort);
+    socket->connectToService(adresse, uuid);
+    socket->open(QIODevice::ReadWrite);
+}
+
+/**
+ * @brief fonction appelée quand l'appareil est connecté
+ *
+ * @fn Transmission::socketConnected
+ */
+void Transmission::socketConnected()
+{
+    qDebug() << Q_FUNC_INFO << QString::fromUtf8("Périphérique connecté ") + socket->peerName() + " [" + socket->peerAddress().toString() + "]";
+    QString message = "connecter à " + socket->peerName();
+    setStatutBluetooth(message);
+    emit connecter();
+}
+
+/**
+ * @brief fonction appelée quand l'appareil est deconnecté
+ *
+ * @fn Transmission::socketDisconnected
+ */
+void Transmission::socketDisconnected()
+{
+    qDebug() << Q_FUNC_INFO;
+    QString message = QString::fromUtf8("Périphérique déconnecté ");
+    qDebug() << message;
+    setStatutBluetooth(message);
+    emit deconnecter();
 }

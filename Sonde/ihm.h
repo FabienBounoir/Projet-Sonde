@@ -58,7 +58,10 @@ private slots:
     void actualiserDonnee();                        /** met a jour les donner des LcdNumber dans l'onglet Données en fonction de la trame recu */
     void desactiverOuverturePort();                 /** Méthode appelée quand un port serie et ouvert */
     void desactiverFermerPort();                    /** Méthode appelée quand un port serie et fermer */
-    void actualiserAffichageMeteo();
+    void actualiserAffichageMeteo();                /** methode qui actualise les données de meteo reçu */
+    void mettreAjourAppareilBluetoothDisponible();  /** methode qui actualiser les appareil disponible*/
+    void actualiserAffichageBluetooth();            /** methode qui met à jour l'affichage des bouton(enable / disable)*/
+    void actualiserMessageStatutBluetooth();        /** methode qui met à jour le message de statut de la connection bluetooth*/
 
     void on_pushButtonOuvrirPort_clicked();         /** Méthode appelée dès que le bouton Ouvrir port et enclencher */
     void on_pushButtonFermerPort_clicked();         /** Méthode appelée dès que le bouton Fermer port et enclencher */
@@ -68,6 +71,8 @@ private slots:
     void on_radioButtonLedOrange_clicked();         /** Méthode appelée dès que le radio bouton LedOrange et enclencher */
     void on_radioButtonLedOff_clicked();            /** Méthode appelée dès que le radio bouton LedOff et enclencher */
     void on_pushButtonVille_clicked();              /** Méthode appelée dès que le radio bouton Ville et enclencher */
+    void on_pushButtonScan_clicked();               /** Méthode appelée dès que le push bouton Scan et enclencher */
+    void on_pushButtonConnection_clicked();         /** Méthode appelée dès que le push bouton Connection et enclencher */
 
 private:
     Ui::Ihm *ui;                                    //!< objet Ihm
