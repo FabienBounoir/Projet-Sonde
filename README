@@ -2,8 +2,8 @@ README
 
 Nom du logiciel : Sonde
 Date de début : 12/12/19
-Numéro de version du logiciel : 3.0
-Date de cette version du logiciel : 08/01/20
+Numéro de version du logiciel : 4.0
+Date de cette version du logiciel : 13/01/20
 Objectif : recuperer les données d'une sonde et les visualiser sur une Ihm
 Équipe de développement : Equipe-3
 			  BOUNOIR Fabien
@@ -26,6 +26,15 @@ Objectif : recuperer les données d'une sonde et les visualiser sur une Ihm
 
 3.0:
 -->visualiser les donnée meteo d'une ville.
--->connection a L'esp32 en bluetooth
+-->ajout de la connection par bluetooth a l'appareil esp32.
+	-->Statut de la connection bluetooth.
+	-->Recevoir la trame par Bluetooth.
+	-->controle de la led par Bluetooth.
+	-->scanner le reseaux pour voir les appareils bluetooth disponible.
+
+4.0:
+-->localisation de la position au demarrage du logiciel pour actualiser les données meteo.
+-->ajout graphique pour voir l'evolution temperature / humiditer / luminosite / pression.
+
 
 

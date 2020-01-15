@@ -1,6 +1,8 @@
 TODO
 
-version 3.0:
+version 4.0:
 
-connection bluetooth avec Esp32(scan fait / a finir la connection avec l'appareil bluetooth).
-Un affichage des données sous forme de graphiques ou de tableau.
+gps avec module gps.
+remediation du code.
+documentation a faire --> graphique.h \ graphique.cpp \ ihm.cpp \ transmission.cpp
+

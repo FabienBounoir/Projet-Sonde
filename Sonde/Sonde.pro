@@ -6,7 +6,9 @@
 
 QT       += core gui \
             serialport network \
-            bluetooth
+            bluetooth \
+            positioning \
+            charts
 
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -32,13 +34,15 @@ SOURCES += \
         ihm.cpp \
     transmission.cpp \
     esp32.cpp \
-    meteo.cpp
+    meteo.cpp \
+    graphique.cpp
 
 HEADERS += \
         ihm.h \
     transmission.h \
     esp32.h \
-    meteo.h
+    meteo.h \
+    graphique.h
 
 FORMS += \
         ihm.ui

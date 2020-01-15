@@ -10,7 +10,7 @@
  *
  * @brief Declaration de la classe Esp32
  *
- * @version 3.0
+ * @version 4.0
  *
  * @author Bounoir Fabien
  * @author Villesseche Ethan

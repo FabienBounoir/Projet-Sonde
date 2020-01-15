@@ -11,7 +11,7 @@
 * @author Bounoir Fabien
 * @author Villesseche Ethan
 *
-* @version 3.0
+* @version 4.0
 *
 */
 
@@ -32,16 +32,9 @@ Ihm::Ihm(QWidget *parent) :
 
     transmission = new Transmission(this);
     meteo = new Meteo(this);
+    graphique = new Graphique();
 
-    connect(transmission, SIGNAL(trameRecue()), this, SLOT(actualiserTrame()));
-    connect(transmission, SIGNAL(trameRecue()), this, SLOT(actualiserDonnee()));
-    connect(transmission, SIGNAL(portOuvert()), this, SLOT(desactiverOuverturePort()));
-    connect(transmission, SIGNAL(portFerme()), this, SLOT(desactiverFermerPort()));
-    connect(meteo, SIGNAL(donnerMeteoMiseAJour()), this, SLOT(actualiserAffichageMeteo()));
-    connect(transmission, SIGNAL(nouvelleAppareilDisponible()), this, SLOT(mettreAjourAppareilBluetoothDisponible()));
-    connect(transmission, SIGNAL(scanfini()), this, SLOT(actualiserAffichageBluetooth()));
-    connect(transmission, SIGNAL(connecter()), this, SLOT(actualiserMessageStatutBluetooth()));
-    connect(transmission, SIGNAL(deconnecter()), this, SLOT(actualiserMessageStatutBluetooth()));
+    initialiserConnect();
 }
 
 /**
@@ -52,8 +45,27 @@ Ihm::Ihm(QWidget *parent) :
 Ihm::~Ihm()
 {
     enregistrerConfigurationPort();
-
+    delete graphique;
     delete ui;
+}
+
+/**
+ * @brief initialise les connects
+ *
+ * @fn Ihm::initialiserConnect
+ */
+void Ihm::initialiserConnect()
+{
+    connect(transmission, SIGNAL(trameRecue()), this, SLOT(actualiserTrame()));
+    connect(transmission, SIGNAL(trameRecue()), this, SLOT(actualiserDonnee()));
+    connect(transmission, SIGNAL(portOuvert()), this, SLOT(desactiverOuverturePort()));
+    connect(transmission, SIGNAL(portFerme()), this, SLOT(desactiverFermerPort()));
+    connect(meteo, SIGNAL(donnerMeteoMiseAJour()), this, SLOT(actualiserAffichageMeteo()));
+    connect(transmission, SIGNAL(nouvelleAppareilDisponible()), this, SLOT(mettreAjourAppareilBluetoothDisponible()));
+    connect(transmission, SIGNAL(scanfini()), this, SLOT(actualiserAffichageBluetooth()));
+    connect(transmission, SIGNAL(connecter()), this, SLOT(actualiserMessageStatutConnecterBluetooth()));
+    connect(transmission, SIGNAL(deconnecter()), this, SLOT(actualiserMessageStatutDeconnecterBluetooth()));
+    connect(transmission, SIGNAL(socketErreur()), this, SLOT(actualiserMessageStatutErreurBluetooth()));
 }
 
 /**
@@ -63,14 +75,14 @@ Ihm::~Ihm()
  */
 void Ihm::enregistrerConfigurationPort()
 {
-    QSettings configurationport("Sonde.ini", QSettings::IniFormat);
+    QSettings configuration("Sonde.ini", QSettings::IniFormat);
 
-    configurationport.beginGroup("Port");
-    configurationport.setValue("Appareil", ui->comboBoxAppareil->currentText());
-    configurationport.setValue("DebitBauds", ui->comboBoxDebitBaud->currentText());
-    configurationport.setValue("BitsDonnee", ui->comboBoxBitsDonnees->currentText());
-    configurationport.setValue("BitsStop", ui->comboBoxBitsStop->currentText());
-    configurationport.endGroup();
+    configuration.beginGroup("PortSerie");
+    configuration.setValue("Appareil", ui->comboBoxAppareil->currentText());
+    configuration.setValue("DebitBauds", ui->comboBoxDebitBaud->currentText());
+    configuration.setValue("BitsDonnee", ui->comboBoxBitsDonnees->currentText());
+    configuration.setValue("BitsStop", ui->comboBoxBitsStop->currentText());
+    configuration.endGroup();
 }
 
 /**
@@ -80,12 +92,12 @@ void Ihm::enregistrerConfigurationPort()
  */
 void Ihm::chargerConfigurationPort()
 {
-    QSettings configurationport("Sonde.ini", QSettings::IniFormat);
+    QSettings configuration("Sonde.ini", QSettings::IniFormat);
 
-    ui->comboBoxAppareil->setCurrentText(configurationport.value("Port/Appareil","/dev/ttyUSB0").toString());
-    ui->comboBoxDebitBaud->setCurrentText(configurationport.value("Port/DebitBauds","1200").toString());
-    ui->comboBoxBitsDonnees->setCurrentText(configurationport.value("Port/BitsDonnee","5").toString());
-    ui->comboBoxBitsStop->setCurrentText(configurationport.value("Port/BitsStop","1").toString());
+    ui->comboBoxAppareil->setCurrentText(configuration.value("PortSerie/Appareil","/dev/ttyUSB0").toString());
+    ui->comboBoxDebitBaud->setCurrentText(configuration.value("PortSerie/DebitBauds","1200").toString());
+    ui->comboBoxBitsDonnees->setCurrentText(configuration.value("PortSerie/BitsDonnee","5").toString());
+    ui->comboBoxBitsStop->setCurrentText(configuration.value("PortSerie/BitsStop","1").toString());
 }
 
 /**
@@ -109,7 +121,10 @@ void Ihm::initialiserInterface()
     ui->comboBoxDebitBaud->addItems(QStringList{"1200", "1800", "2400", "4800", "9600", "19200", "38400", "57600", "115200", "230400", "460800"});
     ui->comboBoxBitsDonnees->addItems(QStringList{"5", "6", "7", "8"});
     ui->comboBoxBitsStop->addItems(QStringList{"1", "2"});
-    ui->pushButtonConnection->setDisabled(true);
+    ui->pushButtonConnexion->setDisabled(true);
+    ui->pushButtonDeconnexion->setDisabled(true);
+    ui->lineEditEnvoyerTrame->setDisabled(true);
+    ui->pushButtonEnvoyerTrame->setDisabled(true);
     chargerConfigurationPort();
 
 }
@@ -122,6 +137,7 @@ void Ihm::initialiserInterface()
 void Ihm::on_pushButtonQuitter_clicked()
 {
     this->close();
+    graphique->close();
 }
 
 /**
@@ -211,6 +227,11 @@ void Ihm::actualiserDonnee()
     ui->labelUniteAltitude->setText(transmission->getEsp32()->getAltitudeUnite());
 
     modifierEtatLed();
+
+    graphique->ajouterDonneeTemperature(transmission->getEsp32()->getTemperature());
+    graphique->ajouterDonneeHumidite(transmission->getEsp32()->getHumidite());
+    graphique->ajouterDonneeLuminosite(transmission->getEsp32()->getLuminosite());
+    graphique->ajouterDonneePression(transmission->getEsp32()->getPression());
 }
 
 
@@ -235,6 +256,19 @@ void Ihm::on_pushButtonFermerPort_clicked()
 }
 
 /**
+ * @brief active la possibilité de contrôler les leds
+ *
+ * @fn Ihm::ActiverControleLed
+ */
+void Ihm::ActiverControleLed()
+{
+    ui->radioButtonLedOff->setDisabled(false);
+    ui->radioButtonLedVert->setDisabled(false);
+    ui->radioButtonLedRouge->setDisabled(false);
+    ui->radioButtonLedOrange->setDisabled(false);
+}
+
+/**
  * @brief desactive des bouton de l'Ihm
  *
  * @fn Ihm::desactiverOuvrirPort
@@ -243,11 +277,27 @@ void Ihm::desactiverOuverturePort()
 {
     ui->pushButtonOuvrirPort->setDisabled(true);
     ui->pushButtonFermerPort->setDisabled(false);
+    ui->lineEditEnvoyerTrame->setDisabled(false);
+    ui->pushButtonEnvoyerTrame->setDisabled(false);
+    ui->lineEditEnvoyerTrame->setDisabled(false);
+    ui->pushButtonEnvoyerTrame->setDisabled(false);
+    ActiverControleLed();
 
-    ui->radioButtonLedOff->setDisabled(false);
-    ui->radioButtonLedVert->setDisabled(false);
-    ui->radioButtonLedRouge->setDisabled(false);
-    ui->radioButtonLedOrange->setDisabled(false);
+    desactiverConnexionBluetooth();
+}
+
+
+/**
+ * @brief Désactiver la possibilité de contrôler les leds
+ *
+ * @fn Ihm::DesactiverControleLed
+ */
+void Ihm::DesactiverControleLed()
+{
+    ui->radioButtonLedOff->setDisabled(true);
+    ui->radioButtonLedVert->setDisabled(true);
+    ui->radioButtonLedRouge->setDisabled(true);
+    ui->radioButtonLedOrange->setDisabled(true);
 }
 
 /**
@@ -259,12 +309,13 @@ void Ihm::desactiverFermerPort()
 {
     ui->pushButtonOuvrirPort->setDisabled(false);
     ui->pushButtonFermerPort->setDisabled(true);
+    ui->lineEditEnvoyerTrame->setDisabled(true);
+    ui->pushButtonEnvoyerTrame->setDisabled(true);
     initialiserAffichage();
 
-    ui->radioButtonLedOff->setDisabled(true);
-    ui->radioButtonLedVert->setDisabled(true);
-    ui->radioButtonLedRouge->setDisabled(true);
-    ui->radioButtonLedOrange->setDisabled(true);
+    DesactiverControleLed();
+
+    activerConnexionBluetooth();
 }
 
 /**
@@ -289,6 +340,7 @@ void Ihm::initialiserAffichage()
  */
 void Ihm::actualiserAffichageMeteo()
 {
+    ui->lineEditVille->setText(meteo->getVille());
     ui->lcdNumberTemperatureMeteo->display(meteo->getTemperature());
     ui->lcdNumberHumiditeMeteo->display(meteo->getHumidite());
     ui->lcdNumberRessentieMeteo->display(meteo->getRessentie());
@@ -360,10 +412,9 @@ void Ihm::on_pushButtonVille_clicked()
 {
     if(ui->lineEditVille->text() != "")
     {
-        meteo->recupererDonnerMeteo(ui->lineEditVille->text());
+        meteo->creerUrlVille(ui->lineEditVille->text());
     }
 }
-
 
 /**
  * @brief fonction qui met a jour les appareil bluetooth disponible
@@ -387,7 +438,8 @@ void Ihm::on_pushButtonScan_clicked()
             ui->comboBoxBluetooth->removeItem(i);*/
     ui->comboBoxBluetooth->clear();
     ui->pushButtonScan->setEnabled(false);
-    ui->pushButtonConnection->setEnabled(false);
+    ui->pushButtonConnexion->setEnabled(false);
+    ui->pushButtonDeconnexion->setEnabled(false);
     ui->labelStatut->setText("<font color=\"#bd2c2c\">scan en cours...</font>");
     transmission->demarrerScan();
 }
@@ -400,30 +452,150 @@ void Ihm::on_pushButtonScan_clicked()
 void Ihm::actualiserAffichageBluetooth()
 {
     ui->pushButtonScan->setEnabled(true);
-    ui->pushButtonConnection->setEnabled(true);
+    ui->pushButtonConnexion->setEnabled(true);
     ui->labelStatut->setText("<font color=\"#19B2AD\">scan terminé</font>");
 }
 
 /**
  * @brief fonction appelée quand le bouton connexion est cliqué
  *
- * @fn Ihm::on_pushButtonConnection_clicked
+ * @fn Ihm::on_pushButtonConnexion_clicked
  */
-void Ihm::on_pushButtonConnection_clicked()
+void Ihm::on_pushButtonConnexion_clicked()
 {
     if(ui->comboBoxBluetooth->currentText() != "")
     {
-        ui->labelStatut->setText("<font color=\"#21618c\">Connection en cours...</font>");
+        ui->labelStatut->setText("<font color=\"#21618c\">Connexion en cours...</font>");
         transmission->connecterAppareilBluetooth(ui->comboBoxBluetooth->currentText());
     }
 }
 
 /**
- * @brief fonction qui actualiser dans l'ihm le statut de la connection avec l'appareil
+ * @brief fonction qui actualiser dans l'ihm le statut de la connexion avec l'appareil
  *
  * @fn Ihm::actualiserMessageStatutBluetooth
  */
-void Ihm::actualiserMessageStatutBluetooth()
+void Ihm::actualiserMessageStatutConnecterBluetooth()
 {
     ui->labelStatut->setText("<font color=\"#f39c12\">" + transmission->getStatutBluetooth() + "</font>");
+    ui->pushButtonConnexion->setEnabled(false);
+    ui->pushButtonScan->setEnabled(false);
+    ui->pushButtonDeconnexion->setEnabled(true);
+    ui->lineEditEnvoyerTrame->setDisabled(false);
+    ui->pushButtonEnvoyerTrame->setDisabled(false);
+    desactiverConnexionPortSerie();
+    ActiverControleLed();
+}
+
+/**
+ * @brief met à jour le message de statut pour afficher que l'appareil est déconnecter
+ *
+ * @fn Ihm::actualiserMessageStatutDeconnecterBluetooth
+ */
+void Ihm::actualiserMessageStatutDeconnecterBluetooth()
+{
+    ui->labelStatut->setText("<font color=\"#7329b9\">" + transmission->getStatutBluetooth() + "</font>");
+    ui->pushButtonConnexion->setEnabled(true);
+    ui->pushButtonScan->setEnabled(true);
+    ui->pushButtonDeconnexion->setEnabled(false);
+    ui->lineEditEnvoyerTrame->setDisabled(true);
+    ui->pushButtonEnvoyerTrame->setDisabled(true);
+    initialiserAffichage();
+    DesactiverControleLed();
+}
+
+/**
+ * @brief met à jour le message de statut pour afficher une erreur
+ *
+ * @fn Ihm::actualiserMessageStatutErreurBluetooth
+ */
+void Ihm::actualiserMessageStatutErreurBluetooth()
+{
+    ui->labelStatut->setText("<font color=\"#7329b9\">" + transmission->getStatutBluetooth() + "</font>");
+}
+
+/**
+ * @brief Méthode appelée quand on clique sur le bouton deconnexion elle réactive la possibilité de se connecter en port série
+ *
+ * @fn Ihm::on_pushButtonDeconnexion_clicked
+ */
+void Ihm::on_pushButtonDeconnexion_clicked()
+{
+    transmission->deconnecterAppareilBluetooth();
+    activerConnexionPortSerie();
+}
+
+/**
+ * @brief active des objet de l'interface quand la connexion bluetooth est activer
+ *
+ * @fn Ihm::desactiverConnexionPortSerie
+ */
+void Ihm::desactiverConnexionPortSerie()
+{
+    ui->comboBoxAppareil->setDisabled(true);
+    ui->comboBoxDebitBaud->setDisabled(true);
+    ui->comboBoxBitsDonnees->setDisabled(true);
+    ui->comboBoxBitsStop->setDisabled(true);
+    ui->pushButtonOuvrirPort->setDisabled(true);
+    ui->pushButtonFermerPort->setDisabled(true);
+}
+
+/**
+ * @brief désactive des objet de l'interface quand la connexion bluetooth est activer
+ *
+ * @fn Ihm::activerConnexionPortSerie
+ */
+void Ihm::activerConnexionPortSerie()
+{
+    ui->comboBoxAppareil->setDisabled(false);
+    ui->comboBoxDebitBaud->setDisabled(false);
+    ui->comboBoxBitsDonnees->setDisabled(false);
+    ui->comboBoxBitsStop->setDisabled(false);
+    ui->pushButtonOuvrirPort->setDisabled(false);
+}
+
+/**
+ * @brief active des objet de l'interface quand la connexion bluetooth est activer
+ *
+ * @fn Ihm::desactiverConnexionBluetooth
+ */
+void Ihm::desactiverConnexionBluetooth()
+{
+    ui->comboBoxBluetooth->setDisabled(true);
+    ui->pushButtonScan->setDisabled(true);
+    ui->pushButtonConnexion->setDisabled(true);
+    ui->pushButtonDeconnexion->setDisabled(true);
+    ui->labelStatut->setText("<font color=\"#63cb23\">Connexion Serie en cours...</font>");
+
+}
+
+/**
+ * @brief désactive des objet de l'interface quand la connexion bluetooth est activer
+ *
+ * @fn Ihm::activerConnexionBluetooth
+ */
+void Ihm::activerConnexionBluetooth()
+{
+    ui->comboBoxBluetooth->setDisabled(false);
+    ui->pushButtonScan->setDisabled(false);
+    ui->pushButtonConnexion->setDisabled(false);
+    ui->pushButtonDeconnexion->setDisabled(false);
+    ui->labelStatut->setText("");
+}
+
+void Ihm::on_pushButtonGraphique_clicked()
+{
+    graphique->show();
+}
+
+void Ihm::on_checkBoxPleinEcran_stateChanged(int arg1)
+{
+    if(arg1 == 2)
+    {
+        showFullScreen();
+    }
+    else
+    {
+        showNormal();
+    }
 }

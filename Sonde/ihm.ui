@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>533</width>
-    <height>419</height>
+    <height>430</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -25,140 +25,151 @@
      <item>
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>3</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="Donnees">
         <attribute name="title">
          <string>Données</string>
         </attribute>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <layout class="QVBoxLayout" name="verticalLayout_6">
          <item>
-          <layout class="QGridLayout" name="gridLayout" columnstretch="0,0,0">
-           <property name="horizontalSpacing">
-            <number>6</number>
-           </property>
-           <item row="2" column="1">
-            <widget class="QLCDNumber" name="lcdNumberRessentie"/>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="labelRessentie">
-             <property name="text">
-              <string>Ressentie :</string>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <layout class="QGridLayout" name="gridLayout" columnstretch="0,0,0">
+             <property name="horizontalSpacing">
+              <number>6</number>
              </property>
-            </widget>
+             <item row="2" column="1">
+              <widget class="QLCDNumber" name="lcdNumberRessentie"/>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="labelRessentie">
+               <property name="text">
+                <string>Ressentie :</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="2">
+              <widget class="QLabel" name="labelUniteRessenti">
+               <property name="text">
+                <string>°C</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QLCDNumber" name="lcdNumberLuminosite"/>
+             </item>
+             <item row="5" column="0">
+              <widget class="QLabel" name="labelPression">
+               <property name="text">
+                <string>Pression :</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLCDNumber" name="lcdNumberTemperature"/>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="labelLuminositer">
+               <property name="text">
+                <string>Luminosité :</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="labelTemperature">
+               <property name="text">
+                <string>Température :</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="labelHumiditer">
+               <property name="text">
+                <string>Humidité :</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLCDNumber" name="lcdNumberHumidite"/>
+             </item>
+             <item row="1" column="2">
+              <widget class="QLabel" name="labelUniteTemperature">
+               <property name="text">
+                <string>°C</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="1">
+              <widget class="QLCDNumber" name="lcdNumberPression"/>
+             </item>
+             <item row="5" column="2">
+              <widget class="QLabel" name="labelUnitePression">
+               <property name="text">
+                <string>hPa</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="2">
+              <widget class="QLabel" name="labelUniteHumidite">
+               <property name="text">
+                <string>%</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <widget class="QLCDNumber" name="lcdNumberAltitude"/>
+             </item>
+             <item row="4" column="2">
+              <widget class="QLabel" name="labelUniteLuminosite">
+               <property name="text">
+                <string>Lux</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0">
+              <widget class="QLabel" name="labelAltitude">
+               <property name="text">
+                <string>Altitude :</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="2">
+              <widget class="QLabel" name="labelUniteAltitude">
+               <property name="text">
+                <string>Mètre</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1" colspan="2">
+              <widget class="QLabel" name="horodatage">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="labelHorodatage">
+               <property name="text">
+                <string>Horodatage :</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
-           <item row="2" column="2">
-            <widget class="QLabel" name="labelUniteRessenti">
-             <property name="text">
-              <string>°C</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <widget class="QLCDNumber" name="lcdNumberLuminosite"/>
-           </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="labelPression">
-             <property name="text">
-              <string>Pression :</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QLCDNumber" name="lcdNumberTemperature"/>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="labelLuminositer">
-             <property name="text">
-              <string>Luminosité :</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="labelTemperature">
-             <property name="text">
-              <string>Température :</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="labelHumiditer">
-             <property name="text">
-              <string>Humidité :</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <widget class="QLCDNumber" name="lcdNumberHumidite"/>
-           </item>
-           <item row="1" column="2">
-            <widget class="QLabel" name="labelUniteTemperature">
-             <property name="text">
-              <string>°C</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <widget class="QLCDNumber" name="lcdNumberPression"/>
-           </item>
-           <item row="5" column="2">
-            <widget class="QLabel" name="labelUnitePression">
-             <property name="text">
-              <string>hPa</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="2">
-            <widget class="QLabel" name="labelUniteHumidite">
-             <property name="text">
-              <string>%</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="1">
-            <widget class="QLCDNumber" name="lcdNumberAltitude"/>
-           </item>
-           <item row="4" column="2">
-            <widget class="QLabel" name="labelUniteLuminosite">
-             <property name="text">
-              <string>Lux</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0">
-            <widget class="QLabel" name="labelAltitude">
-             <property name="text">
-              <string>Altitude :</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="2">
-            <widget class="QLabel" name="labelUniteAltitude">
-             <property name="text">
-              <string>Mètre</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1" colspan="2">
-            <widget class="QLabel" name="horodatage">
+           <item>
+            <widget class="QLabel" name="ImageEtatLed">
              <property name="text">
               <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="labelHorodatage">
-             <property name="text">
-              <string>Horodatage :</string>
              </property>
             </widget>
            </item>
           </layout>
          </item>
          <item>
-          <widget class="QLabel" name="ImageEtatLed">
+          <widget class="QPushButton" name="pushButtonGraphique">
            <property name="text">
-            <string/>
+            <string>graphique</string>
            </property>
           </widget>
          </item>
@@ -430,7 +441,7 @@
              <property name="sizeHint" stdset="0">
               <size>
                <width>170</width>
-               <height>20</height>
+               <height>40</height>
               </size>
              </property>
             </spacer>
@@ -445,6 +456,13 @@
            <item row="7" column="1">
             <widget class="QComboBox" name="comboBoxBluetooth"/>
            </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="labelStatut">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
            <item row="8" column="1">
             <widget class="QPushButton" name="pushButtonScan">
              <property name="text">
@@ -453,16 +471,16 @@
             </widget>
            </item>
            <item row="9" column="1">
-            <widget class="QPushButton" name="pushButtonConnection">
+            <widget class="QPushButton" name="pushButtonConnexion">
              <property name="text">
-              <string>connection</string>
+              <string>connexion</string>
              </property>
             </widget>
            </item>
-           <item row="8" column="0">
-            <widget class="QLabel" name="labelStatut">
+           <item row="10" column="1">
+            <widget class="QPushButton" name="pushButtonDeconnexion">
              <property name="text">
-              <string/>
+              <string>deconnexion</string>
              </property>
             </widget>
            </item>
@@ -527,6 +545,20 @@
       <widget class="QCheckBox" name="ModeOperateur">
        <property name="text">
         <string>Mode Operateur</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBoxPleinEcran">
+       <property name="text">
+        <string>Plein Ecran</string>
        </property>
       </widget>
      </item>

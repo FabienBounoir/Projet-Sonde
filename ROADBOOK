@@ -90,11 +90,38 @@ affichage donnée de la meteo de la ville choisie dans l'Ihm (onglet Meteo).
 
 correction bug requete Api openweather
 voir les appareils bluetooth disponible
-connection possible(presque)
+connection possible
+
+10/01/20
+
+communication  avec l'esp32 en bluetooth.
+désactiver la possibilité de communiquer avec le port série quand une connexion bluetooth est active.
+ajout possibilité contrôlait la LED par la connexion bluetooth.
+ajout affichage statut connection bluetooth sur L'ihm (connection/deconnection/erreur).
+recherche bug.
+rendu 3.0
 
 
+13/01/20
+
+correction faute orthographe
+debut de la localisation gps
 
 
+14/01/20
+
+localisation de la position terminer.
+commencement creation graphique pour visualiser l'evolution des temperatures.
+
+
+15/01/20
+
+creation fênetre pour graphique
+creation graphique pour la temperature
+creation graphique humidité
+creation graphique luminosité
+creation graphique pression
+remediation du code (teste la trame avant de la decomposer).
 
 
 
