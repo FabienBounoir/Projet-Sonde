@@ -1,14 +1,18 @@
 README
 
 Nom du logiciel : Sonde
-Date de début : 12/12/19
+Date de début : 17/01/20
 Numéro de version du logiciel : 4.0
 Date de cette version du logiciel : 13/01/20
-Objectif : recuperer les données d'une sonde et les visualiser sur une Ihm
-Équipe de développement : Equipe-3
-			  BOUNOIR Fabien
-			  Villesseche Ethan
+Objectif : - recuperer les données d'une sonde et les visualiser sur une Ihm
+	   - controler une led depuis l'Ihm.
+ 	   - recuperer les données de temperature depuis l'api openwheater
+	   - recuperer la localisation grace a un gps.
+ 
+Équipe de développement : BOUNOIR Fabien <bounoirfabien@gmail.com>
 
+
+Version:
 1.0 :
 -->voir les differente donner de temperature
 -->mode operateur
@@ -33,8 +37,10 @@ Objectif : recuperer les données d'une sonde et les visualiser sur une Ihm
 	-->scanner le reseaux pour voir les appareils bluetooth disponible.
 
 4.0:
--->localisation de la position au demarrage du logiciel pour actualiser les données meteo.
+-->localisation de la position grace à un gps.
 -->ajout graphique pour voir l'evolution temperature / humiditer / luminosite / pression.
+-->recevoir notification pour voir l'etat de la connection bluetooth.
+
 
 
 

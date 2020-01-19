@@ -78,19 +78,19 @@ private slots:
     void on_radioButtonLedOff_clicked();            /** Méthode appelée dès que le radio bouton LedOff et enclencher */
     void on_pushButtonVille_clicked();              /** Méthode appelée dès que le radio bouton Ville et enclencher */
     void on_pushButtonScan_clicked();               /** Méthode appelée dès que le push bouton Scan et enclencher */
-    void on_pushButtonConnexion_clicked();         /** Méthode appelée dès que le push bouton Connexion et enclencher */
-
-    void on_pushButtonDeconnexion_clicked();
-
-    void on_pushButtonGraphique_clicked();
-
-    void on_checkBoxPleinEcran_stateChanged(int arg1);
+    void on_pushButtonConnexion_clicked();          /** Méthode appelée dès que le push bouton Connexion et enclencher */
+    void on_pushButtonDeconnexion_clicked();        /** Méthode appelée dès que le push bouton deconnexion et enclencher */
+    void on_pushButtonGraphique_clicked();          /** Méthode appelée dès que le push bouton graphique et enclencher */
+    void on_checkBoxPleinEcran_stateChanged(int arg1);  /** Méthode appelée dès que l'etat du checkBox plein ecran change */
+    void actualiserDonneeGps();                         /** Méthode qui met a jour la latitude et longitude dans l'Ihm */
+    void on_pushButtonEnvoyerCoordonnee_clicked();   /** bouton qui actualise l'etat les données meteo grace à la latitude et longitude*/
 
 private:
     Ui::Ihm *ui;                                    //!< objet Ihm
     Transmission* transmission;                     //!< objet transmission
     Meteo* meteo;                                   //!< objet meteo
-    Graphique* graphique;
+    Graphique* graphique;                           //!< objet graphique;
+    QProcess *proc;                                 //!< pointer proc
 
     void initialiserAffichage();                /** reinitialise les different lcdNumber a zero */
     void initialiserInterface();                /** cette fonction désactive certains Boutons ne pouvant être utilisé */

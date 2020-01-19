@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>533</width>
+    <width>608</width>
     <height>430</height>
    </rect>
   </property>
@@ -17,7 +17,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Ihm</string>
+   <string>Sonde</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -25,7 +25,7 @@
      <item>
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>0</number>
+        <number>4</number>
        </property>
        <widget class="QWidget" name="Donnees">
         <attribute name="title">
@@ -212,6 +212,9 @@
              </property>
             </widget>
            </item>
+           <item row="4" column="1">
+            <widget class="QLCDNumber" name="lcdNumberTempMaxMeteo"/>
+           </item>
            <item row="2" column="0">
             <widget class="QLabel" name="labelRessentieMeteo">
              <property name="text">
@@ -219,18 +222,15 @@
              </property>
             </widget>
            </item>
+           <item row="3" column="1">
+            <widget class="QLCDNumber" name="lcdNumberTempMinMeteo"/>
+           </item>
            <item row="1" column="0">
             <widget class="QLabel" name="labelTemperatureMeteo">
              <property name="text">
               <string>Température: </string>
              </property>
             </widget>
-           </item>
-           <item row="4" column="1">
-            <widget class="QLCDNumber" name="lcdNumberTempMaxMeteo"/>
-           </item>
-           <item row="3" column="1">
-            <widget class="QLCDNumber" name="lcdNumberTempMinMeteo"/>
            </item>
            <item row="1" column="2">
             <widget class="QLabel" name="labelUniteTemperatureMeteo">
@@ -260,6 +260,9 @@
              </property>
             </widget>
            </item>
+           <item row="5" column="1">
+            <widget class="QLCDNumber" name="lcdNumberPressionMeteo"/>
+           </item>
            <item row="5" column="0">
             <widget class="QLabel" name="labelPressionMeteo">
              <property name="text">
@@ -267,18 +270,15 @@
              </property>
             </widget>
            </item>
+           <item row="6" column="1">
+            <widget class="QLCDNumber" name="lcdNumberHumiditeMeteo"/>
+           </item>
            <item row="6" column="0">
             <widget class="QLabel" name="labelHumiditeMeteo">
              <property name="text">
               <string>Humidité</string>
              </property>
             </widget>
-           </item>
-           <item row="5" column="1">
-            <widget class="QLCDNumber" name="lcdNumberPressionMeteo"/>
-           </item>
-           <item row="6" column="1">
-            <widget class="QLCDNumber" name="lcdNumberHumiditeMeteo"/>
            </item>
            <item row="0" column="2">
             <widget class="QPushButton" name="pushButtonVille">
@@ -301,6 +301,27 @@
              </property>
             </widget>
            </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="labelCoordonnee">
+             <property name="text">
+              <string>Coordonnée</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QLabel" name="labelValeurCoordonnee">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="2">
+            <widget class="QPushButton" name="pushButtonEnvoyerCoordonnee">
+             <property name="text">
+              <string>Envoyer</string>
+             </property>
+            </widget>
+           </item>
           </layout>
          </item>
         </layout>
@@ -316,6 +337,20 @@
             <layout class="QVBoxLayout" name="verticalLayout_4">
              <item>
               <widget class="QLabel" name="labelEtatLed">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                 <underline>true</underline>
+                </font>
+               </property>
                <property name="text">
                 <string>Configurer la couleur de la LED :</string>
                </property>
@@ -329,6 +364,24 @@
                <property name="enabled">
                 <bool>true</bool>
                </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>13</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                 <stylestrategy>PreferDefault</stylestrategy>
+                 <kerning>true</kerning>
+                </font>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
                <property name="text">
                 <string>Rouge</string>
                </property>
@@ -336,6 +389,22 @@
              </item>
              <item>
               <widget class="QRadioButton" name="radioButtonLedVert">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>13</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
                <property name="text">
                 <string>Vert</string>
                </property>
@@ -343,6 +412,22 @@
              </item>
              <item>
               <widget class="QRadioButton" name="radioButtonLedOrange">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>13</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
                <property name="text">
                 <string>Orange</string>
                </property>
@@ -350,6 +435,22 @@
              </item>
              <item>
               <widget class="QRadioButton" name="radioButtonLedOff">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>13</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
                <property name="text">
                 <string>Eteint</string>
                </property>
@@ -367,94 +468,82 @@
         </attribute>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
-          <layout class="QFormLayout" name="formLayout">
-           <item row="0" column="0">
-            <widget class="QLabel" name="labelAppareil">
-             <property name="text">
-              <string>Appareil port serie:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QComboBox" name="comboBoxAppareil">
-             <property name="editable">
-              <bool>true</bool>
-             </property>
-             <property name="currentText">
-              <string>/dev/ttyUSB0</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="labelDebitBauds">
-             <property name="text">
-              <string>débit en bauds</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QComboBox" name="comboBoxDebitBaud">
-             <property name="editable">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
+          <layout class="QGridLayout" name="gridLayout_4">
            <item row="2" column="0">
             <widget class="QLabel" name="labelBitsDonnees">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="text">
               <string>Bits de données :</string>
              </property>
             </widget>
            </item>
-           <item row="2" column="1">
-            <widget class="QComboBox" name="comboBoxBitsDonnees"/>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="labelBitsStop">
-             <property name="text">
-              <string>Bits de stop :</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <widget class="QComboBox" name="comboBoxBitsStop"/>
-           </item>
-           <item row="4" column="0">
-            <widget class="QPushButton" name="pushButtonOuvrirPort">
-             <property name="text">
-              <string>Ouvrir port</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QPushButton" name="pushButtonFermerPort">
-             <property name="text">
-              <string>fermer port</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0">
-            <spacer name="verticalSpacer">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>170</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
            <item row="7" column="0">
             <widget class="QLabel" name="labelBluetooth">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="text">
               <string>Appareil Bluetooth :</string>
              </property>
             </widget>
            </item>
-           <item row="7" column="1">
-            <widget class="QComboBox" name="comboBoxBluetooth"/>
+           <item row="0" column="0">
+            <widget class="QLabel" name="labelAppareil">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Appareil port serie:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QPushButton" name="pushButtonConnexion">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="layoutDirection">
+              <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="autoFillBackground">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Connexion</string>
+             </property>
+             <property name="checkable">
+              <bool>false</bool>
+             </property>
+             <property name="autoRepeat">
+              <bool>false</bool>
+             </property>
+             <property name="autoDefault">
+              <bool>false</bool>
+             </property>
+             <property name="default">
+              <bool>false</bool>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
            </item>
            <item row="8" column="0">
             <widget class="QLabel" name="labelStatut">
@@ -463,26 +552,158 @@
              </property>
             </widget>
            </item>
-           <item row="8" column="1">
+           <item row="3" column="0">
+            <widget class="QLabel" name="labelBitsStop">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Bits de stop :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1" colspan="2">
+            <widget class="QComboBox" name="comboBoxBluetooth">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1" colspan="2">
+            <widget class="QComboBox" name="comboBoxBitsDonnees">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QPushButton" name="pushButtonOuvrirPort">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Ouvrir port</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="labelDebitBauds">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Débit en bauds :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1" colspan="2">
+            <widget class="QComboBox" name="comboBoxBitsStop">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1" colspan="2">
+            <widget class="QComboBox" name="comboBoxAppareil">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="editable">
+              <bool>true</bool>
+             </property>
+             <property name="currentText">
+              <string>/dev/ttyUSB0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1" colspan="2">
             <widget class="QPushButton" name="pushButtonScan">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="text">
               <string>Scan</string>
              </property>
             </widget>
            </item>
-           <item row="9" column="1">
-            <widget class="QPushButton" name="pushButtonConnexion">
+           <item row="5" column="2">
+            <widget class="QPushButton" name="pushButtonFermerPort">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="text">
-              <string>connexion</string>
+              <string>fermer port</string>
              </property>
             </widget>
            </item>
-           <item row="10" column="1">
-            <widget class="QPushButton" name="pushButtonDeconnexion">
-             <property name="text">
-              <string>deconnexion</string>
+           <item row="1" column="1" colspan="2">
+            <widget class="QComboBox" name="comboBoxDebitBaud">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="editable">
+              <bool>false</bool>
              </property>
             </widget>
+           </item>
+           <item row="9" column="2">
+            <widget class="QPushButton" name="pushButtonDeconnexion">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Deconnexion</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Expanding</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>150</width>
+               <height>50</height>
+              </size>
+             </property>
+            </spacer>
            </item>
           </layout>
          </item>
@@ -501,7 +722,7 @@
            <item>
             <widget class="QLabel" name="labelEnvoieTrame">
              <property name="text">
-              <string>envoie trame:</string>
+              <string>Envoie trame:</string>
              </property>
             </widget>
            </item>
@@ -543,6 +764,18 @@
     <layout class="QHBoxLayout" name="horizontalLayoutFooter">
      <item>
       <widget class="QCheckBox" name="ModeOperateur">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="text">
         <string>Mode Operateur</string>
        </property>
@@ -557,6 +790,18 @@
      </item>
      <item>
       <widget class="QCheckBox" name="checkBoxPleinEcran">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="text">
         <string>Plein Ecran</string>
        </property>
@@ -577,6 +822,18 @@
      </item>
      <item>
       <widget class="QPushButton" name="pushButtonQuitter">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="text">
         <string>Quitter</string>
        </property>

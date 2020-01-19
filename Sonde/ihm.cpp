@@ -33,6 +33,7 @@ Ihm::Ihm(QWidget *parent) :
     transmission = new Transmission(this);
     meteo = new Meteo(this);
     graphique = new Graphique();
+    proc = new QProcess();
 
     initialiserConnect();
 }
@@ -56,8 +57,11 @@ Ihm::~Ihm()
  */
 void Ihm::initialiserConnect()
 {
-    connect(transmission, SIGNAL(trameRecue()), this, SLOT(actualiserTrame()));
-    connect(transmission, SIGNAL(trameRecue()), this, SLOT(actualiserDonnee()));
+    connect(transmission, SIGNAL(trameEsp32Recue()), this, SLOT(actualiserTrame()));
+    connect(transmission, SIGNAL(trameEsp32Recue()), this, SLOT(actualiserDonnee()));
+    connect(transmission, SIGNAL(trameGpsRecue()), this, SLOT(actualiserTrame()));
+    connect(transmission, SIGNAL(trameGpsRecue()), this, SLOT(actualiserDonneeGps()));
+
     connect(transmission, SIGNAL(portOuvert()), this, SLOT(desactiverOuverturePort()));
     connect(transmission, SIGNAL(portFerme()), this, SLOT(desactiverFermerPort()));
     connect(meteo, SIGNAL(donnerMeteoMiseAJour()), this, SLOT(actualiserAffichageMeteo()));
@@ -125,6 +129,8 @@ void Ihm::initialiserInterface()
     ui->pushButtonDeconnexion->setDisabled(true);
     ui->lineEditEnvoyerTrame->setDisabled(true);
     ui->pushButtonEnvoyerTrame->setDisabled(true);
+    ui->pushButtonEnvoyerCoordonnee->setEnabled(false);
+    ui->labelValeurCoordonnee->setText("<font color=\"#bd2c2c\">Connecté un GPS</font>");
     chargerConfigurationPort();
 
 }
@@ -132,7 +138,7 @@ void Ihm::initialiserInterface()
 /**
  * @brief Méthode appelée lorsque le Bouton quitté est enclenché
  *
- * @fn Ihm::on_pushButton_Quitter_clicked
+ * @fn Ihm::on_pushButtonQuitter_clicked
  */
 void Ihm::on_pushButtonQuitter_clicked()
 {
@@ -168,7 +174,6 @@ void Ihm::actualiserTrame()
     QDateTime maintenant = QDateTime::currentDateTime();
     QString heure = maintenant.toString("hh:mm:ss");
 
-    ui->horodatage->setText(heure);
     ui->textEditTrame->setTextColor(Qt::red);
     ui->textEditTrame->append(heure + " :");
     ui->textEditTrame->setTextColor(Qt::black);
@@ -212,6 +217,10 @@ void Ihm::modifierEtatLed()
  */
 void Ihm::actualiserDonnee()
 {
+    QDateTime maintenant = QDateTime::currentDateTime();
+    QString heure = maintenant.toString("hh:mm:ss");
+    ui->horodatage->setText(heure);
+
     ui->lcdNumberTemperature->display(transmission->getEsp32()->getTemperature());
     ui->lcdNumberHumidite->display(transmission->getEsp32()->getHumidite());
     ui->lcdNumberRessentie->display(transmission->getEsp32()->getRessentie());
@@ -271,7 +280,7 @@ void Ihm::ActiverControleLed()
 /**
  * @brief desactive des bouton de l'Ihm
  *
- * @fn Ihm::desactiverOuvrirPort
+ * @fn Ihm::desactiverOuverturePort
  */
 void Ihm::desactiverOuverturePort()
 {
@@ -281,9 +290,14 @@ void Ihm::desactiverOuverturePort()
     ui->pushButtonEnvoyerTrame->setDisabled(false);
     ui->lineEditEnvoyerTrame->setDisabled(false);
     ui->pushButtonEnvoyerTrame->setDisabled(false);
+    ui->comboBoxAppareil->setDisabled(true);
+    ui->comboBoxBitsDonnees->setDisabled(true);
+    ui->comboBoxBitsStop->setDisabled(true);
+    ui->comboBoxDebitBaud->setDisabled(true);
+
     ActiverControleLed();
 
-    desactiverConnexionBluetooth();
+    //desactiverConnexionBluetooth();
 }
 
 
@@ -312,10 +326,14 @@ void Ihm::desactiverFermerPort()
     ui->lineEditEnvoyerTrame->setDisabled(true);
     ui->pushButtonEnvoyerTrame->setDisabled(true);
     initialiserAffichage();
-
+    ui->labelValeurCoordonnee->setText("<font color=\"#bd2c2c\">Connecté un GPS</font>");
+    ui->comboBoxAppareil->setDisabled(false);
+    ui->comboBoxBitsDonnees->setDisabled(false);
+    ui->comboBoxBitsStop->setDisabled(false);
+    ui->comboBoxDebitBaud->setDisabled(false);
     DesactiverControleLed();
 
-    activerConnexionBluetooth();
+    //activerConnexionBluetooth();
 }
 
 /**
@@ -331,6 +349,8 @@ void Ihm::initialiserAffichage()
     ui->lcdNumberLuminosite->display("----");
     ui->lcdNumberPression->display("----");
     ui->lcdNumberAltitude->display("----");
+
+    ui->ImageEtatLed->setPixmap(QPixmap(LED_OFF));
 }
 
 /**
@@ -434,13 +454,12 @@ void Ihm::mettreAjourAppareilBluetoothDisponible()
  */
 void Ihm::on_pushButtonScan_clicked()
 {
-    /*for (int i = 0; i <= ui->comboBoxBluetooth->count(); i++)
-            ui->comboBoxBluetooth->removeItem(i);*/
     ui->comboBoxBluetooth->clear();
     ui->pushButtonScan->setEnabled(false);
     ui->pushButtonConnexion->setEnabled(false);
     ui->pushButtonDeconnexion->setEnabled(false);
     ui->labelStatut->setText("<font color=\"#bd2c2c\">scan en cours...</font>");
+
     transmission->demarrerScan();
 }
 
@@ -473,17 +492,20 @@ void Ihm::on_pushButtonConnexion_clicked()
 /**
  * @brief fonction qui actualiser dans l'ihm le statut de la connexion avec l'appareil
  *
- * @fn Ihm::actualiserMessageStatutBluetooth
+ * @fn Ihm::actualiserMessageStatutConnecterBluetooth
  */
 void Ihm::actualiserMessageStatutConnecterBluetooth()
 {
     ui->labelStatut->setText("<font color=\"#f39c12\">" + transmission->getStatutBluetooth() + "</font>");
+
+    proc->execute("notify-send --icon=/usr/share/icons/hicolor/48x48/apps/bluetooth.png \"" + transmission->getStatutBluetooth() + "\" ");
+
     ui->pushButtonConnexion->setEnabled(false);
     ui->pushButtonScan->setEnabled(false);
     ui->pushButtonDeconnexion->setEnabled(true);
     ui->lineEditEnvoyerTrame->setDisabled(false);
     ui->pushButtonEnvoyerTrame->setDisabled(false);
-    desactiverConnexionPortSerie();
+    //desactiverConnexionPortSerie();
     ActiverControleLed();
 }
 
@@ -495,6 +517,9 @@ void Ihm::actualiserMessageStatutConnecterBluetooth()
 void Ihm::actualiserMessageStatutDeconnecterBluetooth()
 {
     ui->labelStatut->setText("<font color=\"#7329b9\">" + transmission->getStatutBluetooth() + "</font>");
+
+    proc->execute("notify-send --icon=/usr/share/icons/hicolor/48x48/apps/bluetooth.png \"" + transmission->getStatutBluetooth() + "\" ");
+
     ui->pushButtonConnexion->setEnabled(true);
     ui->pushButtonScan->setEnabled(true);
     ui->pushButtonDeconnexion->setEnabled(false);
@@ -522,7 +547,7 @@ void Ihm::actualiserMessageStatutErreurBluetooth()
 void Ihm::on_pushButtonDeconnexion_clicked()
 {
     transmission->deconnecterAppareilBluetooth();
-    activerConnexionPortSerie();
+    //activerConnexionPortSerie();
 }
 
 /**
@@ -583,11 +608,22 @@ void Ihm::activerConnexionBluetooth()
     ui->labelStatut->setText("");
 }
 
+/**
+ * @brief
+ *
+ * @fn Ihm::on_pushButtonGraphique_clicked
+ */
 void Ihm::on_pushButtonGraphique_clicked()
 {
     graphique->show();
 }
 
+/**
+ * @brief
+ *
+ * @fn Ihm::on_checkBoxPleinEcran_stateChanged
+ * @param arg1
+ */
 void Ihm::on_checkBoxPleinEcran_stateChanged(int arg1)
 {
     if(arg1 == 2)
@@ -598,4 +634,25 @@ void Ihm::on_checkBoxPleinEcran_stateChanged(int arg1)
     {
         showNormal();
     }
+}
+
+/**
+ * @brief
+ *
+ * @fn Ihm::actualiserDonneeGps
+ */
+void Ihm::actualiserDonneeGps()
+{
+    ui->labelValeurCoordonnee->setText(QString::number(transmission->getGps()->getLatitude()) + " " + QString::number(transmission->getGps()->getLongitude()));
+    ui->pushButtonEnvoyerCoordonnee->setEnabled(true);
+}
+
+/**
+ * @brief
+ *
+ * @fn Ihm::on_pushButtonEnvoyerCoordonnee_clicked
+ */
+void Ihm::on_pushButtonEnvoyerCoordonnee_clicked()
+{
+    meteo->creerUrlCoordonnerGps(transmission->getGps()->getLatitude(), transmission->getGps()->getLongitude());
 }

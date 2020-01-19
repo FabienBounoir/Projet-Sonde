@@ -18,9 +18,11 @@
  * @fn Transmission::Transmission
  * @param parent
  */
-Transmission::Transmission(QObject *parent) : QObject(parent), trame("")
+Transmission::Transmission(QObject *parent) : QObject(parent), trame(""), donneeLatDms(""), donneeLongDms(""), donneLatDD(0.), donneLongDD(0.),\
+  signeLat(""), signeLong("")
 {
     esp32 = new Esp32(this);
+    gps = new Gps();
     port = new QSerialPort(this);
     scan = new QBluetoothDeviceDiscoveryAgent(this);
     socket = new QBluetoothSocket(QBluetoothServiceInfo::RfcommProtocol);
@@ -39,6 +41,7 @@ Transmission::Transmission(QObject *parent) : QObject(parent), trame("")
 Transmission::~Transmission()
 {
     this->fermerPort();
+    delete gps;
     deconnecterAppareilBluetooth();
 }
 
@@ -62,6 +65,17 @@ QString Transmission::getTrame() const
 Esp32* Transmission::getEsp32() const
 {
     return esp32;
+}
+
+/**
+ * @brief return l'objet gps
+ *
+ * @fn Transmission::getGps
+ * @return Esp32
+ */
+Gps* Transmission::getGps() const
+{
+    return gps;
 }
 
 /**
@@ -165,7 +179,7 @@ void Transmission::fermerPort()
 }
 
 /**
- * @brief   Décompose la trame reçue
+ * @brief Décompose la trame reçue
  *
  * @fn Transmission::decomposer
  */
@@ -187,7 +201,50 @@ void Transmission::decomposer()
         esp32->setAltitudeUnite(trame.section(";",12,12));
         esp32->setCouleurLed(trame.section(";",17,17).toInt());
     }
-    emit trameRecue();
+    emit trameEsp32Recue();
+}
+
+/**
+ * @brief   Décompose la trame gps pour avoir la latitude et la longitude
+ *
+ * @fn Transmission::decomposerDonneeGps
+ */
+void Transmission::decomposerDonneeGps()
+{
+    if(trame.startsWith("$GPGGA") && trame.endsWith("\r\n"))
+    {
+        donneeLatDms = trame.section(",",2,2);
+        donneeLongDms = trame.section(",",4,4);
+        signeLat = trame.section(",",3,3);
+        signeLong = trame.section(",",5,5);
+
+        if(signeLat == "N")
+        {
+            donneLatDD = donneeLatDms.left(2).toDouble() + donneeLatDms.mid(2,2).toDouble()/60 + donneeLatDms.mid(5,2).toDouble()/3600;
+            qDebug() << "latitude DD:" << donneLatDD << endl;
+            gps->setLatitude(donneLatDD);
+        }
+        else if(signeLong == "S")
+        {
+            donneLatDD = donneeLatDms.left(2).toDouble() + donneeLatDms.mid(2,2).toDouble()/60 + donneeLatDms.mid(5,2).toDouble()/3600;
+            qDebug() << "latitude DD:" << donneLatDD * -1 << endl;
+            gps->setLatitude(donneLatDD * -1);
+        }
+
+        if(signeLong == "E")
+        {
+            donneLongDD = donneeLongDms.left(3).toDouble() + donneeLongDms.mid(2,2).toDouble()/60 + donneeLongDms.mid(5,2).toDouble()/3600;
+            qDebug() << "longitude DD:" << donneLongDD << endl;
+            gps->setLongitude(donneLongDD);
+        }
+        else if(signeLat == "W")
+        {
+            donneLongDD = donneeLongDms.left(3).toDouble() + donneeLongDms.mid(2,2).toDouble()/60 + donneeLongDms.mid(5,2).toDouble()/3600;
+            qDebug() << "longitude DD:" << donneLongDD * -1 << endl;
+            gps->setLongitude(donneLongDD * -1);
+        }
+    }
+    emit trameGpsRecue();
 }
 
 /**
@@ -197,13 +254,8 @@ void Transmission::decomposer()
  */
 void Transmission::recevoir()
 {
-        //trame = "$GPGGA,221938.000,4354.1123,N,00448.9145,E,2,08,1.15,26.9,M,49.2,M,0000,0000*55 \
-        $GPGSA,A,3,20,26,31,29,10,21,16,27,,,,,1.93,1.15,1.55*02 \
-        $GPRMC,221938.000,A,4354.1123,N,00448.9145,E,0.02,20.76,150120,,,D*58 \
-        $GPVTG,20.76,T,,M,0.02,N,0.04,K,D*0D"
-
     QByteArray donnees;
-        qDebug() << Q_FUNC_INFO;
+
         while(port->waitForReadyRead(10))
         {
             donnees += port->readAll();
@@ -212,15 +264,15 @@ void Transmission::recevoir()
 
         if(trame.startsWith("SONDE") && trame.endsWith("\r\n"))
         {
-            qDebug() << "trame Port serie reçu : " << trame << endl;
+            qDebug() << Q_FUNC_INFO << "trame Port serie reçu : " << trame << endl;
 
             this->decomposer();
         }
 
-        if(trame.startsWith("$GPGGA") && trame.endsWith("\r\n"))    /** @todo decomposer la trame Gps = https://www.generationrobots.com/fr/401920-adafruit-ultimate-gps-breakout-66-canaux-avec-mise-a-jour10-hz-v3.html**/
+        if(trame.startsWith("$GPGGA") && trame.endsWith("\r\n"))
         {
-            qDebug() << "trame Gps reçu : " << trame << endl;
-            this->decomposer();  /** @todo a changer**/
+            qDebug() << Q_FUNC_INFO << "trame Gps reçu : " << trame << endl;
+            this->decomposerDonneeGps();
         }
 }
 
@@ -239,17 +291,17 @@ void Transmission::envoyerDonnees(QString envoyerTrame)
 
         qDebug() << __FUNCTION__ << ": " << trame << endl;
     }
-    else if(socket->isOpen())
+
+    if(socket->isOpen())
     {
         const char* trame = envoyerTrame.toStdString().c_str();
         socket->write(trame);
 
         qDebug() << __FUNCTION__ << ": " << trame << endl;
     }
-    else
+
+    if(!socket->isOpen() && !port->isOpen())
     {
-        qDebug() << __FUNCTION__ << " port non ouvert" << endl;
-        qDebug() << __FUNCTION__ << " connexion bluetooth non ouvert" <<endl;
         emit portFerme();
     }
 }
@@ -261,6 +313,7 @@ void Transmission::envoyerDonnees(QString envoyerTrame)
  */
 void Transmission::demarrerScan()
 {
+    qDebug() << "scan en cour..." << endl;
     appareilDisponible.clear();
     scan->start();
 }
@@ -352,7 +405,7 @@ void Transmission::socketConnected()
 void Transmission::socketDisconnected()
 {
     qDebug() << Q_FUNC_INFO;
-    QString message = QString::fromUtf8("Périphérique déconnecté");
+    QString message = "Périphérique déconnecté";
     qDebug() << message;
     setStatutBluetooth(message);
     emit deconnecter();

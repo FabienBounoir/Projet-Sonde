@@ -35,14 +35,16 @@ SOURCES += \
     transmission.cpp \
     esp32.cpp \
     meteo.cpp \
-    graphique.cpp
+    graphique.cpp \
+    gps.cpp
 
 HEADERS += \
         ihm.h \
     transmission.h \
     esp32.h \
     meteo.h \
-    graphique.h
+    graphique.h \
+    gps.h
 
 FORMS += \
         ihm.ui

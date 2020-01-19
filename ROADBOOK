@@ -123,7 +123,19 @@ creation graphique luminosité
 creation graphique pression
 remediation du code (teste la trame avant de la decomposer).
 
+16/01/20
 
+creation classe Gps
+Décomposition de la trame GPS.
+conversion des valeurs du GPS de Degrés Sexagésimaux à Degrés Décimaux.
+affichage de la latitude et de la longitude dans l'Ihm.
+ajout possibiliser requete meteo à l'api openwheather avec la longitude et la latitude.
+
+17/01/20
+
+ajout de la gestion des axes (si la valeur recu est supérieure à la valeur de l'axe, cela metre à jour la valeur max de l'axe).
+possibiliter connection par bluetooth et serie en meme temps.
+rendu 4.0
 
 
 

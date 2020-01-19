@@ -25,7 +25,7 @@ class Esp32 : public QObject
 {
     Q_OBJECT
 public:
-    explicit Esp32(QObject *parent = nullptr);
+    explicit Esp32(QObject *parent = nullptr);          /** constructeur de la classe Esp32*/
 
     double getTemperature() const;                          /** recuperer la temperature */
     double getRessentie() const;                            /** recuperer le ressentie*/
@@ -46,7 +46,7 @@ public:
     void setRessentie(double ressentie);                    /** modifier la valeur de ressenti */
     void setTemperatureUnite(QString temperatureUnite);     /** modifier la valeur de l'uniter de temperature */
     void setRessentieUnite(QString ressentieUnite);         /** modifier la valeur de l'uniter de ressenti */
-    void setHumidite(int ressentieUnite);                   /** modifier la valeur de l'humidite */
+    void setHumidite(int humidite);                         /** modifier la valeur de l'humidite */
     void setLuminosite(int luminosite);                     /** modifier la valeur de luminosite */
     void setHumiditeUnite(QString humiditeUnite);           /** modifier la valeur de l'unite d'humidite */
     void setLuminositeUnite(QString luminositeUnite);       /** modifier la valeur de l'unite de luminosite */

@@ -13,8 +13,10 @@
 #include <QBluetoothSocket>
 
 #include "esp32.h"
+#include "gps.h"
 
 class Esp32;
+class Gps;
 
 /**
  * @file transmission.h
@@ -39,7 +41,8 @@ public:
     ~Transmission();                                     /** destructeur de la classe Transmission*/
 
     QString getTrame() const;                            /** recuperer la trame */
-    Esp32 *getEsp32() const;                             /** recuperer l'objet */
+    Esp32 *getEsp32() const;                             /** recuperer l'objet esp32*/
+    Gps *getGps() const;                                 /** recuperer l'objet gps */
     QStringList getAppareilDisponible() const;               /** recuperer les appareil disponible */
     QString getStatutBluetooth() const;                      /** recuperer les message de statut de la connexion */
     void setStatutBluetooth(QString statutBluetooth);        /** modifier le statut de la connexion bluetooth */
@@ -54,7 +57,8 @@ public:
     void deconnecterAppareilBluetooth();                 /** methode appelée pour deconnecter l'appareil bluetooth**/
 
 signals:
-    void trameRecue();                                   /** signal emit quand une nouvelle trame est recu*/
+    void trameEsp32Recue();                              /** signal emit quand une nouvelle trame Esp32 est recu*/
+    void trameGpsRecue();                                /** signal emit quand une nouvelle trame Gps est recu */
     void portOuvert();                                   /** signal emit quand le port est ouvert */
     void portFerme();                                    /** signal emit quand le port est fermer */
     void nouvelleAppareilDisponible();                   /** signal emit quand un nouvelle appareil est disponible */
@@ -73,16 +77,24 @@ public slots:
     void socketReadyRead();                                      /** methode appeler quand une trame est disponible */
 
 private:
+    QString trame;                  /** stockage de la trame recu */
+    QString donneeLatDms;           /** stockage des donnée de latitude en dms */
+    QString donneeLongDms;           /** stockage des donnée de longitude en dms */
+    double donneLatDD;           /** stockage des donnée de latitude en DD */
+    double donneLongDD;           /** stockage des donnée de longitude en DD */
+    QString signeLat;           /** stockage du signe de la latitude */
+    QString signeLong;           /** stockage du signe de la longitude */
 
     Esp32* esp32;                           //!< objet esp32
+    Gps* gps;                               //!< objet gps
     QSerialPort *port;                      //!< objet port
     QBluetoothDeviceDiscoveryAgent *scan;   //!< objet scan
     QLowEnergyController *m_controller;     //!< objet m_controller
     QBluetoothSocket *socket;               //!< objet socket
 
-    QString trame;                  /** stockage de la trame recu */
     QString statutBluetooth;        /** stockage du statut de la connexion bluetooth */
     void decomposer();              /** decomposition de la trame recu */
+    void decomposerDonneeGps();     /** decomposition de la trame Gps recu */
     QStringList appareilDisponible; /** stockage des appareil bluetooth disponible*/
 
 };

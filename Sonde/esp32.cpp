@@ -19,7 +19,7 @@
  * @param parent
  */
 Esp32::Esp32(QObject *parent) : QObject(parent), temperature(0.), temperatureUnite("°C"), ressentie(0.), ressentieUnite("°C"),\
-    humidite(0), humiditeUnite("%"), luminosite(0), luminositeUnite("Lux"), pression(0), pressionUnite("hPa"), altitude(0), altitudeUnite("Mètre"), couleur(1)
+    humidite(0), humiditeUnite("%"), luminosite(0), luminositeUnite("Lux"), pression(0), pressionUnite("hPa"), altitude(0), altitudeUnite("Mètre"), couleur(0)
 {
 
 }
