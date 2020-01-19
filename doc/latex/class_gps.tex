@@ -1,0 +1,206 @@
+\hypertarget{class_gps}{}\subsection{Référence de la classe Gps}
+\label{class_gps}\index{Gps@{Gps}}
+
+
+Declaration de la classe \hyperlink{class_gps}{Gps}.  
+
+
+
+
+{\ttfamily \#include \char`\"{}gps.\+h\char`\"{}}
+
+
+
+Graphe de collaboration de Gps\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_gps__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_gps_a10a73359b33c1357564ebc83fc078000}{Gps} ()
+\begin{DoxyCompactList}\small\item\em constructeur de la classe \hyperlink{class_gps}{Gps} \end{DoxyCompactList}\item 
+\hyperlink{class_gps_a9f076d88f081ae5c010cf150cb957b66}{$\sim$\+Gps} ()
+\begin{DoxyCompactList}\small\item\em destructeur de la classe \hyperlink{class_gps}{Gps} \end{DoxyCompactList}\item 
+double \hyperlink{class_gps_a44c6469bf67727853c06d4be037c6b0f}{get\+Latitude} () const 
+\begin{DoxyCompactList}\small\item\em return la valeur de la latitude \end{DoxyCompactList}\item 
+double \hyperlink{class_gps_a6ce8da770e213bfbf7f204b107d9e3f5}{get\+Longitude} () const 
+\begin{DoxyCompactList}\small\item\em return la valeur de la longitude \end{DoxyCompactList}\item 
+void \hyperlink{class_gps_aaabf328f0bbcdbb9c2901e30b6edccc7}{set\+Latitude} (double \hyperlink{class_gps_a2457bce0fe69afbf68c27a4807c3f847}{latitude})
+\begin{DoxyCompactList}\small\item\em modifier la valeur de la latitude \end{DoxyCompactList}\item 
+void \hyperlink{class_gps_a2d9ca07c62c5bae627c2131062a1236a}{set\+Longitude} (double \hyperlink{class_gps_a6e56fa2b9f1402901a0c768b796402ce}{longitude})
+\begin{DoxyCompactList}\small\item\em modifier la valeur de la longitude \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_gps_a2457bce0fe69afbf68c27a4807c3f847}{latitude}
+\item 
+double \hyperlink{class_gps_a6e56fa2b9f1402901a0c768b796402ce}{longitude}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Documentation des constructeurs et destructeur}
+\index{Gps@{Gps}!Gps@{Gps}}
+\index{Gps@{Gps}!Gps@{Gps}}
+\paragraph[{\texorpdfstring{Gps()}{Gps()}}]{\setlength{\rightskip}{0pt plus 5cm}Gps\+::\+Gps (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gps_a10a73359b33c1357564ebc83fc078000}{}\label{class_gps_a10a73359b33c1357564ebc83fc078000}
+
+\begin{DoxyCode}
+00020         : \hyperlink{class_gps_a2457bce0fe69afbf68c27a4807c3f847}{latitude}(0.), \hyperlink{class_gps_a6e56fa2b9f1402901a0c768b796402ce}{longitude}(0.)
+00021 \{
+00022 
+00023 \}
+\end{DoxyCode}
+\index{Gps@{Gps}!````~Gps@{$\sim$\+Gps}}
+\index{````~Gps@{$\sim$\+Gps}!Gps@{Gps}}
+\paragraph[{\texorpdfstring{$\sim$\+Gps()}{~Gps()}}]{\setlength{\rightskip}{0pt plus 5cm}Gps\+::$\sim$\+Gps (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gps_a9f076d88f081ae5c010cf150cb957b66}{}\label{class_gps_a9f076d88f081ae5c010cf150cb957b66}
+constructeur de la classe \hyperlink{class_gps}{Gps} 
+\begin{DoxyCode}
+00031 \{
+00032 
+00033 \}
+\end{DoxyCode}
+
+
+\subsubsection{Documentation des fonctions membres}
+\index{Gps@{Gps}!get\+Latitude@{get\+Latitude}}
+\index{get\+Latitude@{get\+Latitude}!Gps@{Gps}}
+\paragraph[{\texorpdfstring{get\+Latitude() const }{getLatitude() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Gps\+::get\+Latitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_gps_a44c6469bf67727853c06d4be037c6b0f}{}\label{class_gps_a44c6469bf67727853c06d4be037c6b0f}
+destructeur de la classe \hyperlink{class_gps}{Gps}
+
+\begin{DoxyReturn}{Renvoie}
+double 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_gps_a2457bce0fe69afbf68c27a4807c3f847}{latitude}.
+
+
+
+Référencé par \hyperlink{class_ihm_a3ca276093d65c42a5fc5a87cbca1972a}{Ihm\+::actualiser\+Donnee\+Gps()}, et \hyperlink{class_ihm_a850d1c97ed5fe5ba3cf3aa85d81872cd}{Ihm\+::on\+\_\+push\+Button\+Envoyer\+Coordonnee\+\_\+clicked()}.
+
+
+\begin{DoxyCode}
+00053 \{
+00054     \textcolor{keywordflow}{return} \hyperlink{class_gps_a2457bce0fe69afbf68c27a4807c3f847}{latitude};
+00055 \}
+\end{DoxyCode}
+\index{Gps@{Gps}!get\+Longitude@{get\+Longitude}}
+\index{get\+Longitude@{get\+Longitude}!Gps@{Gps}}
+\paragraph[{\texorpdfstring{get\+Longitude() const }{getLongitude() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Gps\+::get\+Longitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_gps_a6ce8da770e213bfbf7f204b107d9e3f5}{}\label{class_gps_a6ce8da770e213bfbf7f204b107d9e3f5}
+recuperer la latitude
+
+\begin{DoxyReturn}{Renvoie}
+double 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_gps_a6e56fa2b9f1402901a0c768b796402ce}{longitude}.
+
+
+
+Référencé par \hyperlink{class_ihm_a3ca276093d65c42a5fc5a87cbca1972a}{Ihm\+::actualiser\+Donnee\+Gps()}, et \hyperlink{class_ihm_a850d1c97ed5fe5ba3cf3aa85d81872cd}{Ihm\+::on\+\_\+push\+Button\+Envoyer\+Coordonnee\+\_\+clicked()}.
+
+
+\begin{DoxyCode}
+00042 \{
+00043     \textcolor{keywordflow}{return} \hyperlink{class_gps_a6e56fa2b9f1402901a0c768b796402ce}{longitude};
+00044 \}
+\end{DoxyCode}
+\index{Gps@{Gps}!set\+Latitude@{set\+Latitude}}
+\index{set\+Latitude@{set\+Latitude}!Gps@{Gps}}
+\paragraph[{\texorpdfstring{set\+Latitude(double latitude)}{setLatitude(double latitude)}}]{\setlength{\rightskip}{0pt plus 5cm}void Gps\+::set\+Latitude (
+\begin{DoxyParamCaption}
+\item[{double}]{latitude}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gps_aaabf328f0bbcdbb9c2901e30b6edccc7}{}\label{class_gps_aaabf328f0bbcdbb9c2901e30b6edccc7}
+recuperer la longitune
+
+
+\begin{DoxyParams}{Paramètres}
+{\em latitude} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_gps_a2457bce0fe69afbf68c27a4807c3f847}{latitude}.
+
+
+
+Référencé par \hyperlink{class_transmission_acc25e99cce910d23efe684cad233d30e}{Transmission\+::decomposer\+Donnee\+Gps()}.
+
+
+\begin{DoxyCode}
+00064 \{
+00065     this->\hyperlink{class_gps_a2457bce0fe69afbf68c27a4807c3f847}{latitude} = \hyperlink{class_gps_a2457bce0fe69afbf68c27a4807c3f847}{latitude};
+00066 \}
+\end{DoxyCode}
+\index{Gps@{Gps}!set\+Longitude@{set\+Longitude}}
+\index{set\+Longitude@{set\+Longitude}!Gps@{Gps}}
+\paragraph[{\texorpdfstring{set\+Longitude(double longitude)}{setLongitude(double longitude)}}]{\setlength{\rightskip}{0pt plus 5cm}void Gps\+::set\+Longitude (
+\begin{DoxyParamCaption}
+\item[{double}]{longitude}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gps_a2d9ca07c62c5bae627c2131062a1236a}{}\label{class_gps_a2d9ca07c62c5bae627c2131062a1236a}
+modifier la valeur de la latitude
+
+
+\begin{DoxyParams}{Paramètres}
+{\em longitude} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_gps_a6e56fa2b9f1402901a0c768b796402ce}{longitude}.
+
+
+
+Référencé par \hyperlink{class_transmission_acc25e99cce910d23efe684cad233d30e}{Transmission\+::decomposer\+Donnee\+Gps()}.
+
+
+\begin{DoxyCode}
+00075 \{
+00076     this->\hyperlink{class_gps_a6e56fa2b9f1402901a0c768b796402ce}{longitude} = \hyperlink{class_gps_a6e56fa2b9f1402901a0c768b796402ce}{longitude};
+00077 \}
+\end{DoxyCode}
+
+
+\subsubsection{Documentation des données membres}
+\index{Gps@{Gps}!latitude@{latitude}}
+\index{latitude@{latitude}!Gps@{Gps}}
+\paragraph[{\texorpdfstring{latitude}{latitude}}]{\setlength{\rightskip}{0pt plus 5cm}double Gps\+::latitude\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_gps_a2457bce0fe69afbf68c27a4807c3f847}{}\label{class_gps_a2457bce0fe69afbf68c27a4807c3f847}
+modifier la valeur de la longitude 
+
+Référencé par \hyperlink{class_gps_a44c6469bf67727853c06d4be037c6b0f}{get\+Latitude()}, et \hyperlink{class_gps_aaabf328f0bbcdbb9c2901e30b6edccc7}{set\+Latitude()}.
+
+\index{Gps@{Gps}!longitude@{longitude}}
+\index{longitude@{longitude}!Gps@{Gps}}
+\paragraph[{\texorpdfstring{longitude}{longitude}}]{\setlength{\rightskip}{0pt plus 5cm}double Gps\+::longitude\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_gps_a6e56fa2b9f1402901a0c768b796402ce}{}\label{class_gps_a6e56fa2b9f1402901a0c768b796402ce}
+variable qui stocke la latitude 
+
+Référencé par \hyperlink{class_gps_a6ce8da770e213bfbf7f204b107d9e3f5}{get\+Longitude()}, et \hyperlink{class_gps_a2d9ca07c62c5bae627c2131062a1236a}{set\+Longitude()}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{gps_8h}{gps.\+h}\item 
+\hyperlink{gps_8cpp}{gps.\+cpp}\end{DoxyCompactItemize}

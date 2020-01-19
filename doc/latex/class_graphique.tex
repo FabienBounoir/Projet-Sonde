@@ -1,0 +1,794 @@
+\hypertarget{class_graphique}{}\subsection{Référence de la classe Graphique}
+\label{class_graphique}\index{Graphique@{Graphique}}
+
+
+Declaration de la classe \hyperlink{class_graphique}{Graphique}.  
+
+
+
+
+{\ttfamily \#include \char`\"{}graphique.\+h\char`\"{}}
+
+
+
+Graphe de collaboration de Graphique\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{class_graphique__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graphique_a3aec0a5aaae78f0726771dea67af69b4}{Graphique} (\hyperlink{class_q_widget}{Q\+Widget} $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em le constructeur de la classe \hyperlink{class_graphique}{Graphique} \end{DoxyCompactList}\item 
+\hyperlink{class_graphique_a1bb866eb859b961cf0cdddc1b289a773}{$\sim$\+Graphique} ()
+\begin{DoxyCompactList}\small\item\em le destructeur de la classe \hyperlink{class_graphique}{Graphique} \end{DoxyCompactList}\item 
+void \hyperlink{class_graphique_ad9b976804bafcbfe451d89fd35729d16}{creer\+Graphique\+Temperature} ()
+\begin{DoxyCompactList}\small\item\em methode qui cree le graphique pour la temperature \end{DoxyCompactList}\item 
+void \hyperlink{class_graphique_adc50b5ae7a54dd576c99e74ec6bf74c5}{creer\+Graphique\+Pression} ()
+\begin{DoxyCompactList}\small\item\em methode qui cree le graphique pour la pression \end{DoxyCompactList}\item 
+void \hyperlink{class_graphique_a19d6deef2d11e95093a343d49f75d14e}{creer\+Graphique\+Humidite} ()
+\begin{DoxyCompactList}\small\item\em methode qui cree le graphique pour l\textquotesingle{}humidité \end{DoxyCompactList}\item 
+void \hyperlink{class_graphique_a3b55b9c4732856e1b25bef167c25ac4c}{creer\+Graphique\+Luminosite} ()
+\begin{DoxyCompactList}\small\item\em methode qui cree le graphique pour la luminosité \end{DoxyCompactList}\item 
+void \hyperlink{class_graphique_a42b3c986ca86c426adbb8fdb03a04380}{ajouter\+Donnee\+Temperature} (double temperature)
+\begin{DoxyCompactList}\small\item\em Méthode appelé pour ajouter des valeurs aux graphique températures. \end{DoxyCompactList}\item 
+void \hyperlink{class_graphique_ad3dd36f05a9923054a0a2138f96f0311}{ajouter\+Donnee\+Humidite} (int humidite)
+\begin{DoxyCompactList}\small\item\em Méthode appelé pour ajouter des valeurs aux graphique humidité \end{DoxyCompactList}\item 
+void \hyperlink{class_graphique_a1af0e1968998cb7b5ee8add1197cb0e0}{ajouter\+Donnee\+Luminosite} (int luminosite)
+\begin{DoxyCompactList}\small\item\em Méthode appelé pour ajouter des valeurs aux graphique luminosité \end{DoxyCompactList}\item 
+void \hyperlink{class_graphique_a289f0631e56465012511fd7ec9da1b23}{ajouter\+Donnee\+Pression} (int pression)
+\begin{DoxyCompactList}\small\item\em Méthode appelé pour ajouter des valeurs aux graphique pression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_widget}{Q\+Widget} $\ast$ \hyperlink{class_graphique_a55d98b20085f7c79f42f3ae0423ac72a}{ihm\+Graphique}
+\item 
+Q\+Date\+Time \hyperlink{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{debut}
+\item 
+Q\+H\+Box\+Layout $\ast$ \hyperlink{class_graphique_a1ccd9268372eef81a117bd82b50bec6a}{layout\+H\+Temp\+Hum}
+\item 
+Q\+H\+Box\+Layout $\ast$ \hyperlink{class_graphique_a622c90a88a11b29aa275906a3ee051ef}{layout\+H\+Lum\+Pres}
+\item 
+Q\+V\+Box\+Layout $\ast$ \hyperlink{class_graphique_a2a8dbb06be361da2b8a500f231c1c607}{layoutV}
+\item 
+Q\+Chart\+View $\ast$ \hyperlink{class_graphique_a485cc4a65014e812b9e4aa9ee3ea9ca4}{graphique\+Temperature}
+\item 
+Q\+Chart $\ast$ \hyperlink{class_graphique_ad2fe81a972ee10a20a56300a87a78f24}{graphe\+Temperature}
+\item 
+Q\+Line\+Series $\ast$ \hyperlink{class_graphique_a6c2f8ef3364123ad300de74db529bd9b}{courbe\+Temperature}
+\item 
+Q\+Value\+Axis $\ast$ \hyperlink{class_graphique_a3df7eeca8d7dba5f528f65d89883736f}{axe\+Y\+Temperature}
+\item 
+Q\+Date\+Time\+Axis $\ast$ \hyperlink{class_graphique_a83ef0cdf381f66a6202022b8545bfb1c}{axe\+X\+Temperature}
+\item 
+Q\+Chart\+View $\ast$ \hyperlink{class_graphique_a55f7c2a564ee7ea232a9328ebad29f40}{graphique\+Luminosite}
+\item 
+Q\+Chart $\ast$ \hyperlink{class_graphique_adbed6be47df503c9a260586b0d93f5c4}{graphe\+Luminosite}
+\item 
+Q\+Line\+Series $\ast$ \hyperlink{class_graphique_a8bf527363f5d8198bf6fc959a8689963}{courbe\+Luminosite}
+\item 
+Q\+Value\+Axis $\ast$ \hyperlink{class_graphique_a275865e638fd7cb5183d29d8b1a3624e}{axe\+Y\+Luminosite}
+\item 
+Q\+Date\+Time\+Axis $\ast$ \hyperlink{class_graphique_ae4daff72419cbb9e49209f931e79a83b}{axe\+X\+Luminosite}
+\item 
+Q\+Chart\+View $\ast$ \hyperlink{class_graphique_aa389bad562aa7ccba12aa490e02c672b}{graphique\+Pression}
+\item 
+Q\+Chart $\ast$ \hyperlink{class_graphique_afbf5d79803c4395cd5526891e1fc313f}{graphe\+Pression}
+\item 
+Q\+Line\+Series $\ast$ \hyperlink{class_graphique_a49e03fd868685d638fc285837ca26772}{courbe\+Pression}
+\item 
+Q\+Value\+Axis $\ast$ \hyperlink{class_graphique_a9e5efb7607907c0428baa90bd6fbeb2e}{axe\+Y\+Pression}
+\item 
+Q\+Date\+Time\+Axis $\ast$ \hyperlink{class_graphique_a343286de3f9c610257a140c1bf5c4755}{axe\+X\+Pression}
+\item 
+Q\+Value\+Axis $\ast$ \hyperlink{class_graphique_af87e1bc5874f5d633ed944205c8ba15e}{axe\+Y\+Humidite}
+\item 
+Q\+Date\+Time\+Axis $\ast$ \hyperlink{class_graphique_a34c9e250233b7d37981cbbdcc573fe57}{axe\+X\+Humidite}
+\item 
+Q\+Chart $\ast$ \hyperlink{class_graphique_a992da12af1bcf950a9a5fb9799b8f86b}{graphe\+Humidite}
+\item 
+Q\+Chart\+View $\ast$ \hyperlink{class_graphique_af57614c61f87539da7bc7e86527162e1}{graphique\+Humidite}
+\item 
+Q\+Line\+Series $\ast$ \hyperlink{class_graphique_a1ff987d94beb7c471a85be00e881d64c}{courbe\+Humidite}
+\item 
+double \hyperlink{class_graphique_a6aac1bb5ad9a78cb91ca64359e7da307}{axe\+Y\+Temperature\+Max}
+\item 
+double \hyperlink{class_graphique_ad0971f340d49a40c14376a0e0a985f81}{axe\+Y\+Temperature\+Min}
+\item 
+int \hyperlink{class_graphique_a2d382f64898f7e768e612c43dba365de}{axe\+Y\+Pression\+Max}
+\item 
+int \hyperlink{class_graphique_ac8e0364a45fe0882d175f12da7f9b1b3}{axe\+Y\+Luminosite\+Max}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Documentation des constructeurs et destructeur}
+\index{Graphique@{Graphique}!Graphique@{Graphique}}
+\index{Graphique@{Graphique}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{Graphique(\+Q\+Widget $\ast$parent=nullptr)}{Graphique(QWidget *parent=nullptr)}}]{\setlength{\rightskip}{0pt plus 5cm}Graphique\+::\+Graphique (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Widget} $\ast$}]{parent = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_graphique_a3aec0a5aaae78f0726771dea67af69b4}{}\label{class_graphique_a3aec0a5aaae78f0726771dea67af69b4}
+
+
+Références \hyperlink{class_graphique_a19d6deef2d11e95093a343d49f75d14e}{creer\+Graphique\+Humidite()}, \hyperlink{class_graphique_a3b55b9c4732856e1b25bef167c25ac4c}{creer\+Graphique\+Luminosite()}, \hyperlink{class_graphique_adc50b5ae7a54dd576c99e74ec6bf74c5}{creer\+Graphique\+Pression()}, \hyperlink{class_graphique_ad9b976804bafcbfe451d89fd35729d16}{creer\+Graphique\+Temperature()}, \hyperlink{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{debut}, \hyperlink{class_graphique_a55d98b20085f7c79f42f3ae0423ac72a}{ihm\+Graphique}, \hyperlink{class_graphique_a622c90a88a11b29aa275906a3ee051ef}{layout\+H\+Lum\+Pres}, \hyperlink{class_graphique_a1ccd9268372eef81a117bd82b50bec6a}{layout\+H\+Temp\+Hum}, et \hyperlink{class_graphique_a2a8dbb06be361da2b8a500f231c1c607}{layoutV}.
+
+
+\begin{DoxyCode}
+00020                                     : \hyperlink{class_q_widget}{QWidget}(parent), \hyperlink{class_graphique_a6aac1bb5ad9a78cb91ca64359e7da307}{axeYTemperatureMax}(30), 
+      \hyperlink{class_graphique_ad0971f340d49a40c14376a0e0a985f81}{axeYTemperatureMin}(15), \hyperlink{class_graphique_a2d382f64898f7e768e612c43dba365de}{axeYPressionMax}(2000), 
+      \hyperlink{class_graphique_ac8e0364a45fe0882d175f12da7f9b1b3}{axeYLuminositeMax}(1000)
+00021 \{
+00022     setFixedSize(900,700);
+00023     isFullScreen();
+00024     \hyperlink{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{debut} = QDateTime::currentDateTime();
+00025 
+00026     \hyperlink{class_graphique_a2a8dbb06be361da2b8a500f231c1c607}{layoutV} = \textcolor{keyword}{new} QVBoxLayout();
+00027     \hyperlink{class_graphique_a1ccd9268372eef81a117bd82b50bec6a}{layoutHTempHum} = \textcolor{keyword}{new} QHBoxLayout();
+00028     \hyperlink{class_graphique_a622c90a88a11b29aa275906a3ee051ef}{layoutHLumPres} = \textcolor{keyword}{new} QHBoxLayout();
+00029 
+00030     \hyperlink{class_graphique_ad9b976804bafcbfe451d89fd35729d16}{creerGraphiqueTemperature}();
+00031     \hyperlink{class_graphique_a19d6deef2d11e95093a343d49f75d14e}{creerGraphiqueHumidite}();
+00032     \hyperlink{class_graphique_a3b55b9c4732856e1b25bef167c25ac4c}{creerGraphiqueLuminosite}();
+00033     \hyperlink{class_graphique_adc50b5ae7a54dd576c99e74ec6bf74c5}{creerGraphiquePression}();
+00034 
+00035     \hyperlink{class_graphique_a2a8dbb06be361da2b8a500f231c1c607}{layoutV}->addItem(\hyperlink{class_graphique_a1ccd9268372eef81a117bd82b50bec6a}{layoutHTempHum});
+00036     \hyperlink{class_graphique_a2a8dbb06be361da2b8a500f231c1c607}{layoutV}->addItem(\hyperlink{class_graphique_a622c90a88a11b29aa275906a3ee051ef}{layoutHLumPres});
+00037 
+00038     this->setLayout(\hyperlink{class_graphique_a2a8dbb06be361da2b8a500f231c1c607}{layoutV});
+00039 
+00040     \hyperlink{class_graphique_a55d98b20085f7c79f42f3ae0423ac72a}{ihmGraphique} = \textcolor{keyword}{new} \hyperlink{class_q_widget}{QWidget}(\textcolor{keyword}{this});
+00041     \hyperlink{class_graphique_a55d98b20085f7c79f42f3ae0423ac72a}{ihmGraphique}->setWindowTitle(\textcolor{stringliteral}{"Graphique"});
+00042 \}
+\end{DoxyCode}
+\index{Graphique@{Graphique}!````~Graphique@{$\sim$\+Graphique}}
+\index{````~Graphique@{$\sim$\+Graphique}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{$\sim$\+Graphique()}{~Graphique()}}]{\setlength{\rightskip}{0pt plus 5cm}Graphique\+::$\sim$\+Graphique (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_graphique_a1bb866eb859b961cf0cdddc1b289a773}{}\label{class_graphique_a1bb866eb859b961cf0cdddc1b289a773}
+constructeur de la classe graphique 
+
+Références \hyperlink{class_graphique_a55d98b20085f7c79f42f3ae0423ac72a}{ihm\+Graphique}.
+
+
+\begin{DoxyCode}
+00050 \{
+00051     \textcolor{keyword}{delete} \hyperlink{class_graphique_a55d98b20085f7c79f42f3ae0423ac72a}{ihmGraphique};
+00052 \}
+\end{DoxyCode}
+
+
+\subsubsection{Documentation des fonctions membres}
+\index{Graphique@{Graphique}!ajouter\+Donnee\+Humidite@{ajouter\+Donnee\+Humidite}}
+\index{ajouter\+Donnee\+Humidite@{ajouter\+Donnee\+Humidite}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{ajouter\+Donnee\+Humidite(int humidite)}{ajouterDonneeHumidite(int humidite)}}]{\setlength{\rightskip}{0pt plus 5cm}void Graphique\+::ajouter\+Donnee\+Humidite (
+\begin{DoxyParamCaption}
+\item[{int}]{humidite}
+\end{DoxyParamCaption}
+)}\hypertarget{class_graphique_ad3dd36f05a9923054a0a2138f96f0311}{}\label{class_graphique_ad3dd36f05a9923054a0a2138f96f0311}
+fonction appelé pour ajoute des valeurs aux graphique temperature
+
+
+\begin{DoxyParams}{Paramètres}
+{\em humidite} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_graphique_a34c9e250233b7d37981cbbdcc573fe57}{axe\+X\+Humidite}, \hyperlink{class_graphique_a1ff987d94beb7c471a85be00e881d64c}{courbe\+Humidite}, \hyperlink{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{debut}, \hyperlink{class_graphique_a992da12af1bcf950a9a5fb9799b8f86b}{graphe\+Humidite}, et \hyperlink{class_graphique_af57614c61f87539da7bc7e86527162e1}{graphique\+Humidite}.
+
+
+
+Référencé par \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{Ihm\+::actualiser\+Donnee()}.
+
+
+\begin{DoxyCode}
+00295 \{
+00296     QDateTime fin;
+00297     fin = QDateTime::currentDateTime();
+00298 
+00299     \hyperlink{class_graphique_a34c9e250233b7d37981cbbdcc573fe57}{axeXHumidite}->setMin(\hyperlink{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{debut});
+00300     \hyperlink{class_graphique_a1ff987d94beb7c471a85be00e881d64c}{courbeHumidite}->append(fin.toMSecsSinceEpoch(), humidite);
+00301     \hyperlink{class_graphique_a34c9e250233b7d37981cbbdcc573fe57}{axeXHumidite}->setMax(fin);
+00302 
+00303     \hyperlink{class_graphique_af57614c61f87539da7bc7e86527162e1}{graphiqueHumidite}->setChart(\hyperlink{class_graphique_a992da12af1bcf950a9a5fb9799b8f86b}{grapheHumidite});
+00304 
+00305 
+00306 \}
+\end{DoxyCode}
+\index{Graphique@{Graphique}!ajouter\+Donnee\+Luminosite@{ajouter\+Donnee\+Luminosite}}
+\index{ajouter\+Donnee\+Luminosite@{ajouter\+Donnee\+Luminosite}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{ajouter\+Donnee\+Luminosite(int luminosite)}{ajouterDonneeLuminosite(int luminosite)}}]{\setlength{\rightskip}{0pt plus 5cm}void Graphique\+::ajouter\+Donnee\+Luminosite (
+\begin{DoxyParamCaption}
+\item[{int}]{luminosite}
+\end{DoxyParamCaption}
+)}\hypertarget{class_graphique_a1af0e1968998cb7b5ee8add1197cb0e0}{}\label{class_graphique_a1af0e1968998cb7b5ee8add1197cb0e0}
+fonction appelé pour ajoute des valeurs aux graphique humidite
+
+
+\begin{DoxyParams}{Paramètres}
+{\em luminosite} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_graphique_ae4daff72419cbb9e49209f931e79a83b}{axe\+X\+Luminosite}, \hyperlink{class_graphique_a275865e638fd7cb5183d29d8b1a3624e}{axe\+Y\+Luminosite}, \hyperlink{class_graphique_ac8e0364a45fe0882d175f12da7f9b1b3}{axe\+Y\+Luminosite\+Max}, \hyperlink{class_graphique_a8bf527363f5d8198bf6fc959a8689963}{courbe\+Luminosite}, \hyperlink{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{debut}, \hyperlink{class_graphique_adbed6be47df503c9a260586b0d93f5c4}{graphe\+Luminosite}, et \hyperlink{class_graphique_a55f7c2a564ee7ea232a9328ebad29f40}{graphique\+Luminosite}.
+
+
+
+Référencé par \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{Ihm\+::actualiser\+Donnee()}.
+
+
+\begin{DoxyCode}
+00315 \{
+00316     QDateTime fin;
+00317     fin = QDateTime::currentDateTime();
+00318 
+00319     \hyperlink{class_graphique_ae4daff72419cbb9e49209f931e79a83b}{axeXLuminosite}->setMin(\hyperlink{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{debut});
+00320     \textcolor{keywordflow}{if}(luminosite > \hyperlink{class_graphique_ac8e0364a45fe0882d175f12da7f9b1b3}{axeYLuminositeMax})
+00321     \{
+00322         \hyperlink{class_graphique_a275865e638fd7cb5183d29d8b1a3624e}{axeYLuminosite}->setRange(0, luminosite);
+00323         \hyperlink{class_graphique_ac8e0364a45fe0882d175f12da7f9b1b3}{axeYLuminositeMax} = luminosite;
+00324     \}
+00325     \hyperlink{class_graphique_a8bf527363f5d8198bf6fc959a8689963}{courbeLuminosite}->append(fin.toMSecsSinceEpoch(), luminosite);
+00326     \hyperlink{class_graphique_ae4daff72419cbb9e49209f931e79a83b}{axeXLuminosite}->setMax(fin);
+00327 
+00328     \hyperlink{class_graphique_a55f7c2a564ee7ea232a9328ebad29f40}{graphiqueLuminosite}->setChart(\hyperlink{class_graphique_adbed6be47df503c9a260586b0d93f5c4}{grapheLuminosite});
+00329     \hyperlink{class_graphique_a55f7c2a564ee7ea232a9328ebad29f40}{graphiqueLuminosite}->update();
+00330 
+00331 \}
+\end{DoxyCode}
+\index{Graphique@{Graphique}!ajouter\+Donnee\+Pression@{ajouter\+Donnee\+Pression}}
+\index{ajouter\+Donnee\+Pression@{ajouter\+Donnee\+Pression}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{ajouter\+Donnee\+Pression(int pression)}{ajouterDonneePression(int pression)}}]{\setlength{\rightskip}{0pt plus 5cm}void Graphique\+::ajouter\+Donnee\+Pression (
+\begin{DoxyParamCaption}
+\item[{int}]{pression}
+\end{DoxyParamCaption}
+)}\hypertarget{class_graphique_a289f0631e56465012511fd7ec9da1b23}{}\label{class_graphique_a289f0631e56465012511fd7ec9da1b23}
+fonction appelé pour ajoute des valeurs aux graphique luminosité
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pression} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_graphique_a343286de3f9c610257a140c1bf5c4755}{axe\+X\+Pression}, \hyperlink{class_graphique_a9e5efb7607907c0428baa90bd6fbeb2e}{axe\+Y\+Pression}, \hyperlink{class_graphique_a2d382f64898f7e768e612c43dba365de}{axe\+Y\+Pression\+Max}, \hyperlink{class_graphique_a49e03fd868685d638fc285837ca26772}{courbe\+Pression}, \hyperlink{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{debut}, \hyperlink{class_graphique_afbf5d79803c4395cd5526891e1fc313f}{graphe\+Pression}, et \hyperlink{class_graphique_aa389bad562aa7ccba12aa490e02c672b}{graphique\+Pression}.
+
+
+
+Référencé par \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{Ihm\+::actualiser\+Donnee()}.
+
+
+\begin{DoxyCode}
+00340 \{
+00341     QDateTime fin;
+00342     fin = QDateTime::currentDateTime();
+00343 
+00344     \hyperlink{class_graphique_a343286de3f9c610257a140c1bf5c4755}{axeXPression}->setMin(\hyperlink{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{debut});
+00345     \textcolor{keywordflow}{if}(pression > \hyperlink{class_graphique_a2d382f64898f7e768e612c43dba365de}{axeYPressionMax})
+00346     \{
+00347         \hyperlink{class_graphique_a9e5efb7607907c0428baa90bd6fbeb2e}{axeYPression}->setRange(0, pression);
+00348         \hyperlink{class_graphique_a2d382f64898f7e768e612c43dba365de}{axeYPressionMax} = pression;
+00349     \}
+00350     \hyperlink{class_graphique_a49e03fd868685d638fc285837ca26772}{courbePression}->append(fin.toMSecsSinceEpoch(), pression);
+00351     \hyperlink{class_graphique_a343286de3f9c610257a140c1bf5c4755}{axeXPression}->setMax(fin);
+00352 
+00353     \hyperlink{class_graphique_aa389bad562aa7ccba12aa490e02c672b}{graphiquePression}->setChart(\hyperlink{class_graphique_afbf5d79803c4395cd5526891e1fc313f}{graphePression});
+00354     \hyperlink{class_graphique_aa389bad562aa7ccba12aa490e02c672b}{graphiquePression}->update();
+00355 \}
+\end{DoxyCode}
+\index{Graphique@{Graphique}!ajouter\+Donnee\+Temperature@{ajouter\+Donnee\+Temperature}}
+\index{ajouter\+Donnee\+Temperature@{ajouter\+Donnee\+Temperature}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{ajouter\+Donnee\+Temperature(double temperature)}{ajouterDonneeTemperature(double temperature)}}]{\setlength{\rightskip}{0pt plus 5cm}void Graphique\+::ajouter\+Donnee\+Temperature (
+\begin{DoxyParamCaption}
+\item[{double}]{temperature}
+\end{DoxyParamCaption}
+)}\hypertarget{class_graphique_a42b3c986ca86c426adbb8fdb03a04380}{}\label{class_graphique_a42b3c986ca86c426adbb8fdb03a04380}
+fonction appelé pour cree le graphique luminosité
+
+
+\begin{DoxyParams}{Paramètres}
+{\em temperature} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_graphique_a83ef0cdf381f66a6202022b8545bfb1c}{axe\+X\+Temperature}, \hyperlink{class_graphique_a3df7eeca8d7dba5f528f65d89883736f}{axe\+Y\+Temperature}, \hyperlink{class_graphique_a6aac1bb5ad9a78cb91ca64359e7da307}{axe\+Y\+Temperature\+Max}, \hyperlink{class_graphique_ad0971f340d49a40c14376a0e0a985f81}{axe\+Y\+Temperature\+Min}, \hyperlink{class_graphique_a6c2f8ef3364123ad300de74db529bd9b}{courbe\+Temperature}, \hyperlink{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{debut}, \hyperlink{class_graphique_ad2fe81a972ee10a20a56300a87a78f24}{graphe\+Temperature}, et \hyperlink{class_graphique_a485cc4a65014e812b9e4aa9ee3ea9ca4}{graphique\+Temperature}.
+
+
+
+Référencé par \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{Ihm\+::actualiser\+Donnee()}.
+
+
+\begin{DoxyCode}
+00266 \{
+00267     QDateTime fin;
+00268     fin = QDateTime::currentDateTime();
+00269 
+00270     \hyperlink{class_graphique_a83ef0cdf381f66a6202022b8545bfb1c}{axeXTemperature}->setMin(\hyperlink{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{debut});
+00271     \textcolor{keywordflow}{if}(temperature > \hyperlink{class_graphique_a6aac1bb5ad9a78cb91ca64359e7da307}{axeYTemperatureMax})
+00272     \{
+00273         \hyperlink{class_graphique_a3df7eeca8d7dba5f528f65d89883736f}{axeYTemperature}->setRange(\hyperlink{class_graphique_ad0971f340d49a40c14376a0e0a985f81}{axeYTemperatureMin}, temperature);
+00274         \hyperlink{class_graphique_a6aac1bb5ad9a78cb91ca64359e7da307}{axeYTemperatureMax} = temperature;
+00275     \}
+00276     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(temperature < \hyperlink{class_graphique_ad0971f340d49a40c14376a0e0a985f81}{axeYTemperatureMin})
+00277     \{
+00278         \hyperlink{class_graphique_a3df7eeca8d7dba5f528f65d89883736f}{axeYTemperature}->setRange(temperature, \hyperlink{class_graphique_a6aac1bb5ad9a78cb91ca64359e7da307}{axeYTemperatureMax});
+00279         \hyperlink{class_graphique_ad0971f340d49a40c14376a0e0a985f81}{axeYTemperatureMin} = temperature;
+00280     \}
+00281     \hyperlink{class_graphique_a6c2f8ef3364123ad300de74db529bd9b}{courbeTemperature}->append(fin.toMSecsSinceEpoch(), temperature);
+00282     \hyperlink{class_graphique_a83ef0cdf381f66a6202022b8545bfb1c}{axeXTemperature}->setMax(fin);
+00283 
+00284     \hyperlink{class_graphique_a485cc4a65014e812b9e4aa9ee3ea9ca4}{graphiqueTemperature}->setChart(\hyperlink{class_graphique_ad2fe81a972ee10a20a56300a87a78f24}{grapheTemperature});
+00285 
+00286 \}
+\end{DoxyCode}
+\index{Graphique@{Graphique}!creer\+Graphique\+Humidite@{creer\+Graphique\+Humidite}}
+\index{creer\+Graphique\+Humidite@{creer\+Graphique\+Humidite}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{creer\+Graphique\+Humidite()}{creerGraphiqueHumidite()}}]{\setlength{\rightskip}{0pt plus 5cm}void Graphique\+::creer\+Graphique\+Humidite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_graphique_a19d6deef2d11e95093a343d49f75d14e}{}\label{class_graphique_a19d6deef2d11e95093a343d49f75d14e}
+fonction appelé pour cree le graphique pression 
+
+Références \hyperlink{class_graphique_a34c9e250233b7d37981cbbdcc573fe57}{axe\+X\+Humidite}, \hyperlink{class_graphique_af87e1bc5874f5d633ed944205c8ba15e}{axe\+Y\+Humidite}, \hyperlink{class_graphique_a1ff987d94beb7c471a85be00e881d64c}{courbe\+Humidite}, \hyperlink{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{debut}, \hyperlink{class_graphique_a992da12af1bcf950a9a5fb9799b8f86b}{graphe\+Humidite}, \hyperlink{class_graphique_af57614c61f87539da7bc7e86527162e1}{graphique\+Humidite}, et \hyperlink{class_graphique_a1ccd9268372eef81a117bd82b50bec6a}{layout\+H\+Temp\+Hum}.
+
+
+
+Référencé par \hyperlink{class_graphique_a3aec0a5aaae78f0726771dea67af69b4}{Graphique()}.
+
+
+\begin{DoxyCode}
+00111 \{
+00112 
+00113     \textcolor{comment}{// Les données}
+00114     \hyperlink{class_graphique_a1ff987d94beb7c471a85be00e881d64c}{courbeHumidite} = \textcolor{keyword}{new} QLineSeries(\textcolor{keyword}{this});
+00115     \hyperlink{class_graphique_a1ff987d94beb7c471a85be00e881d64c}{courbeHumidite}->setName(QString::fromUtf8(\textcolor{stringliteral}{"humidité"}));
+00116     \hyperlink{class_graphique_a1ff987d94beb7c471a85be00e881d64c}{courbeHumidite}->setColor(Qt::blue);
+00117 
+00118     \textcolor{comment}{// Le grapheHumidite}
+00119     \hyperlink{class_graphique_a992da12af1bcf950a9a5fb9799b8f86b}{grapheHumidite} = \textcolor{keyword}{new} QChart();
+00120     \hyperlink{class_graphique_a992da12af1bcf950a9a5fb9799b8f86b}{grapheHumidite}->setTitle(\textcolor{stringliteral}{"Humidité"});
+00121     \hyperlink{class_graphique_a992da12af1bcf950a9a5fb9799b8f86b}{grapheHumidite}->setTheme(QChart::ChartThemeDark);
+00122     \hyperlink{class_graphique_a992da12af1bcf950a9a5fb9799b8f86b}{grapheHumidite}->addSeries(\hyperlink{class_graphique_a1ff987d94beb7c471a85be00e881d64c}{courbeHumidite});
+00123 
+00124     \textcolor{comment}{//QDateTimeAxis}
+00125     \hyperlink{class_graphique_a34c9e250233b7d37981cbbdcc573fe57}{axeXHumidite} = \textcolor{keyword}{new} QDateTimeAxis(\textcolor{keyword}{this});
+00126     \hyperlink{class_graphique_a34c9e250233b7d37981cbbdcc573fe57}{axeXHumidite}->setTickCount(5);
+00127     \hyperlink{class_graphique_a34c9e250233b7d37981cbbdcc573fe57}{axeXHumidite}->setFormat(\textcolor{stringliteral}{"hh:mm"});
+00128     \hyperlink{class_graphique_a34c9e250233b7d37981cbbdcc573fe57}{axeXHumidite}->setMin(\hyperlink{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{debut});
+00129     \hyperlink{class_graphique_a34c9e250233b7d37981cbbdcc573fe57}{axeXHumidite}->setTitleText(\textcolor{stringliteral}{"Temps"});
+00130 
+00131     \hyperlink{class_graphique_a992da12af1bcf950a9a5fb9799b8f86b}{grapheHumidite}->addAxis(\hyperlink{class_graphique_a34c9e250233b7d37981cbbdcc573fe57}{axeXHumidite}, Qt::AlignBottom);
+00132     \hyperlink{class_graphique_a1ff987d94beb7c471a85be00e881d64c}{courbeHumidite}->attachAxis(\hyperlink{class_graphique_a34c9e250233b7d37981cbbdcc573fe57}{axeXHumidite});
+00133 
+00134     \hyperlink{class_graphique_af87e1bc5874f5d633ed944205c8ba15e}{axeYHumidite} = \textcolor{keyword}{new} QValueAxis(\textcolor{keyword}{this});
+00135     \hyperlink{class_graphique_af87e1bc5874f5d633ed944205c8ba15e}{axeYHumidite}->setRange(0, 100);
+00136     \hyperlink{class_graphique_af87e1bc5874f5d633ed944205c8ba15e}{axeYHumidite}->setLabelFormat(\textcolor{stringliteral}{"%.1f"});
+00137     \hyperlink{class_graphique_af87e1bc5874f5d633ed944205c8ba15e}{axeYHumidite}->setTitleText(QString::fromUtf8(\textcolor{stringliteral}{"Pourcentage"}));
+00138     \hyperlink{class_graphique_a992da12af1bcf950a9a5fb9799b8f86b}{grapheHumidite}->addAxis(\hyperlink{class_graphique_af87e1bc5874f5d633ed944205c8ba15e}{axeYHumidite}, Qt::AlignLeft);
+00139     \hyperlink{class_graphique_a1ff987d94beb7c471a85be00e881d64c}{courbeHumidite}->setPointsVisible(\textcolor{keyword}{true});
+00140 
+00141     \textcolor{comment}{//afficher les points sur la courbe}
+00142     \textcolor{comment}{//courbeHumidite->setPointLabelsFormat("@yPoint %");}
+00143     \textcolor{comment}{//courbeHumidite->setPointLabelsVisible(true);}
+00144 
+00145     \hyperlink{class_graphique_a1ff987d94beb7c471a85be00e881d64c}{courbeHumidite}->attachAxis(\hyperlink{class_graphique_af87e1bc5874f5d633ed944205c8ba15e}{axeYHumidite});
+00146 
+00147     \textcolor{comment}{// Le widget}
+00148     \hyperlink{class_graphique_af57614c61f87539da7bc7e86527162e1}{graphiqueHumidite} = \textcolor{keyword}{new} QChartView(\hyperlink{class_graphique_a992da12af1bcf950a9a5fb9799b8f86b}{grapheHumidite});
+00149     \hyperlink{class_graphique_af57614c61f87539da7bc7e86527162e1}{graphiqueHumidite}->setRenderHint(QPainter::Antialiasing);
+00150 
+00151     resize(300, 200);
+00152 
+00153     \hyperlink{class_graphique_a1ccd9268372eef81a117bd82b50bec6a}{layoutHTempHum}->addWidget(\hyperlink{class_graphique_af57614c61f87539da7bc7e86527162e1}{graphiqueHumidite});
+00154 \}
+\end{DoxyCode}
+\index{Graphique@{Graphique}!creer\+Graphique\+Luminosite@{creer\+Graphique\+Luminosite}}
+\index{creer\+Graphique\+Luminosite@{creer\+Graphique\+Luminosite}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{creer\+Graphique\+Luminosite()}{creerGraphiqueLuminosite()}}]{\setlength{\rightskip}{0pt plus 5cm}void Graphique\+::creer\+Graphique\+Luminosite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_graphique_a3b55b9c4732856e1b25bef167c25ac4c}{}\label{class_graphique_a3b55b9c4732856e1b25bef167c25ac4c}
+fonction appelé pour cree le graphique humidite 
+
+Références \hyperlink{class_graphique_ae4daff72419cbb9e49209f931e79a83b}{axe\+X\+Luminosite}, \hyperlink{class_graphique_a275865e638fd7cb5183d29d8b1a3624e}{axe\+Y\+Luminosite}, \hyperlink{class_graphique_ac8e0364a45fe0882d175f12da7f9b1b3}{axe\+Y\+Luminosite\+Max}, \hyperlink{class_graphique_a8bf527363f5d8198bf6fc959a8689963}{courbe\+Luminosite}, \hyperlink{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{debut}, \hyperlink{class_graphique_adbed6be47df503c9a260586b0d93f5c4}{graphe\+Luminosite}, \hyperlink{class_graphique_a55f7c2a564ee7ea232a9328ebad29f40}{graphique\+Luminosite}, et \hyperlink{class_graphique_a622c90a88a11b29aa275906a3ee051ef}{layout\+H\+Lum\+Pres}.
+
+
+
+Référencé par \hyperlink{class_graphique_a3aec0a5aaae78f0726771dea67af69b4}{Graphique()}.
+
+
+\begin{DoxyCode}
+00162 \{
+00163 
+00164     \textcolor{comment}{// Les données}
+00165     \hyperlink{class_graphique_a8bf527363f5d8198bf6fc959a8689963}{courbeLuminosite} = \textcolor{keyword}{new} QLineSeries(\textcolor{keyword}{this});
+00166     \hyperlink{class_graphique_a8bf527363f5d8198bf6fc959a8689963}{courbeLuminosite}->setName(QString::fromUtf8(\textcolor{stringliteral}{"Luminosite"}));
+00167     \hyperlink{class_graphique_a8bf527363f5d8198bf6fc959a8689963}{courbeLuminosite}->setColor(Qt::magenta);
+00168 
+00169 
+00170     \textcolor{comment}{// Le grapheLuminosite}
+00171     \hyperlink{class_graphique_adbed6be47df503c9a260586b0d93f5c4}{grapheLuminosite} = \textcolor{keyword}{new} QChart();
+00172     \hyperlink{class_graphique_adbed6be47df503c9a260586b0d93f5c4}{grapheLuminosite}->setTitle(\textcolor{stringliteral}{"Luminosite"});
+00173     \hyperlink{class_graphique_adbed6be47df503c9a260586b0d93f5c4}{grapheLuminosite}->setTheme(QChart::ChartThemeDark);
+00174     \hyperlink{class_graphique_adbed6be47df503c9a260586b0d93f5c4}{grapheLuminosite}->addSeries(\hyperlink{class_graphique_a8bf527363f5d8198bf6fc959a8689963}{courbeLuminosite});
+00175 
+00176     \textcolor{comment}{//QDateTimeAxis}
+00177     \hyperlink{class_graphique_ae4daff72419cbb9e49209f931e79a83b}{axeXLuminosite} = \textcolor{keyword}{new} QDateTimeAxis(\textcolor{keyword}{this});
+00178     \hyperlink{class_graphique_ae4daff72419cbb9e49209f931e79a83b}{axeXLuminosite}->setTickCount(5);
+00179     \hyperlink{class_graphique_ae4daff72419cbb9e49209f931e79a83b}{axeXLuminosite}->setFormat(\textcolor{stringliteral}{"hh:mm"});
+00180     \hyperlink{class_graphique_ae4daff72419cbb9e49209f931e79a83b}{axeXLuminosite}->setMin(\hyperlink{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{debut});
+00181     \hyperlink{class_graphique_ae4daff72419cbb9e49209f931e79a83b}{axeXLuminosite}->setTitleText(\textcolor{stringliteral}{"Temps"});
+00182 
+00183     \hyperlink{class_graphique_adbed6be47df503c9a260586b0d93f5c4}{grapheLuminosite}->addAxis(\hyperlink{class_graphique_ae4daff72419cbb9e49209f931e79a83b}{axeXLuminosite}, Qt::AlignBottom);
+00184     \hyperlink{class_graphique_a8bf527363f5d8198bf6fc959a8689963}{courbeLuminosite}->attachAxis(\hyperlink{class_graphique_ae4daff72419cbb9e49209f931e79a83b}{axeXLuminosite});
+00185 
+00186     \hyperlink{class_graphique_a275865e638fd7cb5183d29d8b1a3624e}{axeYLuminosite} = \textcolor{keyword}{new} QValueAxis(\textcolor{keyword}{this});
+00187     \hyperlink{class_graphique_a275865e638fd7cb5183d29d8b1a3624e}{axeYLuminosite}->setRange(0, \hyperlink{class_graphique_ac8e0364a45fe0882d175f12da7f9b1b3}{axeYLuminositeMax});
+00188     \hyperlink{class_graphique_a275865e638fd7cb5183d29d8b1a3624e}{axeYLuminosite}->setLabelFormat(\textcolor{stringliteral}{"%.1f"});
+00189     \hyperlink{class_graphique_a275865e638fd7cb5183d29d8b1a3624e}{axeYLuminosite}->setTitleText(QString::fromUtf8(\textcolor{stringliteral}{"Luminosite"}));
+00190     \hyperlink{class_graphique_adbed6be47df503c9a260586b0d93f5c4}{grapheLuminosite}->addAxis(\hyperlink{class_graphique_a275865e638fd7cb5183d29d8b1a3624e}{axeYLuminosite}, Qt::AlignLeft);
+00191     \hyperlink{class_graphique_a8bf527363f5d8198bf6fc959a8689963}{courbeLuminosite}->setPointsVisible(\textcolor{keyword}{true});
+00192 
+00193     \textcolor{comment}{//afficher les points sur la courbe}
+00194     \textcolor{comment}{//courbeLuminosite->setPointLabelsFormat("@yPoint Lux");}
+00195     \textcolor{comment}{//courbeLuminosite->setPointLabelsVisible(true);}
+00196 
+00197     \hyperlink{class_graphique_a8bf527363f5d8198bf6fc959a8689963}{courbeLuminosite}->attachAxis(\hyperlink{class_graphique_a275865e638fd7cb5183d29d8b1a3624e}{axeYLuminosite});
+00198 
+00199     \textcolor{comment}{// Le widget}
+00200     \hyperlink{class_graphique_a55f7c2a564ee7ea232a9328ebad29f40}{graphiqueLuminosite} = \textcolor{keyword}{new} QChartView(\hyperlink{class_graphique_adbed6be47df503c9a260586b0d93f5c4}{grapheLuminosite});
+00201     \hyperlink{class_graphique_a55f7c2a564ee7ea232a9328ebad29f40}{graphiqueLuminosite}->setRenderHint(QPainter::Antialiasing);
+00202 
+00203     resize(300, 200);
+00204 
+00205     \hyperlink{class_graphique_a622c90a88a11b29aa275906a3ee051ef}{layoutHLumPres}->addWidget(\hyperlink{class_graphique_a55f7c2a564ee7ea232a9328ebad29f40}{graphiqueLuminosite});
+00206 \}
+\end{DoxyCode}
+\index{Graphique@{Graphique}!creer\+Graphique\+Pression@{creer\+Graphique\+Pression}}
+\index{creer\+Graphique\+Pression@{creer\+Graphique\+Pression}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{creer\+Graphique\+Pression()}{creerGraphiquePression()}}]{\setlength{\rightskip}{0pt plus 5cm}void Graphique\+::creer\+Graphique\+Pression (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_graphique_adc50b5ae7a54dd576c99e74ec6bf74c5}{}\label{class_graphique_adc50b5ae7a54dd576c99e74ec6bf74c5}
+fonction appelé pour cree le graphique temperature 
+
+Références \hyperlink{class_graphique_a343286de3f9c610257a140c1bf5c4755}{axe\+X\+Pression}, \hyperlink{class_graphique_a9e5efb7607907c0428baa90bd6fbeb2e}{axe\+Y\+Pression}, \hyperlink{class_graphique_a2d382f64898f7e768e612c43dba365de}{axe\+Y\+Pression\+Max}, \hyperlink{class_graphique_a49e03fd868685d638fc285837ca26772}{courbe\+Pression}, \hyperlink{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{debut}, \hyperlink{class_graphique_afbf5d79803c4395cd5526891e1fc313f}{graphe\+Pression}, \hyperlink{class_graphique_aa389bad562aa7ccba12aa490e02c672b}{graphique\+Pression}, et \hyperlink{class_graphique_a622c90a88a11b29aa275906a3ee051ef}{layout\+H\+Lum\+Pres}.
+
+
+
+Référencé par \hyperlink{class_graphique_a3aec0a5aaae78f0726771dea67af69b4}{Graphique()}.
+
+
+\begin{DoxyCode}
+00214 \{
+00215 
+00216     \textcolor{comment}{// Les données}
+00217     \hyperlink{class_graphique_a49e03fd868685d638fc285837ca26772}{courbePression} = \textcolor{keyword}{new} QLineSeries(\textcolor{keyword}{this});
+00218     \hyperlink{class_graphique_a49e03fd868685d638fc285837ca26772}{courbePression}->setName(QString::fromUtf8(\textcolor{stringliteral}{"Pression"}));
+00219     \hyperlink{class_graphique_a49e03fd868685d638fc285837ca26772}{courbePression}->setColor(Qt::green);
+00220 
+00221     \textcolor{comment}{// Le graphePression}
+00222     \hyperlink{class_graphique_afbf5d79803c4395cd5526891e1fc313f}{graphePression} = \textcolor{keyword}{new} QChart();
+00223     \hyperlink{class_graphique_afbf5d79803c4395cd5526891e1fc313f}{graphePression}->setTitle(\textcolor{stringliteral}{"Pression"});
+00224     \hyperlink{class_graphique_afbf5d79803c4395cd5526891e1fc313f}{graphePression}->setTheme(QChart::ChartThemeDark);
+00225     \hyperlink{class_graphique_afbf5d79803c4395cd5526891e1fc313f}{graphePression}->addSeries(\hyperlink{class_graphique_a49e03fd868685d638fc285837ca26772}{courbePression});
+00226 
+00227     \textcolor{comment}{//QDateTimeAxis}
+00228     \hyperlink{class_graphique_a343286de3f9c610257a140c1bf5c4755}{axeXPression} = \textcolor{keyword}{new} QDateTimeAxis(\textcolor{keyword}{this});
+00229     \hyperlink{class_graphique_a343286de3f9c610257a140c1bf5c4755}{axeXPression}->setTickCount(5);
+00230     \hyperlink{class_graphique_a343286de3f9c610257a140c1bf5c4755}{axeXPression}->setFormat(\textcolor{stringliteral}{"hh:mm"});
+00231     \hyperlink{class_graphique_a343286de3f9c610257a140c1bf5c4755}{axeXPression}->setMin(\hyperlink{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{debut});
+00232     \hyperlink{class_graphique_a343286de3f9c610257a140c1bf5c4755}{axeXPression}->setTitleText(\textcolor{stringliteral}{"Temps"});
+00233 
+00234     \hyperlink{class_graphique_afbf5d79803c4395cd5526891e1fc313f}{graphePression}->addAxis(\hyperlink{class_graphique_a343286de3f9c610257a140c1bf5c4755}{axeXPression}, Qt::AlignBottom);
+00235     \hyperlink{class_graphique_a49e03fd868685d638fc285837ca26772}{courbePression}->attachAxis(\hyperlink{class_graphique_a343286de3f9c610257a140c1bf5c4755}{axeXPression});
+00236 
+00237     \hyperlink{class_graphique_a9e5efb7607907c0428baa90bd6fbeb2e}{axeYPression} = \textcolor{keyword}{new} QValueAxis(\textcolor{keyword}{this});
+00238     \hyperlink{class_graphique_a9e5efb7607907c0428baa90bd6fbeb2e}{axeYPression}->setRange(0, \hyperlink{class_graphique_a2d382f64898f7e768e612c43dba365de}{axeYPressionMax});
+00239     \hyperlink{class_graphique_a9e5efb7607907c0428baa90bd6fbeb2e}{axeYPression}->setLabelFormat(\textcolor{stringliteral}{"%.1f"});
+00240     \hyperlink{class_graphique_a9e5efb7607907c0428baa90bd6fbeb2e}{axeYPression}->setTitleText(QString::fromUtf8(\textcolor{stringliteral}{"Pression"}));
+00241     \hyperlink{class_graphique_afbf5d79803c4395cd5526891e1fc313f}{graphePression}->addAxis(\hyperlink{class_graphique_a9e5efb7607907c0428baa90bd6fbeb2e}{axeYPression}, Qt::AlignLeft);
+00242     \hyperlink{class_graphique_a49e03fd868685d638fc285837ca26772}{courbePression}->setPointsVisible(\textcolor{keyword}{true});
+00243 
+00244     \textcolor{comment}{//afficher les points sur la courbe}
+00245     \textcolor{comment}{//courbePression->setPointLabelsFormat("@yPoint hPa");}
+00246     \textcolor{comment}{//courbePression->setPointLabelsVisible(true);}
+00247 
+00248     \hyperlink{class_graphique_a49e03fd868685d638fc285837ca26772}{courbePression}->attachAxis(\hyperlink{class_graphique_a9e5efb7607907c0428baa90bd6fbeb2e}{axeYPression});
+00249 
+00250     \textcolor{comment}{// Le widget}
+00251     \hyperlink{class_graphique_aa389bad562aa7ccba12aa490e02c672b}{graphiquePression} = \textcolor{keyword}{new} QChartView(\hyperlink{class_graphique_afbf5d79803c4395cd5526891e1fc313f}{graphePression});
+00252     \hyperlink{class_graphique_aa389bad562aa7ccba12aa490e02c672b}{graphiquePression}->setRenderHint(QPainter::Antialiasing);
+00253 
+00254     resize(300, 200);
+00255 
+00256     \hyperlink{class_graphique_a622c90a88a11b29aa275906a3ee051ef}{layoutHLumPres}->addWidget(\hyperlink{class_graphique_aa389bad562aa7ccba12aa490e02c672b}{graphiquePression});
+00257 \}
+\end{DoxyCode}
+\index{Graphique@{Graphique}!creer\+Graphique\+Temperature@{creer\+Graphique\+Temperature}}
+\index{creer\+Graphique\+Temperature@{creer\+Graphique\+Temperature}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{creer\+Graphique\+Temperature()}{creerGraphiqueTemperature()}}]{\setlength{\rightskip}{0pt plus 5cm}void Graphique\+::creer\+Graphique\+Temperature (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_graphique_ad9b976804bafcbfe451d89fd35729d16}{}\label{class_graphique_ad9b976804bafcbfe451d89fd35729d16}
+destructeur de la classe graphique 
+
+Références \hyperlink{class_graphique_a83ef0cdf381f66a6202022b8545bfb1c}{axe\+X\+Temperature}, \hyperlink{class_graphique_a3df7eeca8d7dba5f528f65d89883736f}{axe\+Y\+Temperature}, \hyperlink{class_graphique_a6aac1bb5ad9a78cb91ca64359e7da307}{axe\+Y\+Temperature\+Max}, \hyperlink{class_graphique_ad0971f340d49a40c14376a0e0a985f81}{axe\+Y\+Temperature\+Min}, \hyperlink{class_graphique_a6c2f8ef3364123ad300de74db529bd9b}{courbe\+Temperature}, \hyperlink{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{debut}, \hyperlink{class_graphique_ad2fe81a972ee10a20a56300a87a78f24}{graphe\+Temperature}, \hyperlink{class_graphique_a485cc4a65014e812b9e4aa9ee3ea9ca4}{graphique\+Temperature}, et \hyperlink{class_graphique_a1ccd9268372eef81a117bd82b50bec6a}{layout\+H\+Temp\+Hum}.
+
+
+
+Référencé par \hyperlink{class_graphique_a3aec0a5aaae78f0726771dea67af69b4}{Graphique()}.
+
+
+\begin{DoxyCode}
+00060 \{
+00061 
+00062     \textcolor{comment}{// Les données}
+00063     \hyperlink{class_graphique_a6c2f8ef3364123ad300de74db529bd9b}{courbeTemperature} = \textcolor{keyword}{new} QLineSeries(\textcolor{keyword}{this});
+00064     \hyperlink{class_graphique_a6c2f8ef3364123ad300de74db529bd9b}{courbeTemperature}->setName(QString::fromUtf8(\textcolor{stringliteral}{"température"}));
+00065     \hyperlink{class_graphique_a6c2f8ef3364123ad300de74db529bd9b}{courbeTemperature}->setColor(Qt::red);
+00066 
+00067     \textcolor{comment}{// Le grapheTemperature}
+00068     \hyperlink{class_graphique_ad2fe81a972ee10a20a56300a87a78f24}{grapheTemperature} = \textcolor{keyword}{new} QChart();
+00069     \hyperlink{class_graphique_ad2fe81a972ee10a20a56300a87a78f24}{grapheTemperature}->setTitle(\textcolor{stringliteral}{"température"});
+00070     \hyperlink{class_graphique_ad2fe81a972ee10a20a56300a87a78f24}{grapheTemperature}->setTheme(QChart::ChartThemeDark);
+00071     \hyperlink{class_graphique_ad2fe81a972ee10a20a56300a87a78f24}{grapheTemperature}->addSeries(\hyperlink{class_graphique_a6c2f8ef3364123ad300de74db529bd9b}{courbeTemperature});
+00072 
+00073     \textcolor{comment}{//QDateTimeAxis}
+00074     \hyperlink{class_graphique_a83ef0cdf381f66a6202022b8545bfb1c}{axeXTemperature} = \textcolor{keyword}{new} QDateTimeAxis(\textcolor{keyword}{this});
+00075     \hyperlink{class_graphique_a83ef0cdf381f66a6202022b8545bfb1c}{axeXTemperature}->setTickCount(5);
+00076     \hyperlink{class_graphique_a83ef0cdf381f66a6202022b8545bfb1c}{axeXTemperature}->setFormat(\textcolor{stringliteral}{"hh:mm"});
+00077     \hyperlink{class_graphique_a83ef0cdf381f66a6202022b8545bfb1c}{axeXTemperature}->setMin(\hyperlink{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{debut});
+00078     \hyperlink{class_graphique_a83ef0cdf381f66a6202022b8545bfb1c}{axeXTemperature}->setTitleText(\textcolor{stringliteral}{"Temps"});
+00079 
+00080     \hyperlink{class_graphique_ad2fe81a972ee10a20a56300a87a78f24}{grapheTemperature}->addAxis(\hyperlink{class_graphique_a83ef0cdf381f66a6202022b8545bfb1c}{axeXTemperature}, Qt::AlignBottom);
+00081     \hyperlink{class_graphique_a6c2f8ef3364123ad300de74db529bd9b}{courbeTemperature}->attachAxis(\hyperlink{class_graphique_a83ef0cdf381f66a6202022b8545bfb1c}{axeXTemperature});
+00082 
+00083     \hyperlink{class_graphique_a3df7eeca8d7dba5f528f65d89883736f}{axeYTemperature} = \textcolor{keyword}{new} QValueAxis(\textcolor{keyword}{this});
+00084     \hyperlink{class_graphique_a3df7eeca8d7dba5f528f65d89883736f}{axeYTemperature}->setRange(\hyperlink{class_graphique_ad0971f340d49a40c14376a0e0a985f81}{axeYTemperatureMin}, 
+      \hyperlink{class_graphique_a6aac1bb5ad9a78cb91ca64359e7da307}{axeYTemperatureMax});
+00085     \hyperlink{class_graphique_a3df7eeca8d7dba5f528f65d89883736f}{axeYTemperature}->setLabelFormat(\textcolor{stringliteral}{"%.1f"});
+00086     \hyperlink{class_graphique_a3df7eeca8d7dba5f528f65d89883736f}{axeYTemperature}->setTitleText(QString::fromUtf8(\textcolor{stringliteral}{"Température"}));
+00087     \hyperlink{class_graphique_ad2fe81a972ee10a20a56300a87a78f24}{grapheTemperature}->addAxis(\hyperlink{class_graphique_a3df7eeca8d7dba5f528f65d89883736f}{axeYTemperature}, Qt::AlignLeft);
+00088     \hyperlink{class_graphique_a6c2f8ef3364123ad300de74db529bd9b}{courbeTemperature}->setPointsVisible(\textcolor{keyword}{true});
+00089 
+00090     \textcolor{comment}{//afficher les points sur la courbe}
+00091     \textcolor{comment}{//courbeTemperature->setPointLabelsFormat("@yPoint °C");}
+00092     \textcolor{comment}{//courbeTemperature->setPointLabelsVisible(true);}
+00093 
+00094     \hyperlink{class_graphique_a6c2f8ef3364123ad300de74db529bd9b}{courbeTemperature}->attachAxis(\hyperlink{class_graphique_a3df7eeca8d7dba5f528f65d89883736f}{axeYTemperature});
+00095 
+00096     \textcolor{comment}{// Le widget}
+00097     \hyperlink{class_graphique_a485cc4a65014e812b9e4aa9ee3ea9ca4}{graphiqueTemperature} = \textcolor{keyword}{new} QChartView(\hyperlink{class_graphique_ad2fe81a972ee10a20a56300a87a78f24}{grapheTemperature});
+00098     \hyperlink{class_graphique_a485cc4a65014e812b9e4aa9ee3ea9ca4}{graphiqueTemperature}->setRenderHint(QPainter::Antialiasing);
+00099 
+00100     resize(300, 200);
+00101 
+00102     \hyperlink{class_graphique_a1ccd9268372eef81a117bd82b50bec6a}{layoutHTempHum}->addWidget(\hyperlink{class_graphique_a485cc4a65014e812b9e4aa9ee3ea9ca4}{graphiqueTemperature});
+00103 \}
+\end{DoxyCode}
+
+
+\subsubsection{Documentation des données membres}
+\index{Graphique@{Graphique}!axe\+X\+Humidite@{axe\+X\+Humidite}}
+\index{axe\+X\+Humidite@{axe\+X\+Humidite}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{axe\+X\+Humidite}{axeXHumidite}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date\+Time\+Axis$\ast$ Graphique\+::axe\+X\+Humidite\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_a34c9e250233b7d37981cbbdcc573fe57}{}\label{class_graphique_a34c9e250233b7d37981cbbdcc573fe57}
+l\textquotesingle{}axe Y humidite 
+
+Référencé par \hyperlink{class_graphique_ad3dd36f05a9923054a0a2138f96f0311}{ajouter\+Donnee\+Humidite()}, et \hyperlink{class_graphique_a19d6deef2d11e95093a343d49f75d14e}{creer\+Graphique\+Humidite()}.
+
+\index{Graphique@{Graphique}!axe\+X\+Luminosite@{axe\+X\+Luminosite}}
+\index{axe\+X\+Luminosite@{axe\+X\+Luminosite}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{axe\+X\+Luminosite}{axeXLuminosite}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date\+Time\+Axis$\ast$ Graphique\+::axe\+X\+Luminosite\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_ae4daff72419cbb9e49209f931e79a83b}{}\label{class_graphique_ae4daff72419cbb9e49209f931e79a83b}
+l\textquotesingle{}axe Y luminosité 
+
+Référencé par \hyperlink{class_graphique_a1af0e1968998cb7b5ee8add1197cb0e0}{ajouter\+Donnee\+Luminosite()}, et \hyperlink{class_graphique_a3b55b9c4732856e1b25bef167c25ac4c}{creer\+Graphique\+Luminosite()}.
+
+\index{Graphique@{Graphique}!axe\+X\+Pression@{axe\+X\+Pression}}
+\index{axe\+X\+Pression@{axe\+X\+Pression}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{axe\+X\+Pression}{axeXPression}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date\+Time\+Axis$\ast$ Graphique\+::axe\+X\+Pression\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_a343286de3f9c610257a140c1bf5c4755}{}\label{class_graphique_a343286de3f9c610257a140c1bf5c4755}
+l\textquotesingle{}axe Y pression 
+
+Référencé par \hyperlink{class_graphique_a289f0631e56465012511fd7ec9da1b23}{ajouter\+Donnee\+Pression()}, et \hyperlink{class_graphique_adc50b5ae7a54dd576c99e74ec6bf74c5}{creer\+Graphique\+Pression()}.
+
+\index{Graphique@{Graphique}!axe\+X\+Temperature@{axe\+X\+Temperature}}
+\index{axe\+X\+Temperature@{axe\+X\+Temperature}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{axe\+X\+Temperature}{axeXTemperature}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date\+Time\+Axis$\ast$ Graphique\+::axe\+X\+Temperature\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_a83ef0cdf381f66a6202022b8545bfb1c}{}\label{class_graphique_a83ef0cdf381f66a6202022b8545bfb1c}
+l\textquotesingle{}axe Y temperature 
+
+Référencé par \hyperlink{class_graphique_a42b3c986ca86c426adbb8fdb03a04380}{ajouter\+Donnee\+Temperature()}, et \hyperlink{class_graphique_ad9b976804bafcbfe451d89fd35729d16}{creer\+Graphique\+Temperature()}.
+
+\index{Graphique@{Graphique}!axe\+Y\+Humidite@{axe\+Y\+Humidite}}
+\index{axe\+Y\+Humidite@{axe\+Y\+Humidite}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{axe\+Y\+Humidite}{axeYHumidite}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Value\+Axis$\ast$ Graphique\+::axe\+Y\+Humidite\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_af87e1bc5874f5d633ed944205c8ba15e}{}\label{class_graphique_af87e1bc5874f5d633ed944205c8ba15e}
+l\textquotesingle{}axe X pression 
+
+Référencé par \hyperlink{class_graphique_a19d6deef2d11e95093a343d49f75d14e}{creer\+Graphique\+Humidite()}.
+
+\index{Graphique@{Graphique}!axe\+Y\+Luminosite@{axe\+Y\+Luminosite}}
+\index{axe\+Y\+Luminosite@{axe\+Y\+Luminosite}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{axe\+Y\+Luminosite}{axeYLuminosite}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Value\+Axis$\ast$ Graphique\+::axe\+Y\+Luminosite\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_a275865e638fd7cb5183d29d8b1a3624e}{}\label{class_graphique_a275865e638fd7cb5183d29d8b1a3624e}
+les données de luminosité 
+
+Référencé par \hyperlink{class_graphique_a1af0e1968998cb7b5ee8add1197cb0e0}{ajouter\+Donnee\+Luminosite()}, et \hyperlink{class_graphique_a3b55b9c4732856e1b25bef167c25ac4c}{creer\+Graphique\+Luminosite()}.
+
+\index{Graphique@{Graphique}!axe\+Y\+Luminosite\+Max@{axe\+Y\+Luminosite\+Max}}
+\index{axe\+Y\+Luminosite\+Max@{axe\+Y\+Luminosite\+Max}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{axe\+Y\+Luminosite\+Max}{axeYLuminositeMax}}]{\setlength{\rightskip}{0pt plus 5cm}int Graphique\+::axe\+Y\+Luminosite\+Max\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_ac8e0364a45fe0882d175f12da7f9b1b3}{}\label{class_graphique_ac8e0364a45fe0882d175f12da7f9b1b3}
+variable qui contient la valeur max de l\textquotesingle{}axe pression 
+
+Référencé par \hyperlink{class_graphique_a1af0e1968998cb7b5ee8add1197cb0e0}{ajouter\+Donnee\+Luminosite()}, et \hyperlink{class_graphique_a3b55b9c4732856e1b25bef167c25ac4c}{creer\+Graphique\+Luminosite()}.
+
+\index{Graphique@{Graphique}!axe\+Y\+Pression@{axe\+Y\+Pression}}
+\index{axe\+Y\+Pression@{axe\+Y\+Pression}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{axe\+Y\+Pression}{axeYPression}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Value\+Axis$\ast$ Graphique\+::axe\+Y\+Pression\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_a9e5efb7607907c0428baa90bd6fbeb2e}{}\label{class_graphique_a9e5efb7607907c0428baa90bd6fbeb2e}
+les données de pression 
+
+Référencé par \hyperlink{class_graphique_a289f0631e56465012511fd7ec9da1b23}{ajouter\+Donnee\+Pression()}, et \hyperlink{class_graphique_adc50b5ae7a54dd576c99e74ec6bf74c5}{creer\+Graphique\+Pression()}.
+
+\index{Graphique@{Graphique}!axe\+Y\+Pression\+Max@{axe\+Y\+Pression\+Max}}
+\index{axe\+Y\+Pression\+Max@{axe\+Y\+Pression\+Max}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{axe\+Y\+Pression\+Max}{axeYPressionMax}}]{\setlength{\rightskip}{0pt plus 5cm}int Graphique\+::axe\+Y\+Pression\+Max\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_a2d382f64898f7e768e612c43dba365de}{}\label{class_graphique_a2d382f64898f7e768e612c43dba365de}
+variable qui contient la valeur min de l\textquotesingle{}axe temperature 
+
+Référencé par \hyperlink{class_graphique_a289f0631e56465012511fd7ec9da1b23}{ajouter\+Donnee\+Pression()}, et \hyperlink{class_graphique_adc50b5ae7a54dd576c99e74ec6bf74c5}{creer\+Graphique\+Pression()}.
+
+\index{Graphique@{Graphique}!axe\+Y\+Temperature@{axe\+Y\+Temperature}}
+\index{axe\+Y\+Temperature@{axe\+Y\+Temperature}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{axe\+Y\+Temperature}{axeYTemperature}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Value\+Axis$\ast$ Graphique\+::axe\+Y\+Temperature\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_a3df7eeca8d7dba5f528f65d89883736f}{}\label{class_graphique_a3df7eeca8d7dba5f528f65d89883736f}
+les données temperatures 
+
+Référencé par \hyperlink{class_graphique_a42b3c986ca86c426adbb8fdb03a04380}{ajouter\+Donnee\+Temperature()}, et \hyperlink{class_graphique_ad9b976804bafcbfe451d89fd35729d16}{creer\+Graphique\+Temperature()}.
+
+\index{Graphique@{Graphique}!axe\+Y\+Temperature\+Max@{axe\+Y\+Temperature\+Max}}
+\index{axe\+Y\+Temperature\+Max@{axe\+Y\+Temperature\+Max}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{axe\+Y\+Temperature\+Max}{axeYTemperatureMax}}]{\setlength{\rightskip}{0pt plus 5cm}double Graphique\+::axe\+Y\+Temperature\+Max\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_a6aac1bb5ad9a78cb91ca64359e7da307}{}\label{class_graphique_a6aac1bb5ad9a78cb91ca64359e7da307}
+les données d\textquotesingle{}humidité 
+
+Référencé par \hyperlink{class_graphique_a42b3c986ca86c426adbb8fdb03a04380}{ajouter\+Donnee\+Temperature()}, et \hyperlink{class_graphique_ad9b976804bafcbfe451d89fd35729d16}{creer\+Graphique\+Temperature()}.
+
+\index{Graphique@{Graphique}!axe\+Y\+Temperature\+Min@{axe\+Y\+Temperature\+Min}}
+\index{axe\+Y\+Temperature\+Min@{axe\+Y\+Temperature\+Min}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{axe\+Y\+Temperature\+Min}{axeYTemperatureMin}}]{\setlength{\rightskip}{0pt plus 5cm}double Graphique\+::axe\+Y\+Temperature\+Min\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_ad0971f340d49a40c14376a0e0a985f81}{}\label{class_graphique_ad0971f340d49a40c14376a0e0a985f81}
+variable qui contient la valeur max de l\textquotesingle{}axe temperature 
+
+Référencé par \hyperlink{class_graphique_a42b3c986ca86c426adbb8fdb03a04380}{ajouter\+Donnee\+Temperature()}, et \hyperlink{class_graphique_ad9b976804bafcbfe451d89fd35729d16}{creer\+Graphique\+Temperature()}.
+
+\index{Graphique@{Graphique}!courbe\+Humidite@{courbe\+Humidite}}
+\index{courbe\+Humidite@{courbe\+Humidite}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{courbe\+Humidite}{courbeHumidite}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Line\+Series$\ast$ Graphique\+::courbe\+Humidite\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_a1ff987d94beb7c471a85be00e881d64c}{}\label{class_graphique_a1ff987d94beb7c471a85be00e881d64c}
+un widget pour afficher un graphe humidité 
+
+Référencé par \hyperlink{class_graphique_ad3dd36f05a9923054a0a2138f96f0311}{ajouter\+Donnee\+Humidite()}, et \hyperlink{class_graphique_a19d6deef2d11e95093a343d49f75d14e}{creer\+Graphique\+Humidite()}.
+
+\index{Graphique@{Graphique}!courbe\+Luminosite@{courbe\+Luminosite}}
+\index{courbe\+Luminosite@{courbe\+Luminosite}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{courbe\+Luminosite}{courbeLuminosite}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Line\+Series$\ast$ Graphique\+::courbe\+Luminosite\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_a8bf527363f5d8198bf6fc959a8689963}{}\label{class_graphique_a8bf527363f5d8198bf6fc959a8689963}
+la représentation du graphe luminosité 
+
+Référencé par \hyperlink{class_graphique_a1af0e1968998cb7b5ee8add1197cb0e0}{ajouter\+Donnee\+Luminosite()}, et \hyperlink{class_graphique_a3b55b9c4732856e1b25bef167c25ac4c}{creer\+Graphique\+Luminosite()}.
+
+\index{Graphique@{Graphique}!courbe\+Pression@{courbe\+Pression}}
+\index{courbe\+Pression@{courbe\+Pression}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{courbe\+Pression}{courbePression}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Line\+Series$\ast$ Graphique\+::courbe\+Pression\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_a49e03fd868685d638fc285837ca26772}{}\label{class_graphique_a49e03fd868685d638fc285837ca26772}
+la représentation du graphe pression 
+
+Référencé par \hyperlink{class_graphique_a289f0631e56465012511fd7ec9da1b23}{ajouter\+Donnee\+Pression()}, et \hyperlink{class_graphique_adc50b5ae7a54dd576c99e74ec6bf74c5}{creer\+Graphique\+Pression()}.
+
+\index{Graphique@{Graphique}!courbe\+Temperature@{courbe\+Temperature}}
+\index{courbe\+Temperature@{courbe\+Temperature}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{courbe\+Temperature}{courbeTemperature}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Line\+Series$\ast$ Graphique\+::courbe\+Temperature\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_a6c2f8ef3364123ad300de74db529bd9b}{}\label{class_graphique_a6c2f8ef3364123ad300de74db529bd9b}
+la représentation du graphe temperature 
+
+Référencé par \hyperlink{class_graphique_a42b3c986ca86c426adbb8fdb03a04380}{ajouter\+Donnee\+Temperature()}, et \hyperlink{class_graphique_ad9b976804bafcbfe451d89fd35729d16}{creer\+Graphique\+Temperature()}.
+
+\index{Graphique@{Graphique}!debut@{debut}}
+\index{debut@{debut}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{debut}{debut}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date\+Time Graphique\+::debut\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{}\label{class_graphique_a468d57ae7b14b46558cf25629cced7b6}
+le widget qui contient les graphiques 
+
+Référencé par \hyperlink{class_graphique_ad3dd36f05a9923054a0a2138f96f0311}{ajouter\+Donnee\+Humidite()}, \hyperlink{class_graphique_a1af0e1968998cb7b5ee8add1197cb0e0}{ajouter\+Donnee\+Luminosite()}, \hyperlink{class_graphique_a289f0631e56465012511fd7ec9da1b23}{ajouter\+Donnee\+Pression()}, \hyperlink{class_graphique_a42b3c986ca86c426adbb8fdb03a04380}{ajouter\+Donnee\+Temperature()}, \hyperlink{class_graphique_a19d6deef2d11e95093a343d49f75d14e}{creer\+Graphique\+Humidite()}, \hyperlink{class_graphique_a3b55b9c4732856e1b25bef167c25ac4c}{creer\+Graphique\+Luminosite()}, \hyperlink{class_graphique_adc50b5ae7a54dd576c99e74ec6bf74c5}{creer\+Graphique\+Pression()}, \hyperlink{class_graphique_ad9b976804bafcbfe451d89fd35729d16}{creer\+Graphique\+Temperature()}, et \hyperlink{class_graphique_a3aec0a5aaae78f0726771dea67af69b4}{Graphique()}.
+
+\index{Graphique@{Graphique}!graphe\+Humidite@{graphe\+Humidite}}
+\index{graphe\+Humidite@{graphe\+Humidite}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{graphe\+Humidite}{grapheHumidite}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Chart$\ast$ Graphique\+::graphe\+Humidite\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_a992da12af1bcf950a9a5fb9799b8f86b}{}\label{class_graphique_a992da12af1bcf950a9a5fb9799b8f86b}
+l\textquotesingle{}axe X humidite 
+
+Référencé par \hyperlink{class_graphique_ad3dd36f05a9923054a0a2138f96f0311}{ajouter\+Donnee\+Humidite()}, et \hyperlink{class_graphique_a19d6deef2d11e95093a343d49f75d14e}{creer\+Graphique\+Humidite()}.
+
+\index{Graphique@{Graphique}!graphe\+Luminosite@{graphe\+Luminosite}}
+\index{graphe\+Luminosite@{graphe\+Luminosite}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{graphe\+Luminosite}{grapheLuminosite}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Chart$\ast$ Graphique\+::graphe\+Luminosite\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_adbed6be47df503c9a260586b0d93f5c4}{}\label{class_graphique_adbed6be47df503c9a260586b0d93f5c4}
+un widget pour afficher le graphe luminosité 
+
+Référencé par \hyperlink{class_graphique_a1af0e1968998cb7b5ee8add1197cb0e0}{ajouter\+Donnee\+Luminosite()}, et \hyperlink{class_graphique_a3b55b9c4732856e1b25bef167c25ac4c}{creer\+Graphique\+Luminosite()}.
+
+\index{Graphique@{Graphique}!graphe\+Pression@{graphe\+Pression}}
+\index{graphe\+Pression@{graphe\+Pression}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{graphe\+Pression}{graphePression}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Chart$\ast$ Graphique\+::graphe\+Pression\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_afbf5d79803c4395cd5526891e1fc313f}{}\label{class_graphique_afbf5d79803c4395cd5526891e1fc313f}
+un widget pour afficher le graphe pression 
+
+Référencé par \hyperlink{class_graphique_a289f0631e56465012511fd7ec9da1b23}{ajouter\+Donnee\+Pression()}, et \hyperlink{class_graphique_adc50b5ae7a54dd576c99e74ec6bf74c5}{creer\+Graphique\+Pression()}.
+
+\index{Graphique@{Graphique}!graphe\+Temperature@{graphe\+Temperature}}
+\index{graphe\+Temperature@{graphe\+Temperature}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{graphe\+Temperature}{grapheTemperature}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Chart$\ast$ Graphique\+::graphe\+Temperature\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_ad2fe81a972ee10a20a56300a87a78f24}{}\label{class_graphique_ad2fe81a972ee10a20a56300a87a78f24}
+un widget pour afficher le graphe temperature 
+
+Référencé par \hyperlink{class_graphique_a42b3c986ca86c426adbb8fdb03a04380}{ajouter\+Donnee\+Temperature()}, et \hyperlink{class_graphique_ad9b976804bafcbfe451d89fd35729d16}{creer\+Graphique\+Temperature()}.
+
+\index{Graphique@{Graphique}!graphique\+Humidite@{graphique\+Humidite}}
+\index{graphique\+Humidite@{graphique\+Humidite}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{graphique\+Humidite}{graphiqueHumidite}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Chart\+View$\ast$ Graphique\+::graphique\+Humidite\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_af57614c61f87539da7bc7e86527162e1}{}\label{class_graphique_af57614c61f87539da7bc7e86527162e1}
+la représentation du graphe humidité 
+
+Référencé par \hyperlink{class_graphique_ad3dd36f05a9923054a0a2138f96f0311}{ajouter\+Donnee\+Humidite()}, et \hyperlink{class_graphique_a19d6deef2d11e95093a343d49f75d14e}{creer\+Graphique\+Humidite()}.
+
+\index{Graphique@{Graphique}!graphique\+Luminosite@{graphique\+Luminosite}}
+\index{graphique\+Luminosite@{graphique\+Luminosite}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{graphique\+Luminosite}{graphiqueLuminosite}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Chart\+View$\ast$ Graphique\+::graphique\+Luminosite\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_a55f7c2a564ee7ea232a9328ebad29f40}{}\label{class_graphique_a55f7c2a564ee7ea232a9328ebad29f40}
+l\textquotesingle{}axe X temperature 
+
+Référencé par \hyperlink{class_graphique_a1af0e1968998cb7b5ee8add1197cb0e0}{ajouter\+Donnee\+Luminosite()}, et \hyperlink{class_graphique_a3b55b9c4732856e1b25bef167c25ac4c}{creer\+Graphique\+Luminosite()}.
+
+\index{Graphique@{Graphique}!graphique\+Pression@{graphique\+Pression}}
+\index{graphique\+Pression@{graphique\+Pression}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{graphique\+Pression}{graphiquePression}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Chart\+View$\ast$ Graphique\+::graphique\+Pression\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_aa389bad562aa7ccba12aa490e02c672b}{}\label{class_graphique_aa389bad562aa7ccba12aa490e02c672b}
+l\textquotesingle{}axe X lumonisité 
+
+Référencé par \hyperlink{class_graphique_a289f0631e56465012511fd7ec9da1b23}{ajouter\+Donnee\+Pression()}, et \hyperlink{class_graphique_adc50b5ae7a54dd576c99e74ec6bf74c5}{creer\+Graphique\+Pression()}.
+
+\index{Graphique@{Graphique}!graphique\+Temperature@{graphique\+Temperature}}
+\index{graphique\+Temperature@{graphique\+Temperature}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{graphique\+Temperature}{graphiqueTemperature}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Chart\+View$\ast$ Graphique\+::graphique\+Temperature\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_a485cc4a65014e812b9e4aa9ee3ea9ca4}{}\label{class_graphique_a485cc4a65014e812b9e4aa9ee3ea9ca4}
+layout qui contient les deux layout \textquotesingle{}avec les graphiques (layout\+H\+Temp\+Hum / layout\+H\+Lum\+Pres) 
+
+Référencé par \hyperlink{class_graphique_a42b3c986ca86c426adbb8fdb03a04380}{ajouter\+Donnee\+Temperature()}, et \hyperlink{class_graphique_ad9b976804bafcbfe451d89fd35729d16}{creer\+Graphique\+Temperature()}.
+
+\index{Graphique@{Graphique}!ihm\+Graphique@{ihm\+Graphique}}
+\index{ihm\+Graphique@{ihm\+Graphique}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{ihm\+Graphique}{ihmGraphique}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Q\+Widget}$\ast$ Graphique\+::ihm\+Graphique\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_a55d98b20085f7c79f42f3ae0423ac72a}{}\label{class_graphique_a55d98b20085f7c79f42f3ae0423ac72a}
+fonction appelé pour ajoute des valeurs aux graphique pression 
+
+Référencé par \hyperlink{class_graphique_a3aec0a5aaae78f0726771dea67af69b4}{Graphique()}, et \hyperlink{class_graphique_a1bb866eb859b961cf0cdddc1b289a773}{$\sim$\+Graphique()}.
+
+\index{Graphique@{Graphique}!layout\+H\+Lum\+Pres@{layout\+H\+Lum\+Pres}}
+\index{layout\+H\+Lum\+Pres@{layout\+H\+Lum\+Pres}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{layout\+H\+Lum\+Pres}{layoutHLumPres}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+H\+Box\+Layout$\ast$ Graphique\+::layout\+H\+Lum\+Pres\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_a622c90a88a11b29aa275906a3ee051ef}{}\label{class_graphique_a622c90a88a11b29aa275906a3ee051ef}
+layout qui contient le graphique temperature et humidité 
+
+Référencé par \hyperlink{class_graphique_a3b55b9c4732856e1b25bef167c25ac4c}{creer\+Graphique\+Luminosite()}, \hyperlink{class_graphique_adc50b5ae7a54dd576c99e74ec6bf74c5}{creer\+Graphique\+Pression()}, et \hyperlink{class_graphique_a3aec0a5aaae78f0726771dea67af69b4}{Graphique()}.
+
+\index{Graphique@{Graphique}!layout\+H\+Temp\+Hum@{layout\+H\+Temp\+Hum}}
+\index{layout\+H\+Temp\+Hum@{layout\+H\+Temp\+Hum}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{layout\+H\+Temp\+Hum}{layoutHTempHum}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+H\+Box\+Layout$\ast$ Graphique\+::layout\+H\+Temp\+Hum\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_a1ccd9268372eef81a117bd82b50bec6a}{}\label{class_graphique_a1ccd9268372eef81a117bd82b50bec6a}
+objet date utilisé pour l\textquotesingle{}axe temps des graphiques. 
+
+Référencé par \hyperlink{class_graphique_a19d6deef2d11e95093a343d49f75d14e}{creer\+Graphique\+Humidite()}, \hyperlink{class_graphique_ad9b976804bafcbfe451d89fd35729d16}{creer\+Graphique\+Temperature()}, et \hyperlink{class_graphique_a3aec0a5aaae78f0726771dea67af69b4}{Graphique()}.
+
+\index{Graphique@{Graphique}!layoutV@{layoutV}}
+\index{layoutV@{layoutV}!Graphique@{Graphique}}
+\paragraph[{\texorpdfstring{layoutV}{layoutV}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+V\+Box\+Layout$\ast$ Graphique\+::layoutV\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_graphique_a2a8dbb06be361da2b8a500f231c1c607}{}\label{class_graphique_a2a8dbb06be361da2b8a500f231c1c607}
+layout qui contient le graphique luminosité et pression 
+
+Référencé par \hyperlink{class_graphique_a3aec0a5aaae78f0726771dea67af69b4}{Graphique()}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{graphique_8h}{graphique.\+h}\item 
+\hyperlink{graphique_8cpp}{graphique.\+cpp}\end{DoxyCompactItemize}

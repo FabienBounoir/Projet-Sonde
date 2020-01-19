@@ -1,0 +1,60 @@
+\hypertarget{esp32_8h_source}{}\subsection{esp32.\+h}
+\label{esp32_8h_source}\index{esp32.\+h@{esp32.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#ifndef ESP32\_H}
+00002 \textcolor{preprocessor}{#define ESP32\_H}
+00003 
+00004 \textcolor{preprocessor}{#include <QObject>}
+00005 \textcolor{preprocessor}{#include <QString>}
+00006 \textcolor{preprocessor}{#include <QtDebug>}
+00007 
+\hypertarget{esp32_8h_source.tex_l00024}{}\hyperlink{class_esp32}{00024} \textcolor{keyword}{class }\hyperlink{class_esp32}{Esp32} : \textcolor{keyword}{public} \hyperlink{class_q_object}{QObject}
+00025 \{
+00026     Q\_OBJECT
+00027 \textcolor{keyword}{public}:
+00028     \textcolor{keyword}{explicit} \hyperlink{class_esp32_abf9de8dee58d0105a551455874f29c19}{Esp32}(\hyperlink{class_q_object}{QObject} *parent = \textcolor{keyword}{nullptr});          
+00030     \textcolor{keywordtype}{double} \hyperlink{class_esp32_adb339413686f3d78df1ecd41f106fd4e}{getTemperature}() \textcolor{keyword}{const};                          
+00031     \textcolor{keywordtype}{double} \hyperlink{class_esp32_ae29854a5127d760a216f96ec7d797412}{getRessentie}() \textcolor{keyword}{const};                            
+00032     QString \hyperlink{class_esp32_ae20c976b79f87de083ca8ee49b2abf25}{getTemperatureUnite}() \textcolor{keyword}{const};                    
+00033     QString \hyperlink{class_esp32_a548ed7533f742d087c65df256479ed00}{getRessentieUnite}() \textcolor{keyword}{const};                      
+00034     \textcolor{keywordtype}{int} \hyperlink{class_esp32_a87f581ef8f01bcb71a7294cc545b242e}{getHumidite}() \textcolor{keyword}{const};                                
+00035     \textcolor{keywordtype}{int} \hyperlink{class_esp32_aa2cdabace1ce70928c53d25e306a16d1}{getLuminosite}() \textcolor{keyword}{const};                              
+00036     QString \hyperlink{class_esp32_ab2a1fc92c11af031814569f3d2836f33}{getHumiditeUnite}() \textcolor{keyword}{const};                       
+00037     QString \hyperlink{class_esp32_a50f4ef373379d2dbc0fd960438ab6f93}{getLuminositeUnite}() \textcolor{keyword}{const};                     
+00038     \textcolor{keywordtype}{int} \hyperlink{class_esp32_a31155a36108b37febae371d9ae65385a}{getPression}() \textcolor{keyword}{const};                                
+00039     QString \hyperlink{class_esp32_a398d4a1cbc61f7af2f3af7ecbcf2f93f}{getPressionUnite}() \textcolor{keyword}{const};                       
+00040     \textcolor{keywordtype}{int} \hyperlink{class_esp32_a31b691e6c75c1f9859bde4c0df8fe12f}{getAltitude}() \textcolor{keyword}{const};                                
+00041     QString \hyperlink{class_esp32_aad3c2e4b5d15a02abc62d0329f43942d}{getAltitudeUnite}() \textcolor{keyword}{const};                       
+00042     \textcolor{keywordtype}{int} \hyperlink{class_esp32_ac695656654b5d83ec3924b47f533f465}{getEtatLed}() \textcolor{keyword}{const};                                 
+00045     \textcolor{keywordtype}{void} \hyperlink{class_esp32_a8e7a509ed5704bee4bc527ae297f14f0}{setTemperature}(\textcolor{keywordtype}{double} \hyperlink{class_esp32_a8274802633ca34c07fbfe7fa38a171a8}{temperature});                
+00046     \textcolor{keywordtype}{void} \hyperlink{class_esp32_a85dc760b771c9233fa094a49679d9286}{setRessentie}(\textcolor{keywordtype}{double} \hyperlink{class_esp32_a08425470633629dae05f61659ff90375}{ressentie});                    
+00047     \textcolor{keywordtype}{void} \hyperlink{class_esp32_a709c261e1cea7b6bbd2ea1b09b1d7ec0}{setTemperatureUnite}(QString \hyperlink{class_esp32_a825526f0d6b74fda9ddeba7e67ec9dd5}{temperatureUnite});     
+00048     \textcolor{keywordtype}{void} \hyperlink{class_esp32_abf8a7f9942150b6c17cc5d1cc7b0fc8a}{setRessentieUnite}(QString \hyperlink{class_esp32_a5333681c08a07f1877c20cfe88b7024f}{ressentieUnite});         
+00049     \textcolor{keywordtype}{void} \hyperlink{class_esp32_a029c94bf405887eb890b3381ac176a9a}{setHumidite}(\textcolor{keywordtype}{int} \hyperlink{class_esp32_a7ad1a81c0a3cb29035aaef89d153f662}{humidite});                         
+00050     \textcolor{keywordtype}{void} \hyperlink{class_esp32_ae60b48e8c808a5108402d5b9f03590ac}{setLuminosite}(\textcolor{keywordtype}{int} \hyperlink{class_esp32_aa6ce86f87c88d7fd29880e9865fefefc}{luminosite});                     
+00051     \textcolor{keywordtype}{void} \hyperlink{class_esp32_ae9b2704f36bcd246668354d0ac06ea35}{setHumiditeUnite}(QString \hyperlink{class_esp32_a90c1ea9a5598c16a7918205185aa9fd6}{humiditeUnite});           
+00052     \textcolor{keywordtype}{void} \hyperlink{class_esp32_a36450bcd23e7676d1f0a46e8bec31275}{setLuminositeUnite}(QString \hyperlink{class_esp32_a67087c5b6b76b64f929dbc255a7d5441}{luminositeUnite});       
+00053     \textcolor{keywordtype}{void} \hyperlink{class_esp32_a583358abbf0b279dabb5a2976f1783de}{setPression}(\textcolor{keywordtype}{int} \hyperlink{class_esp32_a7ddfb5679b439b204a93f775cfa9d2fa}{pression});                         
+00054     \textcolor{keywordtype}{void} \hyperlink{class_esp32_a3c6dd57f955aef0738c48be705538337}{setPressionUnite}(QString \hyperlink{class_esp32_aad1ead1e2c830025af0eebcdb30bcafe}{pressionUnite});           
+00055     \textcolor{keywordtype}{void} \hyperlink{class_esp32_aeb2268155501f27e36e6a7c6caa15412}{setAltitude}(\textcolor{keywordtype}{int} \hyperlink{class_esp32_ab257f7aff043b4d60d963e1bfd1fe35f}{altitude});                         
+00056     \textcolor{keywordtype}{void} \hyperlink{class_esp32_a69b0c6a1c0a31e043b715be3fc40ded1}{setAltitudeUnite}(QString \hyperlink{class_esp32_ad407a4a4139183be7c4293fb254c96d7}{altitudeUnite});           
+00057     \textcolor{keywordtype}{void} \hyperlink{class_esp32_a32d0d1abb41a3762a54e9f5a33b3b247}{setCouleurLed}(\textcolor{keywordtype}{int} \hyperlink{class_esp32_ae8f6b2080769949ae5bd41c8312a6892}{couleur});                        
+00059 \textcolor{keyword}{private}:
+\hypertarget{esp32_8h_source.tex_l00060}{}\hyperlink{class_esp32_a8274802633ca34c07fbfe7fa38a171a8}{00060}     \textcolor{keywordtype}{double} \hyperlink{class_esp32_a8274802633ca34c07fbfe7fa38a171a8}{temperature};             
+\hypertarget{esp32_8h_source.tex_l00061}{}\hyperlink{class_esp32_a825526f0d6b74fda9ddeba7e67ec9dd5}{00061}     QString \hyperlink{class_esp32_a825526f0d6b74fda9ddeba7e67ec9dd5}{temperatureUnite};       
+\hypertarget{esp32_8h_source.tex_l00063}{}\hyperlink{class_esp32_a08425470633629dae05f61659ff90375}{00063}     \textcolor{keywordtype}{double} \hyperlink{class_esp32_a08425470633629dae05f61659ff90375}{ressentie};               
+\hypertarget{esp32_8h_source.tex_l00064}{}\hyperlink{class_esp32_a5333681c08a07f1877c20cfe88b7024f}{00064}     QString \hyperlink{class_esp32_a5333681c08a07f1877c20cfe88b7024f}{ressentieUnite};         
+\hypertarget{esp32_8h_source.tex_l00066}{}\hyperlink{class_esp32_a7ad1a81c0a3cb29035aaef89d153f662}{00066}     \textcolor{keywordtype}{int} \hyperlink{class_esp32_a7ad1a81c0a3cb29035aaef89d153f662}{humidite};                   
+\hypertarget{esp32_8h_source.tex_l00067}{}\hyperlink{class_esp32_a90c1ea9a5598c16a7918205185aa9fd6}{00067}     QString \hyperlink{class_esp32_a90c1ea9a5598c16a7918205185aa9fd6}{humiditeUnite};           
+\hypertarget{esp32_8h_source.tex_l00069}{}\hyperlink{class_esp32_aa6ce86f87c88d7fd29880e9865fefefc}{00069}     \textcolor{keywordtype}{int} \hyperlink{class_esp32_aa6ce86f87c88d7fd29880e9865fefefc}{luminosite};                 
+\hypertarget{esp32_8h_source.tex_l00070}{}\hyperlink{class_esp32_a67087c5b6b76b64f929dbc255a7d5441}{00070}     QString \hyperlink{class_esp32_a67087c5b6b76b64f929dbc255a7d5441}{luminositeUnite};        
+\hypertarget{esp32_8h_source.tex_l00072}{}\hyperlink{class_esp32_a7ddfb5679b439b204a93f775cfa9d2fa}{00072}     \textcolor{keywordtype}{int} \hyperlink{class_esp32_a7ddfb5679b439b204a93f775cfa9d2fa}{pression};                   
+\hypertarget{esp32_8h_source.tex_l00073}{}\hyperlink{class_esp32_aad1ead1e2c830025af0eebcdb30bcafe}{00073}     QString \hyperlink{class_esp32_aad1ead1e2c830025af0eebcdb30bcafe}{pressionUnite};          
+\hypertarget{esp32_8h_source.tex_l00075}{}\hyperlink{class_esp32_ab257f7aff043b4d60d963e1bfd1fe35f}{00075}     \textcolor{keywordtype}{int} \hyperlink{class_esp32_ab257f7aff043b4d60d963e1bfd1fe35f}{altitude};                   
+\hypertarget{esp32_8h_source.tex_l00076}{}\hyperlink{class_esp32_ad407a4a4139183be7c4293fb254c96d7}{00076}     QString \hyperlink{class_esp32_ad407a4a4139183be7c4293fb254c96d7}{altitudeUnite};          
+\hypertarget{esp32_8h_source.tex_l00078}{}\hyperlink{class_esp32_ae8f6b2080769949ae5bd41c8312a6892}{00078}     \textcolor{keywordtype}{int} \hyperlink{class_esp32_ae8f6b2080769949ae5bd41c8312a6892}{couleur};                
+00079 \};
+00080 
+00081 \textcolor{preprocessor}{#endif // ESP32\_H}
+\end{DoxyCode}

@@ -1,0 +1,114 @@
+\subsubsection*{Nom \+: Mini-\/projet Qt Sonde E\+S\+P32}
+
+\subsubsection*{Numéro de version \+: 4.\+0}
+
+\subsubsection*{Auteurs}
+
+{\itshape Fabien} Bounoir (IR) \href{mailto:bounoirfabien@gmail.com}{\tt bounoirfabien@gmail.\+com}
+
+\subsubsection*{Description}
+
+Le programme a été réalisé avec Qt 5.\+11.\+2.
+
+Fichier {\ttfamily .pro} \+:
+
+
+\begin{DoxyCode}
+00001 QT       += core gui \(\backslash\)
+00002             serialport network \(\backslash\)
+00003             bluetooth \(\backslash\)
+00004             positioning \(\backslash\)
+00005             charts
+00006 
+00007 greaterThan(QT\_MAJOR\_VERSION, 4): QT += widgets
+00008 
+00009 TARGET = Sonde
+00010 TEMPLATE = app
+00011 
+00012 CONFIG += c++11
+00013 
+00014 SOURCES += \(\backslash\)
+00015         main.cpp \(\backslash\)
+00016         ihm.cpp \(\backslash\)
+00017     transmission.cpp \(\backslash\)
+00018     esp32.cpp \(\backslash\)
+00019     meteo.cpp \(\backslash\)
+00020     graphique.cpp \(\backslash\)
+00021     gps.cpp
+00022 
+00023 HEADERS += \(\backslash\)
+00024         ihm.h \(\backslash\)
+00025     transmission.h \(\backslash\)
+00026     esp32.h \(\backslash\)
+00027     meteo.h \(\backslash\)
+00028     graphique.h \(\backslash\)
+00029     gps.h
+00030 
+00031 FORMS += \(\backslash\)
+00032         ihm.ui
+00033 
+00034 CONFIG(release, debug|release):DEFINES+=QT\_NO\_DEBUG\_OUTPUT
+\end{DoxyCode}
+
+
+\subsubsection*{Protocole}
+
+
+\begin{DoxyCode}
+00001 
+      SONDE;TEMPERATURE;UNITE;RESSENTIE;UNITE;HUMIDITE;UNITE;ECLAIREMENT;UNITE;PRESSION;UNITE;ALTITUDE;UNITE;\(\backslash\)n
+00002 LED;ETAT LED ROUGE;ETAT LED VERTE;ETAT;COULEUR;\(\backslash\)n
+\end{DoxyCode}
+
+
+Exemple \+:
+
+
+\begin{DoxyCode}
+00001 SONDE;20.8;C;20.0;C;41;%;997;lux;1007;hPa;52;m;\(\backslash\)n -> Température 20,8 °C, Ressentie 20 °C, Humidité 41
+       %, un éclairement de 997 lux, une pression atmosphérique de 1007 hPa et d'une altitude évaluée à 52 m
+00002 LED;1;0;1;1;\(\backslash\)n -> Le Led est allumée en rouge
+\end{DoxyCode}
+
+
+{\itshape Remarques \+:}
+
+
+\begin{DoxyItemize}
+\item Les valeurs de température sont précisées au dixième de degré.
+\item Un booléen est égal à 0 pour false et 1 pour true.
+\item Les codes de couleur pour la Led sont \+:
+\begin{DoxyItemize}
+\item Aucune (éteinte) = 0
+\item Rouge = 1
+\item Verte = 2
+\item Orange = 3
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Les clients connectés ont la possibilité d\textquotesingle{}envoyer une requête pour commander la led \+:
+
+
+\begin{DoxyCode}
+00001 SET LED commande\(\backslash\)n
+\end{DoxyCode}
+
+
+Le champ commande peut prendre les valeurs suivantes \+:
+
+
+\begin{DoxyCode}
+00001 SET LED ON\(\backslash\)n -> allume la Led dans sa couleur courante
+00002 SET LED OFF\(\backslash\)n -> éteint la Led
+00003 SET LED 0\(\backslash\)n -> éteint la Led
+00004 SET LED 1\(\backslash\)n -> allume la Led en rouge
+00005 SET LED 2\(\backslash\)n -> allume la Led en vert
+00006 SET LED 3\(\backslash\) -> allume la Led en orange
+00007 SET LED ROUGE\(\backslash\)n -> allume la Led en rouge
+00008 SET LED VERT\(\backslash\)n -> allume la Led en vert
+00009 SET LED VERTE\(\backslash\)n -> allume la Led en vert
+00010 SET LED ORANGE\(\backslash\)n -> allume la Led en orange
+\end{DoxyCode}
+
+
+{\itshape Remarque \+: la requête est insensible à la casse.} 

@@ -1,0 +1,782 @@
+\hypertarget{class_meteo}{}\subsection{Référence de la classe Meteo}
+\label{class_meteo}\index{Meteo@{Meteo}}
+
+
+Declaration de la classe \hyperlink{class_meteo}{Meteo}.  
+
+
+
+
+{\ttfamily \#include \char`\"{}meteo.\+h\char`\"{}}
+
+
+
+Graphe de collaboration de Meteo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{class_meteo__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Signaux}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_meteo_ab58994e421e7f44a81bd802c6b167cfb}{donner\+Meteo\+Mise\+A\+Jour} ()
+\end{DoxyCompactItemize}
+\subsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_meteo_aa7dab03da06a05dce302c154ad9aec53}{Meteo} (\hyperlink{class_q_object}{Q\+Object} $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em constructeur de la classe \hyperlink{class_meteo}{Meteo} \end{DoxyCompactList}\item 
+double \hyperlink{class_meteo_ad0a7466f4371df14623fd03fa0bab8dd}{get\+Temperature} () const 
+\begin{DoxyCompactList}\small\item\em retourne la valeur de temperature \end{DoxyCompactList}\item 
+double \hyperlink{class_meteo_a7bcbc6280fb91ff28436e84f7d8765e7}{get\+Ressentie} () const 
+\begin{DoxyCompactList}\small\item\em retourne la valeur de ressentie \end{DoxyCompactList}\item 
+double \hyperlink{class_meteo_a0cef4ff7ae16cfcd820d164d1c5334c4}{get\+Temperature\+Min} () const 
+\begin{DoxyCompactList}\small\item\em retourne la valeur de temperature Minimal en degre \end{DoxyCompactList}\item 
+double \hyperlink{class_meteo_a114aadb20b0b56c1fe8a6fc2dd19c02b}{get\+Temperature\+Max} () const 
+\begin{DoxyCompactList}\small\item\em retourne la valeur de temperature Maximal en degre \end{DoxyCompactList}\item 
+int \hyperlink{class_meteo_a2a4cd85d63157f6b682d37f9c19d1683}{get\+Pression} () const 
+\begin{DoxyCompactList}\small\item\em retourne la valeur de pression \end{DoxyCompactList}\item 
+int \hyperlink{class_meteo_a336cfea55c062ebe45fbc7d1a48aaaa1}{get\+Humidite} () const 
+\begin{DoxyCompactList}\small\item\em retourne la valeur de humidité \end{DoxyCompactList}\item 
+Q\+String \hyperlink{class_meteo_af9ceb3e99e123e6931f8cd9cfde57834}{get\+Ville} () const 
+\begin{DoxyCompactList}\small\item\em retourne la valeur de la ville \end{DoxyCompactList}\item 
+void \hyperlink{class_meteo_a7e15015233ae155d482e414804c4b381}{set\+Temperature} (double \hyperlink{class_meteo_a8086970687d7df655f68775bc0852178}{temperature})
+\begin{DoxyCompactList}\small\item\em modifie la variable température avec celle passer en paramètre \end{DoxyCompactList}\item 
+void \hyperlink{class_meteo_a7055da66033ec24def1e9f9688b837d1}{set\+Temperature\+Min} (double \hyperlink{class_meteo_a640f1543a82502057c333eed2c2b049e}{temperature\+Min})
+\begin{DoxyCompactList}\small\item\em modifie la variable température\+Min avec celle passer en paramètre \end{DoxyCompactList}\item 
+void \hyperlink{class_meteo_a1737d7a11c9bf4326071531acfcc3243}{set\+Temperature\+Max} (double \hyperlink{class_meteo_a5dd5312470d767714779344a524fd27b}{temperature\+Max})
+\begin{DoxyCompactList}\small\item\em modifie la variable température\+Max avec celle passer en paramètre \end{DoxyCompactList}\item 
+void \hyperlink{class_meteo_a73283bb2c6aa7bc205b0490cfb6ddf08}{set\+Ressentie} (double \hyperlink{class_meteo_a405ea827846e04994ed8073f82978995}{ressentie})
+\begin{DoxyCompactList}\small\item\em modifie la variable ressentie avec celle passer en paramètre \end{DoxyCompactList}\item 
+void \hyperlink{class_meteo_a919f06b3944298a47daf3405bde46402}{set\+Pression} (int \hyperlink{class_meteo_a28fe6c4ed03fcf9829dd5a8997bfb0fc}{pression})
+\begin{DoxyCompactList}\small\item\em modifie la variable pression avec celle passer en paramètre \end{DoxyCompactList}\item 
+void \hyperlink{class_meteo_adb383986b49742d49f3fe86ca7bec358}{set\+Humidite} (int \hyperlink{class_meteo_ada819b35e83127ce17a51abad383f349}{humidite})
+\begin{DoxyCompactList}\small\item\em modifie la variable humidite avec celle passer en paramètre \end{DoxyCompactList}\item 
+void \hyperlink{class_meteo_ae6f56d33b87f62db4d6ebd88226d9e5f}{set\+Ville} (Q\+String \hyperlink{class_meteo_a20ab84130cd8c6085e665f1d7d8403a6}{ville})
+\begin{DoxyCompactList}\small\item\em modifie la variable ville avec celle passer en paramètre \end{DoxyCompactList}\item 
+void \hyperlink{class_meteo_abb613fded967168801097cf487ac2e29}{recuperer\+Donner\+Meteo} (Q\+String U\+RL)
+\begin{DoxyCompactList}\small\item\em fonction qui fait une requête a l\textquotesingle{}api du site openweathermap en fonction de la ville choisie \end{DoxyCompactList}\item 
+void \hyperlink{class_meteo_a256a2559d391cb862009c778a97dee2c}{creer\+Url\+Ville} (Q\+String \hyperlink{class_meteo_a20ab84130cd8c6085e665f1d7d8403a6}{ville})
+\begin{DoxyCompactList}\small\item\em methode qui cree un Url pour l\textquotesingle{}api avec une longitude et latitude \end{DoxyCompactList}\item 
+void \hyperlink{class_meteo_a1580d310479be44d2c94a2967d53e043}{creer\+Url\+Coordonner\+Gps} (double latitude, double longitude)
+\begin{DoxyCompactList}\small\item\em methode qui cree un Url pour l\textquotesingle{}api avec une ville \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Connecteurs privés}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_meteo_a3bb764a7af2d35df9018e0acb3a88127}{reply\+Finished} (Q\+Network\+Reply $\ast$reply)
+\begin{DoxyCompactList}\small\item\em Décompose le Json pour récupérer les différentes données. \end{DoxyCompactList}\item 
+void \hyperlink{class_meteo_af6fbf43af30cfd3987f058d1ab7ab27b}{position\+Mise\+A\+Jour} (const Q\+Geo\+Position\+Info \&info)
+\begin{DoxyCompactList}\small\item\em methode appeler quand la position est mise à jour \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_meteo_a08c48ce5f6ff05c687e570e34117f2ed}{localiser\+Appareil} ()
+\begin{DoxyCompactList}\small\item\em methode qui localise l\textquotesingle{}endroit ou se trouve l\textquotesingle{}appareil \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Network\+Access\+Manager $\ast$ \hyperlink{class_meteo_a020089a0880ff5d97df50e6a97b68f90}{manager}
+\begin{DoxyCompactList}\small\item\em objet manager \end{DoxyCompactList}\item 
+double \hyperlink{class_meteo_a8086970687d7df655f68775bc0852178}{temperature}
+\item 
+double \hyperlink{class_meteo_a405ea827846e04994ed8073f82978995}{ressentie}
+\item 
+double \hyperlink{class_meteo_a640f1543a82502057c333eed2c2b049e}{temperature\+Min}
+\item 
+double \hyperlink{class_meteo_a5dd5312470d767714779344a524fd27b}{temperature\+Max}
+\item 
+int \hyperlink{class_meteo_a28fe6c4ed03fcf9829dd5a8997bfb0fc}{pression}
+\item 
+int \hyperlink{class_meteo_ada819b35e83127ce17a51abad383f349}{humidite}
+\item 
+Q\+String \hyperlink{class_meteo_a20ab84130cd8c6085e665f1d7d8403a6}{ville}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Documentation des constructeurs et destructeur}
+\index{Meteo@{Meteo}!Meteo@{Meteo}}
+\index{Meteo@{Meteo}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{Meteo(\+Q\+Object $\ast$parent=nullptr)}{Meteo(QObject *parent=nullptr)}}]{\setlength{\rightskip}{0pt plus 5cm}Meteo\+::\+Meteo (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Object} $\ast$}]{parent = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{class_meteo_aa7dab03da06a05dce302c154ad9aec53}{}\label{class_meteo_aa7dab03da06a05dce302c154ad9aec53}
+
+\begin{DoxyParams}{Paramètres}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_meteo_a020089a0880ff5d97df50e6a97b68f90}{manager}, et \hyperlink{class_meteo_a3bb764a7af2d35df9018e0acb3a88127}{reply\+Finished()}.
+
+
+\begin{DoxyCode}
+00019                             : \hyperlink{class_q_object}{QObject}(parent), \hyperlink{class_meteo_a8086970687d7df655f68775bc0852178}{temperature}(0.), 
+      \hyperlink{class_meteo_a405ea827846e04994ed8073f82978995}{ressentie}(0.), \hyperlink{class_meteo_a640f1543a82502057c333eed2c2b049e}{temperatureMin}(0.), \hyperlink{class_meteo_a5dd5312470d767714779344a524fd27b}{temperatureMax}(0.), 
+      \hyperlink{class_meteo_a28fe6c4ed03fcf9829dd5a8997bfb0fc}{pression}(0), \hyperlink{class_meteo_ada819b35e83127ce17a51abad383f349}{humidite}(0)
+00020 \{
+00021     \hyperlink{class_meteo_a020089a0880ff5d97df50e6a97b68f90}{manager} = \textcolor{keyword}{new} QNetworkAccessManager(\textcolor{keyword}{this});
+00022     connect(\hyperlink{class_meteo_a020089a0880ff5d97df50e6a97b68f90}{manager}, SIGNAL(finished(QNetworkReply*)), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{class_meteo_a3bb764a7af2d35df9018e0acb3a88127}{replyFinished}(QNetworkReply*)));
+00023 
+00024     \textcolor{comment}{//localiserAppareil();          //methode pour localiser sans GPS.}
+00025 \}
+\end{DoxyCode}
+
+
+\subsubsection{Documentation des fonctions membres}
+\index{Meteo@{Meteo}!creer\+Url\+Coordonner\+Gps@{creer\+Url\+Coordonner\+Gps}}
+\index{creer\+Url\+Coordonner\+Gps@{creer\+Url\+Coordonner\+Gps}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{creer\+Url\+Coordonner\+Gps(double latitude, double longitude)}{creerUrlCoordonnerGps(double latitude, double longitude)}}]{\setlength{\rightskip}{0pt plus 5cm}void Meteo\+::creer\+Url\+Coordonner\+Gps (
+\begin{DoxyParamCaption}
+\item[{double}]{latitude, }
+\item[{double}]{longitude}
+\end{DoxyParamCaption}
+)}\hypertarget{class_meteo_a1580d310479be44d2c94a2967d53e043}{}\label{class_meteo_a1580d310479be44d2c94a2967d53e043}
+fonction qui permet de creer l\textquotesingle{}U\+Rl pour l\textquotesingle{}Api avec une ville
+
+
+\begin{DoxyParams}{Paramètres}
+{\em latitude} & \\
+\hline
+{\em longitude} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{meteo_8h_a187af7b881bea2905b906b75ac61c951}{A\+P\+I\+\_\+\+K\+EY}, et \hyperlink{class_meteo_abb613fded967168801097cf487ac2e29}{recuperer\+Donner\+Meteo()}.
+
+
+
+Référencé par \hyperlink{class_ihm_a850d1c97ed5fe5ba3cf3aa85d81872cd}{Ihm\+::on\+\_\+push\+Button\+Envoyer\+Coordonnee\+\_\+clicked()}, et \hyperlink{class_meteo_af6fbf43af30cfd3987f058d1ab7ab27b}{position\+Mise\+A\+Jour()}.
+
+
+\begin{DoxyCode}
+00221 \{
+00222     \hyperlink{class_meteo_abb613fded967168801097cf487ac2e29}{recupererDonnerMeteo}(\textcolor{stringliteral}{"http://api.openweathermap.org/data/2.5/weather?lat="} + 
+      QString::number(latitude) + \textcolor{stringliteral}{"&lon="} + QString::number(longitude) + \textcolor{stringliteral}{"&units=metric&APPID="} + 
+      \hyperlink{meteo_8h_a187af7b881bea2905b906b75ac61c951}{API\_KEY});
+00223 \}
+\end{DoxyCode}
+\index{Meteo@{Meteo}!creer\+Url\+Ville@{creer\+Url\+Ville}}
+\index{creer\+Url\+Ville@{creer\+Url\+Ville}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{creer\+Url\+Ville(\+Q\+String ville)}{creerUrlVille(QString ville)}}]{\setlength{\rightskip}{0pt plus 5cm}void Meteo\+::creer\+Url\+Ville (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{ville}
+\end{DoxyParamCaption}
+)}\hypertarget{class_meteo_a256a2559d391cb862009c778a97dee2c}{}\label{class_meteo_a256a2559d391cb862009c778a97dee2c}
+fonction qui envoie une requete a l\textquotesingle{}api de openweather
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ville} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{meteo_8h_a187af7b881bea2905b906b75ac61c951}{A\+P\+I\+\_\+\+K\+EY}, et \hyperlink{class_meteo_abb613fded967168801097cf487ac2e29}{recuperer\+Donner\+Meteo()}.
+
+
+
+Référencé par \hyperlink{class_ihm_aa943965aa565ec50e00f433100660892}{Ihm\+::on\+\_\+push\+Button\+Ville\+\_\+clicked()}.
+
+
+\begin{DoxyCode}
+00232 \{
+00233     \hyperlink{class_meteo_abb613fded967168801097cf487ac2e29}{recupererDonnerMeteo}(\textcolor{stringliteral}{"http://api.openweathermap.org/data/2.5/weather?q="} + 
+      \hyperlink{class_meteo_a20ab84130cd8c6085e665f1d7d8403a6}{ville} + \textcolor{stringliteral}{",FR&units=metric&APPID="} + \hyperlink{meteo_8h_a187af7b881bea2905b906b75ac61c951}{API\_KEY});
+00234 \}
+\end{DoxyCode}
+\index{Meteo@{Meteo}!donner\+Meteo\+Mise\+A\+Jour@{donner\+Meteo\+Mise\+A\+Jour}}
+\index{donner\+Meteo\+Mise\+A\+Jour@{donner\+Meteo\+Mise\+A\+Jour}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{donner\+Meteo\+Mise\+A\+Jour}{donnerMeteoMiseAJour}}]{\setlength{\rightskip}{0pt plus 5cm}void Meteo\+::donner\+Meteo\+Mise\+A\+Jour (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}\hypertarget{class_meteo_ab58994e421e7f44a81bd802c6b167cfb}{}\label{class_meteo_ab58994e421e7f44a81bd802c6b167cfb}
+
+
+Référencé par \hyperlink{class_meteo_a3bb764a7af2d35df9018e0acb3a88127}{reply\+Finished()}.
+
+\index{Meteo@{Meteo}!get\+Humidite@{get\+Humidite}}
+\index{get\+Humidite@{get\+Humidite}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{get\+Humidite() const }{getHumidite() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Meteo\+::get\+Humidite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_meteo_a336cfea55c062ebe45fbc7d1a48aaaa1}{}\label{class_meteo_a336cfea55c062ebe45fbc7d1a48aaaa1}
+recuperer la pression
+
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_meteo_ada819b35e83127ce17a51abad383f349}{humidite}.
+
+
+
+Référencé par \hyperlink{class_ihm_a65487c8229375ff72290bed145876737}{Ihm\+::actualiser\+Affichage\+Meteo()}.
+
+
+\begin{DoxyCode}
+00089 \{
+00090     \textcolor{keywordflow}{return} \hyperlink{class_meteo_ada819b35e83127ce17a51abad383f349}{humidite};
+00091 \}
+\end{DoxyCode}
+\index{Meteo@{Meteo}!get\+Pression@{get\+Pression}}
+\index{get\+Pression@{get\+Pression}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{get\+Pression() const }{getPression() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Meteo\+::get\+Pression (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_meteo_a2a4cd85d63157f6b682d37f9c19d1683}{}\label{class_meteo_a2a4cd85d63157f6b682d37f9c19d1683}
+recuperer la temperature maximal
+
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_meteo_a28fe6c4ed03fcf9829dd5a8997bfb0fc}{pression}.
+
+
+
+Référencé par \hyperlink{class_ihm_a65487c8229375ff72290bed145876737}{Ihm\+::actualiser\+Affichage\+Meteo()}.
+
+
+\begin{DoxyCode}
+00078 \{
+00079     \textcolor{keywordflow}{return} \hyperlink{class_meteo_a28fe6c4ed03fcf9829dd5a8997bfb0fc}{pression};
+00080 \}
+\end{DoxyCode}
+\index{Meteo@{Meteo}!get\+Ressentie@{get\+Ressentie}}
+\index{get\+Ressentie@{get\+Ressentie}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{get\+Ressentie() const }{getRessentie() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Meteo\+::get\+Ressentie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_meteo_a7bcbc6280fb91ff28436e84f7d8765e7}{}\label{class_meteo_a7bcbc6280fb91ff28436e84f7d8765e7}
+recuperer la temperature
+
+\begin{DoxyReturn}{Renvoie}
+double 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_meteo_a405ea827846e04994ed8073f82978995}{ressentie}.
+
+
+
+Référencé par \hyperlink{class_ihm_a65487c8229375ff72290bed145876737}{Ihm\+::actualiser\+Affichage\+Meteo()}.
+
+
+\begin{DoxyCode}
+00045 \{
+00046     \textcolor{keywordflow}{return} \hyperlink{class_meteo_a405ea827846e04994ed8073f82978995}{ressentie};
+00047 \}
+\end{DoxyCode}
+\index{Meteo@{Meteo}!get\+Temperature@{get\+Temperature}}
+\index{get\+Temperature@{get\+Temperature}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{get\+Temperature() const }{getTemperature() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Meteo\+::get\+Temperature (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_meteo_ad0a7466f4371df14623fd03fa0bab8dd}{}\label{class_meteo_ad0a7466f4371df14623fd03fa0bab8dd}
+\begin{DoxyReturn}{Renvoie}
+double 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_meteo_a8086970687d7df655f68775bc0852178}{temperature}.
+
+
+
+Référencé par \hyperlink{class_ihm_a65487c8229375ff72290bed145876737}{Ihm\+::actualiser\+Affichage\+Meteo()}.
+
+
+\begin{DoxyCode}
+00034 \{
+00035     \textcolor{keywordflow}{return} \hyperlink{class_meteo_a8086970687d7df655f68775bc0852178}{temperature};
+00036 \}
+\end{DoxyCode}
+\index{Meteo@{Meteo}!get\+Temperature\+Max@{get\+Temperature\+Max}}
+\index{get\+Temperature\+Max@{get\+Temperature\+Max}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{get\+Temperature\+Max() const }{getTemperatureMax() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Meteo\+::get\+Temperature\+Max (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_meteo_a114aadb20b0b56c1fe8a6fc2dd19c02b}{}\label{class_meteo_a114aadb20b0b56c1fe8a6fc2dd19c02b}
+recuperer la temperature minimal
+
+\begin{DoxyReturn}{Renvoie}
+double 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_meteo_a5dd5312470d767714779344a524fd27b}{temperature\+Max}.
+
+
+
+Référencé par \hyperlink{class_ihm_a65487c8229375ff72290bed145876737}{Ihm\+::actualiser\+Affichage\+Meteo()}.
+
+
+\begin{DoxyCode}
+00067 \{
+00068     \textcolor{keywordflow}{return} \hyperlink{class_meteo_a5dd5312470d767714779344a524fd27b}{temperatureMax};
+00069 \}
+\end{DoxyCode}
+\index{Meteo@{Meteo}!get\+Temperature\+Min@{get\+Temperature\+Min}}
+\index{get\+Temperature\+Min@{get\+Temperature\+Min}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{get\+Temperature\+Min() const }{getTemperatureMin() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Meteo\+::get\+Temperature\+Min (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_meteo_a0cef4ff7ae16cfcd820d164d1c5334c4}{}\label{class_meteo_a0cef4ff7ae16cfcd820d164d1c5334c4}
+recuperer le ressentie
+
+\begin{DoxyReturn}{Renvoie}
+double 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_meteo_a640f1543a82502057c333eed2c2b049e}{temperature\+Min}.
+
+
+
+Référencé par \hyperlink{class_ihm_a65487c8229375ff72290bed145876737}{Ihm\+::actualiser\+Affichage\+Meteo()}.
+
+
+\begin{DoxyCode}
+00056 \{
+00057     \textcolor{keywordflow}{return} \hyperlink{class_meteo_a640f1543a82502057c333eed2c2b049e}{temperatureMin};
+00058 \}
+\end{DoxyCode}
+\index{Meteo@{Meteo}!get\+Ville@{get\+Ville}}
+\index{get\+Ville@{get\+Ville}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{get\+Ville() const }{getVille() const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Meteo\+::get\+Ville (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_meteo_af9ceb3e99e123e6931f8cd9cfde57834}{}\label{class_meteo_af9ceb3e99e123e6931f8cd9cfde57834}
+recuperer l\textquotesingle{}humidité
+
+\begin{DoxyReturn}{Renvoie}
+Q\+String 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_meteo_a20ab84130cd8c6085e665f1d7d8403a6}{ville}.
+
+
+
+Référencé par \hyperlink{class_ihm_a65487c8229375ff72290bed145876737}{Ihm\+::actualiser\+Affichage\+Meteo()}.
+
+
+\begin{DoxyCode}
+00100 \{
+00101     \textcolor{keywordflow}{return} \hyperlink{class_meteo_a20ab84130cd8c6085e665f1d7d8403a6}{ville};
+00102 \}
+\end{DoxyCode}
+\index{Meteo@{Meteo}!localiser\+Appareil@{localiser\+Appareil}}
+\index{localiser\+Appareil@{localiser\+Appareil}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{localiser\+Appareil()}{localiserAppareil()}}]{\setlength{\rightskip}{0pt plus 5cm}void Meteo\+::localiser\+Appareil (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_meteo_a08c48ce5f6ff05c687e570e34117f2ed}{}\label{class_meteo_a08c48ce5f6ff05c687e570e34117f2ed}
+variable qui stocke la ville 
+
+Références \hyperlink{class_meteo_af6fbf43af30cfd3987f058d1ab7ab27b}{position\+Mise\+A\+Jour()}.
+
+
+\begin{DoxyCode}
+00187 \{
+00188     QGeoPositionInfoSource *source = QGeoPositionInfoSource::createDefaultSource(\textcolor{keyword}{this});
+00189     \textcolor{keywordflow}{if} (source)
+00190     \{
+00191         connect(source, SIGNAL(positionUpdated(QGeoPositionInfo)), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{class_meteo_af6fbf43af30cfd3987f058d1ab7ab27b}{positionMiseAJour}(QGeoPositionInfo)));
+00192         source->startUpdates();    
+00193     \}
+00194     source->setUpdateInterval(2000);
+00195 \}
+\end{DoxyCode}
+\index{Meteo@{Meteo}!position\+Mise\+A\+Jour@{position\+Mise\+A\+Jour}}
+\index{position\+Mise\+A\+Jour@{position\+Mise\+A\+Jour}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{position\+Mise\+A\+Jour}{positionMiseAJour}}]{\setlength{\rightskip}{0pt plus 5cm}void Meteo\+::position\+Mise\+A\+Jour (
+\begin{DoxyParamCaption}
+\item[{const Q\+Geo\+Position\+Info \&}]{info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_meteo_af6fbf43af30cfd3987f058d1ab7ab27b}{}\label{class_meteo_af6fbf43af30cfd3987f058d1ab7ab27b}
+fonction appeler quand un nouveau Json et recu
+
+
+\begin{DoxyParams}{Paramètres}
+{\em info} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_meteo_a1580d310479be44d2c94a2967d53e043}{creer\+Url\+Coordonner\+Gps()}.
+
+
+
+Référencé par \hyperlink{class_meteo_a08c48ce5f6ff05c687e570e34117f2ed}{localiser\+Appareil()}.
+
+
+\begin{DoxyCode}
+00204 \{
+00205     qDebug() << \textcolor{stringliteral}{"Position Mise à jour :"} << info.coordinate();
+00206 
+00207     QGeoCoordinate coordonner = QGeoCoordinate();
+00208     coordonner = info.coordinate();
+00209 
+00210     \hyperlink{class_meteo_a1580d310479be44d2c94a2967d53e043}{creerUrlCoordonnerGps}(coordonner.latitude(), coordonner.longitude());
+00211 \}
+\end{DoxyCode}
+\index{Meteo@{Meteo}!recuperer\+Donner\+Meteo@{recuperer\+Donner\+Meteo}}
+\index{recuperer\+Donner\+Meteo@{recuperer\+Donner\+Meteo}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{recuperer\+Donner\+Meteo(\+Q\+String U\+R\+L)}{recupererDonnerMeteo(QString URL)}}]{\setlength{\rightskip}{0pt plus 5cm}void Meteo\+::recuperer\+Donner\+Meteo (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{U\+RL}
+\end{DoxyParamCaption}
+)}\hypertarget{class_meteo_abb613fded967168801097cf487ac2e29}{}\label{class_meteo_abb613fded967168801097cf487ac2e29}
+modifier la valeur de la ville
+
+
+\begin{DoxyParams}{Paramètres}
+{\em U\+RL} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_meteo_a020089a0880ff5d97df50e6a97b68f90}{manager}.
+
+
+
+Référencé par \hyperlink{class_meteo_a1580d310479be44d2c94a2967d53e043}{creer\+Url\+Coordonner\+Gps()}, et \hyperlink{class_meteo_a256a2559d391cb862009c778a97dee2c}{creer\+Url\+Ville()}.
+
+
+\begin{DoxyCode}
+00243 \{
+00244     QUrl url(URL);
+00245 
+00246     QNetworkRequest request;
+00247     request.setUrl(url);
+00248 
+00249     request.setRawHeader(\textcolor{stringliteral}{"Accept"}, \textcolor{stringliteral}{"application/json"});
+00250     qDebug() << Q\_FUNC\_INFO << request.url() << endl;
+00251     \hyperlink{class_meteo_a020089a0880ff5d97df50e6a97b68f90}{manager}->get(request);
+00252 
+00253 \}
+\end{DoxyCode}
+\index{Meteo@{Meteo}!reply\+Finished@{reply\+Finished}}
+\index{reply\+Finished@{reply\+Finished}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{reply\+Finished}{replyFinished}}]{\setlength{\rightskip}{0pt plus 5cm}void Meteo\+::reply\+Finished (
+\begin{DoxyParamCaption}
+\item[{Q\+Network\+Reply $\ast$}]{reply}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_meteo_a3bb764a7af2d35df9018e0acb3a88127}{}\label{class_meteo_a3bb764a7af2d35df9018e0acb3a88127}
+signal emis quand le Json et decomposer
+
+
+\begin{DoxyParams}{Paramètres}
+{\em reply} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_meteo_ab58994e421e7f44a81bd802c6b167cfb}{donner\+Meteo\+Mise\+A\+Jour()}, \hyperlink{main_8cpp_ae0665038b72011f5c680c660fcb59459}{main()}, \hyperlink{class_meteo_adb383986b49742d49f3fe86ca7bec358}{set\+Humidite()}, \hyperlink{class_meteo_a919f06b3944298a47daf3405bde46402}{set\+Pression()}, \hyperlink{class_meteo_a73283bb2c6aa7bc205b0490cfb6ddf08}{set\+Ressentie()}, \hyperlink{class_meteo_a7e15015233ae155d482e414804c4b381}{set\+Temperature()}, \hyperlink{class_meteo_a1737d7a11c9bf4326071531acfcc3243}{set\+Temperature\+Max()}, \hyperlink{class_meteo_a7055da66033ec24def1e9f9688b837d1}{set\+Temperature\+Min()}, et \hyperlink{class_meteo_ae6f56d33b87f62db4d6ebd88226d9e5f}{set\+Ville()}.
+
+
+
+Référencé par \hyperlink{class_meteo_aa7dab03da06a05dce302c154ad9aec53}{Meteo()}.
+
+
+\begin{DoxyCode}
+00262 \{
+00263     QString datas = reply->readAll();
+00264 
+00265     QJsonDocument doc = QJsonDocument::fromJson(datas.toUtf8());
+00266 
+00267     QJsonObject obj = doc.object();
+00268 
+00269     QJsonObject \hyperlink{main_8cpp_ae0665038b72011f5c680c660fcb59459}{main} = obj.value(QString(\textcolor{stringliteral}{"main"})).toObject();
+00270 
+00271     \hyperlink{class_meteo_ae6f56d33b87f62db4d6ebd88226d9e5f}{setVille}(obj.value(QString(\textcolor{stringliteral}{"name"})).toString());
+00272     \hyperlink{class_meteo_a7e15015233ae155d482e414804c4b381}{setTemperature}(main.value(QString(\textcolor{stringliteral}{"temp"})).toDouble());
+00273     \hyperlink{class_meteo_a7055da66033ec24def1e9f9688b837d1}{setTemperatureMin}(main.value(QString(\textcolor{stringliteral}{"temp\_min"})).toDouble());
+00274     \hyperlink{class_meteo_a1737d7a11c9bf4326071531acfcc3243}{setTemperatureMax}(main.value(QString(\textcolor{stringliteral}{"temp\_max"})).toDouble());
+00275     \hyperlink{class_meteo_a73283bb2c6aa7bc205b0490cfb6ddf08}{setRessentie}(main.value(QString(\textcolor{stringliteral}{"feels\_like"})).toDouble());
+00276     \hyperlink{class_meteo_a919f06b3944298a47daf3405bde46402}{setPression}(main.value(QString(\textcolor{stringliteral}{"pressure"})).toInt());
+00277     \hyperlink{class_meteo_adb383986b49742d49f3fe86ca7bec358}{setHumidite}(main.value(QString(\textcolor{stringliteral}{"humidity"})).toInt());
+00278 
+00279     emit \hyperlink{class_meteo_ab58994e421e7f44a81bd802c6b167cfb}{donnerMeteoMiseAJour}();
+00280 
+00281 \}
+\end{DoxyCode}
+\index{Meteo@{Meteo}!set\+Humidite@{set\+Humidite}}
+\index{set\+Humidite@{set\+Humidite}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{set\+Humidite(int humidite)}{setHumidite(int humidite)}}]{\setlength{\rightskip}{0pt plus 5cm}void Meteo\+::set\+Humidite (
+\begin{DoxyParamCaption}
+\item[{int}]{humidite}
+\end{DoxyParamCaption}
+)}\hypertarget{class_meteo_adb383986b49742d49f3fe86ca7bec358}{}\label{class_meteo_adb383986b49742d49f3fe86ca7bec358}
+modifier la valeur de la pression
+
+
+\begin{DoxyParams}{Paramètres}
+{\em humidite} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_meteo_ada819b35e83127ce17a51abad383f349}{humidite}.
+
+
+
+Référencé par \hyperlink{class_meteo_a3bb764a7af2d35df9018e0acb3a88127}{reply\+Finished()}.
+
+
+\begin{DoxyCode}
+00166 \{
+00167     this->\hyperlink{class_meteo_ada819b35e83127ce17a51abad383f349}{humidite} = \hyperlink{class_meteo_ada819b35e83127ce17a51abad383f349}{humidite};
+00168 \}
+\end{DoxyCode}
+\index{Meteo@{Meteo}!set\+Pression@{set\+Pression}}
+\index{set\+Pression@{set\+Pression}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{set\+Pression(int pression)}{setPression(int pression)}}]{\setlength{\rightskip}{0pt plus 5cm}void Meteo\+::set\+Pression (
+\begin{DoxyParamCaption}
+\item[{int}]{pression}
+\end{DoxyParamCaption}
+)}\hypertarget{class_meteo_a919f06b3944298a47daf3405bde46402}{}\label{class_meteo_a919f06b3944298a47daf3405bde46402}
+modifier la valeur de ressenti
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pression} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_meteo_a28fe6c4ed03fcf9829dd5a8997bfb0fc}{pression}.
+
+
+
+Référencé par \hyperlink{class_meteo_a3bb764a7af2d35df9018e0acb3a88127}{reply\+Finished()}.
+
+
+\begin{DoxyCode}
+00177 \{
+00178     this->\hyperlink{class_meteo_a28fe6c4ed03fcf9829dd5a8997bfb0fc}{pression} = \hyperlink{class_meteo_a28fe6c4ed03fcf9829dd5a8997bfb0fc}{pression};
+00179 \}
+\end{DoxyCode}
+\index{Meteo@{Meteo}!set\+Ressentie@{set\+Ressentie}}
+\index{set\+Ressentie@{set\+Ressentie}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{set\+Ressentie(double ressentie)}{setRessentie(double ressentie)}}]{\setlength{\rightskip}{0pt plus 5cm}void Meteo\+::set\+Ressentie (
+\begin{DoxyParamCaption}
+\item[{double}]{ressentie}
+\end{DoxyParamCaption}
+)}\hypertarget{class_meteo_a73283bb2c6aa7bc205b0490cfb6ddf08}{}\label{class_meteo_a73283bb2c6aa7bc205b0490cfb6ddf08}
+modifier la valeur de la temperature maximal
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ressentie} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_meteo_a405ea827846e04994ed8073f82978995}{ressentie}.
+
+
+
+Référencé par \hyperlink{class_meteo_a3bb764a7af2d35df9018e0acb3a88127}{reply\+Finished()}.
+
+
+\begin{DoxyCode}
+00155 \{
+00156     this->\hyperlink{class_meteo_a405ea827846e04994ed8073f82978995}{ressentie} = \hyperlink{class_meteo_a405ea827846e04994ed8073f82978995}{ressentie};
+00157 \}
+\end{DoxyCode}
+\index{Meteo@{Meteo}!set\+Temperature@{set\+Temperature}}
+\index{set\+Temperature@{set\+Temperature}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{set\+Temperature(double temperature)}{setTemperature(double temperature)}}]{\setlength{\rightskip}{0pt plus 5cm}void Meteo\+::set\+Temperature (
+\begin{DoxyParamCaption}
+\item[{double}]{temperature}
+\end{DoxyParamCaption}
+)}\hypertarget{class_meteo_a7e15015233ae155d482e414804c4b381}{}\label{class_meteo_a7e15015233ae155d482e414804c4b381}
+recuperer la ville
+
+
+\begin{DoxyParams}{Paramètres}
+{\em temperature} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_meteo_a8086970687d7df655f68775bc0852178}{temperature}.
+
+
+
+Référencé par \hyperlink{class_meteo_a3bb764a7af2d35df9018e0acb3a88127}{reply\+Finished()}.
+
+
+\begin{DoxyCode}
+00122 \{
+00123     this->\hyperlink{class_meteo_a8086970687d7df655f68775bc0852178}{temperature} = \hyperlink{class_meteo_a8086970687d7df655f68775bc0852178}{temperature};
+00124 \}
+\end{DoxyCode}
+\index{Meteo@{Meteo}!set\+Temperature\+Max@{set\+Temperature\+Max}}
+\index{set\+Temperature\+Max@{set\+Temperature\+Max}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{set\+Temperature\+Max(double temperature\+Max)}{setTemperatureMax(double temperatureMax)}}]{\setlength{\rightskip}{0pt plus 5cm}void Meteo\+::set\+Temperature\+Max (
+\begin{DoxyParamCaption}
+\item[{double}]{temperature\+Max}
+\end{DoxyParamCaption}
+)}\hypertarget{class_meteo_a1737d7a11c9bf4326071531acfcc3243}{}\label{class_meteo_a1737d7a11c9bf4326071531acfcc3243}
+modifier la valeur de la temperature minimal
+
+
+\begin{DoxyParams}{Paramètres}
+{\em temperature\+Max} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_meteo_a5dd5312470d767714779344a524fd27b}{temperature\+Max}.
+
+
+
+Référencé par \hyperlink{class_meteo_a3bb764a7af2d35df9018e0acb3a88127}{reply\+Finished()}.
+
+
+\begin{DoxyCode}
+00133 \{
+00134     this->\hyperlink{class_meteo_a5dd5312470d767714779344a524fd27b}{temperatureMax} = \hyperlink{class_meteo_a5dd5312470d767714779344a524fd27b}{temperatureMax};
+00135 \}
+\end{DoxyCode}
+\index{Meteo@{Meteo}!set\+Temperature\+Min@{set\+Temperature\+Min}}
+\index{set\+Temperature\+Min@{set\+Temperature\+Min}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{set\+Temperature\+Min(double temperature\+Min)}{setTemperatureMin(double temperatureMin)}}]{\setlength{\rightskip}{0pt plus 5cm}void Meteo\+::set\+Temperature\+Min (
+\begin{DoxyParamCaption}
+\item[{double}]{temperature\+Min}
+\end{DoxyParamCaption}
+)}\hypertarget{class_meteo_a7055da66033ec24def1e9f9688b837d1}{}\label{class_meteo_a7055da66033ec24def1e9f9688b837d1}
+modifier la valeur de la temperature
+
+
+\begin{DoxyParams}{Paramètres}
+{\em temperature\+Min} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_meteo_a640f1543a82502057c333eed2c2b049e}{temperature\+Min}.
+
+
+
+Référencé par \hyperlink{class_meteo_a3bb764a7af2d35df9018e0acb3a88127}{reply\+Finished()}.
+
+
+\begin{DoxyCode}
+00144 \{
+00145     this->\hyperlink{class_meteo_a640f1543a82502057c333eed2c2b049e}{temperatureMin} = \hyperlink{class_meteo_a640f1543a82502057c333eed2c2b049e}{temperatureMin};
+00146 \}
+\end{DoxyCode}
+\index{Meteo@{Meteo}!set\+Ville@{set\+Ville}}
+\index{set\+Ville@{set\+Ville}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{set\+Ville(\+Q\+String ville)}{setVille(QString ville)}}]{\setlength{\rightskip}{0pt plus 5cm}void Meteo\+::set\+Ville (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{ville}
+\end{DoxyParamCaption}
+)}\hypertarget{class_meteo_ae6f56d33b87f62db4d6ebd88226d9e5f}{}\label{class_meteo_ae6f56d33b87f62db4d6ebd88226d9e5f}
+modifier la valeur de l\textquotesingle{}humidite
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ville} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_meteo_a20ab84130cd8c6085e665f1d7d8403a6}{ville}.
+
+
+
+Référencé par \hyperlink{class_meteo_a3bb764a7af2d35df9018e0acb3a88127}{reply\+Finished()}.
+
+
+\begin{DoxyCode}
+00112 \{
+00113     this->\hyperlink{class_meteo_a20ab84130cd8c6085e665f1d7d8403a6}{ville} = \hyperlink{class_meteo_a20ab84130cd8c6085e665f1d7d8403a6}{ville};
+00114 \}
+\end{DoxyCode}
+
+
+\subsubsection{Documentation des données membres}
+\index{Meteo@{Meteo}!humidite@{humidite}}
+\index{humidite@{humidite}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{humidite}{humidite}}]{\setlength{\rightskip}{0pt plus 5cm}int Meteo\+::humidite\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_meteo_ada819b35e83127ce17a51abad383f349}{}\label{class_meteo_ada819b35e83127ce17a51abad383f349}
+variable qui stocke la pression 
+
+Référencé par \hyperlink{class_meteo_a336cfea55c062ebe45fbc7d1a48aaaa1}{get\+Humidite()}, et \hyperlink{class_meteo_adb383986b49742d49f3fe86ca7bec358}{set\+Humidite()}.
+
+\index{Meteo@{Meteo}!manager@{manager}}
+\index{manager@{manager}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{manager}{manager}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Network\+Access\+Manager$\ast$ Meteo\+::manager\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_meteo_a020089a0880ff5d97df50e6a97b68f90}{}\label{class_meteo_a020089a0880ff5d97df50e6a97b68f90}
+fonction qui permet de creer l\textquotesingle{}U\+Rl pour l\textquotesingle{}Api avec les coordonnée de longitude et latitude 
+
+Référencé par \hyperlink{class_meteo_aa7dab03da06a05dce302c154ad9aec53}{Meteo()}, et \hyperlink{class_meteo_abb613fded967168801097cf487ac2e29}{recuperer\+Donner\+Meteo()}.
+
+\index{Meteo@{Meteo}!pression@{pression}}
+\index{pression@{pression}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{pression}{pression}}]{\setlength{\rightskip}{0pt plus 5cm}int Meteo\+::pression\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_meteo_a28fe6c4ed03fcf9829dd5a8997bfb0fc}{}\label{class_meteo_a28fe6c4ed03fcf9829dd5a8997bfb0fc}
+variable qui stocke la temperature maximal 
+
+Référencé par \hyperlink{class_meteo_a2a4cd85d63157f6b682d37f9c19d1683}{get\+Pression()}, et \hyperlink{class_meteo_a919f06b3944298a47daf3405bde46402}{set\+Pression()}.
+
+\index{Meteo@{Meteo}!ressentie@{ressentie}}
+\index{ressentie@{ressentie}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{ressentie}{ressentie}}]{\setlength{\rightskip}{0pt plus 5cm}double Meteo\+::ressentie\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_meteo_a405ea827846e04994ed8073f82978995}{}\label{class_meteo_a405ea827846e04994ed8073f82978995}
+variable qui stocke la temperature 
+
+Référencé par \hyperlink{class_meteo_a7bcbc6280fb91ff28436e84f7d8765e7}{get\+Ressentie()}, et \hyperlink{class_meteo_a73283bb2c6aa7bc205b0490cfb6ddf08}{set\+Ressentie()}.
+
+\index{Meteo@{Meteo}!temperature@{temperature}}
+\index{temperature@{temperature}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{temperature}{temperature}}]{\setlength{\rightskip}{0pt plus 5cm}double Meteo\+::temperature\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_meteo_a8086970687d7df655f68775bc0852178}{}\label{class_meteo_a8086970687d7df655f68775bc0852178}
+fonction appeler quand la possition est mise à jour 
+
+Référencé par \hyperlink{class_meteo_ad0a7466f4371df14623fd03fa0bab8dd}{get\+Temperature()}, et \hyperlink{class_meteo_a7e15015233ae155d482e414804c4b381}{set\+Temperature()}.
+
+\index{Meteo@{Meteo}!temperature\+Max@{temperature\+Max}}
+\index{temperature\+Max@{temperature\+Max}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{temperature\+Max}{temperatureMax}}]{\setlength{\rightskip}{0pt plus 5cm}double Meteo\+::temperature\+Max\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_meteo_a5dd5312470d767714779344a524fd27b}{}\label{class_meteo_a5dd5312470d767714779344a524fd27b}
+variable qui stocke a temperature minimal 
+
+Référencé par \hyperlink{class_meteo_a114aadb20b0b56c1fe8a6fc2dd19c02b}{get\+Temperature\+Max()}, et \hyperlink{class_meteo_a1737d7a11c9bf4326071531acfcc3243}{set\+Temperature\+Max()}.
+
+\index{Meteo@{Meteo}!temperature\+Min@{temperature\+Min}}
+\index{temperature\+Min@{temperature\+Min}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{temperature\+Min}{temperatureMin}}]{\setlength{\rightskip}{0pt plus 5cm}double Meteo\+::temperature\+Min\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_meteo_a640f1543a82502057c333eed2c2b049e}{}\label{class_meteo_a640f1543a82502057c333eed2c2b049e}
+variable qui stocke le ressentie 
+
+Référencé par \hyperlink{class_meteo_a0cef4ff7ae16cfcd820d164d1c5334c4}{get\+Temperature\+Min()}, et \hyperlink{class_meteo_a7055da66033ec24def1e9f9688b837d1}{set\+Temperature\+Min()}.
+
+\index{Meteo@{Meteo}!ville@{ville}}
+\index{ville@{ville}!Meteo@{Meteo}}
+\paragraph[{\texorpdfstring{ville}{ville}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Meteo\+::ville\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_meteo_a20ab84130cd8c6085e665f1d7d8403a6}{}\label{class_meteo_a20ab84130cd8c6085e665f1d7d8403a6}
+variable qui stocke l\textquotesingle{}humidité 
+
+Référencé par \hyperlink{class_meteo_af9ceb3e99e123e6931f8cd9cfde57834}{get\+Ville()}, et \hyperlink{class_meteo_ae6f56d33b87f62db4d6ebd88226d9e5f}{set\+Ville()}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{meteo_8h}{meteo.\+h}\item 
+\hyperlink{meteo_8cpp}{meteo.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,62 @@
+\hypertarget{main_8cpp}{}\subsection{Référence du fichier main.\+cpp}
+\label{main_8cpp}\index{main.\+cpp@{main.\+cpp}}
+
+
+Programme principal ...  
+
+
+{\ttfamily \#include \char`\"{}ihm.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$Q\+Application$>$}\\*
+\subsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8cpp_ae0665038b72011f5c680c660fcb59459}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Crée et affiche la fenêtre principale de l\textquotesingle{}application ...
+
+\begin{DoxyAuthor}{Auteur}
+Bounoir Fabien 
+
+Villesseche Ethan
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+4.\+0 
+\end{DoxyVersion}
+
+
+\subsubsection{Documentation des fonctions}
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\paragraph[{\texorpdfstring{main(int argc, char $\ast$argv[])}{main(int argc, char *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8cpp_ae0665038b72011f5c680c660fcb59459}{}\label{main_8cpp_ae0665038b72011f5c680c660fcb59459}
+
+\begin{DoxyParams}{Paramètres}
+{\em argc} & \\
+\hline
+{\em argv\mbox{[}$\,$\mbox{]}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+
+
+Référencé par \hyperlink{class_meteo_a3bb764a7af2d35df9018e0acb3a88127}{Meteo\+::reply\+Finished()}.
+
+
+\begin{DoxyCode}
+00023 \{
+00024     QApplication a(argc, argv);
+00025     \hyperlink{class_ihm}{Ihm} w;
+00026     w.show();
+00027 
+00028     \textcolor{keywordflow}{return} a.exec();
+00029 \}
+\end{DoxyCode}

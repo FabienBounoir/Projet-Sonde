@@ -1,0 +1,938 @@
+\hypertarget{class_esp32}{}\subsection{Référence de la classe Esp32}
+\label{class_esp32}\index{Esp32@{Esp32}}
+
+
+Declaration de la classe \hyperlink{class_esp32}{Esp32}.  
+
+
+
+
+{\ttfamily \#include \char`\"{}esp32.\+h\char`\"{}}
+
+
+
+Graphe de collaboration de Esp32\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{class_esp32__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_esp32_abf9de8dee58d0105a551455874f29c19}{Esp32} (\hyperlink{class_q_object}{Q\+Object} $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em contructeur de la classe \hyperlink{class_esp32}{Esp32} \end{DoxyCompactList}\item 
+double \hyperlink{class_esp32_adb339413686f3d78df1ecd41f106fd4e}{get\+Temperature} () const 
+\begin{DoxyCompactList}\small\item\em retourne la valeur de temperature \end{DoxyCompactList}\item 
+double \hyperlink{class_esp32_ae29854a5127d760a216f96ec7d797412}{get\+Ressentie} () const 
+\begin{DoxyCompactList}\small\item\em retourne la valeur de ressentie \end{DoxyCompactList}\item 
+Q\+String \hyperlink{class_esp32_ae20c976b79f87de083ca8ee49b2abf25}{get\+Temperature\+Unite} () const 
+\begin{DoxyCompactList}\small\item\em retourne l\textquotesingle{}uniter de la valeur de temperature \end{DoxyCompactList}\item 
+Q\+String \hyperlink{class_esp32_a548ed7533f742d087c65df256479ed00}{get\+Ressentie\+Unite} () const 
+\begin{DoxyCompactList}\small\item\em retourne l\textquotesingle{}uniter de la valeur de ressentie \end{DoxyCompactList}\item 
+int \hyperlink{class_esp32_a87f581ef8f01bcb71a7294cc545b242e}{get\+Humidite} () const 
+\begin{DoxyCompactList}\small\item\em retourne la valeur d\textquotesingle{}humiditer \end{DoxyCompactList}\item 
+int \hyperlink{class_esp32_aa2cdabace1ce70928c53d25e306a16d1}{get\+Luminosite} () const 
+\begin{DoxyCompactList}\small\item\em retourne la valeur de luminositer \end{DoxyCompactList}\item 
+Q\+String \hyperlink{class_esp32_ab2a1fc92c11af031814569f3d2836f33}{get\+Humidite\+Unite} () const 
+\begin{DoxyCompactList}\small\item\em retourne l\textquotesingle{}uniter de la valeur d\textquotesingle{}humidite \end{DoxyCompactList}\item 
+Q\+String \hyperlink{class_esp32_a50f4ef373379d2dbc0fd960438ab6f93}{get\+Luminosite\+Unite} () const 
+\begin{DoxyCompactList}\small\item\em retourne l\textquotesingle{}uniter de la valeur de luminosite \end{DoxyCompactList}\item 
+int \hyperlink{class_esp32_a31155a36108b37febae371d9ae65385a}{get\+Pression} () const 
+\begin{DoxyCompactList}\small\item\em retourne la valeur de pression \end{DoxyCompactList}\item 
+Q\+String \hyperlink{class_esp32_a398d4a1cbc61f7af2f3af7ecbcf2f93f}{get\+Pression\+Unite} () const 
+\begin{DoxyCompactList}\small\item\em retourne l\textquotesingle{}uniter de la valeur de pression \end{DoxyCompactList}\item 
+int \hyperlink{class_esp32_a31b691e6c75c1f9859bde4c0df8fe12f}{get\+Altitude} () const 
+\begin{DoxyCompactList}\small\item\em retourne la valeur de l\textquotesingle{}altitude \end{DoxyCompactList}\item 
+Q\+String \hyperlink{class_esp32_aad3c2e4b5d15a02abc62d0329f43942d}{get\+Altitude\+Unite} () const 
+\begin{DoxyCompactList}\small\item\em retourne l\textquotesingle{}uniter de la valeur de l\textquotesingle{}altitude \end{DoxyCompactList}\item 
+int \hyperlink{class_esp32_ac695656654b5d83ec3924b47f533f465}{get\+Etat\+Led} () const 
+\begin{DoxyCompactList}\small\item\em retourne l\textquotesingle{}etat de la led \end{DoxyCompactList}\item 
+void \hyperlink{class_esp32_a8e7a509ed5704bee4bc527ae297f14f0}{set\+Temperature} (double \hyperlink{class_esp32_a8274802633ca34c07fbfe7fa38a171a8}{temperature})
+\begin{DoxyCompactList}\small\item\em modifie la variable température avec celle-\/ci passer en paramètre \end{DoxyCompactList}\item 
+void \hyperlink{class_esp32_a85dc760b771c9233fa094a49679d9286}{set\+Ressentie} (double \hyperlink{class_esp32_a08425470633629dae05f61659ff90375}{ressentie})
+\begin{DoxyCompactList}\small\item\em modifie la variable ressentie avec celle-\/ci passer en paramètre \end{DoxyCompactList}\item 
+void \hyperlink{class_esp32_a709c261e1cea7b6bbd2ea1b09b1d7ec0}{set\+Temperature\+Unite} (Q\+String \hyperlink{class_esp32_a825526f0d6b74fda9ddeba7e67ec9dd5}{temperature\+Unite})
+\begin{DoxyCompactList}\small\item\em modifie la variable de l\textquotesingle{}uniter utiliser pour la temperature \end{DoxyCompactList}\item 
+void \hyperlink{class_esp32_abf8a7f9942150b6c17cc5d1cc7b0fc8a}{set\+Ressentie\+Unite} (Q\+String \hyperlink{class_esp32_a5333681c08a07f1877c20cfe88b7024f}{ressentie\+Unite})
+\begin{DoxyCompactList}\small\item\em modifie la variable de l\textquotesingle{}uniter utiliser pour le ressentie \end{DoxyCompactList}\item 
+void \hyperlink{class_esp32_a029c94bf405887eb890b3381ac176a9a}{set\+Humidite} (int \hyperlink{class_esp32_a7ad1a81c0a3cb29035aaef89d153f662}{humidite})
+\begin{DoxyCompactList}\small\item\em modifie la variable de l\textquotesingle{}humidite \end{DoxyCompactList}\item 
+void \hyperlink{class_esp32_ae60b48e8c808a5108402d5b9f03590ac}{set\+Luminosite} (int \hyperlink{class_esp32_aa6ce86f87c88d7fd29880e9865fefefc}{luminosite})
+\begin{DoxyCompactList}\small\item\em modifie la variable de la luminosite \end{DoxyCompactList}\item 
+void \hyperlink{class_esp32_ae9b2704f36bcd246668354d0ac06ea35}{set\+Humidite\+Unite} (Q\+String \hyperlink{class_esp32_a90c1ea9a5598c16a7918205185aa9fd6}{humidite\+Unite})
+\begin{DoxyCompactList}\small\item\em modifie la variable de l\textquotesingle{}uniter utiliser pour l\textquotesingle{}humidite \end{DoxyCompactList}\item 
+void \hyperlink{class_esp32_a36450bcd23e7676d1f0a46e8bec31275}{set\+Luminosite\+Unite} (Q\+String \hyperlink{class_esp32_a67087c5b6b76b64f929dbc255a7d5441}{luminosite\+Unite})
+\begin{DoxyCompactList}\small\item\em modifie la variable de l\textquotesingle{}uniter utiliser pour la luminosite \end{DoxyCompactList}\item 
+void \hyperlink{class_esp32_a583358abbf0b279dabb5a2976f1783de}{set\+Pression} (int \hyperlink{class_esp32_a7ddfb5679b439b204a93f775cfa9d2fa}{pression})
+\begin{DoxyCompactList}\small\item\em modifie la variable de la pression \end{DoxyCompactList}\item 
+void \hyperlink{class_esp32_a3c6dd57f955aef0738c48be705538337}{set\+Pression\+Unite} (Q\+String \hyperlink{class_esp32_aad1ead1e2c830025af0eebcdb30bcafe}{pression\+Unite})
+\begin{DoxyCompactList}\small\item\em modifie la variable de l\textquotesingle{}uniter utiliser pour la pression \end{DoxyCompactList}\item 
+void \hyperlink{class_esp32_aeb2268155501f27e36e6a7c6caa15412}{set\+Altitude} (int \hyperlink{class_esp32_ab257f7aff043b4d60d963e1bfd1fe35f}{altitude})
+\begin{DoxyCompactList}\small\item\em modifie la variable altitude passer en paramètre \end{DoxyCompactList}\item 
+void \hyperlink{class_esp32_a69b0c6a1c0a31e043b715be3fc40ded1}{set\+Altitude\+Unite} (Q\+String \hyperlink{class_esp32_ad407a4a4139183be7c4293fb254c96d7}{altitude\+Unite})
+\begin{DoxyCompactList}\small\item\em modifie la variable de l\textquotesingle{}uniter utiliser pour l\textquotesingle{}altitude \end{DoxyCompactList}\item 
+void \hyperlink{class_esp32_a32d0d1abb41a3762a54e9f5a33b3b247}{set\+Couleur\+Led} (int \hyperlink{class_esp32_ae8f6b2080769949ae5bd41c8312a6892}{couleur})
+\begin{DoxyCompactList}\small\item\em modifie la variable de l\textquotesingle{}etat de la led \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_esp32_a8274802633ca34c07fbfe7fa38a171a8}{temperature}
+\item 
+Q\+String \hyperlink{class_esp32_a825526f0d6b74fda9ddeba7e67ec9dd5}{temperature\+Unite}
+\item 
+double \hyperlink{class_esp32_a08425470633629dae05f61659ff90375}{ressentie}
+\item 
+Q\+String \hyperlink{class_esp32_a5333681c08a07f1877c20cfe88b7024f}{ressentie\+Unite}
+\item 
+int \hyperlink{class_esp32_a7ad1a81c0a3cb29035aaef89d153f662}{humidite}
+\item 
+Q\+String \hyperlink{class_esp32_a90c1ea9a5598c16a7918205185aa9fd6}{humidite\+Unite}
+\item 
+int \hyperlink{class_esp32_aa6ce86f87c88d7fd29880e9865fefefc}{luminosite}
+\item 
+Q\+String \hyperlink{class_esp32_a67087c5b6b76b64f929dbc255a7d5441}{luminosite\+Unite}
+\item 
+int \hyperlink{class_esp32_a7ddfb5679b439b204a93f775cfa9d2fa}{pression}
+\item 
+Q\+String \hyperlink{class_esp32_aad1ead1e2c830025af0eebcdb30bcafe}{pression\+Unite}
+\item 
+int \hyperlink{class_esp32_ab257f7aff043b4d60d963e1bfd1fe35f}{altitude}
+\item 
+Q\+String \hyperlink{class_esp32_ad407a4a4139183be7c4293fb254c96d7}{altitude\+Unite}
+\item 
+int \hyperlink{class_esp32_ae8f6b2080769949ae5bd41c8312a6892}{couleur}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Documentation des constructeurs et destructeur}
+\index{Esp32@{Esp32}!Esp32@{Esp32}}
+\index{Esp32@{Esp32}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{Esp32(\+Q\+Object $\ast$parent=nullptr)}{Esp32(QObject *parent=nullptr)}}]{\setlength{\rightskip}{0pt plus 5cm}Esp32\+::\+Esp32 (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Object} $\ast$}]{parent = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{class_esp32_abf9de8dee58d0105a551455874f29c19}{}\label{class_esp32_abf9de8dee58d0105a551455874f29c19}
+
+\begin{DoxyParams}{Paramètres}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+00021                             : \hyperlink{class_q_object}{QObject}(parent), \hyperlink{class_esp32_a8274802633ca34c07fbfe7fa38a171a8}{temperature}(0.), 
+      \hyperlink{class_esp32_a825526f0d6b74fda9ddeba7e67ec9dd5}{temperatureUnite}(\textcolor{stringliteral}{"°C"}), \hyperlink{class_esp32_a08425470633629dae05f61659ff90375}{ressentie}(0.), \hyperlink{class_esp32_a5333681c08a07f1877c20cfe88b7024f}{ressentieUnite}(\textcolor{stringliteral}{"°C"}),
+      \hyperlink{class_esp32_a7ad1a81c0a3cb29035aaef89d153f662}{\(\backslash\)}
+00022 \hyperlink{class_esp32_a7ad1a81c0a3cb29035aaef89d153f662}{    humidite}(0), \hyperlink{class_esp32_a90c1ea9a5598c16a7918205185aa9fd6}{humiditeUnite}(\textcolor{stringliteral}{"%"}), \hyperlink{class_esp32_aa6ce86f87c88d7fd29880e9865fefefc}{luminosite}(0), 
+      \hyperlink{class_esp32_a67087c5b6b76b64f929dbc255a7d5441}{luminositeUnite}(\textcolor{stringliteral}{"Lux"}), \hyperlink{class_esp32_a7ddfb5679b439b204a93f775cfa9d2fa}{pression}(0), \hyperlink{class_esp32_aad1ead1e2c830025af0eebcdb30bcafe}{pressionUnite}(\textcolor{stringliteral}{"hPa"}), 
+      \hyperlink{class_esp32_ab257f7aff043b4d60d963e1bfd1fe35f}{altitude}(0), \hyperlink{class_esp32_ad407a4a4139183be7c4293fb254c96d7}{altitudeUnite}(\textcolor{stringliteral}{"Mètre"}), \hyperlink{class_esp32_ae8f6b2080769949ae5bd41c8312a6892}{couleur}(0)
+00023 \{
+00024 
+00025 \}
+\end{DoxyCode}
+
+
+\subsubsection{Documentation des fonctions membres}
+\index{Esp32@{Esp32}!get\+Altitude@{get\+Altitude}}
+\index{get\+Altitude@{get\+Altitude}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{get\+Altitude() const }{getAltitude() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Esp32\+::get\+Altitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_esp32_a31b691e6c75c1f9859bde4c0df8fe12f}{}\label{class_esp32_a31b691e6c75c1f9859bde4c0df8fe12f}
+recuperer l\textquotesingle{}unite de pression
+
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_esp32_ab257f7aff043b4d60d963e1bfd1fe35f}{altitude}.
+
+
+
+Référencé par \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{Ihm\+::actualiser\+Donnee()}.
+
+
+\begin{DoxyCode}
+00144 \{
+00145     \textcolor{keywordflow}{return} \hyperlink{class_esp32_ab257f7aff043b4d60d963e1bfd1fe35f}{altitude};
+00146 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!get\+Altitude\+Unite@{get\+Altitude\+Unite}}
+\index{get\+Altitude\+Unite@{get\+Altitude\+Unite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{get\+Altitude\+Unite() const }{getAltitudeUnite() const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Esp32\+::get\+Altitude\+Unite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_esp32_aad3c2e4b5d15a02abc62d0329f43942d}{}\label{class_esp32_aad3c2e4b5d15a02abc62d0329f43942d}
+recuperer l\textquotesingle{}altitude
+
+\begin{DoxyReturn}{Renvoie}
+Q\+String 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_esp32_ad407a4a4139183be7c4293fb254c96d7}{altitude\+Unite}.
+
+
+
+Référencé par \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{Ihm\+::actualiser\+Donnee()}.
+
+
+\begin{DoxyCode}
+00155 \{
+00156     \textcolor{keywordflow}{return} \hyperlink{class_esp32_ad407a4a4139183be7c4293fb254c96d7}{altitudeUnite};
+00157 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!get\+Etat\+Led@{get\+Etat\+Led}}
+\index{get\+Etat\+Led@{get\+Etat\+Led}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{get\+Etat\+Led() const }{getEtatLed() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Esp32\+::get\+Etat\+Led (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_esp32_ac695656654b5d83ec3924b47f533f465}{}\label{class_esp32_ac695656654b5d83ec3924b47f533f465}
+recuperer l\textquotesingle{}unite d\textquotesingle{}altitude
+
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_esp32_ae8f6b2080769949ae5bd41c8312a6892}{couleur}.
+
+
+
+Référencé par \hyperlink{class_ihm_af0426507c2130aefd01bdb4f825ae168}{Ihm\+::modifier\+Etat\+Led()}.
+
+
+\begin{DoxyCode}
+00166 \{
+00167     \textcolor{keywordflow}{return} \hyperlink{class_esp32_ae8f6b2080769949ae5bd41c8312a6892}{couleur};
+00168 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!get\+Humidite@{get\+Humidite}}
+\index{get\+Humidite@{get\+Humidite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{get\+Humidite() const }{getHumidite() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Esp32\+::get\+Humidite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_esp32_a87f581ef8f01bcb71a7294cc545b242e}{}\label{class_esp32_a87f581ef8f01bcb71a7294cc545b242e}
+recuperer l\textquotesingle{}unite du resssentie
+
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_esp32_a7ad1a81c0a3cb29035aaef89d153f662}{humidite}.
+
+
+
+Référencé par \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{Ihm\+::actualiser\+Donnee()}.
+
+
+\begin{DoxyCode}
+00078 \{
+00079     \textcolor{keywordflow}{return} \hyperlink{class_esp32_a7ad1a81c0a3cb29035aaef89d153f662}{humidite};
+00080 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!get\+Humidite\+Unite@{get\+Humidite\+Unite}}
+\index{get\+Humidite\+Unite@{get\+Humidite\+Unite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{get\+Humidite\+Unite() const }{getHumiditeUnite() const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Esp32\+::get\+Humidite\+Unite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_esp32_ab2a1fc92c11af031814569f3d2836f33}{}\label{class_esp32_ab2a1fc92c11af031814569f3d2836f33}
+recuperer la luminosite
+
+\begin{DoxyReturn}{Renvoie}
+Q\+String 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_esp32_a90c1ea9a5598c16a7918205185aa9fd6}{humidite\+Unite}.
+
+
+
+Référencé par \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{Ihm\+::actualiser\+Donnee()}.
+
+
+\begin{DoxyCode}
+00100 \{
+00101     \textcolor{keywordflow}{return} \hyperlink{class_esp32_a90c1ea9a5598c16a7918205185aa9fd6}{humiditeUnite};
+00102 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!get\+Luminosite@{get\+Luminosite}}
+\index{get\+Luminosite@{get\+Luminosite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{get\+Luminosite() const }{getLuminosite() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Esp32\+::get\+Luminosite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_esp32_aa2cdabace1ce70928c53d25e306a16d1}{}\label{class_esp32_aa2cdabace1ce70928c53d25e306a16d1}
+recuperer l\textquotesingle{}humidite
+
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_esp32_aa6ce86f87c88d7fd29880e9865fefefc}{luminosite}.
+
+
+
+Référencé par \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{Ihm\+::actualiser\+Donnee()}.
+
+
+\begin{DoxyCode}
+00089 \{
+00090     \textcolor{keywordflow}{return} \hyperlink{class_esp32_aa6ce86f87c88d7fd29880e9865fefefc}{luminosite};
+00091 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!get\+Luminosite\+Unite@{get\+Luminosite\+Unite}}
+\index{get\+Luminosite\+Unite@{get\+Luminosite\+Unite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{get\+Luminosite\+Unite() const }{getLuminositeUnite() const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Esp32\+::get\+Luminosite\+Unite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_esp32_a50f4ef373379d2dbc0fd960438ab6f93}{}\label{class_esp32_a50f4ef373379d2dbc0fd960438ab6f93}
+recuperer l\textquotesingle{}unite d\textquotesingle{}humidite
+
+\begin{DoxyReturn}{Renvoie}
+Q\+String 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_esp32_a67087c5b6b76b64f929dbc255a7d5441}{luminosite\+Unite}.
+
+
+
+Référencé par \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{Ihm\+::actualiser\+Donnee()}.
+
+
+\begin{DoxyCode}
+00111 \{
+00112     \textcolor{keywordflow}{return} \hyperlink{class_esp32_a67087c5b6b76b64f929dbc255a7d5441}{luminositeUnite};
+00113 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!get\+Pression@{get\+Pression}}
+\index{get\+Pression@{get\+Pression}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{get\+Pression() const }{getPression() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Esp32\+::get\+Pression (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_esp32_a31155a36108b37febae371d9ae65385a}{}\label{class_esp32_a31155a36108b37febae371d9ae65385a}
+recuperer l\textquotesingle{}unite de luminosite
+
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_esp32_a7ddfb5679b439b204a93f775cfa9d2fa}{pression}.
+
+
+
+Référencé par \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{Ihm\+::actualiser\+Donnee()}.
+
+
+\begin{DoxyCode}
+00122 \{
+00123     \textcolor{keywordflow}{return} \hyperlink{class_esp32_a7ddfb5679b439b204a93f775cfa9d2fa}{pression};
+00124 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!get\+Pression\+Unite@{get\+Pression\+Unite}}
+\index{get\+Pression\+Unite@{get\+Pression\+Unite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{get\+Pression\+Unite() const }{getPressionUnite() const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Esp32\+::get\+Pression\+Unite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_esp32_a398d4a1cbc61f7af2f3af7ecbcf2f93f}{}\label{class_esp32_a398d4a1cbc61f7af2f3af7ecbcf2f93f}
+recuperer la pression
+
+\begin{DoxyReturn}{Renvoie}
+Q\+String 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_esp32_aad1ead1e2c830025af0eebcdb30bcafe}{pression\+Unite}.
+
+
+
+Référencé par \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{Ihm\+::actualiser\+Donnee()}.
+
+
+\begin{DoxyCode}
+00133 \{
+00134     \textcolor{keywordflow}{return} \hyperlink{class_esp32_aad1ead1e2c830025af0eebcdb30bcafe}{pressionUnite};
+00135 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!get\+Ressentie@{get\+Ressentie}}
+\index{get\+Ressentie@{get\+Ressentie}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{get\+Ressentie() const }{getRessentie() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Esp32\+::get\+Ressentie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_esp32_ae29854a5127d760a216f96ec7d797412}{}\label{class_esp32_ae29854a5127d760a216f96ec7d797412}
+recuperer la temperature
+
+\begin{DoxyReturn}{Renvoie}
+double 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_esp32_a08425470633629dae05f61659ff90375}{ressentie}.
+
+
+
+Référencé par \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{Ihm\+::actualiser\+Donnee()}.
+
+
+\begin{DoxyCode}
+00045 \{
+00046     \textcolor{keywordflow}{return} \hyperlink{class_esp32_a08425470633629dae05f61659ff90375}{ressentie};
+00047 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!get\+Ressentie\+Unite@{get\+Ressentie\+Unite}}
+\index{get\+Ressentie\+Unite@{get\+Ressentie\+Unite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{get\+Ressentie\+Unite() const }{getRessentieUnite() const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Esp32\+::get\+Ressentie\+Unite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_esp32_a548ed7533f742d087c65df256479ed00}{}\label{class_esp32_a548ed7533f742d087c65df256479ed00}
+recuperer l\textquotesingle{}unite de temperature
+
+\begin{DoxyReturn}{Renvoie}
+Q\+String 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_esp32_a5333681c08a07f1877c20cfe88b7024f}{ressentie\+Unite}.
+
+
+
+Référencé par \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{Ihm\+::actualiser\+Donnee()}.
+
+
+\begin{DoxyCode}
+00067 \{
+00068     \textcolor{keywordflow}{return} \hyperlink{class_esp32_a5333681c08a07f1877c20cfe88b7024f}{ressentieUnite};
+00069 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!get\+Temperature@{get\+Temperature}}
+\index{get\+Temperature@{get\+Temperature}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{get\+Temperature() const }{getTemperature() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Esp32\+::get\+Temperature (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_esp32_adb339413686f3d78df1ecd41f106fd4e}{}\label{class_esp32_adb339413686f3d78df1ecd41f106fd4e}
+constructeur de la classe \hyperlink{class_esp32}{Esp32}
+
+\begin{DoxyReturn}{Renvoie}
+double ... 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_esp32_a8274802633ca34c07fbfe7fa38a171a8}{temperature}.
+
+
+
+Référencé par \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{Ihm\+::actualiser\+Donnee()}.
+
+
+\begin{DoxyCode}
+00034 \{
+00035     \textcolor{keywordflow}{return} \hyperlink{class_esp32_a8274802633ca34c07fbfe7fa38a171a8}{temperature};
+00036 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!get\+Temperature\+Unite@{get\+Temperature\+Unite}}
+\index{get\+Temperature\+Unite@{get\+Temperature\+Unite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{get\+Temperature\+Unite() const }{getTemperatureUnite() const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Esp32\+::get\+Temperature\+Unite (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_esp32_ae20c976b79f87de083ca8ee49b2abf25}{}\label{class_esp32_ae20c976b79f87de083ca8ee49b2abf25}
+recuperer le ressentie
+
+\begin{DoxyReturn}{Renvoie}
+Q\+String 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_esp32_a825526f0d6b74fda9ddeba7e67ec9dd5}{temperature\+Unite}.
+
+
+
+Référencé par \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{Ihm\+::actualiser\+Donnee()}.
+
+
+\begin{DoxyCode}
+00056 \{
+00057     \textcolor{keywordflow}{return} \hyperlink{class_esp32_a825526f0d6b74fda9ddeba7e67ec9dd5}{temperatureUnite};
+00058 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!set\+Altitude@{set\+Altitude}}
+\index{set\+Altitude@{set\+Altitude}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{set\+Altitude(int altitude)}{setAltitude(int altitude)}}]{\setlength{\rightskip}{0pt plus 5cm}void Esp32\+::set\+Altitude (
+\begin{DoxyParamCaption}
+\item[{int}]{altitude}
+\end{DoxyParamCaption}
+)}\hypertarget{class_esp32_aeb2268155501f27e36e6a7c6caa15412}{}\label{class_esp32_aeb2268155501f27e36e6a7c6caa15412}
+modifier la valeur de l\textquotesingle{}unite de pression
+
+
+\begin{DoxyParams}{Paramètres}
+{\em altitude} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_esp32_ab257f7aff043b4d60d963e1bfd1fe35f}{altitude}.
+
+
+
+Référencé par \hyperlink{class_transmission_aa2977705ec793b10bf3212a13e67b097}{Transmission\+::decomposer()}.
+
+
+\begin{DoxyCode}
+00287 \{
+00288     this->\hyperlink{class_esp32_ab257f7aff043b4d60d963e1bfd1fe35f}{altitude} = \hyperlink{class_esp32_ab257f7aff043b4d60d963e1bfd1fe35f}{altitude};
+00289 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!set\+Altitude\+Unite@{set\+Altitude\+Unite}}
+\index{set\+Altitude\+Unite@{set\+Altitude\+Unite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{set\+Altitude\+Unite(\+Q\+String altitude\+Unite)}{setAltitudeUnite(QString altitudeUnite)}}]{\setlength{\rightskip}{0pt plus 5cm}void Esp32\+::set\+Altitude\+Unite (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{altitude\+Unite}
+\end{DoxyParamCaption}
+)}\hypertarget{class_esp32_a69b0c6a1c0a31e043b715be3fc40ded1}{}\label{class_esp32_a69b0c6a1c0a31e043b715be3fc40ded1}
+modifier la valeur d\textquotesingle{}altitude
+
+
+\begin{DoxyParams}{Paramètres}
+{\em altitude\+Unite} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_esp32_ad407a4a4139183be7c4293fb254c96d7}{altitude\+Unite}.
+
+
+
+Référencé par \hyperlink{class_transmission_aa2977705ec793b10bf3212a13e67b097}{Transmission\+::decomposer()}.
+
+
+\begin{DoxyCode}
+00298 \{
+00299     this->\hyperlink{class_esp32_ad407a4a4139183be7c4293fb254c96d7}{altitudeUnite} = \hyperlink{class_esp32_ad407a4a4139183be7c4293fb254c96d7}{altitudeUnite};
+00300 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!set\+Couleur\+Led@{set\+Couleur\+Led}}
+\index{set\+Couleur\+Led@{set\+Couleur\+Led}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{set\+Couleur\+Led(int couleur)}{setCouleurLed(int couleur)}}]{\setlength{\rightskip}{0pt plus 5cm}void Esp32\+::set\+Couleur\+Led (
+\begin{DoxyParamCaption}
+\item[{int}]{couleur}
+\end{DoxyParamCaption}
+)}\hypertarget{class_esp32_a32d0d1abb41a3762a54e9f5a33b3b247}{}\label{class_esp32_a32d0d1abb41a3762a54e9f5a33b3b247}
+modifier la valeur de l\textquotesingle{}unite altitude
+
+
+\begin{DoxyParams}{Paramètres}
+{\em couleur} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_esp32_ae8f6b2080769949ae5bd41c8312a6892}{couleur}.
+
+
+
+Référencé par \hyperlink{class_transmission_aa2977705ec793b10bf3212a13e67b097}{Transmission\+::decomposer()}.
+
+
+\begin{DoxyCode}
+00308 \{
+00309     this->\hyperlink{class_esp32_ae8f6b2080769949ae5bd41c8312a6892}{couleur} = \hyperlink{class_esp32_ae8f6b2080769949ae5bd41c8312a6892}{couleur};
+00310 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!set\+Humidite@{set\+Humidite}}
+\index{set\+Humidite@{set\+Humidite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{set\+Humidite(int humidite)}{setHumidite(int humidite)}}]{\setlength{\rightskip}{0pt plus 5cm}void Esp32\+::set\+Humidite (
+\begin{DoxyParamCaption}
+\item[{int}]{humidite}
+\end{DoxyParamCaption}
+)}\hypertarget{class_esp32_a029c94bf405887eb890b3381ac176a9a}{}\label{class_esp32_a029c94bf405887eb890b3381ac176a9a}
+modifier la valeur de l\textquotesingle{}uniter de ressenti
+
+
+\begin{DoxyParams}{Paramètres}
+{\em humidite} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_esp32_a7ad1a81c0a3cb29035aaef89d153f662}{humidite}.
+
+
+
+Référencé par \hyperlink{class_transmission_aa2977705ec793b10bf3212a13e67b097}{Transmission\+::decomposer()}.
+
+
+\begin{DoxyCode}
+00221 \{
+00222     this->\hyperlink{class_esp32_a7ad1a81c0a3cb29035aaef89d153f662}{humidite} = \hyperlink{class_esp32_a7ad1a81c0a3cb29035aaef89d153f662}{humidite};
+00223 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!set\+Humidite\+Unite@{set\+Humidite\+Unite}}
+\index{set\+Humidite\+Unite@{set\+Humidite\+Unite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{set\+Humidite\+Unite(\+Q\+String humidite\+Unite)}{setHumiditeUnite(QString humiditeUnite)}}]{\setlength{\rightskip}{0pt plus 5cm}void Esp32\+::set\+Humidite\+Unite (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{humidite\+Unite}
+\end{DoxyParamCaption}
+)}\hypertarget{class_esp32_ae9b2704f36bcd246668354d0ac06ea35}{}\label{class_esp32_ae9b2704f36bcd246668354d0ac06ea35}
+modifier la valeur de luminosite
+
+
+\begin{DoxyParams}{Paramètres}
+{\em humidite\+Unite} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_esp32_a90c1ea9a5598c16a7918205185aa9fd6}{humidite\+Unite}.
+
+
+
+Référencé par \hyperlink{class_transmission_aa2977705ec793b10bf3212a13e67b097}{Transmission\+::decomposer()}.
+
+
+\begin{DoxyCode}
+00243 \{
+00244     this->\hyperlink{class_esp32_a90c1ea9a5598c16a7918205185aa9fd6}{humiditeUnite} = \hyperlink{class_esp32_a90c1ea9a5598c16a7918205185aa9fd6}{humiditeUnite};
+00245 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!set\+Luminosite@{set\+Luminosite}}
+\index{set\+Luminosite@{set\+Luminosite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{set\+Luminosite(int luminosite)}{setLuminosite(int luminosite)}}]{\setlength{\rightskip}{0pt plus 5cm}void Esp32\+::set\+Luminosite (
+\begin{DoxyParamCaption}
+\item[{int}]{luminosite}
+\end{DoxyParamCaption}
+)}\hypertarget{class_esp32_ae60b48e8c808a5108402d5b9f03590ac}{}\label{class_esp32_ae60b48e8c808a5108402d5b9f03590ac}
+modifier la valeur de l\textquotesingle{}humidite
+
+
+\begin{DoxyParams}{Paramètres}
+{\em luminosite} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_esp32_aa6ce86f87c88d7fd29880e9865fefefc}{luminosite}.
+
+
+
+Référencé par \hyperlink{class_transmission_aa2977705ec793b10bf3212a13e67b097}{Transmission\+::decomposer()}.
+
+
+\begin{DoxyCode}
+00232 \{
+00233     this->\hyperlink{class_esp32_aa6ce86f87c88d7fd29880e9865fefefc}{luminosite} = \hyperlink{class_esp32_aa6ce86f87c88d7fd29880e9865fefefc}{luminosite};
+00234 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!set\+Luminosite\+Unite@{set\+Luminosite\+Unite}}
+\index{set\+Luminosite\+Unite@{set\+Luminosite\+Unite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{set\+Luminosite\+Unite(\+Q\+String luminosite\+Unite)}{setLuminositeUnite(QString luminositeUnite)}}]{\setlength{\rightskip}{0pt plus 5cm}void Esp32\+::set\+Luminosite\+Unite (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{luminosite\+Unite}
+\end{DoxyParamCaption}
+)}\hypertarget{class_esp32_a36450bcd23e7676d1f0a46e8bec31275}{}\label{class_esp32_a36450bcd23e7676d1f0a46e8bec31275}
+modifier la valeur de l\textquotesingle{}unite d\textquotesingle{}humidite
+
+
+\begin{DoxyParams}{Paramètres}
+{\em luminosite\+Unite} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_esp32_a67087c5b6b76b64f929dbc255a7d5441}{luminosite\+Unite}.
+
+
+
+Référencé par \hyperlink{class_transmission_aa2977705ec793b10bf3212a13e67b097}{Transmission\+::decomposer()}.
+
+
+\begin{DoxyCode}
+00254 \{
+00255     this->\hyperlink{class_esp32_a67087c5b6b76b64f929dbc255a7d5441}{luminositeUnite} = \hyperlink{class_esp32_a67087c5b6b76b64f929dbc255a7d5441}{luminositeUnite};
+00256 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!set\+Pression@{set\+Pression}}
+\index{set\+Pression@{set\+Pression}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{set\+Pression(int pression)}{setPression(int pression)}}]{\setlength{\rightskip}{0pt plus 5cm}void Esp32\+::set\+Pression (
+\begin{DoxyParamCaption}
+\item[{int}]{pression}
+\end{DoxyParamCaption}
+)}\hypertarget{class_esp32_a583358abbf0b279dabb5a2976f1783de}{}\label{class_esp32_a583358abbf0b279dabb5a2976f1783de}
+modifier la valeur de l\textquotesingle{}unite de luminosite
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pression} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_esp32_a7ddfb5679b439b204a93f775cfa9d2fa}{pression}.
+
+
+
+Référencé par \hyperlink{class_transmission_aa2977705ec793b10bf3212a13e67b097}{Transmission\+::decomposer()}.
+
+
+\begin{DoxyCode}
+00265 \{
+00266     this->\hyperlink{class_esp32_a7ddfb5679b439b204a93f775cfa9d2fa}{pression} = \hyperlink{class_esp32_a7ddfb5679b439b204a93f775cfa9d2fa}{pression};
+00267 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!set\+Pression\+Unite@{set\+Pression\+Unite}}
+\index{set\+Pression\+Unite@{set\+Pression\+Unite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{set\+Pression\+Unite(\+Q\+String pression\+Unite)}{setPressionUnite(QString pressionUnite)}}]{\setlength{\rightskip}{0pt plus 5cm}void Esp32\+::set\+Pression\+Unite (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{pression\+Unite}
+\end{DoxyParamCaption}
+)}\hypertarget{class_esp32_a3c6dd57f955aef0738c48be705538337}{}\label{class_esp32_a3c6dd57f955aef0738c48be705538337}
+modifier la valeur de la pression
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pression\+Unite} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_esp32_aad1ead1e2c830025af0eebcdb30bcafe}{pression\+Unite}.
+
+
+
+Référencé par \hyperlink{class_transmission_aa2977705ec793b10bf3212a13e67b097}{Transmission\+::decomposer()}.
+
+
+\begin{DoxyCode}
+00276 \{
+00277     this->\hyperlink{class_esp32_aad1ead1e2c830025af0eebcdb30bcafe}{pressionUnite} = \hyperlink{class_esp32_aad1ead1e2c830025af0eebcdb30bcafe}{pressionUnite};
+00278 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!set\+Ressentie@{set\+Ressentie}}
+\index{set\+Ressentie@{set\+Ressentie}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{set\+Ressentie(double ressentie)}{setRessentie(double ressentie)}}]{\setlength{\rightskip}{0pt plus 5cm}void Esp32\+::set\+Ressentie (
+\begin{DoxyParamCaption}
+\item[{double}]{ressentie}
+\end{DoxyParamCaption}
+)}\hypertarget{class_esp32_a85dc760b771c9233fa094a49679d9286}{}\label{class_esp32_a85dc760b771c9233fa094a49679d9286}
+modifier la valeur de la temperature
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ressentie} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_esp32_a08425470633629dae05f61659ff90375}{ressentie}.
+
+
+
+Référencé par \hyperlink{class_transmission_aa2977705ec793b10bf3212a13e67b097}{Transmission\+::decomposer()}.
+
+
+\begin{DoxyCode}
+00188 \{
+00189     this->\hyperlink{class_esp32_a08425470633629dae05f61659ff90375}{ressentie} = \hyperlink{class_esp32_a08425470633629dae05f61659ff90375}{ressentie};
+00190 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!set\+Ressentie\+Unite@{set\+Ressentie\+Unite}}
+\index{set\+Ressentie\+Unite@{set\+Ressentie\+Unite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{set\+Ressentie\+Unite(\+Q\+String ressentie\+Unite)}{setRessentieUnite(QString ressentieUnite)}}]{\setlength{\rightskip}{0pt plus 5cm}void Esp32\+::set\+Ressentie\+Unite (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{ressentie\+Unite}
+\end{DoxyParamCaption}
+)}\hypertarget{class_esp32_abf8a7f9942150b6c17cc5d1cc7b0fc8a}{}\label{class_esp32_abf8a7f9942150b6c17cc5d1cc7b0fc8a}
+modifier la valeur de l\textquotesingle{}uniter de temperature
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ressentie\+Unite} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_esp32_a5333681c08a07f1877c20cfe88b7024f}{ressentie\+Unite}.
+
+
+
+Référencé par \hyperlink{class_transmission_aa2977705ec793b10bf3212a13e67b097}{Transmission\+::decomposer()}.
+
+
+\begin{DoxyCode}
+00210 \{
+00211     this->\hyperlink{class_esp32_a5333681c08a07f1877c20cfe88b7024f}{ressentieUnite} = \textcolor{stringliteral}{"°"} + \hyperlink{class_esp32_a5333681c08a07f1877c20cfe88b7024f}{ressentieUnite};
+00212 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!set\+Temperature@{set\+Temperature}}
+\index{set\+Temperature@{set\+Temperature}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{set\+Temperature(double temperature)}{setTemperature(double temperature)}}]{\setlength{\rightskip}{0pt plus 5cm}void Esp32\+::set\+Temperature (
+\begin{DoxyParamCaption}
+\item[{double}]{temperature}
+\end{DoxyParamCaption}
+)}\hypertarget{class_esp32_a8e7a509ed5704bee4bc527ae297f14f0}{}\label{class_esp32_a8e7a509ed5704bee4bc527ae297f14f0}
+recuperer l\textquotesingle{}etat de la led
+
+
+\begin{DoxyParams}{Paramètres}
+{\em temperature} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_esp32_a8274802633ca34c07fbfe7fa38a171a8}{temperature}.
+
+
+
+Référencé par \hyperlink{class_transmission_aa2977705ec793b10bf3212a13e67b097}{Transmission\+::decomposer()}.
+
+
+\begin{DoxyCode}
+00177 \{
+00178     this->\hyperlink{class_esp32_a8274802633ca34c07fbfe7fa38a171a8}{temperature} = \hyperlink{class_esp32_a8274802633ca34c07fbfe7fa38a171a8}{temperature};
+00179 \}
+\end{DoxyCode}
+\index{Esp32@{Esp32}!set\+Temperature\+Unite@{set\+Temperature\+Unite}}
+\index{set\+Temperature\+Unite@{set\+Temperature\+Unite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{set\+Temperature\+Unite(\+Q\+String temperature\+Unite)}{setTemperatureUnite(QString temperatureUnite)}}]{\setlength{\rightskip}{0pt plus 5cm}void Esp32\+::set\+Temperature\+Unite (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{temperature\+Unite}
+\end{DoxyParamCaption}
+)}\hypertarget{class_esp32_a709c261e1cea7b6bbd2ea1b09b1d7ec0}{}\label{class_esp32_a709c261e1cea7b6bbd2ea1b09b1d7ec0}
+modifier la valeur de ressenti
+
+
+\begin{DoxyParams}{Paramètres}
+{\em temperature\+Unite} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_esp32_a825526f0d6b74fda9ddeba7e67ec9dd5}{temperature\+Unite}.
+
+
+
+Référencé par \hyperlink{class_transmission_aa2977705ec793b10bf3212a13e67b097}{Transmission\+::decomposer()}.
+
+
+\begin{DoxyCode}
+00199 \{
+00200     this->\hyperlink{class_esp32_a825526f0d6b74fda9ddeba7e67ec9dd5}{temperatureUnite} = \textcolor{stringliteral}{"°"} + \hyperlink{class_esp32_a825526f0d6b74fda9ddeba7e67ec9dd5}{temperatureUnite};
+00201 \}
+\end{DoxyCode}
+
+
+\subsubsection{Documentation des données membres}
+\index{Esp32@{Esp32}!altitude@{altitude}}
+\index{altitude@{altitude}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{altitude}{altitude}}]{\setlength{\rightskip}{0pt plus 5cm}int Esp32\+::altitude\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_esp32_ab257f7aff043b4d60d963e1bfd1fe35f}{}\label{class_esp32_ab257f7aff043b4d60d963e1bfd1fe35f}
+variable qui stocke l\textquotesingle{}unite de pression 
+
+Référencé par \hyperlink{class_esp32_a31b691e6c75c1f9859bde4c0df8fe12f}{get\+Altitude()}, et \hyperlink{class_esp32_aeb2268155501f27e36e6a7c6caa15412}{set\+Altitude()}.
+
+\index{Esp32@{Esp32}!altitude\+Unite@{altitude\+Unite}}
+\index{altitude\+Unite@{altitude\+Unite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{altitude\+Unite}{altitudeUnite}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Esp32\+::altitude\+Unite\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_esp32_ad407a4a4139183be7c4293fb254c96d7}{}\label{class_esp32_ad407a4a4139183be7c4293fb254c96d7}
+variable qui stocke l\textquotesingle{}altitude 
+
+Référencé par \hyperlink{class_esp32_aad3c2e4b5d15a02abc62d0329f43942d}{get\+Altitude\+Unite()}, et \hyperlink{class_esp32_a69b0c6a1c0a31e043b715be3fc40ded1}{set\+Altitude\+Unite()}.
+
+\index{Esp32@{Esp32}!couleur@{couleur}}
+\index{couleur@{couleur}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{couleur}{couleur}}]{\setlength{\rightskip}{0pt plus 5cm}int Esp32\+::couleur\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_esp32_ae8f6b2080769949ae5bd41c8312a6892}{}\label{class_esp32_ae8f6b2080769949ae5bd41c8312a6892}
+variable qui stocke l\textquotesingle{}unite de l\textquotesingle{}altitude 
+
+Référencé par \hyperlink{class_esp32_ac695656654b5d83ec3924b47f533f465}{get\+Etat\+Led()}, et \hyperlink{class_esp32_a32d0d1abb41a3762a54e9f5a33b3b247}{set\+Couleur\+Led()}.
+
+\index{Esp32@{Esp32}!humidite@{humidite}}
+\index{humidite@{humidite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{humidite}{humidite}}]{\setlength{\rightskip}{0pt plus 5cm}int Esp32\+::humidite\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_esp32_a7ad1a81c0a3cb29035aaef89d153f662}{}\label{class_esp32_a7ad1a81c0a3cb29035aaef89d153f662}
+variable qui stocke l\textquotesingle{}unite de ressenti 
+
+Référencé par \hyperlink{class_esp32_a87f581ef8f01bcb71a7294cc545b242e}{get\+Humidite()}, et \hyperlink{class_esp32_a029c94bf405887eb890b3381ac176a9a}{set\+Humidite()}.
+
+\index{Esp32@{Esp32}!humidite\+Unite@{humidite\+Unite}}
+\index{humidite\+Unite@{humidite\+Unite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{humidite\+Unite}{humiditeUnite}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Esp32\+::humidite\+Unite\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_esp32_a90c1ea9a5598c16a7918205185aa9fd6}{}\label{class_esp32_a90c1ea9a5598c16a7918205185aa9fd6}
+variable qui stocke l\textquotesingle{}humidite 
+
+Référencé par \hyperlink{class_esp32_ab2a1fc92c11af031814569f3d2836f33}{get\+Humidite\+Unite()}, et \hyperlink{class_esp32_ae9b2704f36bcd246668354d0ac06ea35}{set\+Humidite\+Unite()}.
+
+\index{Esp32@{Esp32}!luminosite@{luminosite}}
+\index{luminosite@{luminosite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{luminosite}{luminosite}}]{\setlength{\rightskip}{0pt plus 5cm}int Esp32\+::luminosite\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_esp32_aa6ce86f87c88d7fd29880e9865fefefc}{}\label{class_esp32_aa6ce86f87c88d7fd29880e9865fefefc}
+variable qui stocke l\textquotesingle{}unite de l\textquotesingle{}humidite 
+
+Référencé par \hyperlink{class_esp32_aa2cdabace1ce70928c53d25e306a16d1}{get\+Luminosite()}, et \hyperlink{class_esp32_ae60b48e8c808a5108402d5b9f03590ac}{set\+Luminosite()}.
+
+\index{Esp32@{Esp32}!luminosite\+Unite@{luminosite\+Unite}}
+\index{luminosite\+Unite@{luminosite\+Unite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{luminosite\+Unite}{luminositeUnite}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Esp32\+::luminosite\+Unite\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_esp32_a67087c5b6b76b64f929dbc255a7d5441}{}\label{class_esp32_a67087c5b6b76b64f929dbc255a7d5441}
+variable qui stocke la luminosite 
+
+Référencé par \hyperlink{class_esp32_a50f4ef373379d2dbc0fd960438ab6f93}{get\+Luminosite\+Unite()}, et \hyperlink{class_esp32_a36450bcd23e7676d1f0a46e8bec31275}{set\+Luminosite\+Unite()}.
+
+\index{Esp32@{Esp32}!pression@{pression}}
+\index{pression@{pression}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{pression}{pression}}]{\setlength{\rightskip}{0pt plus 5cm}int Esp32\+::pression\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_esp32_a7ddfb5679b439b204a93f775cfa9d2fa}{}\label{class_esp32_a7ddfb5679b439b204a93f775cfa9d2fa}
+variable qui stocke l\textquotesingle{}unite de la luminosite 
+
+Référencé par \hyperlink{class_esp32_a31155a36108b37febae371d9ae65385a}{get\+Pression()}, et \hyperlink{class_esp32_a583358abbf0b279dabb5a2976f1783de}{set\+Pression()}.
+
+\index{Esp32@{Esp32}!pression\+Unite@{pression\+Unite}}
+\index{pression\+Unite@{pression\+Unite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{pression\+Unite}{pressionUnite}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Esp32\+::pression\+Unite\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_esp32_aad1ead1e2c830025af0eebcdb30bcafe}{}\label{class_esp32_aad1ead1e2c830025af0eebcdb30bcafe}
+variable qui stocke la pression 
+
+Référencé par \hyperlink{class_esp32_a398d4a1cbc61f7af2f3af7ecbcf2f93f}{get\+Pression\+Unite()}, et \hyperlink{class_esp32_a3c6dd57f955aef0738c48be705538337}{set\+Pression\+Unite()}.
+
+\index{Esp32@{Esp32}!ressentie@{ressentie}}
+\index{ressentie@{ressentie}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{ressentie}{ressentie}}]{\setlength{\rightskip}{0pt plus 5cm}double Esp32\+::ressentie\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_esp32_a08425470633629dae05f61659ff90375}{}\label{class_esp32_a08425470633629dae05f61659ff90375}
+variable qui stocke l\textquotesingle{}unite de la temperature 
+
+Référencé par \hyperlink{class_esp32_ae29854a5127d760a216f96ec7d797412}{get\+Ressentie()}, et \hyperlink{class_esp32_a85dc760b771c9233fa094a49679d9286}{set\+Ressentie()}.
+
+\index{Esp32@{Esp32}!ressentie\+Unite@{ressentie\+Unite}}
+\index{ressentie\+Unite@{ressentie\+Unite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{ressentie\+Unite}{ressentieUnite}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Esp32\+::ressentie\+Unite\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_esp32_a5333681c08a07f1877c20cfe88b7024f}{}\label{class_esp32_a5333681c08a07f1877c20cfe88b7024f}
+variable qui stocke le ressenti 
+
+Référencé par \hyperlink{class_esp32_a548ed7533f742d087c65df256479ed00}{get\+Ressentie\+Unite()}, et \hyperlink{class_esp32_abf8a7f9942150b6c17cc5d1cc7b0fc8a}{set\+Ressentie\+Unite()}.
+
+\index{Esp32@{Esp32}!temperature@{temperature}}
+\index{temperature@{temperature}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{temperature}{temperature}}]{\setlength{\rightskip}{0pt plus 5cm}double Esp32\+::temperature\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_esp32_a8274802633ca34c07fbfe7fa38a171a8}{}\label{class_esp32_a8274802633ca34c07fbfe7fa38a171a8}
+modifier l\textquotesingle{}etat de la led 
+
+Référencé par \hyperlink{class_esp32_adb339413686f3d78df1ecd41f106fd4e}{get\+Temperature()}, et \hyperlink{class_esp32_a8e7a509ed5704bee4bc527ae297f14f0}{set\+Temperature()}.
+
+\index{Esp32@{Esp32}!temperature\+Unite@{temperature\+Unite}}
+\index{temperature\+Unite@{temperature\+Unite}!Esp32@{Esp32}}
+\paragraph[{\texorpdfstring{temperature\+Unite}{temperatureUnite}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Esp32\+::temperature\+Unite\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_esp32_a825526f0d6b74fda9ddeba7e67ec9dd5}{}\label{class_esp32_a825526f0d6b74fda9ddeba7e67ec9dd5}
+variable qui stocke la temperature 
+
+Référencé par \hyperlink{class_esp32_ae20c976b79f87de083ca8ee49b2abf25}{get\+Temperature\+Unite()}, et \hyperlink{class_esp32_a709c261e1cea7b6bbd2ea1b09b1d7ec0}{set\+Temperature\+Unite()}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{esp32_8h}{esp32.\+h}\item 
+\hyperlink{esp32_8cpp}{esp32.\+cpp}\end{DoxyCompactItemize}

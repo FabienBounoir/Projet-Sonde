@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Mini-projet Qt Sonde ESP32:  Fichier source de ihm.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ESP32_weather_qt_icone.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Mini-projet Qt Sonde ESP32
+   &#160;<span id="projectnumber">4.0</span>
+   </div>
+   <div id="projectbrief">BTS SN 2020</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_3b4c60c1f7dcce1feb04e9e53e3d7338.html">Sonde</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ihm.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ihm_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef IHM_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define IHM_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="transmission_8h.html">transmission.h</a>&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="meteo_8h.html">meteo.h</a>&quot;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="graphique_8h.html">graphique.h</a>&quot;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QDateTime&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;QSettings&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QApplication&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="ihm_8h.html#a6a76d185be61af9a67ee12297edb0025">   13</a></span>&#160;<span class="preprocessor">#define MODE_OPERATEUR_ACTIVER 2</span></div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="ihm_8h.html#a467f42462a8692cc6e1027a51c725759">   14</a></span>&#160;<span class="preprocessor">#define ONGLET_MODE_OPERATEUR 4</span></div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="ihm_8h.html#a37c6676a5b82b283c556ba9a35d8ad8d">   15</a></span>&#160;<span class="preprocessor">#define LED_ROUGE &quot;../Sonde/image/ledRouge.png&quot;</span></div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="ihm_8h.html#ae96e1dcc18e953ab066891dcb822ec71">   16</a></span>&#160;<span class="preprocessor">#define LED_VERT &quot;../Sonde/image/ledVert.png&quot;</span></div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="ihm_8h.html#a4d9260fdff3b0a796816640bbac505cc">   17</a></span>&#160;<span class="preprocessor">#define LED_ORANGE &quot;../Sonde/image/ledOrange.png&quot;</span></div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="ihm_8h.html#a80700bb63bd56ebabbb4728aa433fd29">   18</a></span>&#160;<span class="preprocessor">#define LED_OFF &quot;../Sonde/image/ledEteint.png&quot;</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="ihm_8h.html#a51cc9c67b26515b9fe244dd1d583a7b8">   20</a></span>&#160;<span class="preprocessor">#define VALEUR_LED_OFF 0</span></div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="ihm_8h.html#a463267e2444f17d868aadaf532385f29">   21</a></span>&#160;<span class="preprocessor">#define VALEUR_LED_ROUGE 1</span></div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="ihm_8h.html#ab5894fc14244d3bab5a2a702b15ef745">   22</a></span>&#160;<span class="preprocessor">#define VALEUR_LED_VERT 2</span></div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="ihm_8h.html#a96cded5b4a0179b8773dc8caec0c7bec">   23</a></span>&#160;<span class="preprocessor">#define VALEUR_LED_ORANGE 3</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">class </span><a class="code" href="class_transmission.html">Transmission</a>;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class </span><a class="code" href="class_meteo.html">Meteo</a>;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span><a class="code" href="class_graphique.html">Graphique</a>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="namespace_ui.html">   31</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_ui.html">Ui</a> {</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span><a class="code" href="class_ihm.html">Ihm</a>;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_ihm.html">   49</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_ihm.html">Ihm</a> : <span class="keyword">public</span> <a class="code" href="class_q_widget.html">QWidget</a></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    Q_OBJECT</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_ihm.html">Ihm</a>(<a class="code" href="class_q_widget.html">QWidget</a> *parent = <span class="keyword">nullptr</span>);    </div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    ~<a class="code" href="class_ihm.html">Ihm</a>();                                     </div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> modifierEtatLed();                     </div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">private</span> slots:</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> on_pushButtonQuitter_clicked();            </div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> on_ModeOperateur_stateChanged(<span class="keywordtype">int</span> arg1);   </div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> actualiserTrame();                         </div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> actualiserDonnee();                        </div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> desactiverOuverturePort();                 </div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> desactiverFermerPort();                    </div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> actualiserAffichageMeteo();                </div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> mettreAjourAppareilBluetoothDisponible();  </div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> actualiserAffichageBluetooth();            </div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> actualiserMessageStatutConnecterBluetooth();        </div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> actualiserMessageStatutDeconnecterBluetooth();      </div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> actualiserMessageStatutErreurBluetooth();           </div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> on_pushButtonOuvrirPort_clicked();         </div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> on_pushButtonFermerPort_clicked();         </div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> on_pushButtonEnvoyerTrame_clicked();       </div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> on_radioButtonLedRouge_clicked();          </div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> on_radioButtonLedVert_clicked();           </div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> on_radioButtonLedOrange_clicked();         </div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> on_radioButtonLedOff_clicked();            </div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> on_pushButtonVille_clicked();              </div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> on_pushButtonScan_clicked();               </div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> on_pushButtonConnexion_clicked();          </div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> on_pushButtonDeconnexion_clicked();        </div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> on_pushButtonGraphique_clicked();          </div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> on_checkBoxPleinEcran_stateChanged(<span class="keywordtype">int</span> arg1);  </div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> actualiserDonneeGps();                         </div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> on_pushButtonEnvoyerCoordonnee_clicked();   </div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_ihm.html#a0ac5f47856566ceeeca1720109bf70ea">   89</a></span>&#160;    Ui::Ihm *<a class="code" href="class_ihm.html#a0ac5f47856566ceeeca1720109bf70ea">ui</a>;                                    </div><div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_ihm.html#aa8fa25758a4f3e47e07d1d98f6bbab33">   90</a></span>&#160;    <a class="code" href="class_transmission.html">Transmission</a>* <a class="code" href="class_ihm.html#aa8fa25758a4f3e47e07d1d98f6bbab33">transmission</a>;                     </div><div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_ihm.html#af17b420166b2bb1b3e3b1c4b998a2102">   91</a></span>&#160;    <a class="code" href="class_meteo.html">Meteo</a>* <a class="code" href="class_ihm.html#af17b420166b2bb1b3e3b1c4b998a2102">meteo</a>;                                   </div><div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="class_ihm.html#a990b3fe0efe66ae9da5e13a5e0a11291">   92</a></span>&#160;    <a class="code" href="class_graphique.html">Graphique</a>* <a class="code" href="class_ihm.html#a990b3fe0efe66ae9da5e13a5e0a11291">graphique</a>;                           </div><div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_ihm.html#aa1bea3b8f9bad5c19a662a2b455895fb">   93</a></span>&#160;    QProcess *<a class="code" href="class_ihm.html#aa1bea3b8f9bad5c19a662a2b455895fb">proc</a>;                                 </div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> initialiserAffichage();                </div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">void</span> initialiserInterface();                </div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> enregistrerConfigurationPort();        </div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">void</span> chargerConfigurationPort();            </div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> desactiverConnexionPortSerie();        </div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">void</span> activerConnexionPortSerie();           </div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">void</span> desactiverConnexionBluetooth();        </div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span> activerConnexionBluetooth();           </div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span> ActiverControleLed();                  </div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">void</span> DesactiverControleLed();               </div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">void</span> initialiserConnect();                  </div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;};</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#endif // IHM_H</span></div><div class="ttc" id="class_ihm_html_aa1bea3b8f9bad5c19a662a2b455895fb"><div class="ttname"><a href="class_ihm.html#aa1bea3b8f9bad5c19a662a2b455895fb">Ihm::proc</a></div><div class="ttdeci">QProcess * proc</div><div class="ttdoc">pointer proc </div><div class="ttdef"><b>Definition:</b> ihm.h:93</div></div>
+<div class="ttc" id="class_transmission_html"><div class="ttname"><a href="class_transmission.html">Transmission</a></div><div class="ttdoc">Declaration de la classe Transmission. </div><div class="ttdef"><b>Definition:</b> transmission.h:36</div></div>
+<div class="ttc" id="namespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> ihm.h:31</div></div>
+<div class="ttc" id="class_meteo_html"><div class="ttname"><a href="class_meteo.html">Meteo</a></div><div class="ttdoc">Declaration de la classe Meteo. </div><div class="ttdef"><b>Definition:</b> meteo.h:32</div></div>
+<div class="ttc" id="transmission_8h_html"><div class="ttname"><a href="transmission_8h.html">transmission.h</a></div><div class="ttdoc">Declaration de la classe Transmission. </div></div>
+<div class="ttc" id="class_graphique_html"><div class="ttname"><a href="class_graphique.html">Graphique</a></div><div class="ttdoc">Declaration de la classe Graphique. </div><div class="ttdef"><b>Definition:</b> graphique.h:25</div></div>
+<div class="ttc" id="class_ihm_html_a0ac5f47856566ceeeca1720109bf70ea"><div class="ttname"><a href="class_ihm.html#a0ac5f47856566ceeeca1720109bf70ea">Ihm::ui</a></div><div class="ttdeci">Ui::Ihm * ui</div><div class="ttdoc">objet Ihm </div><div class="ttdef"><b>Definition:</b> ihm.h:89</div></div>
+<div class="ttc" id="class_ihm_html_aa8fa25758a4f3e47e07d1d98f6bbab33"><div class="ttname"><a href="class_ihm.html#aa8fa25758a4f3e47e07d1d98f6bbab33">Ihm::transmission</a></div><div class="ttdeci">Transmission * transmission</div><div class="ttdoc">objet transmission </div><div class="ttdef"><b>Definition:</b> ihm.h:90</div></div>
+<div class="ttc" id="class_ihm_html_af17b420166b2bb1b3e3b1c4b998a2102"><div class="ttname"><a href="class_ihm.html#af17b420166b2bb1b3e3b1c4b998a2102">Ihm::meteo</a></div><div class="ttdeci">Meteo * meteo</div><div class="ttdoc">objet meteo </div><div class="ttdef"><b>Definition:</b> ihm.h:91</div></div>
+<div class="ttc" id="meteo_8h_html"><div class="ttname"><a href="meteo_8h.html">meteo.h</a></div><div class="ttdoc">Declaration de la classe Meteo. </div></div>
+<div class="ttc" id="class_ihm_html"><div class="ttname"><a href="class_ihm.html">Ihm</a></div><div class="ttdoc">Declaration de la classe Ihm. </div><div class="ttdef"><b>Definition:</b> ihm.h:49</div></div>
+<div class="ttc" id="graphique_8h_html"><div class="ttname"><a href="graphique_8h.html">graphique.h</a></div><div class="ttdoc">Declaration de la classe Graphique. </div></div>
+<div class="ttc" id="class_q_widget_html"><div class="ttname"><a href="class_q_widget.html">QWidget</a></div></div>
+<div class="ttc" id="class_ihm_html_a990b3fe0efe66ae9da5e13a5e0a11291"><div class="ttname"><a href="class_ihm.html#a990b3fe0efe66ae9da5e13a5e0a11291">Ihm::graphique</a></div><div class="ttdeci">Graphique * graphique</div><div class="ttdoc">objet graphique; </div><div class="ttdef"><b>Definition:</b> ihm.h:92</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Dimanche 19 Janvier 2020 10:40:37 pour Mini-projet Qt Sonde ESP32 par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

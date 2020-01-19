@@ -1,0 +1,1095 @@
+\hypertarget{class_transmission}{}\subsection{Référence de la classe Transmission}
+\label{class_transmission}\index{Transmission@{Transmission}}
+
+
+Declaration de la classe \hyperlink{class_transmission}{Transmission}.  
+
+
+
+
+{\ttfamily \#include \char`\"{}transmission.\+h\char`\"{}}
+
+
+
+Graphe de collaboration de Transmission\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_transmission__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Connecteurs publics}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_transmission_aa54a695d9d1c728ccab04f1d8030da41}{recevoir} ()
+\begin{DoxyCompactList}\small\item\em Récupérer la trame émise. \end{DoxyCompactList}\item 
+void \hyperlink{class_transmission_aeeccf41fd32a4bb17d3312d785aec98a}{ajouter\+Appareil} (const Q\+Bluetooth\+Device\+Info \&info)
+\begin{DoxyCompactList}\small\item\em ajout les appareil trouver dans une list pour les afficher dans l\textquotesingle{}I\+HM \end{DoxyCompactList}\item 
+void \hyperlink{class_transmission_a6945e6b653c6d46d7e13484811647e6e}{scan\+Terminer} ()
+\begin{DoxyCompactList}\small\item\em fonction appeler quand le scan est fini \end{DoxyCompactList}\item 
+void \hyperlink{class_transmission_ad231163c435936cc69149dd03aaaf473}{socket\+Connected} ()
+\begin{DoxyCompactList}\small\item\em fonction appelée quand l\textquotesingle{}appareil est connecté \end{DoxyCompactList}\item 
+void \hyperlink{class_transmission_a5b02dec98a34f14b341adf40cf520bdf}{socket\+Disconnected} ()
+\begin{DoxyCompactList}\small\item\em fonction appelée quand l\textquotesingle{}appareil est deconnecté \end{DoxyCompactList}\item 
+void \hyperlink{class_transmission_a3beab187cc2056a8f34bc6643fdc0e26}{socket\+Ready\+Read} ()
+\begin{DoxyCompactList}\small\item\em methode appeler quand une trame est disponible \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Signaux}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_transmission_a489a1ee2f15aec3594b44f0a6152cbe6}{trame\+Esp32\+Recue} ()
+\item 
+void \hyperlink{class_transmission_a4501908a4480b9b2ea4358dc85dc438d}{trame\+Gps\+Recue} ()
+\item 
+void \hyperlink{class_transmission_af4627b741806b2d4eb05fae07f2b0588}{port\+Ouvert} ()
+\item 
+void \hyperlink{class_transmission_a4ec325c36d76fbf830253ff16e9783a7}{port\+Ferme} ()
+\item 
+void \hyperlink{class_transmission_a8789222ce8dc94d657d66a6edbbcc588}{nouvelle\+Appareil\+Disponible} ()
+\item 
+void \hyperlink{class_transmission_a2558a386d6888478f7d56c672a4855b3}{scanfini} ()
+\item 
+void \hyperlink{class_transmission_a76ba0e916b9e30615d563b78e26acbc2}{connecter} ()
+\item 
+void \hyperlink{class_transmission_aa3cfe0fc92fcc2147d239553820c983c}{deconnecter} ()
+\item 
+void \hyperlink{class_transmission_ad42d923341b19d450d27c7659ea51a58}{socket\+Erreur} ()
+\end{DoxyCompactItemize}
+\subsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_transmission_a1d8087d2d09b9ddd4fd6e8261daed9f3}{Transmission} (\hyperlink{class_q_object}{Q\+Object} $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em constructeur de la classe \hyperlink{class_transmission}{Transmission} \end{DoxyCompactList}\item 
+\hyperlink{class_transmission_adcdc6012d99ddb1d0c3159d50984e146}{$\sim$\+Transmission} ()
+\begin{DoxyCompactList}\small\item\em destructeur de la classe \hyperlink{class_transmission}{Transmission} \end{DoxyCompactList}\item 
+Q\+String \hyperlink{class_transmission_a3fc179158c8c9e2cceba36423ef92505}{get\+Trame} () const 
+\begin{DoxyCompactList}\small\item\em return la trame stockée \end{DoxyCompactList}\item 
+\hyperlink{class_esp32}{Esp32} $\ast$ \hyperlink{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{get\+Esp32} () const 
+\begin{DoxyCompactList}\small\item\em return l\textquotesingle{}objet \hyperlink{class_esp32}{Esp32} \end{DoxyCompactList}\item 
+\hyperlink{class_gps}{Gps} $\ast$ \hyperlink{class_transmission_aa5004c178152de5b94ef14e11e80792c}{get\+Gps} () const 
+\begin{DoxyCompactList}\small\item\em return l\textquotesingle{}objet gps \end{DoxyCompactList}\item 
+Q\+String\+List \hyperlink{class_transmission_a2a38d0633b4a27dfa3754efcd3db4f9c}{get\+Appareil\+Disponible} () const 
+\begin{DoxyCompactList}\small\item\em return une liste des appareil bluetooth disponible \end{DoxyCompactList}\item 
+Q\+String \hyperlink{class_transmission_adf65c6a49fbbc9d25b7b2fca2c410f99}{get\+Statut\+Bluetooth} () const 
+\begin{DoxyCompactList}\small\item\em return la statut de la connexion avec l\textquotesingle{}appareil bluetooth \end{DoxyCompactList}\item 
+void \hyperlink{class_transmission_a0680d6aab9c17d11e90566c359187ebc}{set\+Statut\+Bluetooth} (Q\+String \hyperlink{class_transmission_a01afc46fac8c712083225d5dd2386217}{statut\+Bluetooth})
+\begin{DoxyCompactList}\small\item\em permet de modifier le statut de la connexion avec l\textquotesingle{}appareil bluetooth \end{DoxyCompactList}\item 
+void \hyperlink{class_transmission_ad2c1d8838a1f7ed8d3599dba0a118a86}{set\+Appareil\+Disponible} (Q\+String \hyperlink{class_transmission_ada55d73f163440c8250102cfe74c05a1}{appareil\+Disponible})
+\begin{DoxyCompactList}\small\item\em ajoute un appareil a la liste des appareil\+Disponible \end{DoxyCompactList}\item 
+void \hyperlink{class_transmission_ab4e82ab30c181a8e0d0c0257ea0e1f56}{configurer\+Port} (Q\+String port\+Communication, Q\+String Debit\+Baud, Q\+String Bits\+Donnees, Q\+String Bits\+Stop)
+\begin{DoxyCompactList}\small\item\em configure le port serie \end{DoxyCompactList}\item 
+void \hyperlink{class_transmission_a14d36ad615852d6b630fbddf5787f3a3}{fermer\+Port} ()
+\begin{DoxyCompactList}\small\item\em cette methode ferme le port serie \end{DoxyCompactList}\item 
+void \hyperlink{class_transmission_a21e35372ada18cd35411c0e8c0984fd7}{envoyer\+Donnees} (Q\+String envoyer\+Trame)
+\begin{DoxyCompactList}\small\item\em envoyer les données par le port serie ou bluetooth suivant le mode choisie \end{DoxyCompactList}\item 
+void \hyperlink{class_transmission_a41d15e65be472e058b28869f8dfad392}{ouvrir\+Port} ()
+\item 
+void \hyperlink{class_transmission_a217b97344fdad09dbe226c55a8ac56b0}{demarrer\+Scan} ()
+\begin{DoxyCompactList}\small\item\em cette fonction scan les appareils disponible \end{DoxyCompactList}\item 
+void \hyperlink{class_transmission_a5a21d201dd0096f96aec12264c2f03d9}{connecter\+Appareil\+Bluetooth} (Q\+String appareil)
+\begin{DoxyCompactList}\small\item\em Permets de se connecter à un appareil. \end{DoxyCompactList}\item 
+void \hyperlink{class_transmission_afc5d716d53ee7039c3abf05f799327ae}{deconnecter\+Appareil\+Bluetooth} ()
+\begin{DoxyCompactList}\small\item\em methode qui deconnecte l\textquotesingle{}appareil bluetooth connecter \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_transmission_aa2977705ec793b10bf3212a13e67b097}{decomposer} ()
+\begin{DoxyCompactList}\small\item\em Décompose la trame reçue. \end{DoxyCompactList}\item 
+void \hyperlink{class_transmission_acc25e99cce910d23efe684cad233d30e}{decomposer\+Donnee\+Gps} ()
+\begin{DoxyCompactList}\small\item\em Décompose la trame gps pour avoir la latitude et la longitude. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}
+\item 
+Q\+String \hyperlink{class_transmission_a82596aa40988da67b05174375d9cfadb}{donnee\+Lat\+Dms}
+\item 
+Q\+String \hyperlink{class_transmission_abd43fbd8ce97a99ebfd1048a9b2297cf}{donnee\+Long\+Dms}
+\item 
+double \hyperlink{class_transmission_a4c7537ba62aa4ffa286ef269974e9571}{donne\+Lat\+DD}
+\item 
+double \hyperlink{class_transmission_a285721af01428c688b33c7af80f424f5}{donne\+Long\+DD}
+\item 
+Q\+String \hyperlink{class_transmission_aecd312863e33ce32d811895bc143b265}{signe\+Lat}
+\item 
+Q\+String \hyperlink{class_transmission_a80f29bafb41f10f5be97ebaced6e684a}{signe\+Long}
+\item 
+\hyperlink{class_esp32}{Esp32} $\ast$ \hyperlink{class_transmission_a06ec58d6f8fa4adff82f5b2ab911c461}{esp32}
+\begin{DoxyCompactList}\small\item\em objet esp32 \end{DoxyCompactList}\item 
+\hyperlink{class_gps}{Gps} $\ast$ \hyperlink{class_transmission_aebadfef439f114cb09e57ddb2e3188dc}{gps}
+\begin{DoxyCompactList}\small\item\em objet gps \end{DoxyCompactList}\item 
+Q\+Serial\+Port $\ast$ \hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}
+\begin{DoxyCompactList}\small\item\em objet port \end{DoxyCompactList}\item 
+Q\+Bluetooth\+Device\+Discovery\+Agent $\ast$ \hyperlink{class_transmission_a70e442ca9125041564f79c40230ecd08}{scan}
+\begin{DoxyCompactList}\small\item\em objet scan \end{DoxyCompactList}\item 
+Q\+Low\+Energy\+Controller $\ast$ \hyperlink{class_transmission_a9b056d8291609ec049b91d0aed8e408a}{m\+\_\+controller}
+\begin{DoxyCompactList}\small\item\em objet m\+\_\+controller \end{DoxyCompactList}\item 
+Q\+Bluetooth\+Socket $\ast$ \hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}
+\begin{DoxyCompactList}\small\item\em objet socket \end{DoxyCompactList}\item 
+Q\+String \hyperlink{class_transmission_a01afc46fac8c712083225d5dd2386217}{statut\+Bluetooth}
+\item 
+Q\+String\+List \hyperlink{class_transmission_ada55d73f163440c8250102cfe74c05a1}{appareil\+Disponible}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Documentation des constructeurs et destructeur}
+\index{Transmission@{Transmission}!Transmission@{Transmission}}
+\index{Transmission@{Transmission}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{Transmission(\+Q\+Object $\ast$parent=nullptr)}{Transmission(QObject *parent=nullptr)}}]{\setlength{\rightskip}{0pt plus 5cm}Transmission\+::\+Transmission (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Object} $\ast$}]{parent = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{class_transmission_a1d8087d2d09b9ddd4fd6e8261daed9f3}{}\label{class_transmission_a1d8087d2d09b9ddd4fd6e8261daed9f3}
+
+\begin{DoxyParams}{Paramètres}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_transmission_aeeccf41fd32a4bb17d3312d785aec98a}{ajouter\+Appareil()}, \hyperlink{class_transmission_a217b97344fdad09dbe226c55a8ac56b0}{demarrer\+Scan()}, \hyperlink{class_transmission_a06ec58d6f8fa4adff82f5b2ab911c461}{esp32}, \hyperlink{class_transmission_aebadfef439f114cb09e57ddb2e3188dc}{gps}, \hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}, \hyperlink{class_transmission_a70e442ca9125041564f79c40230ecd08}{scan}, \hyperlink{class_transmission_a6945e6b653c6d46d7e13484811647e6e}{scan\+Terminer()}, et \hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}.
+
+
+\begin{DoxyCode}
+00021                                           : \hyperlink{class_q_object}{QObject}(parent), \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}(\textcolor{stringliteral}{""}), 
+      \hyperlink{class_transmission_a82596aa40988da67b05174375d9cfadb}{donneeLatDms}(\textcolor{stringliteral}{""}), \hyperlink{class_transmission_abd43fbd8ce97a99ebfd1048a9b2297cf}{donneeLongDms}(\textcolor{stringliteral}{""}), \hyperlink{class_transmission_a4c7537ba62aa4ffa286ef269974e9571}{donneLatDD}(0.), 
+      \hyperlink{class_transmission_a285721af01428c688b33c7af80f424f5}{donneLongDD}(0.),\hyperlink{class_transmission_aecd312863e33ce32d811895bc143b265}{\(\backslash\)}
+00022 \hyperlink{class_transmission_aecd312863e33ce32d811895bc143b265}{  signeLat}(\textcolor{stringliteral}{""}), \hyperlink{class_transmission_a80f29bafb41f10f5be97ebaced6e684a}{signeLong}(\textcolor{stringliteral}{""})
+00023 \{
+00024     \hyperlink{class_transmission_a06ec58d6f8fa4adff82f5b2ab911c461}{esp32} = \textcolor{keyword}{new} \hyperlink{class_esp32}{Esp32}(\textcolor{keyword}{this});
+00025     \hyperlink{class_transmission_aebadfef439f114cb09e57ddb2e3188dc}{gps} = \textcolor{keyword}{new} \hyperlink{class_gps}{Gps}();
+00026     \hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port} = \textcolor{keyword}{new} QSerialPort(\textcolor{keyword}{this});
+00027     \hyperlink{class_transmission_a70e442ca9125041564f79c40230ecd08}{scan} = \textcolor{keyword}{new} QBluetoothDeviceDiscoveryAgent(\textcolor{keyword}{this});
+00028     \hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket} = \textcolor{keyword}{new} QBluetoothSocket(QBluetoothServiceInfo::RfcommProtocol);
+00029 
+00030     connect(\hyperlink{class_transmission_a70e442ca9125041564f79c40230ecd08}{scan}, SIGNAL(deviceDiscovered(QBluetoothDeviceInfo)), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{class_transmission_aeeccf41fd32a4bb17d3312d785aec98a}{ajouterAppareil}(QBluetoothDeviceInfo)));
+00031     connect(\hyperlink{class_transmission_a70e442ca9125041564f79c40230ecd08}{scan}, SIGNAL(finished()), \textcolor{keyword}{this}, SLOT(\hyperlink{class_transmission_a6945e6b653c6d46d7e13484811647e6e}{scanTerminer}()));
+00032 
+00033     \hyperlink{class_transmission_a217b97344fdad09dbe226c55a8ac56b0}{demarrerScan}();
+00034 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!````~Transmission@{$\sim$\+Transmission}}
+\index{````~Transmission@{$\sim$\+Transmission}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{$\sim$\+Transmission()}{~Transmission()}}]{\setlength{\rightskip}{0pt plus 5cm}Transmission\+::$\sim$\+Transmission (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_transmission_adcdc6012d99ddb1d0c3159d50984e146}{}\label{class_transmission_adcdc6012d99ddb1d0c3159d50984e146}
+constructeur de la classe \hyperlink{class_transmission}{Transmission} 
+
+Références \hyperlink{class_transmission_afc5d716d53ee7039c3abf05f799327ae}{deconnecter\+Appareil\+Bluetooth()}, \hyperlink{class_transmission_a14d36ad615852d6b630fbddf5787f3a3}{fermer\+Port()}, et \hyperlink{class_transmission_aebadfef439f114cb09e57ddb2e3188dc}{gps}.
+
+
+\begin{DoxyCode}
+00042 \{
+00043     this->\hyperlink{class_transmission_a14d36ad615852d6b630fbddf5787f3a3}{fermerPort}();
+00044     \textcolor{keyword}{delete} \hyperlink{class_transmission_aebadfef439f114cb09e57ddb2e3188dc}{gps};
+00045     \hyperlink{class_transmission_afc5d716d53ee7039c3abf05f799327ae}{deconnecterAppareilBluetooth}();
+00046 \}
+\end{DoxyCode}
+
+
+\subsubsection{Documentation des fonctions membres}
+\index{Transmission@{Transmission}!ajouter\+Appareil@{ajouter\+Appareil}}
+\index{ajouter\+Appareil@{ajouter\+Appareil}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{ajouter\+Appareil}{ajouterAppareil}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::ajouter\+Appareil (
+\begin{DoxyParamCaption}
+\item[{const Q\+Bluetooth\+Device\+Info \&}]{info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{class_transmission_aeeccf41fd32a4bb17d3312d785aec98a}{}\label{class_transmission_aeeccf41fd32a4bb17d3312d785aec98a}
+methode appeler quand une nouvelle trame et disponible
+
+
+\begin{DoxyParams}{Paramètres}
+{\em info} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_transmission_ada55d73f163440c8250102cfe74c05a1}{appareil\+Disponible}, et \hyperlink{class_transmission_ad2c1d8838a1f7ed8d3599dba0a118a86}{set\+Appareil\+Disponible()}.
+
+
+
+Référencé par \hyperlink{class_transmission_a1d8087d2d09b9ddd4fd6e8261daed9f3}{Transmission()}.
+
+
+\begin{DoxyCode}
+00328 \{
+00329     \textcolor{comment}{//QString appareilDisponible = QString("%1 %2").arg(info.address().toString()).arg(info.name());}
+00330     QString \hyperlink{class_transmission_ada55d73f163440c8250102cfe74c05a1}{appareilDisponible} = info.address().toString();
+00331 
+00332     qDebug() << \textcolor{stringliteral}{"Appareil Bluetooth trouvé :"} << QString(\textcolor{stringliteral}{"%1 %2"}).arg(info.address().toString()).arg(info.
+      name()) << endl;
+00333 
+00334     \hyperlink{class_transmission_ad2c1d8838a1f7ed8d3599dba0a118a86}{setAppareilDisponible}(appareilDisponible);
+00335 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!configurer\+Port@{configurer\+Port}}
+\index{configurer\+Port@{configurer\+Port}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{configurer\+Port(\+Q\+String port\+Communication, Q\+String Debit\+Baud, Q\+String Bits\+Donnees, Q\+String Bits\+Stop)}{configurerPort(QString portCommunication, QString DebitBaud, QString BitsDonnees, QString BitsStop)}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::configurer\+Port (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{port\+Communication, }
+\item[{Q\+String}]{Debit\+Baud, }
+\item[{Q\+String}]{Bits\+Donnees, }
+\item[{Q\+String}]{Bits\+Stop}
+\end{DoxyParamCaption}
+)}\hypertarget{class_transmission_ab4e82ab30c181a8e0d0c0257ea0e1f56}{}\label{class_transmission_ab4e82ab30c181a8e0d0c0257ea0e1f56}
+configurer le port de communication
+
+modifier la liste des appareil bluetooth disponible 
+
+Références \hyperlink{class_transmission_a41d15e65be472e058b28869f8dfad392}{ouvrir\+Port()}, et \hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}.
+
+
+
+Référencé par \hyperlink{class_ihm_a9ce167b94baead6e318bbd0c5254f842}{Ihm\+::on\+\_\+push\+Button\+Ouvrir\+Port\+\_\+clicked()}.
+
+
+\begin{DoxyCode}
+00152 \{
+00153     \hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port} = \textcolor{keyword}{new} QSerialPort(portCommunication);
+00154 
+00155     \hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}->setBaudRate(DebitBaud.toInt());
+00156     \hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}->setDataBits(QSerialPort::DataBits(BitsDonnees.toInt()));
+00157     \hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}->setParity(QSerialPort::NoParity);
+00158     \hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}->setStopBits(QSerialPort::StopBits(BitsStop.toInt()));
+00159     \hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}->setFlowControl(QSerialPort::NoFlowControl);
+00160 
+00161     \hyperlink{class_transmission_a41d15e65be472e058b28869f8dfad392}{ouvrirPort}();
+00162 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!connecter@{connecter}}
+\index{connecter@{connecter}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{connecter}{connecter}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::connecter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}\hypertarget{class_transmission_a76ba0e916b9e30615d563b78e26acbc2}{}\label{class_transmission_a76ba0e916b9e30615d563b78e26acbc2}
+signal emit quand le scan est terminé 
+
+Référencé par \hyperlink{class_transmission_ad231163c435936cc69149dd03aaaf473}{socket\+Connected()}.
+
+\index{Transmission@{Transmission}!connecter\+Appareil\+Bluetooth@{connecter\+Appareil\+Bluetooth}}
+\index{connecter\+Appareil\+Bluetooth@{connecter\+Appareil\+Bluetooth}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{connecter\+Appareil\+Bluetooth(\+Q\+String appareil)}{connecterAppareilBluetooth(QString appareil)}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::connecter\+Appareil\+Bluetooth (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{appareil}
+\end{DoxyParamCaption}
+)}\hypertarget{class_transmission_a5a21d201dd0096f96aec12264c2f03d9}{}\label{class_transmission_a5a21d201dd0096f96aec12264c2f03d9}
+methode appelée pour demarrer le scan
+
+
+\begin{DoxyParams}{Paramètres}
+{\em appareil} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_transmission_a0680d6aab9c17d11e90566c359187ebc}{set\+Statut\+Bluetooth()}, \hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}, \hyperlink{class_transmission_ad231163c435936cc69149dd03aaaf473}{socket\+Connected()}, \hyperlink{class_transmission_a5b02dec98a34f14b341adf40cf520bdf}{socket\+Disconnected()}, \hyperlink{class_transmission_ad42d923341b19d450d27c7659ea51a58}{socket\+Erreur()}, et \hyperlink{class_transmission_a3beab187cc2056a8f34bc6643fdc0e26}{socket\+Ready\+Read()}.
+
+
+
+Référencé par \hyperlink{class_ihm_abf61dda1820e5632485de93983c40196}{Ihm\+::on\+\_\+push\+Button\+Connexion\+\_\+clicked()}.
+
+
+\begin{DoxyCode}
+00356 \{
+00357     connect(\hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}, SIGNAL(connected()), \textcolor{keyword}{this}, SLOT(\hyperlink{class_transmission_ad231163c435936cc69149dd03aaaf473}{socketConnected}()));
+00358     connect(\hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}, SIGNAL(disconnected()), \textcolor{keyword}{this}, SLOT(\hyperlink{class_transmission_a5b02dec98a34f14b341adf40cf520bdf}{socketDisconnected}()));
+00359     connect(\hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}, SIGNAL(readyRead()), \textcolor{keyword}{this}, SLOT(\hyperlink{class_transmission_a3beab187cc2056a8f34bc6643fdc0e26}{socketReadyRead}()));
+00360     connect(\hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}, QOverload<QBluetoothSocket::SocketError>::of(&QBluetoothSocket::error),
+00361         [=](QBluetoothSocket::SocketError error)
+00362     \{
+00363         qDebug() <<\_\_FUNCTION\_\_ << error;
+00364         \hyperlink{class_transmission_a0680d6aab9c17d11e90566c359187ebc}{setStatutBluetooth}(\textcolor{stringliteral}{"Erreur"});
+00365         emit \hyperlink{class_transmission_ad42d923341b19d450d27c7659ea51a58}{socketErreur}();
+00366     \});
+00367 
+00368     QBluetoothAddress adresse = QBluetoothAddress(appareil);
+00369     QBluetoothUuid uuid = QBluetoothUuid(QBluetoothUuid::SerialPort);
+00370     \hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}->connectToService(adresse, uuid);
+00371     \hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}->open(QIODevice::ReadWrite);
+00372 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!decomposer@{decomposer}}
+\index{decomposer@{decomposer}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{decomposer()}{decomposer()}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::decomposer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_transmission_aa2977705ec793b10bf3212a13e67b097}{}\label{class_transmission_aa2977705ec793b10bf3212a13e67b097}
+stockage du statut de la connexion bluetooth 
+
+Références \hyperlink{class_transmission_a06ec58d6f8fa4adff82f5b2ab911c461}{esp32}, \hyperlink{class_esp32_aeb2268155501f27e36e6a7c6caa15412}{Esp32\+::set\+Altitude()}, \hyperlink{class_esp32_a69b0c6a1c0a31e043b715be3fc40ded1}{Esp32\+::set\+Altitude\+Unite()}, \hyperlink{class_esp32_a32d0d1abb41a3762a54e9f5a33b3b247}{Esp32\+::set\+Couleur\+Led()}, \hyperlink{class_esp32_a029c94bf405887eb890b3381ac176a9a}{Esp32\+::set\+Humidite()}, \hyperlink{class_esp32_ae9b2704f36bcd246668354d0ac06ea35}{Esp32\+::set\+Humidite\+Unite()}, \hyperlink{class_esp32_ae60b48e8c808a5108402d5b9f03590ac}{Esp32\+::set\+Luminosite()}, \hyperlink{class_esp32_a36450bcd23e7676d1f0a46e8bec31275}{Esp32\+::set\+Luminosite\+Unite()}, \hyperlink{class_esp32_a583358abbf0b279dabb5a2976f1783de}{Esp32\+::set\+Pression()}, \hyperlink{class_esp32_a3c6dd57f955aef0738c48be705538337}{Esp32\+::set\+Pression\+Unite()}, \hyperlink{class_esp32_a85dc760b771c9233fa094a49679d9286}{Esp32\+::set\+Ressentie()}, \hyperlink{class_esp32_abf8a7f9942150b6c17cc5d1cc7b0fc8a}{Esp32\+::set\+Ressentie\+Unite()}, \hyperlink{class_esp32_a8e7a509ed5704bee4bc527ae297f14f0}{Esp32\+::set\+Temperature()}, \hyperlink{class_esp32_a709c261e1cea7b6bbd2ea1b09b1d7ec0}{Esp32\+::set\+Temperature\+Unite()}, \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}, et \hyperlink{class_transmission_a489a1ee2f15aec3594b44f0a6152cbe6}{trame\+Esp32\+Recue()}.
+
+
+
+Référencé par \hyperlink{class_transmission_aa54a695d9d1c728ccab04f1d8030da41}{recevoir()}, et \hyperlink{class_transmission_a3beab187cc2056a8f34bc6643fdc0e26}{socket\+Ready\+Read()}.
+
+
+\begin{DoxyCode}
+00187 \{
+00188     \textcolor{keywordflow}{if}(\hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.startsWith(\textcolor{stringliteral}{"SONDE"}) && \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.endsWith(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"}))
+00189     \{
+00190         \hyperlink{class_transmission_a06ec58d6f8fa4adff82f5b2ab911c461}{esp32}->\hyperlink{class_esp32_a8e7a509ed5704bee4bc527ae297f14f0}{setTemperature}(\hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.section(\textcolor{stringliteral}{";"},1,1).toDouble());
+00191         \hyperlink{class_transmission_a06ec58d6f8fa4adff82f5b2ab911c461}{esp32}->\hyperlink{class_esp32_a709c261e1cea7b6bbd2ea1b09b1d7ec0}{setTemperatureUnite}(\hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.section(\textcolor{stringliteral}{";"},2,2));
+00192         \hyperlink{class_transmission_a06ec58d6f8fa4adff82f5b2ab911c461}{esp32}->\hyperlink{class_esp32_a85dc760b771c9233fa094a49679d9286}{setRessentie}(\hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.section(\textcolor{stringliteral}{";"},3,3).toDouble());
+00193         \hyperlink{class_transmission_a06ec58d6f8fa4adff82f5b2ab911c461}{esp32}->\hyperlink{class_esp32_abf8a7f9942150b6c17cc5d1cc7b0fc8a}{setRessentieUnite}(\hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.section(\textcolor{stringliteral}{";"},4,4));
+00194         \hyperlink{class_transmission_a06ec58d6f8fa4adff82f5b2ab911c461}{esp32}->\hyperlink{class_esp32_a029c94bf405887eb890b3381ac176a9a}{setHumidite}(\hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.section(\textcolor{stringliteral}{";"},5,5).toInt());
+00195         \hyperlink{class_transmission_a06ec58d6f8fa4adff82f5b2ab911c461}{esp32}->\hyperlink{class_esp32_ae9b2704f36bcd246668354d0ac06ea35}{setHumiditeUnite}(\hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.section(\textcolor{stringliteral}{";"},6,6));
+00196         \hyperlink{class_transmission_a06ec58d6f8fa4adff82f5b2ab911c461}{esp32}->\hyperlink{class_esp32_ae60b48e8c808a5108402d5b9f03590ac}{setLuminosite}(\hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.section(\textcolor{stringliteral}{";"},7,7).toInt());
+00197         \hyperlink{class_transmission_a06ec58d6f8fa4adff82f5b2ab911c461}{esp32}->\hyperlink{class_esp32_a36450bcd23e7676d1f0a46e8bec31275}{setLuminositeUnite}(\hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.section(\textcolor{stringliteral}{";"},8,8));
+00198         \hyperlink{class_transmission_a06ec58d6f8fa4adff82f5b2ab911c461}{esp32}->\hyperlink{class_esp32_a583358abbf0b279dabb5a2976f1783de}{setPression}(\hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.section(\textcolor{stringliteral}{";"},9,9).toInt());
+00199         \hyperlink{class_transmission_a06ec58d6f8fa4adff82f5b2ab911c461}{esp32}->\hyperlink{class_esp32_a3c6dd57f955aef0738c48be705538337}{setPressionUnite}(\hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.section(\textcolor{stringliteral}{";"},10,10));
+00200         \hyperlink{class_transmission_a06ec58d6f8fa4adff82f5b2ab911c461}{esp32}->\hyperlink{class_esp32_aeb2268155501f27e36e6a7c6caa15412}{setAltitude}(\hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.section(\textcolor{stringliteral}{";"},11,11).toInt());
+00201         \hyperlink{class_transmission_a06ec58d6f8fa4adff82f5b2ab911c461}{esp32}->\hyperlink{class_esp32_a69b0c6a1c0a31e043b715be3fc40ded1}{setAltitudeUnite}(\hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.section(\textcolor{stringliteral}{";"},12,12));
+00202         \hyperlink{class_transmission_a06ec58d6f8fa4adff82f5b2ab911c461}{esp32}->\hyperlink{class_esp32_a32d0d1abb41a3762a54e9f5a33b3b247}{setCouleurLed}(\hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.section(\textcolor{stringliteral}{";"},17,17).toInt());
+00203     \}
+00204     emit \hyperlink{class_transmission_a489a1ee2f15aec3594b44f0a6152cbe6}{trameEsp32Recue}();
+00205 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!decomposer\+Donnee\+Gps@{decomposer\+Donnee\+Gps}}
+\index{decomposer\+Donnee\+Gps@{decomposer\+Donnee\+Gps}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{decomposer\+Donnee\+Gps()}{decomposerDonneeGps()}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::decomposer\+Donnee\+Gps (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_transmission_acc25e99cce910d23efe684cad233d30e}{}\label{class_transmission_acc25e99cce910d23efe684cad233d30e}
+decomposition de la trame recu 
+
+Références \hyperlink{class_transmission_a82596aa40988da67b05174375d9cfadb}{donnee\+Lat\+Dms}, \hyperlink{class_transmission_abd43fbd8ce97a99ebfd1048a9b2297cf}{donnee\+Long\+Dms}, \hyperlink{class_transmission_a4c7537ba62aa4ffa286ef269974e9571}{donne\+Lat\+DD}, \hyperlink{class_transmission_a285721af01428c688b33c7af80f424f5}{donne\+Long\+DD}, \hyperlink{class_transmission_aebadfef439f114cb09e57ddb2e3188dc}{gps}, \hyperlink{class_gps_aaabf328f0bbcdbb9c2901e30b6edccc7}{Gps\+::set\+Latitude()}, \hyperlink{class_gps_a2d9ca07c62c5bae627c2131062a1236a}{Gps\+::set\+Longitude()}, \hyperlink{class_transmission_aecd312863e33ce32d811895bc143b265}{signe\+Lat}, \hyperlink{class_transmission_a80f29bafb41f10f5be97ebaced6e684a}{signe\+Long}, \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}, et \hyperlink{class_transmission_a4501908a4480b9b2ea4358dc85dc438d}{trame\+Gps\+Recue()}.
+
+
+
+Référencé par \hyperlink{class_transmission_aa54a695d9d1c728ccab04f1d8030da41}{recevoir()}.
+
+
+\begin{DoxyCode}
+00213 \{
+00214     \textcolor{keywordflow}{if}(\hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.startsWith(\textcolor{stringliteral}{"$GPGGA"}) && \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.endsWith(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"}))
+00215     \{
+00216         \hyperlink{class_transmission_a82596aa40988da67b05174375d9cfadb}{donneeLatDms} = \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.section(\textcolor{stringliteral}{","},2,2);
+00217         \hyperlink{class_transmission_abd43fbd8ce97a99ebfd1048a9b2297cf}{donneeLongDms} = \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.section(\textcolor{stringliteral}{","},4,4);
+00218         \hyperlink{class_transmission_aecd312863e33ce32d811895bc143b265}{signeLat} = \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.section(\textcolor{stringliteral}{","},3,3);
+00219         \hyperlink{class_transmission_a80f29bafb41f10f5be97ebaced6e684a}{signeLong} = \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.section(\textcolor{stringliteral}{","},5,5);
+00220 
+00221         \textcolor{keywordflow}{if}(\hyperlink{class_transmission_aecd312863e33ce32d811895bc143b265}{signeLat} == \textcolor{stringliteral}{"N"})
+00222         \{
+00223             \hyperlink{class_transmission_a4c7537ba62aa4ffa286ef269974e9571}{donneLatDD} = \hyperlink{class_transmission_a82596aa40988da67b05174375d9cfadb}{donneeLatDms}.left(2).toDouble() + 
+      \hyperlink{class_transmission_a82596aa40988da67b05174375d9cfadb}{donneeLatDms}.mid(2,2).toDouble()/60 + \hyperlink{class_transmission_a82596aa40988da67b05174375d9cfadb}{donneeLatDms}.mid(5,2).toDouble()/3600;
+00224             qDebug() << \textcolor{stringliteral}{"latitude DD:"} << \hyperlink{class_transmission_a4c7537ba62aa4ffa286ef269974e9571}{donneLatDD} << endl;
+00225             \hyperlink{class_transmission_aebadfef439f114cb09e57ddb2e3188dc}{gps}->\hyperlink{class_gps_aaabf328f0bbcdbb9c2901e30b6edccc7}{setLatitude}(\hyperlink{class_transmission_a4c7537ba62aa4ffa286ef269974e9571}{donneLatDD});
+00226         \}
+00227         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{class_transmission_a80f29bafb41f10f5be97ebaced6e684a}{signeLong} == \textcolor{stringliteral}{"S"})
+00228         \{
+00229             \hyperlink{class_transmission_a4c7537ba62aa4ffa286ef269974e9571}{donneLatDD} = \hyperlink{class_transmission_a82596aa40988da67b05174375d9cfadb}{donneeLatDms}.left(2).toDouble() + 
+      \hyperlink{class_transmission_a82596aa40988da67b05174375d9cfadb}{donneeLatDms}.mid(2,2).toDouble()/60 + \hyperlink{class_transmission_a82596aa40988da67b05174375d9cfadb}{donneeLatDms}.mid(5,2).toDouble()/3600;
+00230             qDebug() << \textcolor{stringliteral}{"latitude DD:"} << \hyperlink{class_transmission_a4c7537ba62aa4ffa286ef269974e9571}{donneLatDD} * -1 << endl;
+00231             \hyperlink{class_transmission_aebadfef439f114cb09e57ddb2e3188dc}{gps}->\hyperlink{class_gps_aaabf328f0bbcdbb9c2901e30b6edccc7}{setLatitude}(\hyperlink{class_transmission_a4c7537ba62aa4ffa286ef269974e9571}{donneLatDD} * -1);
+00232         \}
+00233 
+00234         \textcolor{keywordflow}{if}(\hyperlink{class_transmission_a80f29bafb41f10f5be97ebaced6e684a}{signeLong} == \textcolor{stringliteral}{"E"})
+00235         \{
+00236             \hyperlink{class_transmission_a285721af01428c688b33c7af80f424f5}{donneLongDD} = \hyperlink{class_transmission_abd43fbd8ce97a99ebfd1048a9b2297cf}{donneeLongDms}.left(3).toDouble() + 
+      \hyperlink{class_transmission_abd43fbd8ce97a99ebfd1048a9b2297cf}{donneeLongDms}.mid(2,2).toDouble()/60 + \hyperlink{class_transmission_abd43fbd8ce97a99ebfd1048a9b2297cf}{donneeLongDms}.mid(5,2).toDouble()/3600;
+00237             qDebug() << \textcolor{stringliteral}{"longitude DD:"} << \hyperlink{class_transmission_a285721af01428c688b33c7af80f424f5}{donneLongDD} << endl;
+00238             \hyperlink{class_transmission_aebadfef439f114cb09e57ddb2e3188dc}{gps}->\hyperlink{class_gps_a2d9ca07c62c5bae627c2131062a1236a}{setLongitude}(\hyperlink{class_transmission_a285721af01428c688b33c7af80f424f5}{donneLongDD});
+00239         \}
+00240         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{class_transmission_aecd312863e33ce32d811895bc143b265}{signeLat} == \textcolor{stringliteral}{"W"})
+00241         \{
+00242             \hyperlink{class_transmission_a285721af01428c688b33c7af80f424f5}{donneLongDD} = \hyperlink{class_transmission_abd43fbd8ce97a99ebfd1048a9b2297cf}{donneeLongDms}.left(3).toDouble() + 
+      \hyperlink{class_transmission_abd43fbd8ce97a99ebfd1048a9b2297cf}{donneeLongDms}.mid(2,2).toDouble()/60 + \hyperlink{class_transmission_abd43fbd8ce97a99ebfd1048a9b2297cf}{donneeLongDms}.mid(5,2).toDouble()/3600;
+00243             qDebug() << \textcolor{stringliteral}{"longitude DD:"} << \hyperlink{class_transmission_a285721af01428c688b33c7af80f424f5}{donneLongDD} * -1 << endl;
+00244             \hyperlink{class_transmission_aebadfef439f114cb09e57ddb2e3188dc}{gps}->\hyperlink{class_gps_a2d9ca07c62c5bae627c2131062a1236a}{setLongitude}(\hyperlink{class_transmission_a285721af01428c688b33c7af80f424f5}{donneLongDD} * -1);
+00245         \}
+00246     \}
+00247     emit \hyperlink{class_transmission_a4501908a4480b9b2ea4358dc85dc438d}{trameGpsRecue}();
+00248 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!deconnecter@{deconnecter}}
+\index{deconnecter@{deconnecter}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{deconnecter}{deconnecter}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::deconnecter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}\hypertarget{class_transmission_aa3cfe0fc92fcc2147d239553820c983c}{}\label{class_transmission_aa3cfe0fc92fcc2147d239553820c983c}
+signal emit quand l\textquotesingle{}appareil est connecté 
+
+Référencé par \hyperlink{class_transmission_a5b02dec98a34f14b341adf40cf520bdf}{socket\+Disconnected()}.
+
+\index{Transmission@{Transmission}!deconnecter\+Appareil\+Bluetooth@{deconnecter\+Appareil\+Bluetooth}}
+\index{deconnecter\+Appareil\+Bluetooth@{deconnecter\+Appareil\+Bluetooth}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{deconnecter\+Appareil\+Bluetooth()}{deconnecterAppareilBluetooth()}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::deconnecter\+Appareil\+Bluetooth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_transmission_afc5d716d53ee7039c3abf05f799327ae}{}\label{class_transmission_afc5d716d53ee7039c3abf05f799327ae}
+methode appelée pour connecter un appareil bluetooth 
+
+Références \hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}.
+
+
+
+Référencé par \hyperlink{class_ihm_ad176c58fb3c583286544f010ac006b66}{Ihm\+::on\+\_\+push\+Button\+Deconnexion\+\_\+clicked()}, et \hyperlink{class_transmission_adcdc6012d99ddb1d0c3159d50984e146}{$\sim$\+Transmission()}.
+
+
+\begin{DoxyCode}
+00380 \{
+00381     \textcolor{keywordflow}{if} (\hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}->isOpen())
+00382         \{
+00383             \hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}->close();
+00384         \}
+00385 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!demarrer\+Scan@{demarrer\+Scan}}
+\index{demarrer\+Scan@{demarrer\+Scan}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{demarrer\+Scan()}{demarrerScan()}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::demarrer\+Scan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_transmission_a217b97344fdad09dbe226c55a8ac56b0}{}\label{class_transmission_a217b97344fdad09dbe226c55a8ac56b0}
+Méthode appelée pour ouvrir le port série 
+
+Références \hyperlink{class_transmission_ada55d73f163440c8250102cfe74c05a1}{appareil\+Disponible}, et \hyperlink{class_transmission_a70e442ca9125041564f79c40230ecd08}{scan}.
+
+
+
+Référencé par \hyperlink{class_ihm_a277763bdb63ed529aafba7db513cb630}{Ihm\+::on\+\_\+push\+Button\+Scan\+\_\+clicked()}, et \hyperlink{class_transmission_a1d8087d2d09b9ddd4fd6e8261daed9f3}{Transmission()}.
+
+
+\begin{DoxyCode}
+00315 \{
+00316     qDebug() << \textcolor{stringliteral}{"scan en cour..."} << endl;
+00317     \hyperlink{class_transmission_ada55d73f163440c8250102cfe74c05a1}{appareilDisponible}.clear();
+00318     \hyperlink{class_transmission_a70e442ca9125041564f79c40230ecd08}{scan}->start();
+00319 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!envoyer\+Donnees@{envoyer\+Donnees}}
+\index{envoyer\+Donnees@{envoyer\+Donnees}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{envoyer\+Donnees(\+Q\+String envoyer\+Trame)}{envoyerDonnees(QString envoyerTrame)}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::envoyer\+Donnees (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{envoyer\+Trame}
+\end{DoxyParamCaption}
+)}\hypertarget{class_transmission_a21e35372ada18cd35411c0e8c0984fd7}{}\label{class_transmission_a21e35372ada18cd35411c0e8c0984fd7}
+fermer le port de transmission
+
+
+\begin{DoxyParams}{Paramètres}
+{\em envoyer\+Trame} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}, \hyperlink{class_transmission_a4ec325c36d76fbf830253ff16e9783a7}{port\+Ferme()}, \hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}, et \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.
+
+
+
+Référencé par \hyperlink{class_ihm_afd32da9e614eba44bb1d3630b48e6075}{Ihm\+::on\+\_\+push\+Button\+Envoyer\+Trame\+\_\+clicked()}, \hyperlink{class_ihm_a1e328a2e8165bbef347e901f1bc5534d}{Ihm\+::on\+\_\+radio\+Button\+Led\+Off\+\_\+clicked()}, \hyperlink{class_ihm_a7e000e198b11fc38a4459f7749561ded}{Ihm\+::on\+\_\+radio\+Button\+Led\+Orange\+\_\+clicked()}, \hyperlink{class_ihm_a731ee780915cb90a5dfb11f2e02144c9}{Ihm\+::on\+\_\+radio\+Button\+Led\+Rouge\+\_\+clicked()}, et \hyperlink{class_ihm_afef5bfaa83383427e615d21d9474f466}{Ihm\+::on\+\_\+radio\+Button\+Led\+Vert\+\_\+clicked()}.
+
+
+\begin{DoxyCode}
+00286 \{
+00287     \textcolor{keywordflow}{if}(\hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}->isOpen())
+00288     \{
+00289         \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame} = envoyerTrame.toStdString().c\_str();
+00290         \hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}->write(trame);
+00291 
+00292         qDebug() << \_\_FUNCTION\_\_ << \textcolor{stringliteral}{": "} << trame << endl;
+00293     \}
+00294 
+00295     \textcolor{keywordflow}{if}(\hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}->isOpen())
+00296     \{
+00297         \textcolor{keyword}{const} \textcolor{keywordtype}{char}* trame = envoyerTrame.toStdString().c\_str();
+00298         \hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}->write(trame);
+00299 
+00300         qDebug() << \_\_FUNCTION\_\_ << \textcolor{stringliteral}{": "} << trame << endl;
+00301     \}
+00302 
+00303     \textcolor{keywordflow}{if}(!\hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}->isOpen() && !\hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}->isOpen())
+00304     \{
+00305         emit \hyperlink{class_transmission_a4ec325c36d76fbf830253ff16e9783a7}{portFerme}();
+00306     \}
+00307 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!fermer\+Port@{fermer\+Port}}
+\index{fermer\+Port@{fermer\+Port}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{fermer\+Port()}{fermerPort()}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::fermer\+Port (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_transmission_a14d36ad615852d6b630fbddf5787f3a3}{}\label{class_transmission_a14d36ad615852d6b630fbddf5787f3a3}
+configurer le port de transmission 
+
+Références \hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}, et \hyperlink{class_transmission_a4ec325c36d76fbf830253ff16e9783a7}{port\+Ferme()}.
+
+
+
+Référencé par \hyperlink{class_ihm_abcdae03ce7e83266fb9d3e795df8a171}{Ihm\+::on\+\_\+push\+Button\+Fermer\+Port\+\_\+clicked()}, et \hyperlink{class_transmission_adcdc6012d99ddb1d0c3159d50984e146}{$\sim$\+Transmission()}.
+
+
+\begin{DoxyCode}
+00170 \{
+00171     \textcolor{keywordflow}{if}(\hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}->isOpen())
+00172     \{
+00173         \hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}->close();
+00174 
+00175         qDebug() << \_\_FUNCTION\_\_ << \textcolor{stringliteral}{": "} <<\textcolor{stringliteral}{"port fermer"} <<endl;
+00176 
+00177         emit \hyperlink{class_transmission_a4ec325c36d76fbf830253ff16e9783a7}{portFerme}();
+00178     \}
+00179 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!get\+Appareil\+Disponible@{get\+Appareil\+Disponible}}
+\index{get\+Appareil\+Disponible@{get\+Appareil\+Disponible}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{get\+Appareil\+Disponible() const }{getAppareilDisponible() const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String\+List Transmission\+::get\+Appareil\+Disponible (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_transmission_a2a38d0633b4a27dfa3754efcd3db4f9c}{}\label{class_transmission_a2a38d0633b4a27dfa3754efcd3db4f9c}
+recuperer l\textquotesingle{}objet gps
+
+\begin{DoxyReturn}{Renvoie}
+Q\+String\+List 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_transmission_ada55d73f163440c8250102cfe74c05a1}{appareil\+Disponible}.
+
+
+
+Référencé par \hyperlink{class_ihm_a9d9ac22e5d73a010bc75a1fcf2e7ddcb}{Ihm\+::mettre\+Ajour\+Appareil\+Bluetooth\+Disponible()}.
+
+
+\begin{DoxyCode}
+00088 \{
+00089     \textcolor{keywordflow}{return} \hyperlink{class_transmission_ada55d73f163440c8250102cfe74c05a1}{appareilDisponible};
+00090 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!get\+Esp32@{get\+Esp32}}
+\index{get\+Esp32@{get\+Esp32}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{get\+Esp32() const }{getEsp32() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Esp32} $\ast$ Transmission\+::get\+Esp32 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{}\label{class_transmission_afccd88f8be8c204a0960bc2d6970931f}
+recuperer la trame
+
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{class_esp32}{Esp32} 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_transmission_a06ec58d6f8fa4adff82f5b2ab911c461}{esp32}.
+
+
+
+Référencé par \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{Ihm\+::actualiser\+Donnee()}, et \hyperlink{class_ihm_af0426507c2130aefd01bdb4f825ae168}{Ihm\+::modifier\+Etat\+Led()}.
+
+
+\begin{DoxyCode}
+00066 \{
+00067     \textcolor{keywordflow}{return} \hyperlink{class_transmission_a06ec58d6f8fa4adff82f5b2ab911c461}{esp32};
+00068 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!get\+Gps@{get\+Gps}}
+\index{get\+Gps@{get\+Gps}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{get\+Gps() const }{getGps() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gps} $\ast$ Transmission\+::get\+Gps (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_transmission_aa5004c178152de5b94ef14e11e80792c}{}\label{class_transmission_aa5004c178152de5b94ef14e11e80792c}
+recuperer l\textquotesingle{}objet esp32
+
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{class_esp32}{Esp32} 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_transmission_aebadfef439f114cb09e57ddb2e3188dc}{gps}.
+
+
+
+Référencé par \hyperlink{class_ihm_a3ca276093d65c42a5fc5a87cbca1972a}{Ihm\+::actualiser\+Donnee\+Gps()}, et \hyperlink{class_ihm_a850d1c97ed5fe5ba3cf3aa85d81872cd}{Ihm\+::on\+\_\+push\+Button\+Envoyer\+Coordonnee\+\_\+clicked()}.
+
+
+\begin{DoxyCode}
+00077 \{
+00078     \textcolor{keywordflow}{return} \hyperlink{class_transmission_aebadfef439f114cb09e57ddb2e3188dc}{gps};
+00079 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!get\+Statut\+Bluetooth@{get\+Statut\+Bluetooth}}
+\index{get\+Statut\+Bluetooth@{get\+Statut\+Bluetooth}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{get\+Statut\+Bluetooth() const }{getStatutBluetooth() const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Transmission\+::get\+Statut\+Bluetooth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_transmission_adf65c6a49fbbc9d25b7b2fca2c410f99}{}\label{class_transmission_adf65c6a49fbbc9d25b7b2fca2c410f99}
+recuperer les appareil disponible
+
+\begin{DoxyReturn}{Renvoie}
+Q\+String 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_transmission_a01afc46fac8c712083225d5dd2386217}{statut\+Bluetooth}.
+
+
+
+Référencé par \hyperlink{class_ihm_a5d7e6bdacfedc0f0dc4d7b3516454788}{Ihm\+::actualiser\+Message\+Statut\+Connecter\+Bluetooth()}, \hyperlink{class_ihm_ad73cc62bafa9c43288f69fbac2b80508}{Ihm\+::actualiser\+Message\+Statut\+Deconnecter\+Bluetooth()}, et \hyperlink{class_ihm_a29b4c5fba871a30f7f2e5fbe08a2087d}{Ihm\+::actualiser\+Message\+Statut\+Erreur\+Bluetooth()}.
+
+
+\begin{DoxyCode}
+00099 \{
+00100     \textcolor{keywordflow}{return} \hyperlink{class_transmission_a01afc46fac8c712083225d5dd2386217}{statutBluetooth};
+00101 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!get\+Trame@{get\+Trame}}
+\index{get\+Trame@{get\+Trame}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{get\+Trame() const }{getTrame() const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Transmission\+::get\+Trame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_transmission_a3fc179158c8c9e2cceba36423ef92505}{}\label{class_transmission_a3fc179158c8c9e2cceba36423ef92505}
+destructeur de la classe \hyperlink{class_transmission}{Transmission}
+
+\begin{DoxyReturn}{Renvoie}
+Q\+String 
+\end{DoxyReturn}
+
+
+Références \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.
+
+
+
+Référencé par \hyperlink{class_ihm_a94ea90d27fc0aa7598cf270dd3be98eb}{Ihm\+::actualiser\+Trame()}.
+
+
+\begin{DoxyCode}
+00055 \{
+00056     \textcolor{keywordflow}{return} \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame};
+00057 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!nouvelle\+Appareil\+Disponible@{nouvelle\+Appareil\+Disponible}}
+\index{nouvelle\+Appareil\+Disponible@{nouvelle\+Appareil\+Disponible}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{nouvelle\+Appareil\+Disponible}{nouvelleAppareilDisponible}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::nouvelle\+Appareil\+Disponible (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}\hypertarget{class_transmission_a8789222ce8dc94d657d66a6edbbcc588}{}\label{class_transmission_a8789222ce8dc94d657d66a6edbbcc588}
+signal emit quand le port est fermer 
+
+Référencé par \hyperlink{class_transmission_a6945e6b653c6d46d7e13484811647e6e}{scan\+Terminer()}.
+
+\index{Transmission@{Transmission}!ouvrir\+Port@{ouvrir\+Port}}
+\index{ouvrir\+Port@{ouvrir\+Port}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{ouvrir\+Port()}{ouvrirPort()}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::ouvrir\+Port (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_transmission_a41d15e65be472e058b28869f8dfad392}{}\label{class_transmission_a41d15e65be472e058b28869f8dfad392}
+envoyer donner sur le port serie 
+
+Références \hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}, \hyperlink{class_transmission_af4627b741806b2d4eb05fae07f2b0588}{port\+Ouvert()}, et \hyperlink{class_transmission_aa54a695d9d1c728ccab04f1d8030da41}{recevoir()}.
+
+
+
+Référencé par \hyperlink{class_transmission_ab4e82ab30c181a8e0d0c0257ea0e1f56}{configurer\+Port()}.
+
+
+\begin{DoxyCode}
+00131 \{
+00132     \hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}->open(QIODevice::ReadWrite);
+00133     \textcolor{keywordflow}{if}(\hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}->isOpen())
+00134     \{
+00135         qDebug() << \_\_FUNCTION\_\_ << \textcolor{stringliteral}{": "} <<\textcolor{stringliteral}{"Le port est ouvert"};
+00136 
+00137         connect(\hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}, SIGNAL(readyRead()), \textcolor{keyword}{this}, SLOT(\hyperlink{class_transmission_aa54a695d9d1c728ccab04f1d8030da41}{recevoir}()));
+00138         emit \hyperlink{class_transmission_af4627b741806b2d4eb05fae07f2b0588}{portOuvert}();
+00139     \}
+00140     \textcolor{keywordflow}{else}
+00141     \{
+00142         qDebug() << \_\_FUNCTION\_\_ << \textcolor{stringliteral}{": "} << \textcolor{stringliteral}{"Erreur, le port n'a pas pu être ouvert"};
+00143     \}
+00144 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!port\+Ferme@{port\+Ferme}}
+\index{port\+Ferme@{port\+Ferme}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{port\+Ferme}{portFerme}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::port\+Ferme (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}\hypertarget{class_transmission_a4ec325c36d76fbf830253ff16e9783a7}{}\label{class_transmission_a4ec325c36d76fbf830253ff16e9783a7}
+signal emit quand le port est ouvert 
+
+Référencé par \hyperlink{class_transmission_a21e35372ada18cd35411c0e8c0984fd7}{envoyer\+Donnees()}, et \hyperlink{class_transmission_a14d36ad615852d6b630fbddf5787f3a3}{fermer\+Port()}.
+
+\index{Transmission@{Transmission}!port\+Ouvert@{port\+Ouvert}}
+\index{port\+Ouvert@{port\+Ouvert}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{port\+Ouvert}{portOuvert}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::port\+Ouvert (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}\hypertarget{class_transmission_af4627b741806b2d4eb05fae07f2b0588}{}\label{class_transmission_af4627b741806b2d4eb05fae07f2b0588}
+signal emit quand une nouvelle trame \hyperlink{class_gps}{Gps} est recu 
+
+Référencé par \hyperlink{class_transmission_a41d15e65be472e058b28869f8dfad392}{ouvrir\+Port()}.
+
+\index{Transmission@{Transmission}!recevoir@{recevoir}}
+\index{recevoir@{recevoir}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{recevoir}{recevoir}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::recevoir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{class_transmission_aa54a695d9d1c728ccab04f1d8030da41}{}\label{class_transmission_aa54a695d9d1c728ccab04f1d8030da41}
+signal emit quand il y a une erreur avec la communication 
+
+Références \hyperlink{class_transmission_aa2977705ec793b10bf3212a13e67b097}{decomposer()}, \hyperlink{class_transmission_acc25e99cce910d23efe684cad233d30e}{decomposer\+Donnee\+Gps()}, \hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}, et \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.
+
+
+
+Référencé par \hyperlink{class_transmission_a41d15e65be472e058b28869f8dfad392}{ouvrir\+Port()}.
+
+
+\begin{DoxyCode}
+00256 \{
+00257     QByteArray donnees;
+00258 
+00259         \textcolor{keywordflow}{while}(\hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}->waitForReadyRead(10))
+00260         \{
+00261             donnees += \hyperlink{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{port}->readAll();
+00262         \}
+00263         \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame} = QString(donnees.data());
+00264 
+00265         \textcolor{keywordflow}{if}(\hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.startsWith(\textcolor{stringliteral}{"SONDE"}) && \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.endsWith(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"}))
+00266         \{
+00267             qDebug() << Q\_FUNC\_INFO << \textcolor{stringliteral}{"trame Port serie reçu : "} << \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame} << endl;
+00268 
+00269             this->\hyperlink{class_transmission_aa2977705ec793b10bf3212a13e67b097}{decomposer}();
+00270         \}
+00271 
+00272         \textcolor{keywordflow}{if}(\hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.startsWith(\textcolor{stringliteral}{"$GPGGA"}) && \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.endsWith(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"}))
+00273         \{
+00274             qDebug() << Q\_FUNC\_INFO << \textcolor{stringliteral}{"trame Gps reçu : "} << \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame} << endl;
+00275             this->\hyperlink{class_transmission_acc25e99cce910d23efe684cad233d30e}{decomposerDonneeGps}();
+00276         \}
+00277 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!scanfini@{scanfini}}
+\index{scanfini@{scanfini}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{scanfini}{scanfini}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::scanfini (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}\hypertarget{class_transmission_a2558a386d6888478f7d56c672a4855b3}{}\label{class_transmission_a2558a386d6888478f7d56c672a4855b3}
+signal emit quand un nouvelle appareil est disponible 
+
+Référencé par \hyperlink{class_transmission_a6945e6b653c6d46d7e13484811647e6e}{scan\+Terminer()}.
+
+\index{Transmission@{Transmission}!scan\+Terminer@{scan\+Terminer}}
+\index{scan\+Terminer@{scan\+Terminer}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{scan\+Terminer}{scanTerminer}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::scan\+Terminer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{class_transmission_a6945e6b653c6d46d7e13484811647e6e}{}\label{class_transmission_a6945e6b653c6d46d7e13484811647e6e}
+methode appeler quand de nouveau appareil son disponible 
+
+Références \hyperlink{class_transmission_a8789222ce8dc94d657d66a6edbbcc588}{nouvelle\+Appareil\+Disponible()}, et \hyperlink{class_transmission_a2558a386d6888478f7d56c672a4855b3}{scanfini()}.
+
+
+
+Référencé par \hyperlink{class_transmission_a1d8087d2d09b9ddd4fd6e8261daed9f3}{Transmission()}.
+
+
+\begin{DoxyCode}
+00343 \{
+00344     qDebug() << \textcolor{stringliteral}{"scan terminé"};
+00345     emit \hyperlink{class_transmission_a2558a386d6888478f7d56c672a4855b3}{scanfini}();
+00346     emit \hyperlink{class_transmission_a8789222ce8dc94d657d66a6edbbcc588}{nouvelleAppareilDisponible}();
+00347 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!set\+Appareil\+Disponible@{set\+Appareil\+Disponible}}
+\index{set\+Appareil\+Disponible@{set\+Appareil\+Disponible}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{set\+Appareil\+Disponible(\+Q\+String appareil\+Disponible)}{setAppareilDisponible(QString appareilDisponible)}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::set\+Appareil\+Disponible (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{appareil\+Disponible}
+\end{DoxyParamCaption}
+)}\hypertarget{class_transmission_ad2c1d8838a1f7ed8d3599dba0a118a86}{}\label{class_transmission_ad2c1d8838a1f7ed8d3599dba0a118a86}
+modifier le statut de la connexion bluetooth
+
+
+\begin{DoxyParams}{Paramètres}
+{\em appareil\+Disponible} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_transmission_ada55d73f163440c8250102cfe74c05a1}{appareil\+Disponible}.
+
+
+
+Référencé par \hyperlink{class_transmission_aeeccf41fd32a4bb17d3312d785aec98a}{ajouter\+Appareil()}.
+
+
+\begin{DoxyCode}
+00120 \{
+00121     this->\hyperlink{class_transmission_ada55d73f163440c8250102cfe74c05a1}{appareilDisponible} << \hyperlink{class_transmission_ada55d73f163440c8250102cfe74c05a1}{appareilDisponible};
+00122 
+00123 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!set\+Statut\+Bluetooth@{set\+Statut\+Bluetooth}}
+\index{set\+Statut\+Bluetooth@{set\+Statut\+Bluetooth}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{set\+Statut\+Bluetooth(\+Q\+String statut\+Bluetooth)}{setStatutBluetooth(QString statutBluetooth)}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::set\+Statut\+Bluetooth (
+\begin{DoxyParamCaption}
+\item[{Q\+String}]{statut\+Bluetooth}
+\end{DoxyParamCaption}
+)}\hypertarget{class_transmission_a0680d6aab9c17d11e90566c359187ebc}{}\label{class_transmission_a0680d6aab9c17d11e90566c359187ebc}
+recuperer les message de statut de la connexion
+
+
+\begin{DoxyParams}{Paramètres}
+{\em statut\+Bluetooth} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_transmission_a01afc46fac8c712083225d5dd2386217}{statut\+Bluetooth}.
+
+
+
+Référencé par \hyperlink{class_transmission_a5a21d201dd0096f96aec12264c2f03d9}{connecter\+Appareil\+Bluetooth()}, \hyperlink{class_transmission_ad231163c435936cc69149dd03aaaf473}{socket\+Connected()}, et \hyperlink{class_transmission_a5b02dec98a34f14b341adf40cf520bdf}{socket\+Disconnected()}.
+
+
+\begin{DoxyCode}
+00110 \{
+00111     this->\hyperlink{class_transmission_a01afc46fac8c712083225d5dd2386217}{statutBluetooth} = \hyperlink{class_transmission_a01afc46fac8c712083225d5dd2386217}{statutBluetooth};
+00112 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!socket\+Connected@{socket\+Connected}}
+\index{socket\+Connected@{socket\+Connected}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{socket\+Connected}{socketConnected}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::socket\+Connected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{class_transmission_ad231163c435936cc69149dd03aaaf473}{}\label{class_transmission_ad231163c435936cc69149dd03aaaf473}
+methode appeler quand le scan est terminé 
+
+Références \hyperlink{class_transmission_a76ba0e916b9e30615d563b78e26acbc2}{connecter()}, \hyperlink{class_transmission_a0680d6aab9c17d11e90566c359187ebc}{set\+Statut\+Bluetooth()}, et \hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}.
+
+
+
+Référencé par \hyperlink{class_transmission_a5a21d201dd0096f96aec12264c2f03d9}{connecter\+Appareil\+Bluetooth()}.
+
+
+\begin{DoxyCode}
+00393 \{
+00394     qDebug() << Q\_FUNC\_INFO << QString::fromUtf8(\textcolor{stringliteral}{"Périphérique connecté "}) + 
+      \hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}->peerName() + \textcolor{stringliteral}{" ["} + \hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}->peerAddress().toString() + \textcolor{stringliteral}{"]"};
+00395     QString message = \textcolor{stringliteral}{"connecter à "} + \hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}->peerName();
+00396     \hyperlink{class_transmission_a0680d6aab9c17d11e90566c359187ebc}{setStatutBluetooth}(message);
+00397     emit \hyperlink{class_transmission_a76ba0e916b9e30615d563b78e26acbc2}{connecter}();
+00398 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!socket\+Disconnected@{socket\+Disconnected}}
+\index{socket\+Disconnected@{socket\+Disconnected}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{socket\+Disconnected}{socketDisconnected}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::socket\+Disconnected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{class_transmission_a5b02dec98a34f14b341adf40cf520bdf}{}\label{class_transmission_a5b02dec98a34f14b341adf40cf520bdf}
+methode appeler quand l\textquotesingle{}appareil est connecté 
+
+Références \hyperlink{class_transmission_aa3cfe0fc92fcc2147d239553820c983c}{deconnecter()}, et \hyperlink{class_transmission_a0680d6aab9c17d11e90566c359187ebc}{set\+Statut\+Bluetooth()}.
+
+
+
+Référencé par \hyperlink{class_transmission_a5a21d201dd0096f96aec12264c2f03d9}{connecter\+Appareil\+Bluetooth()}.
+
+
+\begin{DoxyCode}
+00406 \{
+00407     qDebug() << Q\_FUNC\_INFO;
+00408     QString message = \textcolor{stringliteral}{"Périphérique déconnecté"};
+00409     qDebug() << message;
+00410     \hyperlink{class_transmission_a0680d6aab9c17d11e90566c359187ebc}{setStatutBluetooth}(message);
+00411     emit \hyperlink{class_transmission_aa3cfe0fc92fcc2147d239553820c983c}{deconnecter}();
+00412 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!socket\+Erreur@{socket\+Erreur}}
+\index{socket\+Erreur@{socket\+Erreur}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{socket\+Erreur}{socketErreur}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::socket\+Erreur (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}\hypertarget{class_transmission_ad42d923341b19d450d27c7659ea51a58}{}\label{class_transmission_ad42d923341b19d450d27c7659ea51a58}
+signal emit quand l\textquotesingle{}appareil est deconnecté 
+
+Référencé par \hyperlink{class_transmission_a5a21d201dd0096f96aec12264c2f03d9}{connecter\+Appareil\+Bluetooth()}.
+
+\index{Transmission@{Transmission}!socket\+Ready\+Read@{socket\+Ready\+Read}}
+\index{socket\+Ready\+Read@{socket\+Ready\+Read}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{socket\+Ready\+Read}{socketReadyRead}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::socket\+Ready\+Read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{class_transmission_a3beab187cc2056a8f34bc6643fdc0e26}{}\label{class_transmission_a3beab187cc2056a8f34bc6643fdc0e26}
+methode appeler quand l\textquotesingle{}appareil est deconnecté 
+
+Références \hyperlink{class_transmission_aa2977705ec793b10bf3212a13e67b097}{decomposer()}, \hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}, et \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.
+
+
+
+Référencé par \hyperlink{class_transmission_a5a21d201dd0096f96aec12264c2f03d9}{connecter\+Appareil\+Bluetooth()}.
+
+
+\begin{DoxyCode}
+00420 \{
+00421     qDebug() << Q\_FUNC\_INFO;
+00422     QByteArray donnees;
+00423 
+00424     \textcolor{keywordflow}{while} (\hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}->bytesAvailable())
+00425     \{
+00426         donnees += \hyperlink{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{socket}->readAll();
+00427         usleep(150000); \textcolor{comment}{// cf. timeout}
+00428     \}
+00429     \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame} = QString(donnees);
+00430     qDebug() << \textcolor{stringliteral}{"Données bluetooth reçues :"} << QString(donnees);
+00431 
+00432     \textcolor{keywordflow}{if}(\hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.startsWith(\textcolor{stringliteral}{"SONDE"}) && \hyperlink{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{trame}.endsWith(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"}))
+00433     \{
+00434         \hyperlink{class_transmission_aa2977705ec793b10bf3212a13e67b097}{decomposer}();
+00435     \}
+00436 \}
+\end{DoxyCode}
+\index{Transmission@{Transmission}!trame\+Esp32\+Recue@{trame\+Esp32\+Recue}}
+\index{trame\+Esp32\+Recue@{trame\+Esp32\+Recue}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{trame\+Esp32\+Recue}{trameEsp32Recue}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::trame\+Esp32\+Recue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}\hypertarget{class_transmission_a489a1ee2f15aec3594b44f0a6152cbe6}{}\label{class_transmission_a489a1ee2f15aec3594b44f0a6152cbe6}
+methode appelée pour deconnecter l\textquotesingle{}appareil bluetooth 
+
+Référencé par \hyperlink{class_transmission_aa2977705ec793b10bf3212a13e67b097}{decomposer()}.
+
+\index{Transmission@{Transmission}!trame\+Gps\+Recue@{trame\+Gps\+Recue}}
+\index{trame\+Gps\+Recue@{trame\+Gps\+Recue}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{trame\+Gps\+Recue}{trameGpsRecue}}]{\setlength{\rightskip}{0pt plus 5cm}void Transmission\+::trame\+Gps\+Recue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}\hypertarget{class_transmission_a4501908a4480b9b2ea4358dc85dc438d}{}\label{class_transmission_a4501908a4480b9b2ea4358dc85dc438d}
+signal emit quand une nouvelle trame \hyperlink{class_esp32}{Esp32} est recu 
+
+Référencé par \hyperlink{class_transmission_acc25e99cce910d23efe684cad233d30e}{decomposer\+Donnee\+Gps()}.
+
+
+
+\subsubsection{Documentation des données membres}
+\index{Transmission@{Transmission}!appareil\+Disponible@{appareil\+Disponible}}
+\index{appareil\+Disponible@{appareil\+Disponible}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{appareil\+Disponible}{appareilDisponible}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String\+List Transmission\+::appareil\+Disponible\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_transmission_ada55d73f163440c8250102cfe74c05a1}{}\label{class_transmission_ada55d73f163440c8250102cfe74c05a1}
+decomposition de la trame \hyperlink{class_gps}{Gps} recu 
+
+Référencé par \hyperlink{class_transmission_aeeccf41fd32a4bb17d3312d785aec98a}{ajouter\+Appareil()}, \hyperlink{class_transmission_a217b97344fdad09dbe226c55a8ac56b0}{demarrer\+Scan()}, \hyperlink{class_transmission_a2a38d0633b4a27dfa3754efcd3db4f9c}{get\+Appareil\+Disponible()}, et \hyperlink{class_transmission_ad2c1d8838a1f7ed8d3599dba0a118a86}{set\+Appareil\+Disponible()}.
+
+\index{Transmission@{Transmission}!donnee\+Lat\+Dms@{donnee\+Lat\+Dms}}
+\index{donnee\+Lat\+Dms@{donnee\+Lat\+Dms}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{donnee\+Lat\+Dms}{donneeLatDms}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Transmission\+::donnee\+Lat\+Dms\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_transmission_a82596aa40988da67b05174375d9cfadb}{}\label{class_transmission_a82596aa40988da67b05174375d9cfadb}
+stockage de la trame recu 
+
+Référencé par \hyperlink{class_transmission_acc25e99cce910d23efe684cad233d30e}{decomposer\+Donnee\+Gps()}.
+
+\index{Transmission@{Transmission}!donnee\+Long\+Dms@{donnee\+Long\+Dms}}
+\index{donnee\+Long\+Dms@{donnee\+Long\+Dms}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{donnee\+Long\+Dms}{donneeLongDms}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Transmission\+::donnee\+Long\+Dms\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_transmission_abd43fbd8ce97a99ebfd1048a9b2297cf}{}\label{class_transmission_abd43fbd8ce97a99ebfd1048a9b2297cf}
+stockage des donnée de latitude en dms 
+
+Référencé par \hyperlink{class_transmission_acc25e99cce910d23efe684cad233d30e}{decomposer\+Donnee\+Gps()}.
+
+\index{Transmission@{Transmission}!donne\+Lat\+DD@{donne\+Lat\+DD}}
+\index{donne\+Lat\+DD@{donne\+Lat\+DD}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{donne\+Lat\+DD}{donneLatDD}}]{\setlength{\rightskip}{0pt plus 5cm}double Transmission\+::donne\+Lat\+DD\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_transmission_a4c7537ba62aa4ffa286ef269974e9571}{}\label{class_transmission_a4c7537ba62aa4ffa286ef269974e9571}
+stockage des donnée de longitude en dms 
+
+Référencé par \hyperlink{class_transmission_acc25e99cce910d23efe684cad233d30e}{decomposer\+Donnee\+Gps()}.
+
+\index{Transmission@{Transmission}!donne\+Long\+DD@{donne\+Long\+DD}}
+\index{donne\+Long\+DD@{donne\+Long\+DD}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{donne\+Long\+DD}{donneLongDD}}]{\setlength{\rightskip}{0pt plus 5cm}double Transmission\+::donne\+Long\+DD\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_transmission_a285721af01428c688b33c7af80f424f5}{}\label{class_transmission_a285721af01428c688b33c7af80f424f5}
+stockage des donnée de latitude en DD 
+
+Référencé par \hyperlink{class_transmission_acc25e99cce910d23efe684cad233d30e}{decomposer\+Donnee\+Gps()}.
+
+\index{Transmission@{Transmission}!esp32@{esp32}}
+\index{esp32@{esp32}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{esp32}{esp32}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Esp32}$\ast$ Transmission\+::esp32\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_transmission_a06ec58d6f8fa4adff82f5b2ab911c461}{}\label{class_transmission_a06ec58d6f8fa4adff82f5b2ab911c461}
+stockage du signe de la longitude 
+
+Référencé par \hyperlink{class_transmission_aa2977705ec793b10bf3212a13e67b097}{decomposer()}, \hyperlink{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{get\+Esp32()}, et \hyperlink{class_transmission_a1d8087d2d09b9ddd4fd6e8261daed9f3}{Transmission()}.
+
+\index{Transmission@{Transmission}!gps@{gps}}
+\index{gps@{gps}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{gps}{gps}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gps}$\ast$ Transmission\+::gps\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_transmission_aebadfef439f114cb09e57ddb2e3188dc}{}\label{class_transmission_aebadfef439f114cb09e57ddb2e3188dc}
+
+
+Référencé par \hyperlink{class_transmission_acc25e99cce910d23efe684cad233d30e}{decomposer\+Donnee\+Gps()}, \hyperlink{class_transmission_aa5004c178152de5b94ef14e11e80792c}{get\+Gps()}, \hyperlink{class_transmission_a1d8087d2d09b9ddd4fd6e8261daed9f3}{Transmission()}, et \hyperlink{class_transmission_adcdc6012d99ddb1d0c3159d50984e146}{$\sim$\+Transmission()}.
+
+\index{Transmission@{Transmission}!m\+\_\+controller@{m\+\_\+controller}}
+\index{m\+\_\+controller@{m\+\_\+controller}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{m\+\_\+controller}{m_controller}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Low\+Energy\+Controller$\ast$ Transmission\+::m\+\_\+controller\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_transmission_a9b056d8291609ec049b91d0aed8e408a}{}\label{class_transmission_a9b056d8291609ec049b91d0aed8e408a}
+\index{Transmission@{Transmission}!port@{port}}
+\index{port@{port}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{port}{port}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Serial\+Port$\ast$ Transmission\+::port\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}{}\label{class_transmission_a0ec8a06c44492c9b4f395e7c3b1e57b9}
+
+
+Référencé par \hyperlink{class_transmission_ab4e82ab30c181a8e0d0c0257ea0e1f56}{configurer\+Port()}, \hyperlink{class_transmission_a21e35372ada18cd35411c0e8c0984fd7}{envoyer\+Donnees()}, \hyperlink{class_transmission_a14d36ad615852d6b630fbddf5787f3a3}{fermer\+Port()}, \hyperlink{class_transmission_a41d15e65be472e058b28869f8dfad392}{ouvrir\+Port()}, \hyperlink{class_transmission_aa54a695d9d1c728ccab04f1d8030da41}{recevoir()}, et \hyperlink{class_transmission_a1d8087d2d09b9ddd4fd6e8261daed9f3}{Transmission()}.
+
+\index{Transmission@{Transmission}!scan@{scan}}
+\index{scan@{scan}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{scan}{scan}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Bluetooth\+Device\+Discovery\+Agent$\ast$ Transmission\+::scan\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_transmission_a70e442ca9125041564f79c40230ecd08}{}\label{class_transmission_a70e442ca9125041564f79c40230ecd08}
+
+
+Référencé par \hyperlink{class_transmission_a217b97344fdad09dbe226c55a8ac56b0}{demarrer\+Scan()}, et \hyperlink{class_transmission_a1d8087d2d09b9ddd4fd6e8261daed9f3}{Transmission()}.
+
+\index{Transmission@{Transmission}!signe\+Lat@{signe\+Lat}}
+\index{signe\+Lat@{signe\+Lat}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{signe\+Lat}{signeLat}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Transmission\+::signe\+Lat\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_transmission_aecd312863e33ce32d811895bc143b265}{}\label{class_transmission_aecd312863e33ce32d811895bc143b265}
+stockage des donnée de longitude en DD 
+
+Référencé par \hyperlink{class_transmission_acc25e99cce910d23efe684cad233d30e}{decomposer\+Donnee\+Gps()}.
+
+\index{Transmission@{Transmission}!signe\+Long@{signe\+Long}}
+\index{signe\+Long@{signe\+Long}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{signe\+Long}{signeLong}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Transmission\+::signe\+Long\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_transmission_a80f29bafb41f10f5be97ebaced6e684a}{}\label{class_transmission_a80f29bafb41f10f5be97ebaced6e684a}
+stockage du signe de la latitude 
+
+Référencé par \hyperlink{class_transmission_acc25e99cce910d23efe684cad233d30e}{decomposer\+Donnee\+Gps()}.
+
+\index{Transmission@{Transmission}!socket@{socket}}
+\index{socket@{socket}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{socket}{socket}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Bluetooth\+Socket$\ast$ Transmission\+::socket\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}{}\label{class_transmission_a0b579c9da71d4b19f0504241ffbfae21}
+
+
+Référencé par \hyperlink{class_transmission_a5a21d201dd0096f96aec12264c2f03d9}{connecter\+Appareil\+Bluetooth()}, \hyperlink{class_transmission_afc5d716d53ee7039c3abf05f799327ae}{deconnecter\+Appareil\+Bluetooth()}, \hyperlink{class_transmission_a21e35372ada18cd35411c0e8c0984fd7}{envoyer\+Donnees()}, \hyperlink{class_transmission_ad231163c435936cc69149dd03aaaf473}{socket\+Connected()}, \hyperlink{class_transmission_a3beab187cc2056a8f34bc6643fdc0e26}{socket\+Ready\+Read()}, et \hyperlink{class_transmission_a1d8087d2d09b9ddd4fd6e8261daed9f3}{Transmission()}.
+
+\index{Transmission@{Transmission}!statut\+Bluetooth@{statut\+Bluetooth}}
+\index{statut\+Bluetooth@{statut\+Bluetooth}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{statut\+Bluetooth}{statutBluetooth}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Transmission\+::statut\+Bluetooth\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_transmission_a01afc46fac8c712083225d5dd2386217}{}\label{class_transmission_a01afc46fac8c712083225d5dd2386217}
+
+
+Référencé par \hyperlink{class_transmission_adf65c6a49fbbc9d25b7b2fca2c410f99}{get\+Statut\+Bluetooth()}, et \hyperlink{class_transmission_a0680d6aab9c17d11e90566c359187ebc}{set\+Statut\+Bluetooth()}.
+
+\index{Transmission@{Transmission}!trame@{trame}}
+\index{trame@{trame}!Transmission@{Transmission}}
+\paragraph[{\texorpdfstring{trame}{trame}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Transmission\+::trame\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_transmission_af2e63afdc212381aa023a3bcb48148c1}{}\label{class_transmission_af2e63afdc212381aa023a3bcb48148c1}
+methode appeler quand une trame est disponible 
+
+Référencé par \hyperlink{class_transmission_aa2977705ec793b10bf3212a13e67b097}{decomposer()}, \hyperlink{class_transmission_acc25e99cce910d23efe684cad233d30e}{decomposer\+Donnee\+Gps()}, \hyperlink{class_transmission_a21e35372ada18cd35411c0e8c0984fd7}{envoyer\+Donnees()}, \hyperlink{class_transmission_a3fc179158c8c9e2cceba36423ef92505}{get\+Trame()}, \hyperlink{class_transmission_aa54a695d9d1c728ccab04f1d8030da41}{recevoir()}, et \hyperlink{class_transmission_a3beab187cc2056a8f34bc6643fdc0e26}{socket\+Ready\+Read()}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{transmission_8h}{transmission.\+h}\item 
+\hyperlink{transmission_8cpp}{transmission.\+cpp}\end{DoxyCompactItemize}

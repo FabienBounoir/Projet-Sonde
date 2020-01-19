@@ -1,0 +1,60 @@
+\hypertarget{graphique_8h_source}{}\subsection{graphique.\+h}
+\label{graphique_8h_source}\index{graphique.\+h@{graphique.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#ifndef GRAPHIQUE\_H}
+00002 \textcolor{preprocessor}{#define GRAPHIQUE\_H}
+00003 
+00004 \textcolor{preprocessor}{#include <QObject>}
+00005 \textcolor{preprocessor}{#include <QtWidgets>}
+00006 \textcolor{preprocessor}{#include <QtCharts>}
+00007 \textcolor{preprocessor}{#include <QApplication>}
+00008 
+\hypertarget{graphique_8h_source.tex_l00025}{}\hyperlink{class_graphique}{00025} \textcolor{keyword}{class }\hyperlink{class_graphique}{Graphique} : \textcolor{keyword}{public} \hyperlink{class_q_widget}{QWidget}
+00026 \{
+00027     Q\_OBJECT
+00028 \textcolor{keyword}{public}:
+00029     \hyperlink{class_graphique_a3aec0a5aaae78f0726771dea67af69b4}{Graphique}(\hyperlink{class_q_widget}{QWidget} *parent = \textcolor{keyword}{nullptr});     
+00030     \hyperlink{class_graphique_a1bb866eb859b961cf0cdddc1b289a773}{~Graphique}();                       
+00032     \textcolor{keywordtype}{void} \hyperlink{class_graphique_ad9b976804bafcbfe451d89fd35729d16}{creerGraphiqueTemperature}();       
+00033     \textcolor{keywordtype}{void} \hyperlink{class_graphique_adc50b5ae7a54dd576c99e74ec6bf74c5}{creerGraphiquePression}();       
+00034     \textcolor{keywordtype}{void} \hyperlink{class_graphique_a19d6deef2d11e95093a343d49f75d14e}{creerGraphiqueHumidite}();       
+00035     \textcolor{keywordtype}{void} \hyperlink{class_graphique_a3b55b9c4732856e1b25bef167c25ac4c}{creerGraphiqueLuminosite}();       
+00037     \textcolor{keywordtype}{void} \hyperlink{class_graphique_a42b3c986ca86c426adbb8fdb03a04380}{ajouterDonneeTemperature}(\textcolor{keywordtype}{double} temperature);         
+00038     \textcolor{keywordtype}{void} \hyperlink{class_graphique_ad3dd36f05a9923054a0a2138f96f0311}{ajouterDonneeHumidite}(\textcolor{keywordtype}{int} humidite);         
+00039     \textcolor{keywordtype}{void} \hyperlink{class_graphique_a1af0e1968998cb7b5ee8add1197cb0e0}{ajouterDonneeLuminosite}(\textcolor{keywordtype}{int} luminosite);         
+00040     \textcolor{keywordtype}{void} \hyperlink{class_graphique_a289f0631e56465012511fd7ec9da1b23}{ajouterDonneePression}(\textcolor{keywordtype}{int} pression);         
+00042 \textcolor{keyword}{private}:
+\hypertarget{graphique_8h_source.tex_l00043}{}\hyperlink{class_graphique_a55d98b20085f7c79f42f3ae0423ac72a}{00043}     \hyperlink{class_q_widget}{QWidget} *\hyperlink{class_graphique_a55d98b20085f7c79f42f3ae0423ac72a}{ihmGraphique};  
+\hypertarget{graphique_8h_source.tex_l00044}{}\hyperlink{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{00044}     QDateTime \hyperlink{class_graphique_a468d57ae7b14b46558cf25629cced7b6}{debut};        
+\hypertarget{graphique_8h_source.tex_l00046}{}\hyperlink{class_graphique_a1ccd9268372eef81a117bd82b50bec6a}{00046}     QHBoxLayout *\hyperlink{class_graphique_a1ccd9268372eef81a117bd82b50bec6a}{layoutHTempHum};    
+\hypertarget{graphique_8h_source.tex_l00047}{}\hyperlink{class_graphique_a622c90a88a11b29aa275906a3ee051ef}{00047}     QHBoxLayout *\hyperlink{class_graphique_a622c90a88a11b29aa275906a3ee051ef}{layoutHLumPres};    
+\hypertarget{graphique_8h_source.tex_l00048}{}\hyperlink{class_graphique_a2a8dbb06be361da2b8a500f231c1c607}{00048}     QVBoxLayout *\hyperlink{class_graphique_a2a8dbb06be361da2b8a500f231c1c607}{layoutV};           
+\hypertarget{graphique_8h_source.tex_l00050}{}\hyperlink{class_graphique_a485cc4a65014e812b9e4aa9ee3ea9ca4}{00050}     QChartView *\hyperlink{class_graphique_a485cc4a65014e812b9e4aa9ee3ea9ca4}{graphiqueTemperature}; 
+\hypertarget{graphique_8h_source.tex_l00051}{}\hyperlink{class_graphique_ad2fe81a972ee10a20a56300a87a78f24}{00051}     QChart *\hyperlink{class_graphique_ad2fe81a972ee10a20a56300a87a78f24}{grapheTemperature}; 
+\hypertarget{graphique_8h_source.tex_l00052}{}\hyperlink{class_graphique_a6c2f8ef3364123ad300de74db529bd9b}{00052}     QLineSeries *\hyperlink{class_graphique_a6c2f8ef3364123ad300de74db529bd9b}{courbeTemperature}; 
+\hypertarget{graphique_8h_source.tex_l00053}{}\hyperlink{class_graphique_a3df7eeca8d7dba5f528f65d89883736f}{00053}     QValueAxis *\hyperlink{class_graphique_a3df7eeca8d7dba5f528f65d89883736f}{axeYTemperature}; 
+\hypertarget{graphique_8h_source.tex_l00054}{}\hyperlink{class_graphique_a83ef0cdf381f66a6202022b8545bfb1c}{00054}     QDateTimeAxis *\hyperlink{class_graphique_a83ef0cdf381f66a6202022b8545bfb1c}{axeXTemperature}; 
+\hypertarget{graphique_8h_source.tex_l00056}{}\hyperlink{class_graphique_a55f7c2a564ee7ea232a9328ebad29f40}{00056}     QChartView *\hyperlink{class_graphique_a55f7c2a564ee7ea232a9328ebad29f40}{graphiqueLuminosite}; 
+\hypertarget{graphique_8h_source.tex_l00057}{}\hyperlink{class_graphique_adbed6be47df503c9a260586b0d93f5c4}{00057}     QChart *\hyperlink{class_graphique_adbed6be47df503c9a260586b0d93f5c4}{grapheLuminosite}; 
+\hypertarget{graphique_8h_source.tex_l00058}{}\hyperlink{class_graphique_a8bf527363f5d8198bf6fc959a8689963}{00058}     QLineSeries *\hyperlink{class_graphique_a8bf527363f5d8198bf6fc959a8689963}{courbeLuminosite}; 
+\hypertarget{graphique_8h_source.tex_l00059}{}\hyperlink{class_graphique_a275865e638fd7cb5183d29d8b1a3624e}{00059}     QValueAxis *\hyperlink{class_graphique_a275865e638fd7cb5183d29d8b1a3624e}{axeYLuminosite}; 
+\hypertarget{graphique_8h_source.tex_l00060}{}\hyperlink{class_graphique_ae4daff72419cbb9e49209f931e79a83b}{00060}     QDateTimeAxis *\hyperlink{class_graphique_ae4daff72419cbb9e49209f931e79a83b}{axeXLuminosite}; 
+\hypertarget{graphique_8h_source.tex_l00062}{}\hyperlink{class_graphique_aa389bad562aa7ccba12aa490e02c672b}{00062}     QChartView *\hyperlink{class_graphique_aa389bad562aa7ccba12aa490e02c672b}{graphiquePression}; 
+\hypertarget{graphique_8h_source.tex_l00063}{}\hyperlink{class_graphique_afbf5d79803c4395cd5526891e1fc313f}{00063}     QChart *\hyperlink{class_graphique_afbf5d79803c4395cd5526891e1fc313f}{graphePression}; 
+\hypertarget{graphique_8h_source.tex_l00064}{}\hyperlink{class_graphique_a49e03fd868685d638fc285837ca26772}{00064}     QLineSeries *\hyperlink{class_graphique_a49e03fd868685d638fc285837ca26772}{courbePression}; 
+\hypertarget{graphique_8h_source.tex_l00065}{}\hyperlink{class_graphique_a9e5efb7607907c0428baa90bd6fbeb2e}{00065}     QValueAxis *\hyperlink{class_graphique_a9e5efb7607907c0428baa90bd6fbeb2e}{axeYPression};  
+\hypertarget{graphique_8h_source.tex_l00066}{}\hyperlink{class_graphique_a343286de3f9c610257a140c1bf5c4755}{00066}     QDateTimeAxis *\hyperlink{class_graphique_a343286de3f9c610257a140c1bf5c4755}{axeXPression};  
+\hypertarget{graphique_8h_source.tex_l00068}{}\hyperlink{class_graphique_af87e1bc5874f5d633ed944205c8ba15e}{00068}     QValueAxis *\hyperlink{class_graphique_af87e1bc5874f5d633ed944205c8ba15e}{axeYHumidite};  
+\hypertarget{graphique_8h_source.tex_l00069}{}\hyperlink{class_graphique_a34c9e250233b7d37981cbbdcc573fe57}{00069}     QDateTimeAxis *\hyperlink{class_graphique_a34c9e250233b7d37981cbbdcc573fe57}{axeXHumidite};  
+\hypertarget{graphique_8h_source.tex_l00070}{}\hyperlink{class_graphique_a992da12af1bcf950a9a5fb9799b8f86b}{00070}     QChart *\hyperlink{class_graphique_a992da12af1bcf950a9a5fb9799b8f86b}{grapheHumidite}; 
+\hypertarget{graphique_8h_source.tex_l00071}{}\hyperlink{class_graphique_af57614c61f87539da7bc7e86527162e1}{00071}     QChartView *\hyperlink{class_graphique_af57614c61f87539da7bc7e86527162e1}{graphiqueHumidite}; 
+\hypertarget{graphique_8h_source.tex_l00072}{}\hyperlink{class_graphique_a1ff987d94beb7c471a85be00e881d64c}{00072}     QLineSeries *\hyperlink{class_graphique_a1ff987d94beb7c471a85be00e881d64c}{courbeHumidite}; 
+\hypertarget{graphique_8h_source.tex_l00074}{}\hyperlink{class_graphique_a6aac1bb5ad9a78cb91ca64359e7da307}{00074}     \textcolor{keywordtype}{double} \hyperlink{class_graphique_a6aac1bb5ad9a78cb91ca64359e7da307}{axeYTemperatureMax};      
+\hypertarget{graphique_8h_source.tex_l00075}{}\hyperlink{class_graphique_ad0971f340d49a40c14376a0e0a985f81}{00075}     \textcolor{keywordtype}{double} \hyperlink{class_graphique_ad0971f340d49a40c14376a0e0a985f81}{axeYTemperatureMin};      
+\hypertarget{graphique_8h_source.tex_l00077}{}\hyperlink{class_graphique_a2d382f64898f7e768e612c43dba365de}{00077}     \textcolor{keywordtype}{int} \hyperlink{class_graphique_a2d382f64898f7e768e612c43dba365de}{axeYPressionMax};            
+\hypertarget{graphique_8h_source.tex_l00078}{}\hyperlink{class_graphique_ac8e0364a45fe0882d175f12da7f9b1b3}{00078}     \textcolor{keywordtype}{int} \hyperlink{class_graphique_ac8e0364a45fe0882d175f12da7f9b1b3}{axeYLuminositeMax};          
+00080 \};
+00081 
+00082 \textcolor{preprocessor}{#endif // GRAPHIQUE\_H}
+\end{DoxyCode}

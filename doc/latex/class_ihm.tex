@@ -1,0 +1,1236 @@
+\hypertarget{class_ihm}{}\subsection{Référence de la classe Ihm}
+\label{class_ihm}\index{Ihm@{Ihm}}
+
+
+Declaration de la classe \hyperlink{class_ihm}{Ihm}.  
+
+
+
+
+{\ttfamily \#include \char`\"{}ihm.\+h\char`\"{}}
+
+
+
+Graphe de collaboration de Ihm\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_ihm__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_ihm_a50a7a15775452923868348bdbe4fa51e}{Ihm} (\hyperlink{class_q_widget}{Q\+Widget} $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em constructeur de la classe \hyperlink{class_ihm}{Ihm} \end{DoxyCompactList}\item 
+\hyperlink{class_ihm_add292ea9005bacd1de44dd1ed9ede5b9}{$\sim$\+Ihm} ()
+\begin{DoxyCompactList}\small\item\em destructeur de la classe \hyperlink{class_ihm}{Ihm} \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_af0426507c2130aefd01bdb4f825ae168}{modifier\+Etat\+Led} ()
+\begin{DoxyCompactList}\small\item\em Méthode qui actualise l\textquotesingle{}etat de la led dans ihm et change le radiobutton activer en fontion de l\textquotesingle{}etat. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Connecteurs privés}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_ihm_ac5c16e4562308547603acc9ef76df570}{on\+\_\+push\+Button\+Quitter\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em Méthode appelée lorsque le Bouton quitté est enclenché \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_aeb9414496621bcc42dc63d3ad6e194f9}{on\+\_\+\+Mode\+Operateur\+\_\+state\+Changed} (int arg1)
+\begin{DoxyCompactList}\small\item\em Méthode appelée lorsque le case à cocher Mode operateur est enclenché \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a94ea90d27fc0aa7598cf270dd3be98eb}{actualiser\+Trame} ()
+\begin{DoxyCompactList}\small\item\em ajout la nouvelle trame recu dans le mode operateur \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{actualiser\+Donnee} ()
+\item 
+void \hyperlink{class_ihm_ab0a18639faa9f2c0b2a141321be4b973}{desactiver\+Ouverture\+Port} ()
+\begin{DoxyCompactList}\small\item\em desactive des bouton de l\textquotesingle{}\hyperlink{class_ihm}{Ihm} \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a6a9bb865ffa3baf686ce16f11f69c57f}{desactiver\+Fermer\+Port} ()
+\begin{DoxyCompactList}\small\item\em desactive des bouton de l\textquotesingle{}\hyperlink{class_ihm}{Ihm} \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a65487c8229375ff72290bed145876737}{actualiser\+Affichage\+Meteo} ()
+\begin{DoxyCompactList}\small\item\em fonction qui actualise les différente donné de la météo \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a9d9ac22e5d73a010bc75a1fcf2e7ddcb}{mettre\+Ajour\+Appareil\+Bluetooth\+Disponible} ()
+\begin{DoxyCompactList}\small\item\em fonction qui met a jour les appareil bluetooth disponible \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a02118154be39cdd3de7fdbdbe396a534}{actualiser\+Affichage\+Bluetooth} ()
+\begin{DoxyCompactList}\small\item\em fonction qui actualise l\textquotesingle{}affichage de la parti bluetooth \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a5d7e6bdacfedc0f0dc4d7b3516454788}{actualiser\+Message\+Statut\+Connecter\+Bluetooth} ()
+\begin{DoxyCompactList}\small\item\em fonction qui actualiser dans l\textquotesingle{}ihm le statut de la connexion avec l\textquotesingle{}appareil \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_ad73cc62bafa9c43288f69fbac2b80508}{actualiser\+Message\+Statut\+Deconnecter\+Bluetooth} ()
+\begin{DoxyCompactList}\small\item\em met à jour le message de statut pour afficher que l\textquotesingle{}appareil est déconnecter \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a29b4c5fba871a30f7f2e5fbe08a2087d}{actualiser\+Message\+Statut\+Erreur\+Bluetooth} ()
+\begin{DoxyCompactList}\small\item\em met à jour le message de statut pour afficher une erreur \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a9ce167b94baead6e318bbd0c5254f842}{on\+\_\+push\+Button\+Ouvrir\+Port\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em bouton qui ouvre le port serie \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_abcdae03ce7e83266fb9d3e795df8a171}{on\+\_\+push\+Button\+Fermer\+Port\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em bouton qui ferme le port serie \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_afd32da9e614eba44bb1d3630b48e6075}{on\+\_\+push\+Button\+Envoyer\+Trame\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em recuperer le texte de la line\+Edit dans l\textquotesingle{}onglet operateur pour l\textquotesingle{}envoyer par le port serie \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a731ee780915cb90a5dfb11f2e02144c9}{on\+\_\+radio\+Button\+Led\+Rouge\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em envoit une trame pour allumer la led en rouge \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_afef5bfaa83383427e615d21d9474f466}{on\+\_\+radio\+Button\+Led\+Vert\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em envoit une trame pour allumer la led en vert \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a7e000e198b11fc38a4459f7749561ded}{on\+\_\+radio\+Button\+Led\+Orange\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em envoit une trame pour allumer la led en orange \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a1e328a2e8165bbef347e901f1bc5534d}{on\+\_\+radio\+Button\+Led\+Off\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em envoit une trame pour eteindre la led \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_aa943965aa565ec50e00f433100660892}{on\+\_\+push\+Button\+Ville\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em fonction qui envoit la ville contenue dans la line edit \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a277763bdb63ed529aafba7db513cb630}{on\+\_\+push\+Button\+Scan\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em fonction appelée quand le bouton scan est cliqué \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_abf61dda1820e5632485de93983c40196}{on\+\_\+push\+Button\+Connexion\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em fonction appelée quand le bouton connexion est cliqué \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_ad176c58fb3c583286544f010ac006b66}{on\+\_\+push\+Button\+Deconnexion\+\_\+clicked} ()
+\begin{DoxyCompactList}\small\item\em Méthode appelée quand on clique sur le bouton deconnexion elle réactive la possibilité de se connecter en port série. \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a132bd248057d7278c6841788961b5898}{on\+\_\+push\+Button\+Graphique\+\_\+clicked} ()
+\item 
+void \hyperlink{class_ihm_a8ee57b456ba85c2667ebf298f06d60c5}{on\+\_\+check\+Box\+Plein\+Ecran\+\_\+state\+Changed} (int arg1)
+\item 
+void \hyperlink{class_ihm_a3ca276093d65c42a5fc5a87cbca1972a}{actualiser\+Donnee\+Gps} ()
+\item 
+void \hyperlink{class_ihm_a850d1c97ed5fe5ba3cf3aa85d81872cd}{on\+\_\+push\+Button\+Envoyer\+Coordonnee\+\_\+clicked} ()
+\end{DoxyCompactItemize}
+\subsubsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_ihm_a9bd8f55d47f658fa5311b7880cc94114}{initialiser\+Affichage} ()
+\begin{DoxyCompactList}\small\item\em remet les lcd\+Number a zero quand le port est fermer \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a3c6fa78360d39cf904dc3a20b0347ddc}{initialiser\+Interface} ()
+\begin{DoxyCompactList}\small\item\em initialise l\textquotesingle{}interface utilisateur \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a05afaf2191aaae673c5ecd14a6d1c921}{enregistrer\+Configuration\+Port} ()
+\begin{DoxyCompactList}\small\item\em enregistrer la configuration du port dans un fichier .ini \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a7341abb08452b21ef2e5c8cb5095d5b0}{charger\+Configuration\+Port} ()
+\begin{DoxyCompactList}\small\item\em charger la configuration du port depuis un fichier .ini \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a3c792f8eeef5216e76cdb9d9e13eb1aa}{desactiver\+Connexion\+Port\+Serie} ()
+\begin{DoxyCompactList}\small\item\em active des objet de l\textquotesingle{}interface quand la connexion bluetooth est activer \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a58ae5ccbff166bcb6723db14a9cf04d9}{activer\+Connexion\+Port\+Serie} ()
+\begin{DoxyCompactList}\small\item\em désactive des objet de l\textquotesingle{}interface quand la connexion bluetooth est activer \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a7ff481c3a05c7d84be2b66552fafd79e}{desactiver\+Connexion\+Bluetooth} ()
+\begin{DoxyCompactList}\small\item\em active des objet de l\textquotesingle{}interface quand la connexion bluetooth est activer \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_ac5d166864f1389aa44b0a6784f1977ca}{activer\+Connexion\+Bluetooth} ()
+\begin{DoxyCompactList}\small\item\em désactive des objet de l\textquotesingle{}interface quand la connexion bluetooth est activer \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a4c456231c8af9eab099e9aaadf8a378b}{Activer\+Controle\+Led} ()
+\begin{DoxyCompactList}\small\item\em active la possibilité de contrôler les leds \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a8315a1d902efb0434267778f8144da96}{Desactiver\+Controle\+Led} ()
+\begin{DoxyCompactList}\small\item\em Désactiver la possibilité de contrôler les leds. \end{DoxyCompactList}\item 
+void \hyperlink{class_ihm_a2ef778196b2eba5b0ab5cb4e066bc3b7}{initialiser\+Connect} ()
+\begin{DoxyCompactList}\small\item\em initialise les connects \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Ihm $\ast$ \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}
+\begin{DoxyCompactList}\small\item\em objet \hyperlink{class_ihm}{Ihm} \end{DoxyCompactList}\item 
+\hyperlink{class_transmission}{Transmission} $\ast$ \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}
+\begin{DoxyCompactList}\small\item\em objet transmission \end{DoxyCompactList}\item 
+\hyperlink{class_meteo}{Meteo} $\ast$ \hyperlink{class_ihm_af17b420166b2bb1b3e3b1c4b998a2102}{meteo}
+\begin{DoxyCompactList}\small\item\em objet meteo \end{DoxyCompactList}\item 
+\hyperlink{class_graphique}{Graphique} $\ast$ \hyperlink{class_ihm_a990b3fe0efe66ae9da5e13a5e0a11291}{graphique}
+\begin{DoxyCompactList}\small\item\em objet graphique; \end{DoxyCompactList}\item 
+Q\+Process $\ast$ \hyperlink{class_ihm_aa1bea3b8f9bad5c19a662a2b455895fb}{proc}
+\begin{DoxyCompactList}\small\item\em pointer proc \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Documentation des constructeurs et destructeur}
+\index{Ihm@{Ihm}!Ihm@{Ihm}}
+\index{Ihm@{Ihm}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{Ihm(\+Q\+Widget $\ast$parent=nullptr)}{Ihm(QWidget *parent=nullptr)}}]{\setlength{\rightskip}{0pt plus 5cm}Ihm\+::\+Ihm (
+\begin{DoxyParamCaption}
+\item[{{\bf Q\+Widget} $\ast$}]{parent = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{class_ihm_a50a7a15775452923868348bdbe4fa51e}{}\label{class_ihm_a50a7a15775452923868348bdbe4fa51e}
+
+\begin{DoxyParams}{Paramètres}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{class_ihm_a990b3fe0efe66ae9da5e13a5e0a11291}{graphique}, \hyperlink{class_ihm_a9bd8f55d47f658fa5311b7880cc94114}{initialiser\+Affichage()}, \hyperlink{class_ihm_a2ef778196b2eba5b0ab5cb4e066bc3b7}{initialiser\+Connect()}, \hyperlink{class_ihm_a3c6fa78360d39cf904dc3a20b0347ddc}{initialiser\+Interface()}, \hyperlink{class_ihm_af17b420166b2bb1b3e3b1c4b998a2102}{meteo}, \hyperlink{class_ihm_aa1bea3b8f9bad5c19a662a2b455895fb}{proc}, \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, et \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+\begin{DoxyCode}
+00024                         :
+00025     \hyperlink{class_q_widget}{QWidget}(parent),
+00026     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}(\textcolor{keyword}{new} Ui::Ihm)
+00027 \{
+00028     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->setupUi(\textcolor{keyword}{this});
+00029 
+00030     \hyperlink{class_ihm_a3c6fa78360d39cf904dc3a20b0347ddc}{initialiserInterface}();
+00031     \hyperlink{class_ihm_a9bd8f55d47f658fa5311b7880cc94114}{initialiserAffichage}();
+00032 
+00033     \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission} = \textcolor{keyword}{new} \hyperlink{class_transmission}{Transmission}(\textcolor{keyword}{this});
+00034     \hyperlink{class_ihm_af17b420166b2bb1b3e3b1c4b998a2102}{meteo} = \textcolor{keyword}{new} \hyperlink{class_meteo}{Meteo}(\textcolor{keyword}{this});
+00035     \hyperlink{class_ihm_a990b3fe0efe66ae9da5e13a5e0a11291}{graphique} = \textcolor{keyword}{new} \hyperlink{class_graphique}{Graphique}();
+00036     \hyperlink{class_ihm_aa1bea3b8f9bad5c19a662a2b455895fb}{proc} = \textcolor{keyword}{new} QProcess();
+00037 
+00038     \hyperlink{class_ihm_a2ef778196b2eba5b0ab5cb4e066bc3b7}{initialiserConnect}();
+00039 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!````~Ihm@{$\sim$\+Ihm}}
+\index{````~Ihm@{$\sim$\+Ihm}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{$\sim$\+Ihm()}{~Ihm()}}]{\setlength{\rightskip}{0pt plus 5cm}Ihm\+::$\sim$\+Ihm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_ihm_add292ea9005bacd1de44dd1ed9ede5b9}{}\label{class_ihm_add292ea9005bacd1de44dd1ed9ede5b9}
+constructeur de la classe \hyperlink{class_ihm}{Ihm} 
+
+Références \hyperlink{class_ihm_a05afaf2191aaae673c5ecd14a6d1c921}{enregistrer\+Configuration\+Port()}, \hyperlink{class_ihm_a990b3fe0efe66ae9da5e13a5e0a11291}{graphique}, et \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+\begin{DoxyCode}
+00047 \{
+00048     \hyperlink{class_ihm_a05afaf2191aaae673c5ecd14a6d1c921}{enregistrerConfigurationPort}();
+00049     \textcolor{keyword}{delete} \hyperlink{class_ihm_a990b3fe0efe66ae9da5e13a5e0a11291}{graphique};
+00050     \textcolor{keyword}{delete} \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui};
+00051 \}
+\end{DoxyCode}
+
+
+\subsubsection{Documentation des fonctions membres}
+\index{Ihm@{Ihm}!activer\+Connexion\+Bluetooth@{activer\+Connexion\+Bluetooth}}
+\index{activer\+Connexion\+Bluetooth@{activer\+Connexion\+Bluetooth}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{activer\+Connexion\+Bluetooth()}{activerConnexionBluetooth()}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::activer\+Connexion\+Bluetooth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_ihm_ac5d166864f1389aa44b0a6784f1977ca}{}\label{class_ihm_ac5d166864f1389aa44b0a6784f1977ca}
+cette methode et appeler pour desactiver la possibiliter de connexion par bluetooth car une connexion par port serie est en cour 
+
+Références \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+\begin{DoxyCode}
+00603 \{
+00604     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBluetooth->setDisabled(\textcolor{keyword}{false});
+00605     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonScan->setDisabled(\textcolor{keyword}{false});
+00606     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonConnexion->setDisabled(\textcolor{keyword}{false});
+00607     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonDeconnexion->setDisabled(\textcolor{keyword}{false});
+00608     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->labelStatut->setText(\textcolor{stringliteral}{""});
+00609 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!activer\+Connexion\+Port\+Serie@{activer\+Connexion\+Port\+Serie}}
+\index{activer\+Connexion\+Port\+Serie@{activer\+Connexion\+Port\+Serie}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{activer\+Connexion\+Port\+Serie()}{activerConnexionPortSerie()}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::activer\+Connexion\+Port\+Serie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_ihm_a58ae5ccbff166bcb6723db14a9cf04d9}{}\label{class_ihm_a58ae5ccbff166bcb6723db14a9cf04d9}
+cette methode et appeler pour desactiver la possibiliter de connexion par port serie car une connexion bluetooth est en cour 
+
+Références \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+\begin{DoxyCode}
+00574 \{
+00575     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxAppareil->setDisabled(\textcolor{keyword}{false});
+00576     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxDebitBaud->setDisabled(\textcolor{keyword}{false});
+00577     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBitsDonnees->setDisabled(\textcolor{keyword}{false});
+00578     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBitsStop->setDisabled(\textcolor{keyword}{false});
+00579     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonOuvrirPort->setDisabled(\textcolor{keyword}{false});
+00580 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!Activer\+Controle\+Led@{Activer\+Controle\+Led}}
+\index{Activer\+Controle\+Led@{Activer\+Controle\+Led}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{Activer\+Controle\+Led()}{ActiverControleLed()}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::\+Activer\+Controle\+Led (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_ihm_a4c456231c8af9eab099e9aaadf8a378b}{}\label{class_ihm_a4c456231c8af9eab099e9aaadf8a378b}
+cette methode et appeler pour activer la possibiliter de connexion par bluetooth car aucun connexion en cour 
+
+Références \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+
+Référencé par \hyperlink{class_ihm_a5d7e6bdacfedc0f0dc4d7b3516454788}{actualiser\+Message\+Statut\+Connecter\+Bluetooth()}, et \hyperlink{class_ihm_ab0a18639faa9f2c0b2a141321be4b973}{desactiver\+Ouverture\+Port()}.
+
+
+\begin{DoxyCode}
+00273 \{
+00274     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->radioButtonLedOff->setDisabled(\textcolor{keyword}{false});
+00275     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->radioButtonLedVert->setDisabled(\textcolor{keyword}{false});
+00276     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->radioButtonLedRouge->setDisabled(\textcolor{keyword}{false});
+00277     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->radioButtonLedOrange->setDisabled(\textcolor{keyword}{false});
+00278 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!actualiser\+Affichage\+Bluetooth@{actualiser\+Affichage\+Bluetooth}}
+\index{actualiser\+Affichage\+Bluetooth@{actualiser\+Affichage\+Bluetooth}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{actualiser\+Affichage\+Bluetooth}{actualiserAffichageBluetooth}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::actualiser\+Affichage\+Bluetooth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_a02118154be39cdd3de7fdbdbe396a534}{}\label{class_ihm_a02118154be39cdd3de7fdbdbe396a534}
+methode qui actualiser les appareil disponible 
+
+Références \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+
+Référencé par \hyperlink{class_ihm_a2ef778196b2eba5b0ab5cb4e066bc3b7}{initialiser\+Connect()}.
+
+
+\begin{DoxyCode}
+00472 \{
+00473     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonScan->setEnabled(\textcolor{keyword}{true});
+00474     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonConnexion->setEnabled(\textcolor{keyword}{true});
+00475     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->labelStatut->setText(\textcolor{stringliteral}{"<font color=\(\backslash\)"#19B2AD\(\backslash\)">scan terminé</font>"});
+00476 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!actualiser\+Affichage\+Meteo@{actualiser\+Affichage\+Meteo}}
+\index{actualiser\+Affichage\+Meteo@{actualiser\+Affichage\+Meteo}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{actualiser\+Affichage\+Meteo}{actualiserAffichageMeteo}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::actualiser\+Affichage\+Meteo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_a65487c8229375ff72290bed145876737}{}\label{class_ihm_a65487c8229375ff72290bed145876737}
+Méthode appelée quand un port serie et fermer 
+
+Références \hyperlink{class_meteo_a336cfea55c062ebe45fbc7d1a48aaaa1}{Meteo\+::get\+Humidite()}, \hyperlink{class_meteo_a2a4cd85d63157f6b682d37f9c19d1683}{Meteo\+::get\+Pression()}, \hyperlink{class_meteo_a7bcbc6280fb91ff28436e84f7d8765e7}{Meteo\+::get\+Ressentie()}, \hyperlink{class_meteo_ad0a7466f4371df14623fd03fa0bab8dd}{Meteo\+::get\+Temperature()}, \hyperlink{class_meteo_a114aadb20b0b56c1fe8a6fc2dd19c02b}{Meteo\+::get\+Temperature\+Max()}, \hyperlink{class_meteo_a0cef4ff7ae16cfcd820d164d1c5334c4}{Meteo\+::get\+Temperature\+Min()}, \hyperlink{class_meteo_af9ceb3e99e123e6931f8cd9cfde57834}{Meteo\+::get\+Ville()}, \hyperlink{class_ihm_af17b420166b2bb1b3e3b1c4b998a2102}{meteo}, et \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+
+Référencé par \hyperlink{class_ihm_a2ef778196b2eba5b0ab5cb4e066bc3b7}{initialiser\+Connect()}.
+
+
+\begin{DoxyCode}
+00362 \{
+00363     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lineEditVille->setText(\hyperlink{class_ihm_af17b420166b2bb1b3e3b1c4b998a2102}{meteo}->\hyperlink{class_meteo_af9ceb3e99e123e6931f8cd9cfde57834}{getVille}());
+00364     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lcdNumberTemperatureMeteo->display(\hyperlink{class_ihm_af17b420166b2bb1b3e3b1c4b998a2102}{meteo}->\hyperlink{class_meteo_ad0a7466f4371df14623fd03fa0bab8dd}{getTemperature}());
+00365     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lcdNumberHumiditeMeteo->display(\hyperlink{class_ihm_af17b420166b2bb1b3e3b1c4b998a2102}{meteo}->\hyperlink{class_meteo_a336cfea55c062ebe45fbc7d1a48aaaa1}{getHumidite}());
+00366     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lcdNumberRessentieMeteo->display(\hyperlink{class_ihm_af17b420166b2bb1b3e3b1c4b998a2102}{meteo}->\hyperlink{class_meteo_a7bcbc6280fb91ff28436e84f7d8765e7}{getRessentie}());
+00367     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lcdNumberPressionMeteo->display(\hyperlink{class_ihm_af17b420166b2bb1b3e3b1c4b998a2102}{meteo}->\hyperlink{class_meteo_a2a4cd85d63157f6b682d37f9c19d1683}{getPression}());
+00368     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lcdNumberTempMinMeteo->display(\hyperlink{class_ihm_af17b420166b2bb1b3e3b1c4b998a2102}{meteo}->\hyperlink{class_meteo_a0cef4ff7ae16cfcd820d164d1c5334c4}{getTemperatureMin}());
+00369     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lcdNumberTempMaxMeteo->display(\hyperlink{class_ihm_af17b420166b2bb1b3e3b1c4b998a2102}{meteo}->\hyperlink{class_meteo_a114aadb20b0b56c1fe8a6fc2dd19c02b}{getTemperatureMax}());
+00370 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!actualiser\+Donnee@{actualiser\+Donnee}}
+\index{actualiser\+Donnee@{actualiser\+Donnee}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{actualiser\+Donnee}{actualiserDonnee}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::actualiser\+Donnee (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{}\label{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}
+met a jour l\textquotesingle{}affichage de la trame en mode operateur lors du signal trame\+Recue() 
+
+Références \hyperlink{class_graphique_ad3dd36f05a9923054a0a2138f96f0311}{Graphique\+::ajouter\+Donnee\+Humidite()}, \hyperlink{class_graphique_a1af0e1968998cb7b5ee8add1197cb0e0}{Graphique\+::ajouter\+Donnee\+Luminosite()}, \hyperlink{class_graphique_a289f0631e56465012511fd7ec9da1b23}{Graphique\+::ajouter\+Donnee\+Pression()}, \hyperlink{class_graphique_a42b3c986ca86c426adbb8fdb03a04380}{Graphique\+::ajouter\+Donnee\+Temperature()}, \hyperlink{class_esp32_a31b691e6c75c1f9859bde4c0df8fe12f}{Esp32\+::get\+Altitude()}, \hyperlink{class_esp32_aad3c2e4b5d15a02abc62d0329f43942d}{Esp32\+::get\+Altitude\+Unite()}, \hyperlink{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{Transmission\+::get\+Esp32()}, \hyperlink{class_esp32_a87f581ef8f01bcb71a7294cc545b242e}{Esp32\+::get\+Humidite()}, \hyperlink{class_esp32_ab2a1fc92c11af031814569f3d2836f33}{Esp32\+::get\+Humidite\+Unite()}, \hyperlink{class_esp32_aa2cdabace1ce70928c53d25e306a16d1}{Esp32\+::get\+Luminosite()}, \hyperlink{class_esp32_a50f4ef373379d2dbc0fd960438ab6f93}{Esp32\+::get\+Luminosite\+Unite()}, \hyperlink{class_esp32_a31155a36108b37febae371d9ae65385a}{Esp32\+::get\+Pression()}, \hyperlink{class_esp32_a398d4a1cbc61f7af2f3af7ecbcf2f93f}{Esp32\+::get\+Pression\+Unite()}, \hyperlink{class_esp32_ae29854a5127d760a216f96ec7d797412}{Esp32\+::get\+Ressentie()}, \hyperlink{class_esp32_a548ed7533f742d087c65df256479ed00}{Esp32\+::get\+Ressentie\+Unite()}, \hyperlink{class_esp32_adb339413686f3d78df1ecd41f106fd4e}{Esp32\+::get\+Temperature()}, \hyperlink{class_esp32_ae20c976b79f87de083ca8ee49b2abf25}{Esp32\+::get\+Temperature\+Unite()}, \hyperlink{class_ihm_a990b3fe0efe66ae9da5e13a5e0a11291}{graphique}, \hyperlink{class_ihm_af0426507c2130aefd01bdb4f825ae168}{modifier\+Etat\+Led()}, \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, et \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+
+Référencé par \hyperlink{class_ihm_a2ef778196b2eba5b0ab5cb4e066bc3b7}{initialiser\+Connect()}.
+
+
+\begin{DoxyCode}
+00219 \{
+00220     QDateTime maintenant = QDateTime::currentDateTime();
+00221     QString heure = maintenant.toString(\textcolor{stringliteral}{"hh:mm:ss"});
+00222     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->horodatage->setText(heure);
+00223 
+00224     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lcdNumberTemperature->display(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{getEsp32}()->
+      \hyperlink{class_esp32_adb339413686f3d78df1ecd41f106fd4e}{getTemperature}());
+00225     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lcdNumberHumidite->display(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{getEsp32}()->
+      \hyperlink{class_esp32_a87f581ef8f01bcb71a7294cc545b242e}{getHumidite}());
+00226     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lcdNumberRessentie->display(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{getEsp32}()->
+      \hyperlink{class_esp32_ae29854a5127d760a216f96ec7d797412}{getRessentie}());
+00227     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lcdNumberLuminosite->display(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{getEsp32}()->
+      \hyperlink{class_esp32_aa2cdabace1ce70928c53d25e306a16d1}{getLuminosite}());
+00228     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lcdNumberPression->display(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{getEsp32}()->
+      \hyperlink{class_esp32_a31155a36108b37febae371d9ae65385a}{getPression}());
+00229     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lcdNumberAltitude->display(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{getEsp32}()->
+      \hyperlink{class_esp32_a31b691e6c75c1f9859bde4c0df8fe12f}{getAltitude}());
+00230 
+00231     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->labelUniteTemperature->setText(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{getEsp32}()->
+      \hyperlink{class_esp32_ae20c976b79f87de083ca8ee49b2abf25}{getTemperatureUnite}());
+00232     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->labelUniteRessenti->setText(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{getEsp32}()->
+      \hyperlink{class_esp32_a548ed7533f742d087c65df256479ed00}{getRessentieUnite}());
+00233     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->labelUniteHumidite->setText(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{getEsp32}()->
+      \hyperlink{class_esp32_ab2a1fc92c11af031814569f3d2836f33}{getHumiditeUnite}());
+00234     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->labelUniteLuminosite->setText(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{getEsp32}()->
+      \hyperlink{class_esp32_a50f4ef373379d2dbc0fd960438ab6f93}{getLuminositeUnite}());
+00235     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->labelUnitePression->setText(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{getEsp32}()->
+      \hyperlink{class_esp32_a398d4a1cbc61f7af2f3af7ecbcf2f93f}{getPressionUnite}());
+00236     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->labelUniteAltitude->setText(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{getEsp32}()->
+      \hyperlink{class_esp32_aad3c2e4b5d15a02abc62d0329f43942d}{getAltitudeUnite}());
+00237 
+00238     \hyperlink{class_ihm_af0426507c2130aefd01bdb4f825ae168}{modifierEtatLed}();
+00239 
+00240     \hyperlink{class_ihm_a990b3fe0efe66ae9da5e13a5e0a11291}{graphique}->\hyperlink{class_graphique_a42b3c986ca86c426adbb8fdb03a04380}{ajouterDonneeTemperature}(
+      \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{getEsp32}()->\hyperlink{class_esp32_adb339413686f3d78df1ecd41f106fd4e}{getTemperature}());
+00241     \hyperlink{class_ihm_a990b3fe0efe66ae9da5e13a5e0a11291}{graphique}->\hyperlink{class_graphique_ad3dd36f05a9923054a0a2138f96f0311}{ajouterDonneeHumidite}(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->
+      \hyperlink{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{getEsp32}()->\hyperlink{class_esp32_a87f581ef8f01bcb71a7294cc545b242e}{getHumidite}());
+00242     \hyperlink{class_ihm_a990b3fe0efe66ae9da5e13a5e0a11291}{graphique}->\hyperlink{class_graphique_a1af0e1968998cb7b5ee8add1197cb0e0}{ajouterDonneeLuminosite}(
+      \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{getEsp32}()->\hyperlink{class_esp32_aa2cdabace1ce70928c53d25e306a16d1}{getLuminosite}());
+00243     \hyperlink{class_ihm_a990b3fe0efe66ae9da5e13a5e0a11291}{graphique}->\hyperlink{class_graphique_a289f0631e56465012511fd7ec9da1b23}{ajouterDonneePression}(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->
+      \hyperlink{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{getEsp32}()->\hyperlink{class_esp32_a31155a36108b37febae371d9ae65385a}{getPression}());
+00244 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!actualiser\+Donnee\+Gps@{actualiser\+Donnee\+Gps}}
+\index{actualiser\+Donnee\+Gps@{actualiser\+Donnee\+Gps}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{actualiser\+Donnee\+Gps}{actualiserDonneeGps}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::actualiser\+Donnee\+Gps (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_a3ca276093d65c42a5fc5a87cbca1972a}{}\label{class_ihm_a3ca276093d65c42a5fc5a87cbca1972a}
+Méthode appelée dès que l\textquotesingle{}etat du check\+Box plein ecran change 
+
+Références \hyperlink{class_transmission_aa5004c178152de5b94ef14e11e80792c}{Transmission\+::get\+Gps()}, \hyperlink{class_gps_a44c6469bf67727853c06d4be037c6b0f}{Gps\+::get\+Latitude()}, \hyperlink{class_gps_a6ce8da770e213bfbf7f204b107d9e3f5}{Gps\+::get\+Longitude()}, \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, et \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+
+Référencé par \hyperlink{class_ihm_a2ef778196b2eba5b0ab5cb4e066bc3b7}{initialiser\+Connect()}.
+
+
+\begin{DoxyCode}
+00645 \{
+00646     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->labelValeurCoordonnee->setText(QString::number(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->
+      \hyperlink{class_transmission_aa5004c178152de5b94ef14e11e80792c}{getGps}()->\hyperlink{class_gps_a44c6469bf67727853c06d4be037c6b0f}{getLatitude}()) + \textcolor{stringliteral}{" "} + QString::number(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->
+      \hyperlink{class_transmission_aa5004c178152de5b94ef14e11e80792c}{getGps}()->\hyperlink{class_gps_a6ce8da770e213bfbf7f204b107d9e3f5}{getLongitude}()));
+00647     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonEnvoyerCoordonnee->setEnabled(\textcolor{keyword}{true});
+00648 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!actualiser\+Message\+Statut\+Connecter\+Bluetooth@{actualiser\+Message\+Statut\+Connecter\+Bluetooth}}
+\index{actualiser\+Message\+Statut\+Connecter\+Bluetooth@{actualiser\+Message\+Statut\+Connecter\+Bluetooth}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{actualiser\+Message\+Statut\+Connecter\+Bluetooth}{actualiserMessageStatutConnecterBluetooth}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::actualiser\+Message\+Statut\+Connecter\+Bluetooth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_a5d7e6bdacfedc0f0dc4d7b3516454788}{}\label{class_ihm_a5d7e6bdacfedc0f0dc4d7b3516454788}
+methode qui met à jour l\textquotesingle{}affichage des bouton(enable / disable) 
+
+Références \hyperlink{class_ihm_a4c456231c8af9eab099e9aaadf8a378b}{Activer\+Controle\+Led()}, \hyperlink{class_transmission_adf65c6a49fbbc9d25b7b2fca2c410f99}{Transmission\+::get\+Statut\+Bluetooth()}, \hyperlink{class_ihm_aa1bea3b8f9bad5c19a662a2b455895fb}{proc}, \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, et \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+
+Référencé par \hyperlink{class_ihm_a2ef778196b2eba5b0ab5cb4e066bc3b7}{initialiser\+Connect()}.
+
+
+\begin{DoxyCode}
+00498 \{
+00499     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->labelStatut->setText(\textcolor{stringliteral}{"<font color=\(\backslash\)"#f39c12\(\backslash\)">"} + \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->
+      \hyperlink{class_transmission_adf65c6a49fbbc9d25b7b2fca2c410f99}{getStatutBluetooth}() + \textcolor{stringliteral}{"</font>"});
+00500 
+00501     \hyperlink{class_ihm_aa1bea3b8f9bad5c19a662a2b455895fb}{proc}->execute(\textcolor{stringliteral}{"notify-send --icon=/usr/share/icons/hicolor/48x48/apps/bluetooth.png \(\backslash\)""} + 
+      \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_adf65c6a49fbbc9d25b7b2fca2c410f99}{getStatutBluetooth}() + \textcolor{stringliteral}{"\(\backslash\)" "});
+00502 
+00503     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonConnexion->setEnabled(\textcolor{keyword}{false});
+00504     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonScan->setEnabled(\textcolor{keyword}{false});
+00505     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonDeconnexion->setEnabled(\textcolor{keyword}{true});
+00506     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lineEditEnvoyerTrame->setDisabled(\textcolor{keyword}{false});
+00507     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonEnvoyerTrame->setDisabled(\textcolor{keyword}{false});
+00508     \textcolor{comment}{//desactiverConnexionPortSerie();}
+00509     \hyperlink{class_ihm_a4c456231c8af9eab099e9aaadf8a378b}{ActiverControleLed}();
+00510 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!actualiser\+Message\+Statut\+Deconnecter\+Bluetooth@{actualiser\+Message\+Statut\+Deconnecter\+Bluetooth}}
+\index{actualiser\+Message\+Statut\+Deconnecter\+Bluetooth@{actualiser\+Message\+Statut\+Deconnecter\+Bluetooth}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{actualiser\+Message\+Statut\+Deconnecter\+Bluetooth}{actualiserMessageStatutDeconnecterBluetooth}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::actualiser\+Message\+Statut\+Deconnecter\+Bluetooth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_ad73cc62bafa9c43288f69fbac2b80508}{}\label{class_ihm_ad73cc62bafa9c43288f69fbac2b80508}
+methode qui met à jour le message de statut de la connexion bluetooth (appareil connecter) 
+
+Références \hyperlink{class_ihm_a8315a1d902efb0434267778f8144da96}{Desactiver\+Controle\+Led()}, \hyperlink{class_transmission_adf65c6a49fbbc9d25b7b2fca2c410f99}{Transmission\+::get\+Statut\+Bluetooth()}, \hyperlink{class_ihm_a9bd8f55d47f658fa5311b7880cc94114}{initialiser\+Affichage()}, \hyperlink{class_ihm_aa1bea3b8f9bad5c19a662a2b455895fb}{proc}, \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, et \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+
+Référencé par \hyperlink{class_ihm_a2ef778196b2eba5b0ab5cb4e066bc3b7}{initialiser\+Connect()}.
+
+
+\begin{DoxyCode}
+00518 \{
+00519     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->labelStatut->setText(\textcolor{stringliteral}{"<font color=\(\backslash\)"#7329b9\(\backslash\)">"} + \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->
+      \hyperlink{class_transmission_adf65c6a49fbbc9d25b7b2fca2c410f99}{getStatutBluetooth}() + \textcolor{stringliteral}{"</font>"});
+00520 
+00521     \hyperlink{class_ihm_aa1bea3b8f9bad5c19a662a2b455895fb}{proc}->execute(\textcolor{stringliteral}{"notify-send --icon=/usr/share/icons/hicolor/48x48/apps/bluetooth.png \(\backslash\)""} + 
+      \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_adf65c6a49fbbc9d25b7b2fca2c410f99}{getStatutBluetooth}() + \textcolor{stringliteral}{"\(\backslash\)" "});
+00522 
+00523     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonConnexion->setEnabled(\textcolor{keyword}{true});
+00524     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonScan->setEnabled(\textcolor{keyword}{true});
+00525     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonDeconnexion->setEnabled(\textcolor{keyword}{false});
+00526     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lineEditEnvoyerTrame->setDisabled(\textcolor{keyword}{true});
+00527     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonEnvoyerTrame->setDisabled(\textcolor{keyword}{true});
+00528     \hyperlink{class_ihm_a9bd8f55d47f658fa5311b7880cc94114}{initialiserAffichage}();
+00529     \hyperlink{class_ihm_a8315a1d902efb0434267778f8144da96}{DesactiverControleLed}();
+00530 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!actualiser\+Message\+Statut\+Erreur\+Bluetooth@{actualiser\+Message\+Statut\+Erreur\+Bluetooth}}
+\index{actualiser\+Message\+Statut\+Erreur\+Bluetooth@{actualiser\+Message\+Statut\+Erreur\+Bluetooth}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{actualiser\+Message\+Statut\+Erreur\+Bluetooth}{actualiserMessageStatutErreurBluetooth}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::actualiser\+Message\+Statut\+Erreur\+Bluetooth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_a29b4c5fba871a30f7f2e5fbe08a2087d}{}\label{class_ihm_a29b4c5fba871a30f7f2e5fbe08a2087d}
+methode qui met à jour le message de statut de la connexion bluetooth (appareil deconnecter) 
+
+Références \hyperlink{class_transmission_adf65c6a49fbbc9d25b7b2fca2c410f99}{Transmission\+::get\+Statut\+Bluetooth()}, \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, et \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+
+Référencé par \hyperlink{class_ihm_a2ef778196b2eba5b0ab5cb4e066bc3b7}{initialiser\+Connect()}.
+
+
+\begin{DoxyCode}
+00538 \{
+00539     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->labelStatut->setText(\textcolor{stringliteral}{"<font color=\(\backslash\)"#7329b9\(\backslash\)">"} + \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->
+      \hyperlink{class_transmission_adf65c6a49fbbc9d25b7b2fca2c410f99}{getStatutBluetooth}() + \textcolor{stringliteral}{"</font>"});
+00540 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!actualiser\+Trame@{actualiser\+Trame}}
+\index{actualiser\+Trame@{actualiser\+Trame}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{actualiser\+Trame}{actualiserTrame}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::actualiser\+Trame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_a94ea90d27fc0aa7598cf270dd3be98eb}{}\label{class_ihm_a94ea90d27fc0aa7598cf270dd3be98eb}
+permet de passer en mode Operateur 
+
+Références \hyperlink{class_transmission_a3fc179158c8c9e2cceba36423ef92505}{Transmission\+::get\+Trame()}, \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, et \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+
+Référencé par \hyperlink{class_ihm_a2ef778196b2eba5b0ab5cb4e066bc3b7}{initialiser\+Connect()}.
+
+
+\begin{DoxyCode}
+00173 \{
+00174     QDateTime maintenant = QDateTime::currentDateTime();
+00175     QString heure = maintenant.toString(\textcolor{stringliteral}{"hh:mm:ss"});
+00176 
+00177     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->textEditTrame->setTextColor(Qt::red);
+00178     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->textEditTrame->append(heure + \textcolor{stringliteral}{" :"});
+00179     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->textEditTrame->setTextColor(Qt::black);
+00180     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->textEditTrame->append(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_a3fc179158c8c9e2cceba36423ef92505}{getTrame}());
+00181 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!charger\+Configuration\+Port@{charger\+Configuration\+Port}}
+\index{charger\+Configuration\+Port@{charger\+Configuration\+Port}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{charger\+Configuration\+Port()}{chargerConfigurationPort()}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::charger\+Configuration\+Port (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_ihm_a7341abb08452b21ef2e5c8cb5095d5b0}{}\label{class_ihm_a7341abb08452b21ef2e5c8cb5095d5b0}
+cette methode et appeler pour enregistrer la configuration du port dans un fichier .ini 
+
+Références \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+
+Référencé par \hyperlink{class_ihm_a3c6fa78360d39cf904dc3a20b0347ddc}{initialiser\+Interface()}.
+
+
+\begin{DoxyCode}
+00098 \{
+00099     QSettings configuration(\textcolor{stringliteral}{"Sonde.ini"}, QSettings::IniFormat);
+00100 
+00101     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxAppareil->setCurrentText(configuration.value(\textcolor{stringliteral}{"PortSerie/Appareil"},\textcolor{stringliteral}{"/dev/ttyUSB0"}).
+      toString());
+00102     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxDebitBaud->setCurrentText(configuration.value(\textcolor{stringliteral}{"PortSerie/DebitBauds"},\textcolor{stringliteral}{"1200"}).toString());
+00103     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBitsDonnees->setCurrentText(configuration.value(\textcolor{stringliteral}{"PortSerie/BitsDonnee"},\textcolor{stringliteral}{"5"}).toString());
+00104     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBitsStop->setCurrentText(configuration.value(\textcolor{stringliteral}{"PortSerie/BitsStop"},\textcolor{stringliteral}{"1"}).toString());
+00105 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!desactiver\+Connexion\+Bluetooth@{desactiver\+Connexion\+Bluetooth}}
+\index{desactiver\+Connexion\+Bluetooth@{desactiver\+Connexion\+Bluetooth}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{desactiver\+Connexion\+Bluetooth()}{desactiverConnexionBluetooth()}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::desactiver\+Connexion\+Bluetooth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_ihm_a7ff481c3a05c7d84be2b66552fafd79e}{}\label{class_ihm_a7ff481c3a05c7d84be2b66552fafd79e}
+cette methode et appeler pour activer la possibiliter de connexion par port serie car aucun connexion en cour 
+
+Références \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+\begin{DoxyCode}
+00588 \{
+00589     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBluetooth->setDisabled(\textcolor{keyword}{true});
+00590     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonScan->setDisabled(\textcolor{keyword}{true});
+00591     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonConnexion->setDisabled(\textcolor{keyword}{true});
+00592     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonDeconnexion->setDisabled(\textcolor{keyword}{true});
+00593     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->labelStatut->setText(\textcolor{stringliteral}{"<font color=\(\backslash\)"#63cb23\(\backslash\)">Connexion Serie en cours...</font>"});
+00594 
+00595 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!desactiver\+Connexion\+Port\+Serie@{desactiver\+Connexion\+Port\+Serie}}
+\index{desactiver\+Connexion\+Port\+Serie@{desactiver\+Connexion\+Port\+Serie}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{desactiver\+Connexion\+Port\+Serie()}{desactiverConnexionPortSerie()}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::desactiver\+Connexion\+Port\+Serie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_ihm_a3c792f8eeef5216e76cdb9d9e13eb1aa}{}\label{class_ihm_a3c792f8eeef5216e76cdb9d9e13eb1aa}
+cette methode et appeler pour charger la configuration du port depuis un fichier .ini 
+
+Références \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+\begin{DoxyCode}
+00559 \{
+00560     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxAppareil->setDisabled(\textcolor{keyword}{true});
+00561     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxDebitBaud->setDisabled(\textcolor{keyword}{true});
+00562     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBitsDonnees->setDisabled(\textcolor{keyword}{true});
+00563     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBitsStop->setDisabled(\textcolor{keyword}{true});
+00564     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonOuvrirPort->setDisabled(\textcolor{keyword}{true});
+00565     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonFermerPort->setDisabled(\textcolor{keyword}{true});
+00566 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!Desactiver\+Controle\+Led@{Desactiver\+Controle\+Led}}
+\index{Desactiver\+Controle\+Led@{Desactiver\+Controle\+Led}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{Desactiver\+Controle\+Led()}{DesactiverControleLed()}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::\+Desactiver\+Controle\+Led (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_ihm_a8315a1d902efb0434267778f8144da96}{}\label{class_ihm_a8315a1d902efb0434267778f8144da96}
+cette methode active le controle de la led quand une connexion est en cour 
+
+Références \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+
+Référencé par \hyperlink{class_ihm_ad73cc62bafa9c43288f69fbac2b80508}{actualiser\+Message\+Statut\+Deconnecter\+Bluetooth()}, et \hyperlink{class_ihm_a6a9bb865ffa3baf686ce16f11f69c57f}{desactiver\+Fermer\+Port()}.
+
+
+\begin{DoxyCode}
+00310 \{
+00311     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->radioButtonLedOff->setDisabled(\textcolor{keyword}{true});
+00312     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->radioButtonLedVert->setDisabled(\textcolor{keyword}{true});
+00313     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->radioButtonLedRouge->setDisabled(\textcolor{keyword}{true});
+00314     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->radioButtonLedOrange->setDisabled(\textcolor{keyword}{true});
+00315 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!desactiver\+Fermer\+Port@{desactiver\+Fermer\+Port}}
+\index{desactiver\+Fermer\+Port@{desactiver\+Fermer\+Port}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{desactiver\+Fermer\+Port}{desactiverFermerPort}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::desactiver\+Fermer\+Port (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_a6a9bb865ffa3baf686ce16f11f69c57f}{}\label{class_ihm_a6a9bb865ffa3baf686ce16f11f69c57f}
+Méthode appelée quand un port serie et ouvert 
+
+Références \hyperlink{class_ihm_a8315a1d902efb0434267778f8144da96}{Desactiver\+Controle\+Led()}, \hyperlink{class_ihm_a9bd8f55d47f658fa5311b7880cc94114}{initialiser\+Affichage()}, et \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+
+Référencé par \hyperlink{class_ihm_a2ef778196b2eba5b0ab5cb4e066bc3b7}{initialiser\+Connect()}.
+
+
+\begin{DoxyCode}
+00323 \{
+00324     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonOuvrirPort->setDisabled(\textcolor{keyword}{false});
+00325     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonFermerPort->setDisabled(\textcolor{keyword}{true});
+00326     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lineEditEnvoyerTrame->setDisabled(\textcolor{keyword}{true});
+00327     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonEnvoyerTrame->setDisabled(\textcolor{keyword}{true});
+00328     \hyperlink{class_ihm_a9bd8f55d47f658fa5311b7880cc94114}{initialiserAffichage}();
+00329     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->labelValeurCoordonnee->setText(\textcolor{stringliteral}{"<font color=\(\backslash\)"#bd2c2c\(\backslash\)">Connecté un GPS</font>"});
+00330     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxAppareil->setDisabled(\textcolor{keyword}{false});
+00331     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBitsDonnees->setDisabled(\textcolor{keyword}{false});
+00332     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBitsStop->setDisabled(\textcolor{keyword}{false});
+00333     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxDebitBaud->setDisabled(\textcolor{keyword}{false});
+00334     \hyperlink{class_ihm_a8315a1d902efb0434267778f8144da96}{DesactiverControleLed}();
+00335 
+00336     \textcolor{comment}{//activerConnexionBluetooth();}
+00337 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!desactiver\+Ouverture\+Port@{desactiver\+Ouverture\+Port}}
+\index{desactiver\+Ouverture\+Port@{desactiver\+Ouverture\+Port}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{desactiver\+Ouverture\+Port}{desactiverOuverturePort}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::desactiver\+Ouverture\+Port (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_ab0a18639faa9f2c0b2a141321be4b973}{}\label{class_ihm_ab0a18639faa9f2c0b2a141321be4b973}
+met a jour les donner des Lcd\+Number dans l\textquotesingle{}onglet Données en fonction de la trame recu 
+
+Références \hyperlink{class_ihm_a4c456231c8af9eab099e9aaadf8a378b}{Activer\+Controle\+Led()}, et \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+
+Référencé par \hyperlink{class_ihm_a2ef778196b2eba5b0ab5cb4e066bc3b7}{initialiser\+Connect()}.
+
+
+\begin{DoxyCode}
+00286 \{
+00287     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonOuvrirPort->setDisabled(\textcolor{keyword}{true});
+00288     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonFermerPort->setDisabled(\textcolor{keyword}{false});
+00289     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lineEditEnvoyerTrame->setDisabled(\textcolor{keyword}{false});
+00290     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonEnvoyerTrame->setDisabled(\textcolor{keyword}{false});
+00291     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lineEditEnvoyerTrame->setDisabled(\textcolor{keyword}{false});
+00292     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonEnvoyerTrame->setDisabled(\textcolor{keyword}{false});
+00293     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxAppareil->setDisabled(\textcolor{keyword}{true});
+00294     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBitsDonnees->setDisabled(\textcolor{keyword}{true});
+00295     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBitsStop->setDisabled(\textcolor{keyword}{true});
+00296     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxDebitBaud->setDisabled(\textcolor{keyword}{true});
+00297 
+00298     \hyperlink{class_ihm_a4c456231c8af9eab099e9aaadf8a378b}{ActiverControleLed}();
+00299 
+00300     \textcolor{comment}{//desactiverConnexionBluetooth();}
+00301 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!enregistrer\+Configuration\+Port@{enregistrer\+Configuration\+Port}}
+\index{enregistrer\+Configuration\+Port@{enregistrer\+Configuration\+Port}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{enregistrer\+Configuration\+Port()}{enregistrerConfigurationPort()}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::enregistrer\+Configuration\+Port (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_ihm_a05afaf2191aaae673c5ecd14a6d1c921}{}\label{class_ihm_a05afaf2191aaae673c5ecd14a6d1c921}
+cette fonction désactive certains Boutons ne pouvant être utilisé 
+
+Références \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+
+Référencé par \hyperlink{class_ihm_add292ea9005bacd1de44dd1ed9ede5b9}{$\sim$\+Ihm()}.
+
+
+\begin{DoxyCode}
+00081 \{
+00082     QSettings configuration(\textcolor{stringliteral}{"Sonde.ini"}, QSettings::IniFormat);
+00083 
+00084     configuration.beginGroup(\textcolor{stringliteral}{"PortSerie"});
+00085     configuration.setValue(\textcolor{stringliteral}{"Appareil"}, \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxAppareil->currentText());
+00086     configuration.setValue(\textcolor{stringliteral}{"DebitBauds"}, \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxDebitBaud->currentText());
+00087     configuration.setValue(\textcolor{stringliteral}{"BitsDonnee"}, \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBitsDonnees->currentText());
+00088     configuration.setValue(\textcolor{stringliteral}{"BitsStop"}, \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBitsStop->currentText());
+00089     configuration.endGroup();
+00090 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!initialiser\+Affichage@{initialiser\+Affichage}}
+\index{initialiser\+Affichage@{initialiser\+Affichage}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{initialiser\+Affichage()}{initialiserAffichage()}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::initialiser\+Affichage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_ihm_a9bd8f55d47f658fa5311b7880cc94114}{}\label{class_ihm_a9bd8f55d47f658fa5311b7880cc94114}
+
+
+Références \hyperlink{ihm_8h_a80700bb63bd56ebabbb4728aa433fd29}{L\+E\+D\+\_\+\+O\+FF}, et \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+
+Référencé par \hyperlink{class_ihm_ad73cc62bafa9c43288f69fbac2b80508}{actualiser\+Message\+Statut\+Deconnecter\+Bluetooth()}, \hyperlink{class_ihm_a6a9bb865ffa3baf686ce16f11f69c57f}{desactiver\+Fermer\+Port()}, et \hyperlink{class_ihm_a50a7a15775452923868348bdbe4fa51e}{Ihm()}.
+
+
+\begin{DoxyCode}
+00345 \{
+00346     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lcdNumberTemperature->display(\textcolor{stringliteral}{"----"});
+00347     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lcdNumberHumidite->display(\textcolor{stringliteral}{"----"});
+00348     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lcdNumberRessentie->display(\textcolor{stringliteral}{"----"});
+00349     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lcdNumberLuminosite->display(\textcolor{stringliteral}{"----"});
+00350     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lcdNumberPression->display(\textcolor{stringliteral}{"----"});
+00351     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lcdNumberAltitude->display(\textcolor{stringliteral}{"----"});
+00352 
+00353     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->ImageEtatLed->setPixmap(QPixmap(\hyperlink{ihm_8h_a80700bb63bd56ebabbb4728aa433fd29}{LED\_OFF}));
+00354 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!initialiser\+Connect@{initialiser\+Connect}}
+\index{initialiser\+Connect@{initialiser\+Connect}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{initialiser\+Connect()}{initialiserConnect()}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::initialiser\+Connect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_ihm_a2ef778196b2eba5b0ab5cb4e066bc3b7}{}\label{class_ihm_a2ef778196b2eba5b0ab5cb4e066bc3b7}
+cette methode desactive le controle de la led car aucun connexion en cour 
+
+Références \hyperlink{class_ihm_a02118154be39cdd3de7fdbdbe396a534}{actualiser\+Affichage\+Bluetooth()}, \hyperlink{class_ihm_a65487c8229375ff72290bed145876737}{actualiser\+Affichage\+Meteo()}, \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{actualiser\+Donnee()}, \hyperlink{class_ihm_a3ca276093d65c42a5fc5a87cbca1972a}{actualiser\+Donnee\+Gps()}, \hyperlink{class_ihm_a5d7e6bdacfedc0f0dc4d7b3516454788}{actualiser\+Message\+Statut\+Connecter\+Bluetooth()}, \hyperlink{class_ihm_ad73cc62bafa9c43288f69fbac2b80508}{actualiser\+Message\+Statut\+Deconnecter\+Bluetooth()}, \hyperlink{class_ihm_a29b4c5fba871a30f7f2e5fbe08a2087d}{actualiser\+Message\+Statut\+Erreur\+Bluetooth()}, \hyperlink{class_ihm_a94ea90d27fc0aa7598cf270dd3be98eb}{actualiser\+Trame()}, \hyperlink{class_ihm_a6a9bb865ffa3baf686ce16f11f69c57f}{desactiver\+Fermer\+Port()}, \hyperlink{class_ihm_ab0a18639faa9f2c0b2a141321be4b973}{desactiver\+Ouverture\+Port()}, \hyperlink{class_ihm_af17b420166b2bb1b3e3b1c4b998a2102}{meteo}, \hyperlink{class_ihm_a9d9ac22e5d73a010bc75a1fcf2e7ddcb}{mettre\+Ajour\+Appareil\+Bluetooth\+Disponible()}, et \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}.
+
+
+
+Référencé par \hyperlink{class_ihm_a50a7a15775452923868348bdbe4fa51e}{Ihm()}.
+
+
+\begin{DoxyCode}
+00059 \{
+00060     connect(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, SIGNAL(trameEsp32Recue()), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{class_ihm_a94ea90d27fc0aa7598cf270dd3be98eb}{actualiserTrame}()));
+00061     connect(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, SIGNAL(trameEsp32Recue()), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{actualiserDonnee}()));
+00062     connect(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, SIGNAL(trameGpsRecue()), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{class_ihm_a94ea90d27fc0aa7598cf270dd3be98eb}{actualiserTrame}()));
+00063     connect(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, SIGNAL(trameGpsRecue()), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{class_ihm_a3ca276093d65c42a5fc5a87cbca1972a}{actualiserDonneeGps}()));
+00064 
+00065     connect(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, SIGNAL(portOuvert()), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{class_ihm_ab0a18639faa9f2c0b2a141321be4b973}{desactiverOuverturePort}()));
+00066     connect(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, SIGNAL(portFerme()), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{class_ihm_a6a9bb865ffa3baf686ce16f11f69c57f}{desactiverFermerPort}()));
+00067     connect(\hyperlink{class_ihm_af17b420166b2bb1b3e3b1c4b998a2102}{meteo}, SIGNAL(donnerMeteoMiseAJour()), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{class_ihm_a65487c8229375ff72290bed145876737}{actualiserAffichageMeteo}()));
+00068     connect(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, SIGNAL(nouvelleAppareilDisponible()), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{class_ihm_a9d9ac22e5d73a010bc75a1fcf2e7ddcb}{mettreAjourAppareilBluetoothDisponible}()));
+00069     connect(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, SIGNAL(scanfini()), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{class_ihm_a02118154be39cdd3de7fdbdbe396a534}{actualiserAffichageBluetooth}()));
+00070     connect(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, SIGNAL(connecter()), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{class_ihm_a5d7e6bdacfedc0f0dc4d7b3516454788}{actualiserMessageStatutConnecterBluetooth}()));
+00071     connect(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, SIGNAL(deconnecter()), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{class_ihm_ad73cc62bafa9c43288f69fbac2b80508}{actualiserMessageStatutDeconnecterBluetooth}()));
+00072     connect(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, SIGNAL(socketErreur()), \textcolor{keyword}{this}, SLOT(
+      \hyperlink{class_ihm_a29b4c5fba871a30f7f2e5fbe08a2087d}{actualiserMessageStatutErreurBluetooth}()));
+00073 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!initialiser\+Interface@{initialiser\+Interface}}
+\index{initialiser\+Interface@{initialiser\+Interface}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{initialiser\+Interface()}{initialiserInterface()}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::initialiser\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_ihm_a3c6fa78360d39cf904dc3a20b0347ddc}{}\label{class_ihm_a3c6fa78360d39cf904dc3a20b0347ddc}
+reinitialise les different lcd\+Number a zero 
+
+Références \hyperlink{class_ihm_a7341abb08452b21ef2e5c8cb5095d5b0}{charger\+Configuration\+Port()}, \hyperlink{ihm_8h_a80700bb63bd56ebabbb4728aa433fd29}{L\+E\+D\+\_\+\+O\+FF}, \hyperlink{ihm_8h_a467f42462a8692cc6e1027a51c725759}{O\+N\+G\+L\+E\+T\+\_\+\+M\+O\+D\+E\+\_\+\+O\+P\+E\+R\+A\+T\+E\+UR}, et \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+
+Référencé par \hyperlink{class_ihm_a50a7a15775452923868348bdbe4fa51e}{Ihm()}.
+
+
+\begin{DoxyCode}
+00113 \{
+00114     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->tabWidget->setTabEnabled(\hyperlink{ihm_8h_a467f42462a8692cc6e1027a51c725759}{ONGLET\_MODE\_OPERATEUR},\textcolor{keyword}{false});
+00115     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->textEditTrame->setReadOnly(\textcolor{keyword}{true});
+00116     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonFermerPort->setDisabled(\textcolor{keyword}{true});
+00117     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->radioButtonLedOff->setDisabled(\textcolor{keyword}{true});
+00118     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->radioButtonLedVert->setDisabled(\textcolor{keyword}{true});
+00119     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->radioButtonLedRouge->setDisabled(\textcolor{keyword}{true});
+00120     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->radioButtonLedOrange->setDisabled(\textcolor{keyword}{true});
+00121     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->radioButtonLedOff->setChecked(\textcolor{keyword}{true});
+00122     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->ImageEtatLed->setPixmap(QPixmap(\hyperlink{ihm_8h_a80700bb63bd56ebabbb4728aa433fd29}{LED\_OFF}));
+00123 
+00124     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxAppareil->addItems(QStringList\{\textcolor{stringliteral}{"/dev/ttyUSB0"}, \textcolor{stringliteral}{"/dev/ttyUSB1"}, \textcolor{stringliteral}{"/dev/ttyS0"}, \textcolor{stringliteral}{"/dev/ttyS1"}
+      , \textcolor{stringliteral}{"/dev/ttyS2"}, \textcolor{stringliteral}{"/dev/ttyS3"} \});
+00125     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxDebitBaud->addItems(QStringList\{\textcolor{stringliteral}{"1200"}, \textcolor{stringliteral}{"1800"}, \textcolor{stringliteral}{"2400"}, \textcolor{stringliteral}{"4800"}, \textcolor{stringliteral}{"9600"}, \textcolor{stringliteral}{"19200"}, \textcolor{stringliteral}{"38400"},
+       \textcolor{stringliteral}{"57600"}, \textcolor{stringliteral}{"115200"}, \textcolor{stringliteral}{"230400"}, \textcolor{stringliteral}{"460800"}\});
+00126     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBitsDonnees->addItems(QStringList\{\textcolor{stringliteral}{"5"}, \textcolor{stringliteral}{"6"}, \textcolor{stringliteral}{"7"}, \textcolor{stringliteral}{"8"}\});
+00127     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBitsStop->addItems(QStringList\{\textcolor{stringliteral}{"1"}, \textcolor{stringliteral}{"2"}\});
+00128     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonConnexion->setDisabled(\textcolor{keyword}{true});
+00129     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonDeconnexion->setDisabled(\textcolor{keyword}{true});
+00130     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lineEditEnvoyerTrame->setDisabled(\textcolor{keyword}{true});
+00131     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonEnvoyerTrame->setDisabled(\textcolor{keyword}{true});
+00132     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonEnvoyerCoordonnee->setEnabled(\textcolor{keyword}{false});
+00133     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->labelValeurCoordonnee->setText(\textcolor{stringliteral}{"<font color=\(\backslash\)"#bd2c2c\(\backslash\)">Connecté un GPS</font>"});
+00134     \hyperlink{class_ihm_a7341abb08452b21ef2e5c8cb5095d5b0}{chargerConfigurationPort}();
+00135 
+00136 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!mettre\+Ajour\+Appareil\+Bluetooth\+Disponible@{mettre\+Ajour\+Appareil\+Bluetooth\+Disponible}}
+\index{mettre\+Ajour\+Appareil\+Bluetooth\+Disponible@{mettre\+Ajour\+Appareil\+Bluetooth\+Disponible}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{mettre\+Ajour\+Appareil\+Bluetooth\+Disponible}{mettreAjourAppareilBluetoothDisponible}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::mettre\+Ajour\+Appareil\+Bluetooth\+Disponible (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_a9d9ac22e5d73a010bc75a1fcf2e7ddcb}{}\label{class_ihm_a9d9ac22e5d73a010bc75a1fcf2e7ddcb}
+methode qui actualise les données de meteo reçu 
+
+Références \hyperlink{class_transmission_a2a38d0633b4a27dfa3754efcd3db4f9c}{Transmission\+::get\+Appareil\+Disponible()}, \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, et \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+
+Référencé par \hyperlink{class_ihm_a2ef778196b2eba5b0ab5cb4e066bc3b7}{initialiser\+Connect()}.
+
+
+\begin{DoxyCode}
+00445 \{
+00446      \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBluetooth->clear();
+00447      \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBluetooth->addItems(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->
+      \hyperlink{class_transmission_a2a38d0633b4a27dfa3754efcd3db4f9c}{getAppareilDisponible}());
+00448 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!modifier\+Etat\+Led@{modifier\+Etat\+Led}}
+\index{modifier\+Etat\+Led@{modifier\+Etat\+Led}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{modifier\+Etat\+Led()}{modifierEtatLed()}}]{\setlength{\rightskip}{0pt plus 5cm}Ihm\+::modifier\+Etat\+Led (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_ihm_af0426507c2130aefd01bdb4f825ae168}{}\label{class_ihm_af0426507c2130aefd01bdb4f825ae168}
+Méthode qui actualise les données de L\textquotesingle{}ihm.
+
+destructeur de la classe \hyperlink{class_ihm}{Ihm} 
+
+Références \hyperlink{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{Transmission\+::get\+Esp32()}, \hyperlink{class_esp32_ac695656654b5d83ec3924b47f533f465}{Esp32\+::get\+Etat\+Led()}, \hyperlink{ihm_8h_a80700bb63bd56ebabbb4728aa433fd29}{L\+E\+D\+\_\+\+O\+FF}, \hyperlink{ihm_8h_a4d9260fdff3b0a796816640bbac505cc}{L\+E\+D\+\_\+\+O\+R\+A\+N\+GE}, \hyperlink{ihm_8h_a37c6676a5b82b283c556ba9a35d8ad8d}{L\+E\+D\+\_\+\+R\+O\+U\+GE}, \hyperlink{ihm_8h_ae96e1dcc18e953ab066891dcb822ec71}{L\+E\+D\+\_\+\+V\+E\+RT}, \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}, \hyperlink{ihm_8h_a51cc9c67b26515b9fe244dd1d583a7b8}{V\+A\+L\+E\+U\+R\+\_\+\+L\+E\+D\+\_\+\+O\+FF}, \hyperlink{ihm_8h_a96cded5b4a0179b8773dc8caec0c7bec}{V\+A\+L\+E\+U\+R\+\_\+\+L\+E\+D\+\_\+\+O\+R\+A\+N\+GE}, \hyperlink{ihm_8h_a463267e2444f17d868aadaf532385f29}{V\+A\+L\+E\+U\+R\+\_\+\+L\+E\+D\+\_\+\+R\+O\+U\+GE}, et \hyperlink{ihm_8h_ab5894fc14244d3bab5a2a702b15ef745}{V\+A\+L\+E\+U\+R\+\_\+\+L\+E\+D\+\_\+\+V\+E\+RT}.
+
+
+
+Référencé par \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{actualiser\+Donnee()}.
+
+
+\begin{DoxyCode}
+00189 \{
+00190     \textcolor{keywordflow}{switch} (\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_afccd88f8be8c204a0960bc2d6970931f}{getEsp32}()->\hyperlink{class_esp32_ac695656654b5d83ec3924b47f533f465}{getEtatLed}())
+00191           \{
+00192              \textcolor{keywordflow}{case} \hyperlink{ihm_8h_a51cc9c67b26515b9fe244dd1d583a7b8}{VALEUR\_LED\_OFF}:
+00193                 \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->ImageEtatLed->setPixmap(QPixmap(\hyperlink{ihm_8h_a80700bb63bd56ebabbb4728aa433fd29}{LED\_OFF}));
+00194                 \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->radioButtonLedOff->setChecked(\textcolor{keyword}{true});
+00195                 \textcolor{keywordflow}{break};
+00196              \textcolor{keywordflow}{case} \hyperlink{ihm_8h_a463267e2444f17d868aadaf532385f29}{VALEUR\_LED\_ROUGE}:
+00197                 \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->ImageEtatLed->setPixmap(QPixmap(\hyperlink{ihm_8h_a37c6676a5b82b283c556ba9a35d8ad8d}{LED\_ROUGE}));
+00198                 \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->radioButtonLedRouge->setChecked(\textcolor{keyword}{true});
+00199                 \textcolor{keywordflow}{break};
+00200              \textcolor{keywordflow}{case} \hyperlink{ihm_8h_ab5894fc14244d3bab5a2a702b15ef745}{VALEUR\_LED\_VERT}:
+00201                 \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->ImageEtatLed->setPixmap(QPixmap(\hyperlink{ihm_8h_ae96e1dcc18e953ab066891dcb822ec71}{LED\_VERT}));
+00202                 \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->radioButtonLedVert->setChecked(\textcolor{keyword}{true});
+00203                \textcolor{keywordflow}{break};
+00204              \textcolor{keywordflow}{case} \hyperlink{ihm_8h_a96cded5b4a0179b8773dc8caec0c7bec}{VALEUR\_LED\_ORANGE}:
+00205                 \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->ImageEtatLed->setPixmap(QPixmap(\hyperlink{ihm_8h_a4d9260fdff3b0a796816640bbac505cc}{LED\_ORANGE}));
+00206                 \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->radioButtonLedOrange->setChecked(\textcolor{keyword}{true});
+00207                \textcolor{keywordflow}{break};
+00208              \textcolor{keywordflow}{default}:
+00209                 \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->ImageEtatLed->setPixmap(QPixmap(\hyperlink{ihm_8h_a80700bb63bd56ebabbb4728aa433fd29}{LED\_OFF}));
+00210                 \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->radioButtonLedOff->setChecked(\textcolor{keyword}{true});
+00211           \}
+00212 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!on\+\_\+check\+Box\+Plein\+Ecran\+\_\+state\+Changed@{on\+\_\+check\+Box\+Plein\+Ecran\+\_\+state\+Changed}}
+\index{on\+\_\+check\+Box\+Plein\+Ecran\+\_\+state\+Changed@{on\+\_\+check\+Box\+Plein\+Ecran\+\_\+state\+Changed}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{on\+\_\+check\+Box\+Plein\+Ecran\+\_\+state\+Changed}{on_checkBoxPleinEcran_stateChanged}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::on\+\_\+check\+Box\+Plein\+Ecran\+\_\+state\+Changed (
+\begin{DoxyParamCaption}
+\item[{int}]{arg1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_a8ee57b456ba85c2667ebf298f06d60c5}{}\label{class_ihm_a8ee57b456ba85c2667ebf298f06d60c5}
+Méthode appelée dès que le push bouton graphique et enclencher
+
+
+\begin{DoxyParams}{Paramètres}
+{\em arg1} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}
+00628 \{
+00629     \textcolor{keywordflow}{if}(arg1 == 2)
+00630     \{
+00631         showFullScreen();
+00632     \}
+00633     \textcolor{keywordflow}{else}
+00634     \{
+00635         showNormal();
+00636     \}
+00637 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!on\+\_\+\+Mode\+Operateur\+\_\+state\+Changed@{on\+\_\+\+Mode\+Operateur\+\_\+state\+Changed}}
+\index{on\+\_\+\+Mode\+Operateur\+\_\+state\+Changed@{on\+\_\+\+Mode\+Operateur\+\_\+state\+Changed}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{on\+\_\+\+Mode\+Operateur\+\_\+state\+Changed}{on_ModeOperateur_stateChanged}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::on\+\_\+\+Mode\+Operateur\+\_\+state\+Changed (
+\begin{DoxyParamCaption}
+\item[{int}]{arg1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_aeb9414496621bcc42dc63d3ad6e194f9}{}\label{class_ihm_aeb9414496621bcc42dc63d3ad6e194f9}
+action de fermer la widget
+
+
+\begin{DoxyParams}{Paramètres}
+{\em arg1} & \\
+\hline
+\end{DoxyParams}
+
+
+Références \hyperlink{ihm_8h_a6a76d185be61af9a67ee12297edb0025}{M\+O\+D\+E\+\_\+\+O\+P\+E\+R\+A\+T\+E\+U\+R\+\_\+\+A\+C\+T\+I\+V\+ER}, \hyperlink{ihm_8h_a467f42462a8692cc6e1027a51c725759}{O\+N\+G\+L\+E\+T\+\_\+\+M\+O\+D\+E\+\_\+\+O\+P\+E\+R\+A\+T\+E\+UR}, et \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+\begin{DoxyCode}
+00156 \{
+00157     \textcolor{keywordflow}{if}(arg1 == \hyperlink{ihm_8h_a6a76d185be61af9a67ee12297edb0025}{MODE\_OPERATEUR\_ACTIVER})
+00158     \{
+00159         \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->tabWidget->setTabEnabled(\hyperlink{ihm_8h_a467f42462a8692cc6e1027a51c725759}{ONGLET\_MODE\_OPERATEUR},\textcolor{keyword}{true});
+00160     \}
+00161     \textcolor{keywordflow}{else}
+00162     \{
+00163         \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->tabWidget->setTabEnabled(\hyperlink{ihm_8h_a467f42462a8692cc6e1027a51c725759}{ONGLET\_MODE\_OPERATEUR},\textcolor{keyword}{false});
+00164     \}
+00165 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!on\+\_\+push\+Button\+Connexion\+\_\+clicked@{on\+\_\+push\+Button\+Connexion\+\_\+clicked}}
+\index{on\+\_\+push\+Button\+Connexion\+\_\+clicked@{on\+\_\+push\+Button\+Connexion\+\_\+clicked}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{on\+\_\+push\+Button\+Connexion\+\_\+clicked}{on_pushButtonConnexion_clicked}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::on\+\_\+push\+Button\+Connexion\+\_\+clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_abf61dda1820e5632485de93983c40196}{}\label{class_ihm_abf61dda1820e5632485de93983c40196}
+Méthode appelée dès que le push bouton Scan et enclencher 
+
+Références \hyperlink{class_transmission_a5a21d201dd0096f96aec12264c2f03d9}{Transmission\+::connecter\+Appareil\+Bluetooth()}, \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, et \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+\begin{DoxyCode}
+00484 \{
+00485     \textcolor{keywordflow}{if}(\hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBluetooth->currentText() != \textcolor{stringliteral}{""})
+00486     \{
+00487         \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->labelStatut->setText(\textcolor{stringliteral}{"<font color=\(\backslash\)"#21618c\(\backslash\)">Connexion en cours...</font>"});
+00488         \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_a5a21d201dd0096f96aec12264c2f03d9}{connecterAppareilBluetooth}(
+      \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBluetooth->currentText());
+00489     \}
+00490 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!on\+\_\+push\+Button\+Deconnexion\+\_\+clicked@{on\+\_\+push\+Button\+Deconnexion\+\_\+clicked}}
+\index{on\+\_\+push\+Button\+Deconnexion\+\_\+clicked@{on\+\_\+push\+Button\+Deconnexion\+\_\+clicked}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{on\+\_\+push\+Button\+Deconnexion\+\_\+clicked}{on_pushButtonDeconnexion_clicked}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::on\+\_\+push\+Button\+Deconnexion\+\_\+clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_ad176c58fb3c583286544f010ac006b66}{}\label{class_ihm_ad176c58fb3c583286544f010ac006b66}
+Méthode appelée dès que le push bouton Connexion et enclencher 
+
+Références \hyperlink{class_transmission_afc5d716d53ee7039c3abf05f799327ae}{Transmission\+::deconnecter\+Appareil\+Bluetooth()}, et \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}.
+
+
+\begin{DoxyCode}
+00548 \{
+00549     \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_afc5d716d53ee7039c3abf05f799327ae}{deconnecterAppareilBluetooth}();
+00550     \textcolor{comment}{//activerConnexionPortSerie();}
+00551 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!on\+\_\+push\+Button\+Envoyer\+Coordonnee\+\_\+clicked@{on\+\_\+push\+Button\+Envoyer\+Coordonnee\+\_\+clicked}}
+\index{on\+\_\+push\+Button\+Envoyer\+Coordonnee\+\_\+clicked@{on\+\_\+push\+Button\+Envoyer\+Coordonnee\+\_\+clicked}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{on\+\_\+push\+Button\+Envoyer\+Coordonnee\+\_\+clicked}{on_pushButtonEnvoyerCoordonnee_clicked}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::on\+\_\+push\+Button\+Envoyer\+Coordonnee\+\_\+clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_a850d1c97ed5fe5ba3cf3aa85d81872cd}{}\label{class_ihm_a850d1c97ed5fe5ba3cf3aa85d81872cd}
+Méthode qui met a jour la latitude et longitude dans l\textquotesingle{}\hyperlink{class_ihm}{Ihm} 
+
+Références \hyperlink{class_meteo_a1580d310479be44d2c94a2967d53e043}{Meteo\+::creer\+Url\+Coordonner\+Gps()}, \hyperlink{class_transmission_aa5004c178152de5b94ef14e11e80792c}{Transmission\+::get\+Gps()}, \hyperlink{class_gps_a44c6469bf67727853c06d4be037c6b0f}{Gps\+::get\+Latitude()}, \hyperlink{class_gps_a6ce8da770e213bfbf7f204b107d9e3f5}{Gps\+::get\+Longitude()}, \hyperlink{class_ihm_af17b420166b2bb1b3e3b1c4b998a2102}{meteo}, et \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}.
+
+
+\begin{DoxyCode}
+00656 \{
+00657     \hyperlink{class_ihm_af17b420166b2bb1b3e3b1c4b998a2102}{meteo}->\hyperlink{class_meteo_a1580d310479be44d2c94a2967d53e043}{creerUrlCoordonnerGps}(\hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->
+      \hyperlink{class_transmission_aa5004c178152de5b94ef14e11e80792c}{getGps}()->\hyperlink{class_gps_a44c6469bf67727853c06d4be037c6b0f}{getLatitude}(), \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_aa5004c178152de5b94ef14e11e80792c}{getGps}()->
+      \hyperlink{class_gps_a6ce8da770e213bfbf7f204b107d9e3f5}{getLongitude}());
+00658 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!on\+\_\+push\+Button\+Envoyer\+Trame\+\_\+clicked@{on\+\_\+push\+Button\+Envoyer\+Trame\+\_\+clicked}}
+\index{on\+\_\+push\+Button\+Envoyer\+Trame\+\_\+clicked@{on\+\_\+push\+Button\+Envoyer\+Trame\+\_\+clicked}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{on\+\_\+push\+Button\+Envoyer\+Trame\+\_\+clicked}{on_pushButtonEnvoyerTrame_clicked}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::on\+\_\+push\+Button\+Envoyer\+Trame\+\_\+clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_afd32da9e614eba44bb1d3630b48e6075}{}\label{class_ihm_afd32da9e614eba44bb1d3630b48e6075}
+Méthode appelée dès que le bouton Fermer port et enclencher 
+
+Références \hyperlink{class_transmission_a21e35372ada18cd35411c0e8c0984fd7}{Transmission\+::envoyer\+Donnees()}, \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, et \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+\begin{DoxyCode}
+00378 \{
+00379     \textcolor{keywordflow}{if}(\hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lineEditEnvoyerTrame->text() != \textcolor{stringliteral}{""})
+00380     \{
+00381         \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_a21e35372ada18cd35411c0e8c0984fd7}{envoyerDonnees}(\hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lineEditEnvoyerTrame->text());
+00382     \}
+00383 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!on\+\_\+push\+Button\+Fermer\+Port\+\_\+clicked@{on\+\_\+push\+Button\+Fermer\+Port\+\_\+clicked}}
+\index{on\+\_\+push\+Button\+Fermer\+Port\+\_\+clicked@{on\+\_\+push\+Button\+Fermer\+Port\+\_\+clicked}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{on\+\_\+push\+Button\+Fermer\+Port\+\_\+clicked}{on_pushButtonFermerPort_clicked}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::on\+\_\+push\+Button\+Fermer\+Port\+\_\+clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_abcdae03ce7e83266fb9d3e795df8a171}{}\label{class_ihm_abcdae03ce7e83266fb9d3e795df8a171}
+Méthode appelée dès que le bouton Ouvrir port et enclencher 
+
+Références \hyperlink{class_transmission_a14d36ad615852d6b630fbddf5787f3a3}{Transmission\+::fermer\+Port()}, et \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}.
+
+
+\begin{DoxyCode}
+00263 \{
+00264     \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_a14d36ad615852d6b630fbddf5787f3a3}{fermerPort}();
+00265 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!on\+\_\+push\+Button\+Graphique\+\_\+clicked@{on\+\_\+push\+Button\+Graphique\+\_\+clicked}}
+\index{on\+\_\+push\+Button\+Graphique\+\_\+clicked@{on\+\_\+push\+Button\+Graphique\+\_\+clicked}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{on\+\_\+push\+Button\+Graphique\+\_\+clicked}{on_pushButtonGraphique_clicked}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::on\+\_\+push\+Button\+Graphique\+\_\+clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_a132bd248057d7278c6841788961b5898}{}\label{class_ihm_a132bd248057d7278c6841788961b5898}
+Méthode appelée dès que le push bouton deconnexion et enclencher 
+
+Références \hyperlink{class_ihm_a990b3fe0efe66ae9da5e13a5e0a11291}{graphique}.
+
+
+\begin{DoxyCode}
+00617 \{
+00618     \hyperlink{class_ihm_a990b3fe0efe66ae9da5e13a5e0a11291}{graphique}->show();
+00619 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!on\+\_\+push\+Button\+Ouvrir\+Port\+\_\+clicked@{on\+\_\+push\+Button\+Ouvrir\+Port\+\_\+clicked}}
+\index{on\+\_\+push\+Button\+Ouvrir\+Port\+\_\+clicked@{on\+\_\+push\+Button\+Ouvrir\+Port\+\_\+clicked}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{on\+\_\+push\+Button\+Ouvrir\+Port\+\_\+clicked}{on_pushButtonOuvrirPort_clicked}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::on\+\_\+push\+Button\+Ouvrir\+Port\+\_\+clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_a9ce167b94baead6e318bbd0c5254f842}{}\label{class_ihm_a9ce167b94baead6e318bbd0c5254f842}
+methode qui met à jour le message de statut de la connexion bluetooth (erreur de connexion) 
+
+Références \hyperlink{class_transmission_ab4e82ab30c181a8e0d0c0257ea0e1f56}{Transmission\+::configurer\+Port()}, \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, et \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+\begin{DoxyCode}
+00253 \{
+00254     \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_ab4e82ab30c181a8e0d0c0257ea0e1f56}{configurerPort}(\hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxAppareil->currentText(), 
+      \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxDebitBaud->currentText(), \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBitsDonnees->currentText(), 
+      \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBitsStop->currentText());
+00255 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!on\+\_\+push\+Button\+Quitter\+\_\+clicked@{on\+\_\+push\+Button\+Quitter\+\_\+clicked}}
+\index{on\+\_\+push\+Button\+Quitter\+\_\+clicked@{on\+\_\+push\+Button\+Quitter\+\_\+clicked}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{on\+\_\+push\+Button\+Quitter\+\_\+clicked}{on_pushButtonQuitter_clicked}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::on\+\_\+push\+Button\+Quitter\+\_\+clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_ac5c16e4562308547603acc9ef76df570}{}\label{class_ihm_ac5c16e4562308547603acc9ef76df570}
+modifie l\textquotesingle{}etat de la led en fonction de la trame recu 
+
+Références \hyperlink{class_ihm_a990b3fe0efe66ae9da5e13a5e0a11291}{graphique}.
+
+
+\begin{DoxyCode}
+00144 \{
+00145     this->close();
+00146     \hyperlink{class_ihm_a990b3fe0efe66ae9da5e13a5e0a11291}{graphique}->close();
+00147 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!on\+\_\+push\+Button\+Scan\+\_\+clicked@{on\+\_\+push\+Button\+Scan\+\_\+clicked}}
+\index{on\+\_\+push\+Button\+Scan\+\_\+clicked@{on\+\_\+push\+Button\+Scan\+\_\+clicked}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{on\+\_\+push\+Button\+Scan\+\_\+clicked}{on_pushButtonScan_clicked}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::on\+\_\+push\+Button\+Scan\+\_\+clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_a277763bdb63ed529aafba7db513cb630}{}\label{class_ihm_a277763bdb63ed529aafba7db513cb630}
+Méthode appelée dès que le radio bouton Ville et enclencher 
+
+Références \hyperlink{class_transmission_a217b97344fdad09dbe226c55a8ac56b0}{Transmission\+::demarrer\+Scan()}, \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}, et \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+\begin{DoxyCode}
+00456 \{
+00457     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->comboBoxBluetooth->clear();
+00458     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonScan->setEnabled(\textcolor{keyword}{false});
+00459     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonConnexion->setEnabled(\textcolor{keyword}{false});
+00460     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->pushButtonDeconnexion->setEnabled(\textcolor{keyword}{false});
+00461     \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->labelStatut->setText(\textcolor{stringliteral}{"<font color=\(\backslash\)"#bd2c2c\(\backslash\)">scan en cours...</font>"});
+00462 
+00463     \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_a217b97344fdad09dbe226c55a8ac56b0}{demarrerScan}();
+00464 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!on\+\_\+push\+Button\+Ville\+\_\+clicked@{on\+\_\+push\+Button\+Ville\+\_\+clicked}}
+\index{on\+\_\+push\+Button\+Ville\+\_\+clicked@{on\+\_\+push\+Button\+Ville\+\_\+clicked}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{on\+\_\+push\+Button\+Ville\+\_\+clicked}{on_pushButtonVille_clicked}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::on\+\_\+push\+Button\+Ville\+\_\+clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_aa943965aa565ec50e00f433100660892}{}\label{class_ihm_aa943965aa565ec50e00f433100660892}
+Méthode appelée dès que le radio bouton Led\+Off et enclencher 
+
+Références \hyperlink{class_meteo_a256a2559d391cb862009c778a97dee2c}{Meteo\+::creer\+Url\+Ville()}, \hyperlink{class_ihm_af17b420166b2bb1b3e3b1c4b998a2102}{meteo}, et \hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}.
+
+
+\begin{DoxyCode}
+00432 \{
+00433     \textcolor{keywordflow}{if}(\hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lineEditVille->text() != \textcolor{stringliteral}{""})
+00434     \{
+00435         \hyperlink{class_ihm_af17b420166b2bb1b3e3b1c4b998a2102}{meteo}->\hyperlink{class_meteo_a256a2559d391cb862009c778a97dee2c}{creerUrlVille}(\hyperlink{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{ui}->lineEditVille->text());
+00436     \}
+00437 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!on\+\_\+radio\+Button\+Led\+Off\+\_\+clicked@{on\+\_\+radio\+Button\+Led\+Off\+\_\+clicked}}
+\index{on\+\_\+radio\+Button\+Led\+Off\+\_\+clicked@{on\+\_\+radio\+Button\+Led\+Off\+\_\+clicked}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{on\+\_\+radio\+Button\+Led\+Off\+\_\+clicked}{on_radioButtonLedOff_clicked}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::on\+\_\+radio\+Button\+Led\+Off\+\_\+clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_a1e328a2e8165bbef347e901f1bc5534d}{}\label{class_ihm_a1e328a2e8165bbef347e901f1bc5534d}
+Méthode appelée dès que le radio bouton Led\+Orange et enclencher 
+
+Références \hyperlink{class_transmission_a21e35372ada18cd35411c0e8c0984fd7}{Transmission\+::envoyer\+Donnees()}, et \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}.
+
+
+\begin{DoxyCode}
+00421 \{
+00422     \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_a21e35372ada18cd35411c0e8c0984fd7}{envoyerDonnees}(\textcolor{stringliteral}{"SET LED off"});
+00423 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!on\+\_\+radio\+Button\+Led\+Orange\+\_\+clicked@{on\+\_\+radio\+Button\+Led\+Orange\+\_\+clicked}}
+\index{on\+\_\+radio\+Button\+Led\+Orange\+\_\+clicked@{on\+\_\+radio\+Button\+Led\+Orange\+\_\+clicked}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{on\+\_\+radio\+Button\+Led\+Orange\+\_\+clicked}{on_radioButtonLedOrange_clicked}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::on\+\_\+radio\+Button\+Led\+Orange\+\_\+clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_a7e000e198b11fc38a4459f7749561ded}{}\label{class_ihm_a7e000e198b11fc38a4459f7749561ded}
+Méthode appelée dès que le radio bouton Led\+Vert et enclencher 
+
+Références \hyperlink{class_transmission_a21e35372ada18cd35411c0e8c0984fd7}{Transmission\+::envoyer\+Donnees()}, et \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}.
+
+
+\begin{DoxyCode}
+00411 \{
+00412     \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_a21e35372ada18cd35411c0e8c0984fd7}{envoyerDonnees}(\textcolor{stringliteral}{"SET LED 3"});
+00413 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!on\+\_\+radio\+Button\+Led\+Rouge\+\_\+clicked@{on\+\_\+radio\+Button\+Led\+Rouge\+\_\+clicked}}
+\index{on\+\_\+radio\+Button\+Led\+Rouge\+\_\+clicked@{on\+\_\+radio\+Button\+Led\+Rouge\+\_\+clicked}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{on\+\_\+radio\+Button\+Led\+Rouge\+\_\+clicked}{on_radioButtonLedRouge_clicked}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::on\+\_\+radio\+Button\+Led\+Rouge\+\_\+clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_a731ee780915cb90a5dfb11f2e02144c9}{}\label{class_ihm_a731ee780915cb90a5dfb11f2e02144c9}
+Méthode appelée dès que le bouton envoyer et enclencher 
+
+Références \hyperlink{class_transmission_a21e35372ada18cd35411c0e8c0984fd7}{Transmission\+::envoyer\+Donnees()}, et \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}.
+
+
+\begin{DoxyCode}
+00391 \{
+00392     \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_a21e35372ada18cd35411c0e8c0984fd7}{envoyerDonnees}(\textcolor{stringliteral}{"SET LED 1"});
+00393 \}
+\end{DoxyCode}
+\index{Ihm@{Ihm}!on\+\_\+radio\+Button\+Led\+Vert\+\_\+clicked@{on\+\_\+radio\+Button\+Led\+Vert\+\_\+clicked}}
+\index{on\+\_\+radio\+Button\+Led\+Vert\+\_\+clicked@{on\+\_\+radio\+Button\+Led\+Vert\+\_\+clicked}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{on\+\_\+radio\+Button\+Led\+Vert\+\_\+clicked}{on_radioButtonLedVert_clicked}}]{\setlength{\rightskip}{0pt plus 5cm}void Ihm\+::on\+\_\+radio\+Button\+Led\+Vert\+\_\+clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{class_ihm_afef5bfaa83383427e615d21d9474f466}{}\label{class_ihm_afef5bfaa83383427e615d21d9474f466}
+Méthode appelée dès que le radio bouton Led\+Roude et enclencher 
+
+Références \hyperlink{class_transmission_a21e35372ada18cd35411c0e8c0984fd7}{Transmission\+::envoyer\+Donnees()}, et \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}.
+
+
+\begin{DoxyCode}
+00401 \{
+00402     \hyperlink{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{transmission}->\hyperlink{class_transmission_a21e35372ada18cd35411c0e8c0984fd7}{envoyerDonnees}(\textcolor{stringliteral}{"SET LED 2"});
+00403 \}
+\end{DoxyCode}
+
+
+\subsubsection{Documentation des données membres}
+\index{Ihm@{Ihm}!graphique@{graphique}}
+\index{graphique@{graphique}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{graphique}{graphique}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Graphique}$\ast$ Ihm\+::graphique\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_ihm_a990b3fe0efe66ae9da5e13a5e0a11291}{}\label{class_ihm_a990b3fe0efe66ae9da5e13a5e0a11291}
+
+
+Référencé par \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{actualiser\+Donnee()}, \hyperlink{class_ihm_a50a7a15775452923868348bdbe4fa51e}{Ihm()}, \hyperlink{class_ihm_a132bd248057d7278c6841788961b5898}{on\+\_\+push\+Button\+Graphique\+\_\+clicked()}, \hyperlink{class_ihm_ac5c16e4562308547603acc9ef76df570}{on\+\_\+push\+Button\+Quitter\+\_\+clicked()}, et \hyperlink{class_ihm_add292ea9005bacd1de44dd1ed9ede5b9}{$\sim$\+Ihm()}.
+
+\index{Ihm@{Ihm}!meteo@{meteo}}
+\index{meteo@{meteo}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{meteo}{meteo}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Meteo}$\ast$ Ihm\+::meteo\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_ihm_af17b420166b2bb1b3e3b1c4b998a2102}{}\label{class_ihm_af17b420166b2bb1b3e3b1c4b998a2102}
+
+
+Référencé par \hyperlink{class_ihm_a65487c8229375ff72290bed145876737}{actualiser\+Affichage\+Meteo()}, \hyperlink{class_ihm_a50a7a15775452923868348bdbe4fa51e}{Ihm()}, \hyperlink{class_ihm_a2ef778196b2eba5b0ab5cb4e066bc3b7}{initialiser\+Connect()}, \hyperlink{class_ihm_a850d1c97ed5fe5ba3cf3aa85d81872cd}{on\+\_\+push\+Button\+Envoyer\+Coordonnee\+\_\+clicked()}, et \hyperlink{class_ihm_aa943965aa565ec50e00f433100660892}{on\+\_\+push\+Button\+Ville\+\_\+clicked()}.
+
+\index{Ihm@{Ihm}!proc@{proc}}
+\index{proc@{proc}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{proc}{proc}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Process$\ast$ Ihm\+::proc\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_ihm_aa1bea3b8f9bad5c19a662a2b455895fb}{}\label{class_ihm_aa1bea3b8f9bad5c19a662a2b455895fb}
+
+
+Référencé par \hyperlink{class_ihm_a5d7e6bdacfedc0f0dc4d7b3516454788}{actualiser\+Message\+Statut\+Connecter\+Bluetooth()}, \hyperlink{class_ihm_ad73cc62bafa9c43288f69fbac2b80508}{actualiser\+Message\+Statut\+Deconnecter\+Bluetooth()}, et \hyperlink{class_ihm_a50a7a15775452923868348bdbe4fa51e}{Ihm()}.
+
+\index{Ihm@{Ihm}!transmission@{transmission}}
+\index{transmission@{transmission}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{transmission}{transmission}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transmission}$\ast$ Ihm\+::transmission\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}{}\label{class_ihm_aa8fa25758a4f3e47e07d1d98f6bbab33}
+
+
+Référencé par \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{actualiser\+Donnee()}, \hyperlink{class_ihm_a3ca276093d65c42a5fc5a87cbca1972a}{actualiser\+Donnee\+Gps()}, \hyperlink{class_ihm_a5d7e6bdacfedc0f0dc4d7b3516454788}{actualiser\+Message\+Statut\+Connecter\+Bluetooth()}, \hyperlink{class_ihm_ad73cc62bafa9c43288f69fbac2b80508}{actualiser\+Message\+Statut\+Deconnecter\+Bluetooth()}, \hyperlink{class_ihm_a29b4c5fba871a30f7f2e5fbe08a2087d}{actualiser\+Message\+Statut\+Erreur\+Bluetooth()}, \hyperlink{class_ihm_a94ea90d27fc0aa7598cf270dd3be98eb}{actualiser\+Trame()}, \hyperlink{class_ihm_a50a7a15775452923868348bdbe4fa51e}{Ihm()}, \hyperlink{class_ihm_a2ef778196b2eba5b0ab5cb4e066bc3b7}{initialiser\+Connect()}, \hyperlink{class_ihm_a9d9ac22e5d73a010bc75a1fcf2e7ddcb}{mettre\+Ajour\+Appareil\+Bluetooth\+Disponible()}, \hyperlink{class_ihm_af0426507c2130aefd01bdb4f825ae168}{modifier\+Etat\+Led()}, \hyperlink{class_ihm_abf61dda1820e5632485de93983c40196}{on\+\_\+push\+Button\+Connexion\+\_\+clicked()}, \hyperlink{class_ihm_ad176c58fb3c583286544f010ac006b66}{on\+\_\+push\+Button\+Deconnexion\+\_\+clicked()}, \hyperlink{class_ihm_a850d1c97ed5fe5ba3cf3aa85d81872cd}{on\+\_\+push\+Button\+Envoyer\+Coordonnee\+\_\+clicked()}, \hyperlink{class_ihm_afd32da9e614eba44bb1d3630b48e6075}{on\+\_\+push\+Button\+Envoyer\+Trame\+\_\+clicked()}, \hyperlink{class_ihm_abcdae03ce7e83266fb9d3e795df8a171}{on\+\_\+push\+Button\+Fermer\+Port\+\_\+clicked()}, \hyperlink{class_ihm_a9ce167b94baead6e318bbd0c5254f842}{on\+\_\+push\+Button\+Ouvrir\+Port\+\_\+clicked()}, \hyperlink{class_ihm_a277763bdb63ed529aafba7db513cb630}{on\+\_\+push\+Button\+Scan\+\_\+clicked()}, \hyperlink{class_ihm_a1e328a2e8165bbef347e901f1bc5534d}{on\+\_\+radio\+Button\+Led\+Off\+\_\+clicked()}, \hyperlink{class_ihm_a7e000e198b11fc38a4459f7749561ded}{on\+\_\+radio\+Button\+Led\+Orange\+\_\+clicked()}, \hyperlink{class_ihm_a731ee780915cb90a5dfb11f2e02144c9}{on\+\_\+radio\+Button\+Led\+Rouge\+\_\+clicked()}, et \hyperlink{class_ihm_afef5bfaa83383427e615d21d9474f466}{on\+\_\+radio\+Button\+Led\+Vert\+\_\+clicked()}.
+
+\index{Ihm@{Ihm}!ui@{ui}}
+\index{ui@{ui}!Ihm@{Ihm}}
+\paragraph[{\texorpdfstring{ui}{ui}}]{\setlength{\rightskip}{0pt plus 5cm}Ui\+::\+Ihm$\ast$ Ihm\+::ui\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}{}\label{class_ihm_a0ac5f47856566ceeeca1720109bf70ea}
+bouton qui actualise l\textquotesingle{}etat les données meteo grace à la latitude et longitude 
+
+Référencé par \hyperlink{class_ihm_ac5d166864f1389aa44b0a6784f1977ca}{activer\+Connexion\+Bluetooth()}, \hyperlink{class_ihm_a58ae5ccbff166bcb6723db14a9cf04d9}{activer\+Connexion\+Port\+Serie()}, \hyperlink{class_ihm_a4c456231c8af9eab099e9aaadf8a378b}{Activer\+Controle\+Led()}, \hyperlink{class_ihm_a02118154be39cdd3de7fdbdbe396a534}{actualiser\+Affichage\+Bluetooth()}, \hyperlink{class_ihm_a65487c8229375ff72290bed145876737}{actualiser\+Affichage\+Meteo()}, \hyperlink{class_ihm_a7c0a160f30e11a4f8d56b174e07566fe}{actualiser\+Donnee()}, \hyperlink{class_ihm_a3ca276093d65c42a5fc5a87cbca1972a}{actualiser\+Donnee\+Gps()}, \hyperlink{class_ihm_a5d7e6bdacfedc0f0dc4d7b3516454788}{actualiser\+Message\+Statut\+Connecter\+Bluetooth()}, \hyperlink{class_ihm_ad73cc62bafa9c43288f69fbac2b80508}{actualiser\+Message\+Statut\+Deconnecter\+Bluetooth()}, \hyperlink{class_ihm_a29b4c5fba871a30f7f2e5fbe08a2087d}{actualiser\+Message\+Statut\+Erreur\+Bluetooth()}, \hyperlink{class_ihm_a94ea90d27fc0aa7598cf270dd3be98eb}{actualiser\+Trame()}, \hyperlink{class_ihm_a7341abb08452b21ef2e5c8cb5095d5b0}{charger\+Configuration\+Port()}, \hyperlink{class_ihm_a7ff481c3a05c7d84be2b66552fafd79e}{desactiver\+Connexion\+Bluetooth()}, \hyperlink{class_ihm_a3c792f8eeef5216e76cdb9d9e13eb1aa}{desactiver\+Connexion\+Port\+Serie()}, \hyperlink{class_ihm_a8315a1d902efb0434267778f8144da96}{Desactiver\+Controle\+Led()}, \hyperlink{class_ihm_a6a9bb865ffa3baf686ce16f11f69c57f}{desactiver\+Fermer\+Port()}, \hyperlink{class_ihm_ab0a18639faa9f2c0b2a141321be4b973}{desactiver\+Ouverture\+Port()}, \hyperlink{class_ihm_a05afaf2191aaae673c5ecd14a6d1c921}{enregistrer\+Configuration\+Port()}, \hyperlink{class_ihm_a50a7a15775452923868348bdbe4fa51e}{Ihm()}, \hyperlink{class_ihm_a9bd8f55d47f658fa5311b7880cc94114}{initialiser\+Affichage()}, \hyperlink{class_ihm_a3c6fa78360d39cf904dc3a20b0347ddc}{initialiser\+Interface()}, \hyperlink{class_ihm_a9d9ac22e5d73a010bc75a1fcf2e7ddcb}{mettre\+Ajour\+Appareil\+Bluetooth\+Disponible()}, \hyperlink{class_ihm_af0426507c2130aefd01bdb4f825ae168}{modifier\+Etat\+Led()}, \hyperlink{class_ihm_aeb9414496621bcc42dc63d3ad6e194f9}{on\+\_\+\+Mode\+Operateur\+\_\+state\+Changed()}, \hyperlink{class_ihm_abf61dda1820e5632485de93983c40196}{on\+\_\+push\+Button\+Connexion\+\_\+clicked()}, \hyperlink{class_ihm_afd32da9e614eba44bb1d3630b48e6075}{on\+\_\+push\+Button\+Envoyer\+Trame\+\_\+clicked()}, \hyperlink{class_ihm_a9ce167b94baead6e318bbd0c5254f842}{on\+\_\+push\+Button\+Ouvrir\+Port\+\_\+clicked()}, \hyperlink{class_ihm_a277763bdb63ed529aafba7db513cb630}{on\+\_\+push\+Button\+Scan\+\_\+clicked()}, \hyperlink{class_ihm_aa943965aa565ec50e00f433100660892}{on\+\_\+push\+Button\+Ville\+\_\+clicked()}, et \hyperlink{class_ihm_add292ea9005bacd1de44dd1ed9ede5b9}{$\sim$\+Ihm()}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ihm_8h}{ihm.\+h}\item 
+\hyperlink{ihm_8cpp}{ihm.\+cpp}\end{DoxyCompactItemize}

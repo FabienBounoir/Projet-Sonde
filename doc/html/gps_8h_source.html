@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Mini-projet Qt Sonde ESP32:  Fichier source de gps.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ESP32_weather_qt_icone.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Mini-projet Qt Sonde ESP32
+   &#160;<span id="projectnumber">4.0</span>
+   </div>
+   <div id="projectbrief">BTS SN 2020</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_3b4c60c1f7dcce1feb04e9e53e3d7338.html">Sonde</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">gps.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="gps_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GPS_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GPS_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_gps.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_gps.html">Gps</a></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_gps.html#a10a73359b33c1357564ebc83fc078000">Gps</a>();      </div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_gps.html#a9f076d88f081ae5c010cf150cb957b66">~Gps</a>();     </div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_gps.html#a44c6469bf67727853c06d4be037c6b0f">getLatitude</a>() <span class="keyword">const</span>;     </div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_gps.html#a6ce8da770e213bfbf7f204b107d9e3f5">getLongitude</a>() <span class="keyword">const</span>;    </div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gps.html#aaabf328f0bbcdbb9c2901e30b6edccc7">setLatitude</a>(<span class="keywordtype">double</span> <a class="code" href="class_gps.html#a2457bce0fe69afbf68c27a4807c3f847">latitude</a>);      </div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gps.html#a2d9ca07c62c5bae627c2131062a1236a">setLongitude</a>(<span class="keywordtype">double</span> <a class="code" href="class_gps.html#a6e56fa2b9f1402901a0c768b796402ce">longitude</a>);    </div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_gps.html#a2457bce0fe69afbf68c27a4807c3f847">   35</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_gps.html#a2457bce0fe69afbf68c27a4807c3f847">latitude</a>;        </div><div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_gps.html#a6e56fa2b9f1402901a0c768b796402ce">   36</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_gps.html#a6e56fa2b9f1402901a0c768b796402ce">longitude</a>;       </div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif // GPS_H</span></div><div class="ttc" id="class_gps_html_a6e56fa2b9f1402901a0c768b796402ce"><div class="ttname"><a href="class_gps.html#a6e56fa2b9f1402901a0c768b796402ce">Gps::longitude</a></div><div class="ttdeci">double longitude</div><div class="ttdef"><b>Definition:</b> gps.h:36</div></div>
+<div class="ttc" id="class_gps_html_a6ce8da770e213bfbf7f204b107d9e3f5"><div class="ttname"><a href="class_gps.html#a6ce8da770e213bfbf7f204b107d9e3f5">Gps::getLongitude</a></div><div class="ttdeci">double getLongitude() const </div><div class="ttdoc">return la valeur de la longitude </div><div class="ttdef"><b>Definition:</b> gps.cpp:41</div></div>
+<div class="ttc" id="class_gps_html_a2457bce0fe69afbf68c27a4807c3f847"><div class="ttname"><a href="class_gps.html#a2457bce0fe69afbf68c27a4807c3f847">Gps::latitude</a></div><div class="ttdeci">double latitude</div><div class="ttdef"><b>Definition:</b> gps.h:35</div></div>
+<div class="ttc" id="class_gps_html_a44c6469bf67727853c06d4be037c6b0f"><div class="ttname"><a href="class_gps.html#a44c6469bf67727853c06d4be037c6b0f">Gps::getLatitude</a></div><div class="ttdeci">double getLatitude() const </div><div class="ttdoc">return la valeur de la latitude </div><div class="ttdef"><b>Definition:</b> gps.cpp:52</div></div>
+<div class="ttc" id="class_gps_html"><div class="ttname"><a href="class_gps.html">Gps</a></div><div class="ttdoc">Declaration de la classe Gps. </div><div class="ttdef"><b>Definition:</b> gps.h:22</div></div>
+<div class="ttc" id="class_gps_html_a2d9ca07c62c5bae627c2131062a1236a"><div class="ttname"><a href="class_gps.html#a2d9ca07c62c5bae627c2131062a1236a">Gps::setLongitude</a></div><div class="ttdeci">void setLongitude(double longitude)</div><div class="ttdoc">modifier la valeur de la longitude </div><div class="ttdef"><b>Definition:</b> gps.cpp:74</div></div>
+<div class="ttc" id="class_gps_html_a10a73359b33c1357564ebc83fc078000"><div class="ttname"><a href="class_gps.html#a10a73359b33c1357564ebc83fc078000">Gps::Gps</a></div><div class="ttdeci">Gps()</div><div class="ttdoc">constructeur de la classe Gps </div><div class="ttdef"><b>Definition:</b> gps.cpp:20</div></div>
+<div class="ttc" id="class_gps_html_aaabf328f0bbcdbb9c2901e30b6edccc7"><div class="ttname"><a href="class_gps.html#aaabf328f0bbcdbb9c2901e30b6edccc7">Gps::setLatitude</a></div><div class="ttdeci">void setLatitude(double latitude)</div><div class="ttdoc">modifier la valeur de la latitude </div><div class="ttdef"><b>Definition:</b> gps.cpp:63</div></div>
+<div class="ttc" id="class_gps_html_a9f076d88f081ae5c010cf150cb957b66"><div class="ttname"><a href="class_gps.html#a9f076d88f081ae5c010cf150cb957b66">Gps::~Gps</a></div><div class="ttdeci">~Gps()</div><div class="ttdoc">destructeur de la classe Gps </div><div class="ttdef"><b>Definition:</b> gps.cpp:30</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Dimanche 19 Janvier 2020 10:40:37 pour Mini-projet Qt Sonde ESP32 par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

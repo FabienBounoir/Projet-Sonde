@@ -1,0 +1,5 @@
+<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
+<area shape="rect" id="node1" href="$class_q_widget.html" title="QWidget" alt="" coords="5,31,79,57"/>
+<area shape="rect" id="node2" href="$class_graphique.html" title="Declaration de la classe Graphique. " alt="" coords="127,5,208,32"/>
+<area shape="rect" id="node3" href="$class_ihm.html" title="Declaration de la classe Ihm. " alt="" coords="145,56,189,83"/>
+</map>

@@ -1,0 +1,64 @@
+\hypertarget{meteo_8h_source}{}\subsection{meteo.\+h}
+\label{meteo_8h_source}\index{meteo.\+h@{meteo.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#ifndef METEO\_H}
+00002 \textcolor{preprocessor}{#define METEO\_H}
+00003 
+00004 \textcolor{preprocessor}{#include <QObject>}
+00005 \textcolor{preprocessor}{#include <QNetworkRequest>}
+00006 \textcolor{preprocessor}{#include <QNetworkReply>}
+00007 \textcolor{preprocessor}{#include <QNetworkAccessManager>}
+00008 \textcolor{preprocessor}{#include <QJsonDocument>}
+00009 \textcolor{preprocessor}{#include <QJsonObject>}
+00010 \textcolor{preprocessor}{#include <QJsonArray>}
+00011 \textcolor{preprocessor}{#include <QDebug>}
+00012 \textcolor{preprocessor}{#include <QGeoPositionInfoSource>}
+00013 \textcolor{preprocessor}{#include <QGeoCoordinate>}
+00014 
+\hypertarget{meteo_8h_source.tex_l00015}{}\hyperlink{meteo_8h_a187af7b881bea2905b906b75ac61c951}{00015} \textcolor{preprocessor}{#define API\_KEY "a2157cdc4a03c47c79e8414161c59762"          //cle de l'api de openweather}
+00016 
+\hypertarget{meteo_8h_source.tex_l00032}{}\hyperlink{class_meteo}{00032} \textcolor{keyword}{class }\hyperlink{class_meteo}{Meteo} : \textcolor{keyword}{public} \hyperlink{class_q_object}{QObject}
+00033 \{
+00034     Q\_OBJECT
+00035 \textcolor{keyword}{public}:
+00042     \textcolor{keyword}{explicit} \hyperlink{class_meteo_aa7dab03da06a05dce302c154ad9aec53}{Meteo}(\hyperlink{class_q_object}{QObject} *parent = \textcolor{keyword}{nullptr});
+00043 
+00044     \textcolor{keywordtype}{double} \hyperlink{class_meteo_ad0a7466f4371df14623fd03fa0bab8dd}{getTemperature}() \textcolor{keyword}{const};                          
+00045     \textcolor{keywordtype}{double} \hyperlink{class_meteo_a7bcbc6280fb91ff28436e84f7d8765e7}{getRessentie}() \textcolor{keyword}{const};                            
+00046     \textcolor{keywordtype}{double} \hyperlink{class_meteo_a0cef4ff7ae16cfcd820d164d1c5334c4}{getTemperatureMin}() \textcolor{keyword}{const};                       
+00047     \textcolor{keywordtype}{double} \hyperlink{class_meteo_a114aadb20b0b56c1fe8a6fc2dd19c02b}{getTemperatureMax}() \textcolor{keyword}{const};                       
+00048     \textcolor{keywordtype}{int} \hyperlink{class_meteo_a2a4cd85d63157f6b682d37f9c19d1683}{getPression}() \textcolor{keyword}{const};                                
+00049     \textcolor{keywordtype}{int} \hyperlink{class_meteo_a336cfea55c062ebe45fbc7d1a48aaaa1}{getHumidite}() \textcolor{keyword}{const};                                
+00050     QString \hyperlink{class_meteo_af9ceb3e99e123e6931f8cd9cfde57834}{getVille}() \textcolor{keyword}{const};                               
+00052     \textcolor{keywordtype}{void} \hyperlink{class_meteo_a7e15015233ae155d482e414804c4b381}{setTemperature}(\textcolor{keywordtype}{double} \hyperlink{class_meteo_a8086970687d7df655f68775bc0852178}{temperature});                
+00053     \textcolor{keywordtype}{void} \hyperlink{class_meteo_a7055da66033ec24def1e9f9688b837d1}{setTemperatureMin}(\textcolor{keywordtype}{double} \hyperlink{class_meteo_a640f1543a82502057c333eed2c2b049e}{temperatureMin});          
+00054     \textcolor{keywordtype}{void} \hyperlink{class_meteo_a1737d7a11c9bf4326071531acfcc3243}{setTemperatureMax}(\textcolor{keywordtype}{double} \hyperlink{class_meteo_a5dd5312470d767714779344a524fd27b}{temperatureMax});          
+00055     \textcolor{keywordtype}{void} \hyperlink{class_meteo_a73283bb2c6aa7bc205b0490cfb6ddf08}{setRessentie}(\textcolor{keywordtype}{double} \hyperlink{class_meteo_a405ea827846e04994ed8073f82978995}{ressentie});                    
+00056     \textcolor{keywordtype}{void} \hyperlink{class_meteo_a919f06b3944298a47daf3405bde46402}{setPression}(\textcolor{keywordtype}{int} \hyperlink{class_meteo_a28fe6c4ed03fcf9829dd5a8997bfb0fc}{pression});                         
+00057     \textcolor{keywordtype}{void} \hyperlink{class_meteo_adb383986b49742d49f3fe86ca7bec358}{setHumidite}(\textcolor{keywordtype}{int} \hyperlink{class_meteo_ada819b35e83127ce17a51abad383f349}{humidite});                         
+00058     \textcolor{keywordtype}{void} \hyperlink{class_meteo_ae6f56d33b87f62db4d6ebd88226d9e5f}{setVille}(QString \hyperlink{class_meteo_a20ab84130cd8c6085e665f1d7d8403a6}{ville});                           
+00060     \textcolor{keywordtype}{void} \hyperlink{class_meteo_abb613fded967168801097cf487ac2e29}{recupererDonnerMeteo}(QString URL);                 
+00061     \textcolor{keywordtype}{void} \hyperlink{class_meteo_a256a2559d391cb862009c778a97dee2c}{creerUrlVille}(QString ville);                                  
+00062     \textcolor{keywordtype}{void} \hyperlink{class_meteo_a1580d310479be44d2c94a2967d53e043}{creerUrlCoordonnerGps}(\textcolor{keywordtype}{double} latitude, \textcolor{keywordtype}{double} longitude);    
+00064 \textcolor{keyword}{private}:
+\hypertarget{meteo_8h_source.tex_l00065}{}\hyperlink{class_meteo_a020089a0880ff5d97df50e6a97b68f90}{00065}     QNetworkAccessManager *\hyperlink{class_meteo_a020089a0880ff5d97df50e6a97b68f90}{manager};                         
+00066 
+00067 signals:
+00068     \textcolor{keywordtype}{void} \hyperlink{class_meteo_ab58994e421e7f44a81bd802c6b167cfb}{donnerMeteoMiseAJour}();                            
+00070 \textcolor{keyword}{private} slots:
+00071     \textcolor{keywordtype}{void} \hyperlink{class_meteo_a3bb764a7af2d35df9018e0acb3a88127}{replyFinished}(QNetworkReply *reply);               
+00072     \textcolor{keywordtype}{void} \hyperlink{class_meteo_af6fbf43af30cfd3987f058d1ab7ab27b}{positionMiseAJour}(\textcolor{keyword}{const} QGeoPositionInfo &info);   
+00074 \textcolor{keyword}{private}:
+\hypertarget{meteo_8h_source.tex_l00075}{}\hyperlink{class_meteo_a8086970687d7df655f68775bc0852178}{00075}     \textcolor{keywordtype}{double} \hyperlink{class_meteo_a8086970687d7df655f68775bc0852178}{temperature};                                     
+\hypertarget{meteo_8h_source.tex_l00076}{}\hyperlink{class_meteo_a405ea827846e04994ed8073f82978995}{00076}     \textcolor{keywordtype}{double} \hyperlink{class_meteo_a405ea827846e04994ed8073f82978995}{ressentie};                                       
+\hypertarget{meteo_8h_source.tex_l00077}{}\hyperlink{class_meteo_a640f1543a82502057c333eed2c2b049e}{00077}     \textcolor{keywordtype}{double} \hyperlink{class_meteo_a640f1543a82502057c333eed2c2b049e}{temperatureMin};                                  
+\hypertarget{meteo_8h_source.tex_l00078}{}\hyperlink{class_meteo_a5dd5312470d767714779344a524fd27b}{00078}     \textcolor{keywordtype}{double} \hyperlink{class_meteo_a5dd5312470d767714779344a524fd27b}{temperatureMax};                                  
+\hypertarget{meteo_8h_source.tex_l00080}{}\hyperlink{class_meteo_a28fe6c4ed03fcf9829dd5a8997bfb0fc}{00080}     \textcolor{keywordtype}{int} \hyperlink{class_meteo_a28fe6c4ed03fcf9829dd5a8997bfb0fc}{pression};                                           
+\hypertarget{meteo_8h_source.tex_l00081}{}\hyperlink{class_meteo_ada819b35e83127ce17a51abad383f349}{00081}     \textcolor{keywordtype}{int} \hyperlink{class_meteo_ada819b35e83127ce17a51abad383f349}{humidite};                                           
+\hypertarget{meteo_8h_source.tex_l00083}{}\hyperlink{class_meteo_a20ab84130cd8c6085e665f1d7d8403a6}{00083}     QString \hyperlink{class_meteo_a20ab84130cd8c6085e665f1d7d8403a6}{ville};                                          
+00085     \textcolor{keywordtype}{void} \hyperlink{class_meteo_a08c48ce5f6ff05c687e570e34117f2ed}{localiserAppareil}();                               
+00088 \};
+00089 
+00090 \textcolor{preprocessor}{#endif // METEO\_H}
+\end{DoxyCode}

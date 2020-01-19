@@ -1,0 +1,6 @@
+<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
+<area shape="rect" id="node1" href="$class_q_object.html" title="QObject" alt="" coords="5,56,76,83"/>
+<area shape="rect" id="node2" href="$class_esp32.html" title="Declaration de la classe Esp32. " alt="" coords="145,5,203,32"/>
+<area shape="rect" id="node3" href="$class_meteo.html" title="Declaration de la classe Meteo. " alt="" coords="145,56,203,83"/>
+<area shape="rect" id="node4" href="$class_transmission.html" title="Declaration de la classe Transmission. " alt="" coords="124,107,224,133"/>
+</map>
