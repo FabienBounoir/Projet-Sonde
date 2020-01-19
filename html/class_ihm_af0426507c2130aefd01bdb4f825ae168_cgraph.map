@@ -1,4 +1,0 @@
-<map id="Ihm::modifierEtatLed" name="Ihm::modifierEtatLed">
-<area shape="rect" id="node2" href="$class_transmission.html#afccd88f8be8c204a0960bc2d6970931f" title="return l&#39;objet Esp32 " alt="" coords="196,5,359,32"/>
-<area shape="rect" id="node3" href="$class_esp32.html#ac695656654b5d83ec3924b47f533f465" title="retourne l&#39;etat de la led " alt="" coords="212,56,343,83"/>
-</map>
