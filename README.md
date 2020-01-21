@@ -9,23 +9,30 @@
 
 ## Programme Qt
 
-Le programme réalisé avec Qt 5.11.2 permet de communiquer avec une sonde équipée de différents capteurs. 
+Le programme, réalisé avec le framework Qt 5.11.2, permet de communiquer avec une sonde équipée de différents capteurs. 
 
 L'IHM affiche les informations des capteurs dans l'onglet Données. Il est possible de consulter les relevés de mesures sous forme de graphiques.
 
 \image html capture-onglet-donnees.png
+\image latex capture-onglet-donnees.png
+
+\image html capture-onglet-graphiques.png
+\image latex capture-onglet-graphiques.png
 
 Il est possible de consulter les données météos d'une ville dont il est possible de saisir le nom. Un affichage des coordonnées GPS est dipsonible.
 
 \image html capture-onglet-meteo.png
+\image latex capture-onglet-meteo.png
 
-Tous les échanges de trame s'affichent dans l'onglet opérateur où il est également possible de piloter la led manuellement selon le protocole.
+Tous les échanges de trame s'affichent dans l'onglet Opérateur où il est également possible de piloter la led manuellement selon le protocole.
 
 \image html capture-onglet-operateur.png
+\image latex capture-onglet-operateur.png
 
-La communication se fera au choix de l'utilisateur, soit par liaison série soit par communication Bluetooth. La communication via WiFi n'est pas implémenté dans ce programme.
+La communication se fera au choix de l'utilisateur, soit par liaison série soit par communication Bluetooth. La communication via WiFi n'est pas implémentée dans ce programme.
 
 \image html capture-onglet-configuration.png
+\image latex capture-onglet-configuration.png
 
 ## Sonde ESP32-Weather
 
@@ -36,25 +43,29 @@ La sonde communique aussi via le WiFi, le Bluetooth et la liaison série. Le mê
 La carte a été réalisée par des étudiants d'EC et le programme de l'ESP32 par un professeur.
 
 \image html ESP32_weather.png
+\image latex ESP32_weather.png
 
 ## Auteurs
 
 \a Fabien Bounoir (IR) <bounoirfabien@gmail.com>
 
+\a Ethan Villesseche (IR) <villesseche.ethan@gmail.com>
 
 \page page_README README
 
-## Nom : Mini-projet Qt Sonde ESP32
+## Nom : Mini-projet Qt Sonde ESP32 (BTS SN-IR La Salle Avignon)
 
-## Numéro de version : 4.0
+## Numéro de version : 4.1
 
 ## Auteurs
 
 \a Fabien Bounoir (IR) <bounoirfabien@gmail.com>
 
+\a Ethan Villesseche (IR) <villesseche.ethan@gmail.com>
+
 ## Description
 
-Le programme a été réalisé avec Qt 5.11.2.
+Le programme a été réalisé avec le framework Qt 5.11.2.
 
 Fichier `.pro` :
 
@@ -145,6 +156,7 @@ _Remarque : la requête est insensible à la casse._
 
 \page page_about A propos
 \author \a Fabien Bounoir (IR) <bounoirfabien@gmail.com>
+\author \a Ethan Villesseche (IR) <villesseche.ethan@gmail.com>
 \version 4.0
 \date \b 2020
 

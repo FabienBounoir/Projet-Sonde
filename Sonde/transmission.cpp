@@ -3,12 +3,12 @@
 /**
 * @file transmission.cpp
 *
-* @brief programme qui s'occupe de la parti trame (configuration, reception / envoie de trame)
+* @brief classe qui s'occupe de la parti trame (configuration, reception / envoie de trame)
 *
 * @author Bounoir Fabien
 * @author Villesseche Ethan
 *
-* @version 4.0
+* @version 4.1
 *
 */
 
@@ -18,12 +18,13 @@
  * @fn Transmission::Transmission
  * @param parent
  */
-Transmission::Transmission(QObject *parent) : QObject(parent), trame(""), donneeLatDms(""), donneeLongDms(""), donneLatDD(0.), donneLongDD(0.),\
+Transmission::Transmission(QObject *parent) : QObject(parent), trame(""), trameGps(""), donneeLatDms(""), donneeLongDms(""), donneLatDD(0.), donneLongDD(0.),\
   signeLat(""), signeLong("")
 {
-    esp32 = new Esp32(this);
+    sonde = new Sonde(this);
     gps = new Gps();
-    port = new QSerialPort(this);
+    portSonde = new QSerialPort(this);
+    portGps = new QSerialPort(this);
     scan = new QBluetoothDeviceDiscoveryAgent(this);
     socket = new QBluetoothSocket(QBluetoothServiceInfo::RfcommProtocol);
 
@@ -46,7 +47,7 @@ Transmission::~Transmission()
 }
 
 /**
- * @brief return la trame stockée
+ * @brief retourne la trame stockée
  *
  * @fn Transmission::getTrame
  * @return QString
@@ -57,21 +58,21 @@ QString Transmission::getTrame() const
 }
 
 /**
- * @brief return l'objet Esp32
+ * @brief retourne l'objet Sonde
  *
- * @fn Transmission::getEsp32
- * @return Esp32
+ * @fn Transmission::getSonde
+ * @return sonde
  */
-Esp32* Transmission::getEsp32() const
+Sonde* Transmission::getSonde() const
 {
-    return esp32;
+    return sonde;
 }
 
 /**
- * @brief return l'objet gps
+ * @brief retourne l'objet gps
  *
  * @fn Transmission::getGps
- * @return Esp32
+ * @return gps
  */
 Gps* Transmission::getGps() const
 {
@@ -79,7 +80,7 @@ Gps* Transmission::getGps() const
 }
 
 /**
- * @brief return une liste des appareil bluetooth disponible
+ * @brief retourne une liste des appareils bluetooth disponibles
  *
  * @fn Transmission::getAppareilDisponible
  * @return QStringList
@@ -90,7 +91,7 @@ QStringList Transmission::getAppareilDisponible() const
 }
 
 /**
- * @brief return la statut de la connexion avec l'appareil bluetooth
+ * @brief retourne la statut de la connexion avec l'appareil bluetooth
  *
  * @fn Transmission::getStatutBluetooth
  * @return QString
@@ -110,8 +111,9 @@ void Transmission::setStatutBluetooth(QString statutBluetooth)
 {
     this->statutBluetooth = statutBluetooth;
 }
+
 /**
- * @brief ajoute un appareil a la liste des appareilDisponible
+ * @brief ajoute un appareil a la liste des appareils disponibles
  *
  * @fn Transmission::setAppareilDisponible
  * @param appareilDisponible
@@ -129,36 +131,75 @@ void Transmission::setAppareilDisponible(QString appareilDisponible)
  */
 void Transmission::ouvrirPort()
 {
-    port->open(QIODevice::ReadWrite);
-    if(port->isOpen())
+    portSonde->open(QIODevice::ReadWrite);
+    if(portSonde->isOpen())
     {
         qDebug() << __FUNCTION__ << ": " <<"Le port est ouvert";
 
-        connect(port, SIGNAL(readyRead()), this, SLOT(recevoir()));
+        connect(portSonde, SIGNAL(readyRead()), this, SLOT(recevoir()));
         emit portOuvert();
     }
     else
     {
-        qDebug() << __FUNCTION__ << ": " << "Erreur, le port n'a pas pu être ouvert";
+        qDebug() << __FUNCTION__ << ": " << "Erreur, le port serie de la Sonde n'a pas pu être ouvert";
     }
 }
 
 /**
- * @brief configurer le port de communication
+ * @brief configure le port serie pour le Gps
+ *
+ * @fn Transmission::configurerPortGps
+ */
+void Transmission::ouvrirPortGps()
+{
+    portGps->open(QIODevice::ReadWrite);
+    if(portGps->isOpen())
+    {
+        qDebug() << __FUNCTION__ << ": " <<"Le port est ouvert";
+
+        connect(portGps, SIGNAL(readyRead()), this, SLOT(recevoirGps()));
+        emit portOuvertGps();
+    }
+    else
+    {
+        qDebug() << __FUNCTION__ << ": " << "Erreur, le port serie du GPS n'a pas pu être ouvert";
+    }
+}
+
+/**
+ * @brief configure le port de communication
  *
  * @fn Transmission::configurerPort
  */
 void Transmission::configurerPort(QString portCommunication, QString DebitBaud, QString BitsDonnees, QString BitsStop)
 {
-    port = new QSerialPort(portCommunication);
+    portSonde = new QSerialPort(portCommunication);
 
-    port->setBaudRate(DebitBaud.toInt());
-    port->setDataBits(QSerialPort::DataBits(BitsDonnees.toInt()));
-    port->setParity(QSerialPort::NoParity);
-    port->setStopBits(QSerialPort::StopBits(BitsStop.toInt()));
-    port->setFlowControl(QSerialPort::NoFlowControl);
+    portSonde->setBaudRate(DebitBaud.toInt());
+    portSonde->setDataBits(QSerialPort::DataBits(BitsDonnees.toInt()));
+    portSonde->setParity(QSerialPort::NoParity);
+    portSonde->setStopBits(QSerialPort::StopBits(BitsStop.toInt()));
+    portSonde->setFlowControl(QSerialPort::NoFlowControl);
 
     ouvrirPort();
+}
+
+/**
+ * @brief configure le port de communication Gps
+ *
+ * @fn Transmission::configurerPortGps
+ */
+void Transmission::configurerPortGps(QString portCommunication, QString DebitBaud, QString BitsDonnees, QString BitsStop)
+{
+    portGps = new QSerialPort(portCommunication);
+
+    portGps->setBaudRate(DebitBaud.toInt());
+    portGps->setDataBits(QSerialPort::DataBits(BitsDonnees.toInt()));
+    portGps->setParity(QSerialPort::NoParity);
+    portGps->setStopBits(QSerialPort::StopBits(BitsStop.toInt()));
+    portGps->setFlowControl(QSerialPort::NoFlowControl);
+
+    ouvrirPortGps();
 }
 
 /**
@@ -168,13 +209,30 @@ void Transmission::configurerPort(QString portCommunication, QString DebitBaud, 
  */
 void Transmission::fermerPort()
 {
-    if(port->isOpen())
+    if(portSonde->isOpen())
     {
-        port->close();
+        portSonde->close();
 
-        qDebug() << __FUNCTION__ << ": " <<"port fermer" <<endl;
+        qDebug() << __FUNCTION__ << ": " <<"port Sonde fermer" <<endl;
 
         emit portFerme();
+    }
+}
+
+/**
+ * @brief cette methode ferme le port serie
+ *
+ * @fn Transmission::fermerPortGps
+ */
+void Transmission::fermerPortGps()
+{
+    if(portGps->isOpen())
+    {
+        portGps->close();
+
+        qDebug() << __FUNCTION__ << ": " <<"port Gps fermer" <<endl;
+
+        emit portFermeGps();
     }
 }
 
@@ -187,21 +245,21 @@ void Transmission::decomposer()
 {
     if(trame.startsWith("SONDE") && trame.endsWith("\r\n"))
     {
-        esp32->setTemperature(trame.section(";",1,1).toDouble());
-        esp32->setTemperatureUnite(trame.section(";",2,2));
-        esp32->setRessentie(trame.section(";",3,3).toDouble());
-        esp32->setRessentieUnite(trame.section(";",4,4));
-        esp32->setHumidite(trame.section(";",5,5).toInt());
-        esp32->setHumiditeUnite(trame.section(";",6,6));
-        esp32->setLuminosite(trame.section(";",7,7).toInt());
-        esp32->setLuminositeUnite(trame.section(";",8,8));
-        esp32->setPression(trame.section(";",9,9).toInt());
-        esp32->setPressionUnite(trame.section(";",10,10));
-        esp32->setAltitude(trame.section(";",11,11).toInt());
-        esp32->setAltitudeUnite(trame.section(";",12,12));
-        esp32->setCouleurLed(trame.section(";",17,17).toInt());
+        sonde->setTemperature(trame.section(";",1,1).toDouble());
+        sonde->setTemperatureUnite(trame.section(";",2,2));
+        sonde->setRessentie(trame.section(";",3,3).toDouble());
+        sonde->setRessentieUnite(trame.section(";",4,4));
+        sonde->setHumidite(trame.section(";",5,5).toInt());
+        sonde->setHumiditeUnite(trame.section(";",6,6));
+        sonde->setLuminosite(trame.section(";",7,7).toInt());
+        sonde->setLuminositeUnite(trame.section(";",8,8));
+        sonde->setPression(trame.section(";",9,9).toInt());
+        sonde->setPressionUnite(trame.section(";",10,10));
+        sonde->setAltitude(trame.section(";",11,11).toInt());
+        sonde->setAltitudeUnite(trame.section(";",12,12));
+        sonde->setCouleurLed(trame.section(";",17,17).toInt());
     }
-    emit trameEsp32Recue();
+    emit trameSondeRecue();
 }
 
 /**
@@ -211,12 +269,12 @@ void Transmission::decomposer()
  */
 void Transmission::decomposerDonneeGps()
 {
-    if(trame.startsWith("$GPGGA") && trame.endsWith("\r\n"))
+    if(trameGps.startsWith("$GPGGA") && trameGps.endsWith("\r\n"))
     {
-        donneeLatDms = trame.section(",",2,2);
-        donneeLongDms = trame.section(",",4,4);
-        signeLat = trame.section(",",3,3);
-        signeLong = trame.section(",",5,5);
+        donneeLatDms = trameGps.section(",",2,2);
+        donneeLongDms = trameGps.section(",",4,4);
+        signeLat = trameGps.section(",",3,3);
+        signeLong = trameGps.section(",",5,5);
 
         if(signeLat == "N")
         {
@@ -248,7 +306,7 @@ void Transmission::decomposerDonneeGps()
 }
 
 /**
- * @brief Récupérer la trame émise
+ * @brief Récupérer les données reçues sur le port série
  *
  * @fn Transmission::recevoir
  */
@@ -256,9 +314,9 @@ void Transmission::recevoir()
 {
     QByteArray donnees;
 
-        while(port->waitForReadyRead(10))
+        while(portSonde->waitForReadyRead(10))
         {
-            donnees += port->readAll();
+            donnees += portSonde->readAll();
         }
         trame = QString(donnees.data());
 
@@ -267,12 +325,37 @@ void Transmission::recevoir()
             qDebug() << Q_FUNC_INFO << "trame Port serie reçu : " << trame << endl;
 
             this->decomposer();
+        }else if(trame.startsWith("$GPGGA") && trame.endsWith("\r\n"))
+        {
+            qDebug() << Q_FUNC_INFO << "mauvais module connecté" << endl;
+            emit erreurConnectionPortSerieSonde("Erreur Appareil Connecté");
         }
 
-        if(trame.startsWith("$GPGGA") && trame.endsWith("\r\n"))
+}
+
+/**
+ * @brief Récupérer la trame émise par le Gps
+ *
+ * @fn Transmission::recevoirGps
+ */
+void Transmission::recevoirGps()
+{
+    QByteArray donnees;
+
+        while(portGps->waitForReadyRead(10))
         {
-            qDebug() << Q_FUNC_INFO << "trame Gps reçu : " << trame << endl;
+            donnees += portGps->readAll();
+        }
+        trameGps = QString(donnees.data());
+
+        if(trameGps.startsWith("$GPGGA") && trameGps.endsWith("\r\n"))
+        {
+            qDebug() << Q_FUNC_INFO << "trame Gps reçu : " << trameGps << endl;
             this->decomposerDonneeGps();
+        }else if(trameGps.startsWith("SONDE") && trameGps.endsWith("\r\n"))
+        {
+            qDebug() << Q_FUNC_INFO << "mauvais module connecté" << endl;
+            emit erreurConnectionPortSerieGps("Erreur Appareil Connecté");
         }
 }
 
@@ -284,10 +367,10 @@ void Transmission::recevoir()
  */
 void Transmission::envoyerDonnees(QString envoyerTrame)
 {
-    if(port->isOpen())
+    if(portSonde->isOpen())
     {
         const char* trame = envoyerTrame.toStdString().c_str();
-        port->write(trame);
+        portSonde->write(trame);
 
         qDebug() << __FUNCTION__ << ": " << trame << endl;
     }
@@ -300,33 +383,32 @@ void Transmission::envoyerDonnees(QString envoyerTrame)
         qDebug() << __FUNCTION__ << ": " << trame << endl;
     }
 
-    if(!socket->isOpen() && !port->isOpen())
+    if(!socket->isOpen() && !portSonde->isOpen())
     {
         emit portFerme();
     }
 }
 
 /**
- * @brief cette fonction scan les appareils disponible
+ * @brief cette fonction recherche les appareils disponibles
  *
  * @fn Transmission::demarrerScan
  */
 void Transmission::demarrerScan()
 {
-    qDebug() << "scan en cour..." << endl;
+    qDebug() << "scan en cours..." << endl;
     appareilDisponible.clear();
     scan->start();
 }
 
 /**
- * @brief ajout les appareil trouver dans une list pour les afficher dans l'IHM
+ * @brief ajoute les appareils trouvés dans une liste pour les afficher dans l'IHM
  *
  * @fn Transmission::ajouterAppareil
  * @param info
  */
 void Transmission::ajouterAppareil(const QBluetoothDeviceInfo &info)
 {
-    //QString appareilDisponible = QString("%1 %2").arg(info.address().toString()).arg(info.name());
     QString appareilDisponible = info.address().toString();
 
     qDebug() << "Appareil Bluetooth trouvé :" << QString("%1 %2").arg(info.address().toString()).arg(info.name()) << endl;
@@ -335,7 +417,7 @@ void Transmission::ajouterAppareil(const QBluetoothDeviceInfo &info)
 }
 
 /**
- * @brief fonction appeler quand le scan est fini
+ * @brief fonction appelée quand le scan est fini
  *
  * @fn Transmission::scanTerminer
  */
@@ -347,7 +429,7 @@ void Transmission::scanTerminer()
 }
 
 /**
- * @brief Permets de se connecter à un appareil.
+ * @brief Permet de se connecter à un appareil
  *
  * @fn Transmission::connecterAppareilBluetooth
  * @param appareil
@@ -372,7 +454,7 @@ void Transmission::connecterAppareilBluetooth(QString appareil)
 }
 
 /**
- * @brief methode qui deconnecte l'appareil bluetooth connecter
+ * @brief methode qui deconnecte l'appareil bluetooth connecté
  *
  * @fn Transmission::deconnecterAppareilBluetooth
  */
@@ -412,7 +494,7 @@ void Transmission::socketDisconnected()
 }
 
 /**
- * @brief methode appeler quand une trame est disponible
+ * @brief methode appelée quand une trame est disponible
  *
  * @fn Transmission::socketReadyRead
  */

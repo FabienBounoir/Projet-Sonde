@@ -1,9 +1,9 @@
 README
 
 Nom du logiciel : Sonde
-Date de début : 17/01/20
-Numéro de version du logiciel : 4.0
-Date de cette version du logiciel : 13/01/20
+Date de début : 12/12/19
+Numéro de version du logiciel : 4.1
+Date de cette version du logiciel : 20/01/20
 Objectif : - recuperer les données d'une sonde et les visualiser sur une Ihm
 	   - controler une led depuis l'Ihm.
  	   - recuperer les données de temperature depuis l'api openwheater
@@ -41,6 +41,11 @@ Version:
 -->ajout graphique pour voir l'evolution temperature / humiditer / luminosite / pression.
 -->recevoir notification pour voir l'etat de la connection bluetooth.
 
-
+4.1:
+-->la connexion par port série de la Sonde et du GPS son mieux gérer.
+-->correction de faute de français.
+-->les statuts des connexions par port sérient sont mieux intégrés.
+-->correctif des unités qui n'était pas afficher dans la fenêtre graphique.
+-->changement nom classe Esp32 en Sonde pour etre plus general.
 
 

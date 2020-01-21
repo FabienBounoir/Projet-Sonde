@@ -137,6 +137,17 @@ ajout de la gestion des axes (si la valeur recu est supérieure à la valeur de 
 possibiliter connection par bluetooth et serie en meme temps.
 rendu 4.0
 
+20/01/20
+
+modification texte onglet configuration : "Sonde port série"
+modification texte onglet configuration : "Fermer port"
+modification texte onglet Données : "Afficher graphiques"
+affichage statut connection port serie.
+modification texte onglet Météo : "Météo"
+ajustement fenetre graphique : ajout unite au mesure.
+la classe Transmission gere maintenant la connection du GPS et de la Sonde en meme temps par le port serie.
+ajout message statut pour les connection port serie (connecter / deconnecter / erreur).
+
 
 
 

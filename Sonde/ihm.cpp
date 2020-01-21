@@ -6,12 +6,12 @@
 /**
 * @file ihm.cpp
 *
-* @brief programme qui s'occupe de l'affichage dans l'ihm
+* @brief classe qui s'occupe de l'affichage dans l'ihm
 *
 * @author Bounoir Fabien
 * @author Villesseche Ethan
 *
-* @version 4.0
+* @version 4.1
 *
 */
 
@@ -57,19 +57,24 @@ Ihm::~Ihm()
  */
 void Ihm::initialiserConnect()
 {
-    connect(transmission, SIGNAL(trameEsp32Recue()), this, SLOT(actualiserTrame()));
-    connect(transmission, SIGNAL(trameEsp32Recue()), this, SLOT(actualiserDonnee()));
+    connect(transmission, SIGNAL(trameSondeRecue()), this, SLOT(actualiserTrame()));
+    connect(transmission, SIGNAL(trameSondeRecue()), this, SLOT(actualiserDonnee()));
     connect(transmission, SIGNAL(trameGpsRecue()), this, SLOT(actualiserTrame()));
     connect(transmission, SIGNAL(trameGpsRecue()), this, SLOT(actualiserDonneeGps()));
 
     connect(transmission, SIGNAL(portOuvert()), this, SLOT(desactiverOuverturePort()));
+    connect(transmission, SIGNAL(portOuvertGps()), this, SLOT(desactiverOuverturePortGps()));
     connect(transmission, SIGNAL(portFerme()), this, SLOT(desactiverFermerPort()));
+    connect(transmission, SIGNAL(portFermeGps()), this, SLOT(desactiverFermerPortGps()));
+
     connect(meteo, SIGNAL(donnerMeteoMiseAJour()), this, SLOT(actualiserAffichageMeteo()));
     connect(transmission, SIGNAL(nouvelleAppareilDisponible()), this, SLOT(mettreAjourAppareilBluetoothDisponible()));
     connect(transmission, SIGNAL(scanfini()), this, SLOT(actualiserAffichageBluetooth()));
     connect(transmission, SIGNAL(connecter()), this, SLOT(actualiserMessageStatutConnecterBluetooth()));
     connect(transmission, SIGNAL(deconnecter()), this, SLOT(actualiserMessageStatutDeconnecterBluetooth()));
     connect(transmission, SIGNAL(socketErreur()), this, SLOT(actualiserMessageStatutErreurBluetooth()));
+    connect(transmission, SIGNAL(erreurConnectionPortSerieGps(QString)), this, SLOT(actualiserMessageStatutConnectionGps(QString)));
+    connect(transmission, SIGNAL(erreurConnectionPortSerieSonde(QString)), this, SLOT(actualiserMessageStatutConnectionSonde(QString)));
 }
 
 /**
@@ -81,11 +86,18 @@ void Ihm::enregistrerConfigurationPort()
 {
     QSettings configuration("Sonde.ini", QSettings::IniFormat);
 
-    configuration.beginGroup("PortSerie");
+    configuration.beginGroup("PortSerieSonde");
     configuration.setValue("Appareil", ui->comboBoxAppareil->currentText());
     configuration.setValue("DebitBauds", ui->comboBoxDebitBaud->currentText());
     configuration.setValue("BitsDonnee", ui->comboBoxBitsDonnees->currentText());
     configuration.setValue("BitsStop", ui->comboBoxBitsStop->currentText());
+    configuration.endGroup();
+
+    configuration.beginGroup("PortSerieGps");
+    configuration.setValue("Appareil", ui->comboBoxPortSerieGps->currentText());
+    configuration.setValue("DebitBauds", ui->comboBoxDebitGps->currentText());
+    configuration.setValue("BitsDonnee", ui->comboBoxBitsDonneesGps->currentText());
+    configuration.setValue("BitsStop", ui->comboBoxBitsStopGps->currentText());
     configuration.endGroup();
 }
 
@@ -98,10 +110,15 @@ void Ihm::chargerConfigurationPort()
 {
     QSettings configuration("Sonde.ini", QSettings::IniFormat);
 
-    ui->comboBoxAppareil->setCurrentText(configuration.value("PortSerie/Appareil","/dev/ttyUSB0").toString());
-    ui->comboBoxDebitBaud->setCurrentText(configuration.value("PortSerie/DebitBauds","1200").toString());
-    ui->comboBoxBitsDonnees->setCurrentText(configuration.value("PortSerie/BitsDonnee","5").toString());
-    ui->comboBoxBitsStop->setCurrentText(configuration.value("PortSerie/BitsStop","1").toString());
+    ui->comboBoxAppareil->setCurrentText(configuration.value("PortSerieSonde/Appareil","/dev/ttyUSB0").toString());
+    ui->comboBoxDebitBaud->setCurrentText(configuration.value("PortSerieSonde/DebitBauds","115200").toString());
+    ui->comboBoxBitsDonnees->setCurrentText(configuration.value("PortSerieSonde/BitsDonnee","8").toString());
+    ui->comboBoxBitsStop->setCurrentText(configuration.value("PortSerieSonde/BitsStop","1").toString());
+
+    ui->comboBoxPortSerieGps->setCurrentText(configuration.value("PortSerieGps/Appareil","/dev/ttyUSB1").toString());
+    ui->comboBoxDebitGps->setCurrentText(configuration.value("PortSerieGps/DebitBauds","9600").toString());
+    ui->comboBoxBitsDonneesGps->setCurrentText(configuration.value("PortSerieGps/BitsDonnee","8").toString());
+    ui->comboBoxBitsStopGps->setCurrentText(configuration.value("PortSerieGps/BitsStop","1").toString());
 }
 
 /**
@@ -120,17 +137,27 @@ void Ihm::initialiserInterface()
     ui->radioButtonLedOrange->setDisabled(true);
     ui->radioButtonLedOff->setChecked(true);
     ui->ImageEtatLed->setPixmap(QPixmap(LED_OFF));
+    ui->labelStatutPortSerieSonde->setText("<font color=\"#bd2c2c\">Sonde déconnectée</font>");
+    ui->labelStatutPortSerieGps->setText("<font color=\"#bd2c2c\">GPS déconnecté</font>");
 
-    ui->comboBoxAppareil->addItems(QStringList{"/dev/ttyUSB0", "/dev/ttyUSB1", "/dev/ttyS0", "/dev/ttyS1", "/dev/ttyS2", "/dev/ttyS3" });
+    ui->comboBoxAppareil->addItems(QStringList{"/dev/ttyUSB0", "/dev/ttyUSB1", "/dev/ttyUSB2", "/dev/ttyUSB3", "/dev/ttyS2", "/dev/ttyS3" });
     ui->comboBoxDebitBaud->addItems(QStringList{"1200", "1800", "2400", "4800", "9600", "19200", "38400", "57600", "115200", "230400", "460800"});
     ui->comboBoxBitsDonnees->addItems(QStringList{"5", "6", "7", "8"});
     ui->comboBoxBitsStop->addItems(QStringList{"1", "2"});
+
+    ui->comboBoxPortSerieGps->addItems(QStringList{"/dev/ttyUSB0", "/dev/ttyUSB1", "/dev/ttyUSB2", "/dev/ttyUSB3", "/dev/ttyACM0", "/dev/ttyACM2" });
+    ui->comboBoxDebitGps->addItems(QStringList{"1200", "1800", "2400", "4800", "9600", "19200", "38400", "57600", "115200", "230400", "460800"});
+    ui->comboBoxBitsDonneesGps->addItems(QStringList{"5", "6", "7", "8"});
+    ui->comboBoxBitsStopGps->addItems(QStringList{"1", "2"});
+
+
+    ui->pushButtonFermerPortGps->setDisabled(true);
     ui->pushButtonConnexion->setDisabled(true);
     ui->pushButtonDeconnexion->setDisabled(true);
     ui->lineEditEnvoyerTrame->setDisabled(true);
     ui->pushButtonEnvoyerTrame->setDisabled(true);
     ui->pushButtonEnvoyerCoordonnee->setEnabled(false);
-    ui->labelValeurCoordonnee->setText("<font color=\"#bd2c2c\">Connecté un GPS</font>");
+    ui->labelValeurCoordonnee->setText("<font color=\"#bd2c2c\">Connecter un GPS</font>");
     chargerConfigurationPort();
 
 }
@@ -187,7 +214,7 @@ void Ihm::actualiserTrame()
  */
 void Ihm::modifierEtatLed()
 {
-    switch (transmission->getEsp32()->getEtatLed())
+    switch (transmission->getSonde()->getEtatLed())
           {
              case VALEUR_LED_OFF:
                 ui->ImageEtatLed->setPixmap(QPixmap(LED_OFF));
@@ -221,26 +248,26 @@ void Ihm::actualiserDonnee()
     QString heure = maintenant.toString("hh:mm:ss");
     ui->horodatage->setText(heure);
 
-    ui->lcdNumberTemperature->display(transmission->getEsp32()->getTemperature());
-    ui->lcdNumberHumidite->display(transmission->getEsp32()->getHumidite());
-    ui->lcdNumberRessentie->display(transmission->getEsp32()->getRessentie());
-    ui->lcdNumberLuminosite->display(transmission->getEsp32()->getLuminosite());
-    ui->lcdNumberPression->display(transmission->getEsp32()->getPression());
-    ui->lcdNumberAltitude->display(transmission->getEsp32()->getAltitude());
+    ui->lcdNumberTemperature->display(transmission->getSonde()->getTemperature());
+    ui->lcdNumberHumidite->display(transmission->getSonde()->getHumidite());
+    ui->lcdNumberRessentie->display(transmission->getSonde()->getRessentie());
+    ui->lcdNumberLuminosite->display(transmission->getSonde()->getLuminosite());
+    ui->lcdNumberPression->display(transmission->getSonde()->getPression());
+    ui->lcdNumberAltitude->display(transmission->getSonde()->getAltitude());
 
-    ui->labelUniteTemperature->setText(transmission->getEsp32()->getTemperatureUnite());
-    ui->labelUniteRessenti->setText(transmission->getEsp32()->getRessentieUnite());
-    ui->labelUniteHumidite->setText(transmission->getEsp32()->getHumiditeUnite());
-    ui->labelUniteLuminosite->setText(transmission->getEsp32()->getLuminositeUnite());
-    ui->labelUnitePression->setText(transmission->getEsp32()->getPressionUnite());
-    ui->labelUniteAltitude->setText(transmission->getEsp32()->getAltitudeUnite());
+    ui->labelUniteTemperature->setText(transmission->getSonde()->getTemperatureUnite());
+    ui->labelUniteRessenti->setText(transmission->getSonde()->getRessentieUnite());
+    ui->labelUniteHumidite->setText(transmission->getSonde()->getHumiditeUnite());
+    ui->labelUniteLuminosite->setText(transmission->getSonde()->getLuminositeUnite());
+    ui->labelUnitePression->setText(transmission->getSonde()->getPressionUnite());
+    ui->labelUniteAltitude->setText(transmission->getSonde()->getAltitudeUnite());
 
     modifierEtatLed();
 
-    graphique->ajouterDonneeTemperature(transmission->getEsp32()->getTemperature());
-    graphique->ajouterDonneeHumidite(transmission->getEsp32()->getHumidite());
-    graphique->ajouterDonneeLuminosite(transmission->getEsp32()->getLuminosite());
-    graphique->ajouterDonneePression(transmission->getEsp32()->getPression());
+    graphique->ajouterDonneeTemperature(transmission->getSonde()->getTemperature());
+    graphique->ajouterDonneeHumidite(transmission->getSonde()->getHumidite());
+    graphique->ajouterDonneeLuminosite(transmission->getSonde()->getLuminosite());
+    graphique->ajouterDonneePression(transmission->getSonde()->getPression());
 }
 
 
@@ -294,11 +321,28 @@ void Ihm::desactiverOuverturePort()
     ui->comboBoxBitsDonnees->setDisabled(true);
     ui->comboBoxBitsStop->setDisabled(true);
     ui->comboBoxDebitBaud->setDisabled(true);
+    ui->labelStatutPortSerieSonde->setText("<font color=\"#3498db\">Sonde connectée</font>");
 
     ActiverControleLed();
-
-    //desactiverConnexionBluetooth();
 }
+
+/**
+ * @brief desactive des bouton de l'Ihm
+ *
+ * @fn Ihm::desactiverOuverturePortGps
+ */
+void Ihm::desactiverOuverturePortGps()
+{
+    ui->pushButtonOuvrirPortGps->setDisabled(true);
+    ui->pushButtonFermerPortGps->setDisabled(false);
+    ui->labelStatutPortSerieGps->setText("<font color=\"#3498db\">GPS connecté</font>");
+
+    ui->comboBoxPortSerieGps->setDisabled(true);
+    ui->comboBoxBitsDonneesGps->setDisabled(true);
+    ui->comboBoxBitsStopGps->setDisabled(true);
+    ui->comboBoxDebitGps->setDisabled(true);
+}
+
 
 
 /**
@@ -315,6 +359,7 @@ void Ihm::DesactiverControleLed()
 }
 
 /**
+
  * @brief desactive des bouton de l'Ihm
  *
  * @fn Ihm::desactiverFermerPort
@@ -326,14 +371,29 @@ void Ihm::desactiverFermerPort()
     ui->lineEditEnvoyerTrame->setDisabled(true);
     ui->pushButtonEnvoyerTrame->setDisabled(true);
     initialiserAffichage();
-    ui->labelValeurCoordonnee->setText("<font color=\"#bd2c2c\">Connecté un GPS</font>");
+    ui->labelStatutPortSerieSonde->setText("<font color=\"#bd2c2c\">Sonde déconnectée</font>");
     ui->comboBoxAppareil->setDisabled(false);
     ui->comboBoxBitsDonnees->setDisabled(false);
     ui->comboBoxBitsStop->setDisabled(false);
     ui->comboBoxDebitBaud->setDisabled(false);
     DesactiverControleLed();
+}
 
-    //activerConnexionBluetooth();
+/**
+ * @brief desactive des bouton de l'Ihm
+ *
+ * @fn Ihm::desactiverFermerPortGps
+ */
+void Ihm::desactiverFermerPortGps()
+{
+    ui->pushButtonOuvrirPortGps->setDisabled(false);
+    ui->pushButtonFermerPortGps->setDisabled(true);
+    ui->labelValeurCoordonnee->setText("<font color=\"#bd2c2c\">Connecter un GPS</font>");
+    ui->labelStatutPortSerieGps->setText("<font color=\"#bd2c2c\">GPS déconnecté</font>");
+    ui->comboBoxPortSerieGps->setDisabled(false);
+    ui->comboBoxBitsDonneesGps->setDisabled(false);
+    ui->comboBoxBitsStopGps->setDisabled(false);
+    ui->comboBoxDebitGps->setDisabled(false);
 }
 
 /**
@@ -458,7 +518,7 @@ void Ihm::on_pushButtonScan_clicked()
     ui->pushButtonScan->setEnabled(false);
     ui->pushButtonConnexion->setEnabled(false);
     ui->pushButtonDeconnexion->setEnabled(false);
-    ui->labelStatut->setText("<font color=\"#bd2c2c\">scan en cours...</font>");
+    ui->labelStatut->setText("<font color=\"#bd2c2c\">Recherche en cours ...</font>");
 
     transmission->demarrerScan();
 }
@@ -472,7 +532,7 @@ void Ihm::actualiserAffichageBluetooth()
 {
     ui->pushButtonScan->setEnabled(true);
     ui->pushButtonConnexion->setEnabled(true);
-    ui->labelStatut->setText("<font color=\"#19B2AD\">scan terminé</font>");
+    ui->labelStatut->setText("<font color=\"#19B2AD\">Recherche terminée</font>");
 }
 
 /**
@@ -484,7 +544,7 @@ void Ihm::on_pushButtonConnexion_clicked()
 {
     if(ui->comboBoxBluetooth->currentText() != "")
     {
-        ui->labelStatut->setText("<font color=\"#21618c\">Connexion en cours...</font>");
+        ui->labelStatut->setText("<font color=\"#21618c\">Connexion en cours ...</font>");
         transmission->connecterAppareilBluetooth(ui->comboBoxBluetooth->currentText());
     }
 }
@@ -590,7 +650,7 @@ void Ihm::desactiverConnexionBluetooth()
     ui->pushButtonScan->setDisabled(true);
     ui->pushButtonConnexion->setDisabled(true);
     ui->pushButtonDeconnexion->setDisabled(true);
-    ui->labelStatut->setText("<font color=\"#63cb23\">Connexion Serie en cours...</font>");
+    ui->labelStatut->setText("<font color=\"#63cb23\">Connexion en cours ...</font>");
 
 }
 
@@ -655,4 +715,26 @@ void Ihm::actualiserDonneeGps()
 void Ihm::on_pushButtonEnvoyerCoordonnee_clicked()
 {
     meteo->creerUrlCoordonnerGps(transmission->getGps()->getLatitude(), transmission->getGps()->getLongitude());
+}
+
+void Ihm::on_pushButtonOuvrirPortGps_clicked()
+{
+    transmission->configurerPortGps(ui->comboBoxPortSerieGps->currentText(), ui->comboBoxDebitGps->currentText(), ui->comboBoxBitsDonneesGps->currentText(), ui->comboBoxBitsStopGps->currentText());
+}
+
+void Ihm::on_pushButtonFermerPortGps_clicked()
+{
+    transmission->fermerPortGps();
+}
+
+void Ihm::actualiserMessageStatutConnectionGps(QString message)
+{
+    transmission->fermerPortGps();
+    ui->labelStatutPortSerieGps->setText("<font color=\"#8e44ad\">" + message + "</font>");
+}
+
+void Ihm::actualiserMessageStatutConnectionSonde(QString message)
+{
+    transmission->fermerPort();
+    ui->labelStatutPortSerieSonde->setText("<font color=\"#8e44ad\">" + message + "</font>");
 }
